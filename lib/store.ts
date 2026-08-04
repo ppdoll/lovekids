@@ -119,6 +119,30 @@ export async function kvGet<T>(key: string): Promise<T | null> {
   return key in store ? (JSON.parse(store[key]) as T) : null;
 }
 
+export async function kvDel(key: string): Promise<void> {
+  const r = rest();
+  if (r) {
+    try {
+      const res = await fetch(`${r.url}/del/${encodeURIComponent(key)}`, {
+        method: "POST",
+        headers: { Authorization: `Bearer ${r.token}` },
+      });
+      if (!res.ok) lastWriteError = `Redis 삭제 실패 (HTTP ${res.status})`;
+      else lastWriteError = null;
+    } catch {
+      lastWriteError = "Redis 서버에 연결하지 못했습니다";
+    }
+    memory.delete(key);
+    return;
+  }
+  memory.delete(key);
+  const store = await readFileStore();
+  if (key in store) {
+    delete store[key];
+    await writeFileStore(store);
+  }
+}
+
 export async function kvSet(key: string, value: unknown): Promise<void> {
   const str = JSON.stringify(value);
   const r = rest();

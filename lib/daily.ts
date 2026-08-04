@@ -1,7 +1,7 @@
 import { bankProblems } from "./bank";
 import { todayKST, daysAgoKST } from "./date";
 import { genCustomProblems, genMathProblems } from "./mathgen";
-import { kvGet, kvSet } from "./store";
+import { kvDel, kvGet, kvSet } from "./store";
 import {
   AnswerRecord,
   DailySet,
@@ -60,6 +60,36 @@ export type SetResult =
   | { set: DailySet; reason?: undefined }
   | { set: null; reason: "no-kid" | "off" | "empty-bank" };
 
+/**
+ * 아이·과목에 맞는 문제 count개를 만든다.
+ * 새 숙제를 낼 때와 부모가 문제를 더 낼 때 같은 규칙을 쓰도록 한 곳에 모아둔다.
+ */
+async function buildProblems(kid: Kid, subject: Subject, count: number): Promise<Problem[]> {
+  if (count <= 0) return [];
+
+  if (subject !== "math") {
+    return pickFromBank(kid.id, subject, kid.grade, count);
+  }
+
+  const calc = kid.calc ?? DEFAULT_CALC;
+  const custom = calc.mode === "custom" ? genCustomProblems(calc, count) : [];
+
+  if (custom.length > 0) {
+    // 부모가 직접 고른 연산으로 출제. 문장제를 섞기로 했다면 일부를 문장제로 채운다.
+    const wordTarget = calc.includeWord ? Math.round(count * 0.3) : 0;
+    const word = await pickFromBank(kid.id, "math", kid.grade, wordTarget);
+    const calcPart = custom.slice(0, count - word.length);
+    return shuffle([...calcPart, ...word]);
+  }
+
+  // 학년 자동 = 연산(자동 생성) 60% + 문장제(문제은행) 40%
+  // custom인데 켜진 연산이 하나도 없을 때도 여기로 와서 빈 숙제가 나오지 않게 한다.
+  const wordTarget = Math.round(count * 0.4);
+  const word = await pickFromBank(kid.id, "math", kid.grade, wordTarget);
+  const gen = genMathProblems(kid.grade, count - word.length);
+  return shuffle([...gen, ...word]);
+}
+
 /** 오늘의 문제 세트를 가져오거나, 없으면 새로 출제해서 저장 */
 export async function getOrCreateSet(kidId: string, subject: Subject): Promise<SetResult> {
   const date = todayKST();
@@ -73,29 +103,8 @@ export async function getOrCreateSet(kidId: string, subject: Subject): Promise<S
   const count = kid.perDay[subject] ?? 0;
   if (count <= 0) return { set: null, reason: "off" };
 
-  let problems: Problem[] = [];
-  if (subject === "math") {
-    const calc = kid.calc ?? DEFAULT_CALC;
-    const custom = calc.mode === "custom" ? genCustomProblems(calc, count) : [];
-
-    if (custom.length > 0) {
-      // 부모가 직접 고른 연산으로 출제. 문장제를 섞기로 했다면 일부를 문장제로 채운다.
-      const wordTarget = calc.includeWord ? Math.round(count * 0.3) : 0;
-      const word = await pickFromBank(kidId, "math", kid.grade, wordTarget);
-      const calcPart = custom.slice(0, count - word.length);
-      problems = shuffle([...calcPart, ...word]);
-    } else {
-      // 학년 자동 = 연산(자동 생성) 60% + 문장제(문제은행) 40%
-      // custom인데 켜진 연산이 하나도 없을 때도 여기로 와서 빈 숙제가 나오지 않게 한다.
-      const wordTarget = Math.round(count * 0.4);
-      const word = await pickFromBank(kidId, "math", kid.grade, wordTarget);
-      const gen = genMathProblems(kid.grade, count - word.length);
-      problems = shuffle([...gen, ...word]);
-    }
-  } else {
-    problems = await pickFromBank(kidId, subject, kid.grade, count);
-    if (problems.length === 0) return { set: null, reason: "empty-bank" };
-  }
+  const problems = await buildProblems(kid, subject, count);
+  if (problems.length === 0) return { set: null, reason: "empty-bank" };
 
   const set: DailySet = {
     kidId,
@@ -104,9 +113,93 @@ export async function getOrCreateSet(kidId: string, subject: Subject): Promise<S
     problems,
     answers: problems.map(() => null),
     completedAt: null,
+    bestCombo: 0,
+    wrongPushedIdx: [],
   };
   await kvSet(key, set);
   return { set };
+}
+
+/** 오늘 이 과목 숙제를 없애서 다시 처음부터 풀게 한다 (오답 노트는 남긴다) */
+export async function resetToday(kidId: string, subject: Subject): Promise<void> {
+  const date = todayKST();
+  await kvDel(setKey(kidId, date, subject));
+
+  // 완료 기록도 지워야 달력·연속 달성이 실제 상태와 맞는다
+  const hKey = `history:${kidId}`;
+  const h = (await kvGet<History>(hKey)) ?? {};
+  if (h[date]?.[subject]) {
+    delete h[date]![subject];
+    if (Object.keys(h[date]!).length === 0) delete h[date];
+    await kvSet(hKey, h);
+  }
+}
+
+export type AddResult =
+  | { added: number; total: number }
+  | { error: "no-kid" | "off" | "no-more" };
+
+/** 오늘 이 과목에 문제를 n개 더 낸다 */
+export async function addToToday(kidId: string, subject: Subject, n: number): Promise<AddResult> {
+  const settings = await getSettings();
+  const kid = settings.kids.find((k) => k.id === kidId);
+  if (!kid) return { error: "no-kid" };
+
+  const date = todayKST();
+  const key = setKey(kidId, date, subject);
+  let set = await kvGet<DailySet>(key);
+
+  // 아직 시작 안 한 과목이면 오늘 숙제를 먼저 만든다
+  if (!set) {
+    const created = await getOrCreateSet(kidId, subject);
+    if (!created.set) return { error: created.reason === "off" ? "off" : "no-kid" };
+    set = created.set;
+  }
+
+  const existing = new Set(set.problems.map((p) => p.q));
+  const fresh = (await buildProblems(kid, subject, n * 3)).filter((p) => {
+    if (existing.has(p.q)) return false;
+    existing.add(p.q);
+    return true;
+  });
+  const add = fresh.slice(0, n);
+  if (add.length === 0) return { error: "no-more" };
+
+  set.problems.push(...add);
+  set.answers.push(...add.map(() => null));
+
+  // 문제가 늘었으니 아직 다 푼 게 아니다. 완료 기록도 다시 풀 때까지 내린다.
+  if (set.completedAt) {
+    set.completedAt = null;
+    const hKey = `history:${kidId}`;
+    const h = (await kvGet<History>(hKey)) ?? {};
+    if (h[date]?.[subject]) {
+      delete h[date]![subject];
+      if (Object.keys(h[date]!).length === 0) delete h[date];
+      await kvSet(hKey, h);
+    }
+  }
+  await kvSet(key, set);
+  return { added: add.length, total: set.problems.length };
+}
+
+/**
+ * 연속 정답(콤보) 계산.
+ * 문제는 앞에서부터 순서대로 풀리므로, 처음부터 훑어 이어지는 정답 수를 센다.
+ */
+export function calcCombo(answers: (AnswerRecord | null)[]): { current: number; best: number } {
+  let current = 0;
+  let best = 0;
+  for (const a of answers) {
+    if (!a) break; // 아직 풀지 않은 문제부터는 세지 않는다
+    if (a.correct) {
+      current++;
+      if (current > best) best = current;
+    } else {
+      current = 0;
+    }
+  }
+  return { current, best };
 }
 
 export async function loadSet(kidId: string, subject: Subject, date: string): Promise<DailySet | null> {
@@ -123,6 +216,7 @@ export function toPublic(set: DailySet) {
     tag: p.tag,
     level: p.level,
   }));
+  const combo = calcCombo(set.answers);
   return {
     date: set.date,
     subject: set.subject,
@@ -130,6 +224,8 @@ export function toPublic(set: DailySet) {
     problems,
     answers: set.answers, // 이미 채점된 것에는 정답/해설 포함 (이미 공개된 정보)
     completedAt: set.completedAt,
+    combo: combo.current, // 새로고침해도 콤보가 이어지도록
+    bestCombo: Math.max(set.bestCombo ?? 0, combo.best),
   };
 }
 
@@ -184,6 +280,10 @@ export interface SubmitOutcome {
   total: number;
   correctCount: number;
   done: boolean;
+  /** 지금까지 이어진 연속 정답 수 */
+  combo: number;
+  /** 오늘 이 과목의 최고 연속 정답 수 */
+  bestCombo: number;
 }
 
 export async function submitAnswer(
@@ -214,13 +314,14 @@ export async function submitAnswer(
 
   const answered = set.answers.filter(Boolean).length;
   const correctCount = set.answers.filter((a) => a?.correct).length;
+  const combo = calcCombo(set.answers);
+  set.bestCombo = Math.max(set.bestCombo ?? 0, combo.best);
   let justDone = false;
 
   if (answered === total && !set.completedAt) {
     set.completedAt = new Date().toISOString();
     justDone = true;
   }
-  await kvSet(key, set);
 
   if (justDone) {
     // 완료 기록 저장
@@ -229,10 +330,13 @@ export async function submitAnswer(
     h[date] = { ...(h[date] ?? {}), [subject]: { done: true, correct: correctCount, total } };
     await kvSet(hKey, h);
 
-    // 오답 노트 적재
+    // 오답 노트 적재 — 이미 올린 문제는 건너뛴다
+    // (부모가 문제를 더 내면 다시 완료 처리되는데, 그때 앞 문제들이 또 쌓이면 안 된다)
+    const pushed = new Set(set.wrongPushedIdx ?? []);
     const wrongs: WrongItem[] = [];
     set.answers.forEach((a, i) => {
-      if (a && !a.correct) {
+      if (a && !a.correct && !pushed.has(i)) {
+        pushed.add(i);
         wrongs.push({
           date,
           subject,
@@ -243,6 +347,7 @@ export async function submitAnswer(
         });
       }
     });
+    set.wrongPushedIdx = [...pushed];
     if (wrongs.length > 0) {
       const wKey = `wrong:${kidId}`;
       const w = (await kvGet<WrongItem[]>(wKey)) ?? [];
@@ -250,12 +355,16 @@ export async function submitAnswer(
     }
   }
 
+  await kvSet(key, set);
+
   return {
     record: set.answers[index]!,
     answered,
     total,
     correctCount,
     done: !!set.completedAt,
+    combo: combo.current,
+    bestCombo: set.bestCombo,
   };
 }
 

@@ -637,6 +637,164 @@ select.input {
   background: #fff0f7;
 }
 
+/* ---------- 콤보 (연속 정답) ---------- */
+
+.combo-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 14px;
+  padding: 8px 14px;
+  margin-bottom: 12px;
+  font-size: 14.5px;
+  font-weight: 800;
+  animation: combo-in 0.35s cubic-bezier(0.2, 1.4, 0.4, 1);
+}
+
+@keyframes combo-in {
+  0% { transform: scale(0.8) translateY(-6px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.combo-emoji {
+  font-size: 18px;
+}
+
+.combo-bar.c2 { background: #eef6ff; color: #2f7bd6; }
+.combo-bar.c3 { background: #fff2e3; color: #e2711d; }
+.combo-bar.c4 { background: #fff8d9; color: #c79000; }
+.combo-bar.c5 { background: #ffe9e0; color: #e2561d; }
+.combo-bar.c7 { background: linear-gradient(100deg, #fff0d0, #ffe0ef); color: #d4437f; }
+.combo-bar.c10 { background: linear-gradient(100deg, #ffe9b8, #ffd6ea, #e2e0ff); color: #8b46c4; }
+
+.combo-flames {
+  display: flex;
+  gap: 3px;
+  margin-left: auto;
+}
+
+.combo-flames i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.55;
+}
+
+/* 채점 직후 콤보 축하 */
+.combo-pop {
+  margin-top: 14px;
+  border-radius: 16px;
+  padding: 12px 14px;
+  animation: combo-pop 0.4s cubic-bezier(0.2, 1.5, 0.4, 1);
+}
+
+@keyframes combo-pop {
+  0% { transform: scale(0.6) rotate(-4deg); opacity: 0; }
+  60% { transform: scale(1.06) rotate(1deg); }
+  100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+.combo-pop.c2 { background: #eef6ff; color: #2f7bd6; }
+.combo-pop.c3 { background: #fff2e3; color: #e2711d; }
+.combo-pop.c4 { background: #fff8d9; color: #b98700; }
+.combo-pop.c5 { background: #ffe9e0; color: #e2561d; }
+.combo-pop.c7 { background: linear-gradient(100deg, #fff0d0, #ffe0ef); color: #d4437f; }
+.combo-pop.c10 { background: linear-gradient(100deg, #ffe9b8, #ffd6ea, #e2e0ff); color: #8b46c4; }
+
+.combo-pop-emoji {
+  display: block;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.combo-pop b {
+  display: block;
+  font-size: 19px;
+  margin-top: 2px;
+}
+
+.combo-pop-cheer {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.85;
+  margin-top: 3px;
+}
+
+.combo-break {
+  margin-top: 12px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ink-soft);
+  background: #f6f1f8;
+  border-radius: 14px;
+  padding: 10px 12px;
+  word-break: keep-all;
+}
+
+.finish-combo {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #d4437f;
+  background: #fff0f7;
+  border-radius: 14px;
+  padding: 9px 12px;
+  display: inline-block;
+  word-break: keep-all;
+}
+
+/* ---------- 오늘 탭: 리셋 / 문제 추가 ---------- */
+
+.add-count-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 9px 14px;
+}
+
+.today-row {
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 8px;
+}
+
+.today-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.mini-btn {
+  border-radius: 10px;
+  padding: 6px 11px;
+  font-size: 12.5px;
+  font-weight: 800;
+  background: #f2ecf5;
+  color: var(--ink);
+}
+
+.mini-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.mini-btn.danger {
+  background: #ffeceb;
+  color: #d64545;
+}
+
+.mini-msg {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--good);
+  word-break: keep-all;
+}
+
 /* ---------- 연산 설정 ---------- */
 
 .calc-box {

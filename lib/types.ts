@@ -83,6 +83,10 @@ export interface DailySet {
   problems: Problem[];
   answers: (AnswerRecord | null)[];
   completedAt: string | null;
+  /** 오늘 이 과목에서 기록한 최고 연속 정답 */
+  bestCombo?: number;
+  /** 오답 노트에 이미 올린 문제 번호 (문제를 추가해 다시 완료할 때 중복 기록되지 않도록) */
+  wrongPushedIdx?: number[];
 }
 
 export interface DayResult {

@@ -82,6 +82,44 @@ export default function ParentPage() {
   const [newPin, setNewPin] = useState("");
   const [saveMsg, setSaveMsg] = useState("");
   const [openCalc, setOpenCalc] = useState<number | null>(null);
+  const [actionMsg, setActionMsg] = useState<Record<string, string>>({});
+  const [actionBusy, setActionBusy] = useState<string | null>(null);
+  const [addCount, setAddCount] = useState(5);
+
+  /** 오늘 숙제 리셋 / 문제 추가 */
+  async function setAction(kidId: string, subject: Subject, action: "reset" | "add", hasProgress = false) {
+    const tag = `${kidId}:${subject}`;
+    if (actionBusy) return;
+    if (action === "reset") {
+      const msg = hasProgress
+        ? "오늘 푼 내용을 지우고 새 문제로 다시 시작할까요?\n(오답 노트는 그대로 남습니다)"
+        : "오늘 문제를 새로 뽑고 문제 수를 기본값으로 되돌릴까요?";
+      if (!confirm(msg)) return;
+    }
+    setActionBusy(tag);
+    setActionMsg((m) => ({ ...m, [tag]: "" }));
+    const res = await fetch("/api/parent/set-action", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ pin, kidId, subject, action, count: addCount }),
+    }).catch(() => null);
+    setActionBusy(null);
+
+    if (res?.ok) {
+      const j = await res.json().catch(() => ({}));
+      setActionMsg((m) => ({
+        ...m,
+        [tag]: action === "reset" ? "새 문제로 초기화했어요 ✅" : `${j.added ?? addCount}문제 추가했어요 ✅`,
+      }));
+      await load(pin);
+    } else {
+      const j = await res?.json().catch(() => null);
+      setActionMsg((m) => ({
+        ...m,
+        [tag]: j?.error === "no-more" ? "더 낼 문제가 없어요" : "실패했어요. 다시 시도해 주세요",
+      }));
+    }
+  }
 
   const setCalc = (i: number, patch: (c: CalcConfig) => CalcConfig) =>
     setEditKids((ks) =>
@@ -311,6 +349,25 @@ export default function ParentPage() {
           {data.kids.length === 0 && (
             <div className="card center muted">설정 탭에서 아이를 먼저 등록해 주세요.</div>
           )}
+          {data.kids.length > 0 && (
+            <div className="add-count-bar">
+              <span className="muted" style={{ fontSize: 12.5, fontWeight: 700 }}>
+                문제를 더 낼 때 개수
+              </span>
+              <div className="row" style={{ gap: 6 }}>
+                {[3, 5, 10].map((n) => (
+                  <button
+                    key={n}
+                    className={`chip ${addCount === n ? "active" : ""}`}
+                    style={{ padding: "5px 14px", fontSize: 13 }}
+                    onClick={() => setAddCount(n)}
+                  >
+                    {n}문제
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
           {data.kids.map((k) => (
             <div key={k.id} className="card">
               <div className="row" style={{ marginBottom: 10 }}>
@@ -319,9 +376,10 @@ export default function ParentPage() {
                 <span className="badge">{k.grade}학년</span>
                 {k.streak > 0 && <span className="badge fire">🔥 {k.streak}일</span>}
               </div>
-              <div className="stack" style={{ gap: 6 }}>
+              <div className="stack" style={{ gap: 10 }}>
                 {SUBJECTS.filter((s) => (k.perDay[s] ?? 0) > 0).map((s) => {
                   const t = k.today[s];
+                  const tag = `${k.id}:${s}`;
                   let status: React.ReactNode;
                   if (t.done)
                     status = (
@@ -337,11 +395,36 @@ export default function ParentPage() {
                     );
                   else status = <span className="muted">아직 시작 안 함</span>;
                   return (
-                    <div key={s} className="spread" style={{ fontSize: 14.5 }}>
-                      <span>
-                        {SUBJECT_EMOJI[s]} {SUBJECT_LABEL[s]} ({t.assigned}문제)
-                      </span>
-                      {status}
+                    <div key={s} className="today-row">
+                      <div className="spread" style={{ fontSize: 14.5 }}>
+                        <span>
+                          {SUBJECT_EMOJI[s]} {SUBJECT_LABEL[s]} ({t.total}문제
+                          {/* 문제를 더 냈으면 기본값과 달라지므로 표시해 준다 */}
+                          {t.total !== t.assigned && (
+                            <span className="muted" style={{ fontSize: 12 }}> · 기본 {t.assigned}</span>
+                          )}
+                          )
+                        </span>
+                        {status}
+                      </div>
+                      <div className="row" style={{ gap: 6, marginTop: 6 }}>
+                        <button
+                          className="mini-btn"
+                          disabled={actionBusy === tag}
+                          onClick={() => setAction(k.id, s, "add")}
+                        >
+                          + {addCount}문제 더
+                        </button>
+                        {/* 문제를 잘못 추가했을 때 되돌리는 유일한 방법이므로 항상 누를 수 있어야 한다 */}
+                        <button
+                          className="mini-btn danger"
+                          disabled={actionBusy === tag}
+                          onClick={() => setAction(k.id, s, "reset", t.answered > 0 || t.done)}
+                        >
+                          다시 시작
+                        </button>
+                        {actionMsg[tag] && <span className="mini-msg">{actionMsg[tag]}</span>}
+                      </div>
                     </div>
                   );
                 })}

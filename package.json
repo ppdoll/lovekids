@@ -11,7 +11,8 @@
     "check:math": "node scripts/test-mathgen.mjs",
     "check:code": "node scripts/test-familycode.mjs",
     "check:storage": "node scripts/test-storage.mjs",
-    "check:calc": "node scripts/test-calc.mjs"
+    "check:calc": "node scripts/test-calc.mjs",
+    "check:parent": "node scripts/test-parent-actions.mjs"
   },
   "dependencies": {
     "next": "^16.3.0",

@@ -27,6 +27,8 @@ interface SetData {
   problems: PublicProblem[];
   answers: (AnswerRecord | null)[];
   completedAt: string | null;
+  combo: number;
+  bestCombo: number;
 }
 
 interface SubmitRes {
@@ -35,7 +37,29 @@ interface SubmitRes {
   total: number;
   correctCount: number;
   done: boolean;
+  combo: number;
+  bestCombo: number;
 }
+
+/** 콤보 단계별 표시 (연속 정답이 쌓일수록 반응이 커진다) */
+function comboLook(n: number): { emoji: string; label: string; cls: string } | null {
+  if (n < 2) return null;
+  if (n === 2) return { emoji: "✨", label: "2연속!", cls: "c2" };
+  if (n === 3) return { emoji: "🔥", label: "3연속!", cls: "c3" };
+  if (n === 4) return { emoji: "⚡", label: "4연속!", cls: "c4" };
+  if (n <= 6) return { emoji: "🔥🔥", label: `${n}연속 불꽃!`, cls: "c5" };
+  if (n <= 9) return { emoji: "🌟", label: `${n}연속 대단해요!`, cls: "c7" };
+  return { emoji: "👑", label: `${n}연속 최고예요!`, cls: "c10" };
+}
+
+const COMBO_CHEER: Record<string, string> = {
+  c2: "좋아요, 이어가 볼까요?",
+  c3: "불이 붙었어요!",
+  c4: "멈추지 말아요!",
+  c5: "정말 잘하고 있어요!",
+  c7: "이 정도면 고수예요!",
+  c10: "믿을 수 없어요!",
+};
 
 const PRAISE_HIGH = ["완벽해요! 최고예요! 🏆", "우와, 다 맞혔어요! 천재인가요? ✨", "빈틈이 없네요! 대단해요! 💯"];
 const PRAISE_MID = ["정말 잘했어요! 🎉", "멋져요! 조금만 더 하면 만점! 💪", "훌륭해요! 오늘도 성장했어요! 🌱"];
@@ -55,6 +79,8 @@ export default function QuizPage() {
   const [last, setLast] = useState<SubmitRes | null>(null);
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
+  const [combo, setCombo] = useState(0);
+  const [bestCombo, setBestCombo] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -74,6 +100,8 @@ export default function QuizPage() {
       .then((j) => {
         if (!j) return;
         setData(j);
+        setCombo(j.combo ?? 0);
+        setBestCombo(j.bestCombo ?? 0);
         const firstOpen = j.answers.findIndex((a) => a === null);
         if (firstOpen === -1) {
           setPhase("finished");
@@ -112,6 +140,8 @@ export default function QuizPage() {
     const answers = [...data.answers];
     answers[idx] = j.record;
     setData({ ...data, answers, completedAt: j.done ? new Date().toISOString() : data.completedAt });
+    setCombo(j.combo);
+    setBestCombo(j.bestCombo);
     setLast(j);
     setPhase("feedback");
   }
@@ -184,6 +214,13 @@ export default function QuizPage() {
             {correctCount} / {data.total}
           </div>
           <div className="finish-praise">{praise}</div>
+          {bestCombo >= 2 && (
+            <div className="finish-combo">
+              {bestCombo >= 10 ? "👑" : bestCombo >= 7 ? "🌟" : bestCombo >= 5 ? "🔥🔥" : "🔥"} 최고 연속{" "}
+              <b>{bestCombo}문제</b>
+              {bestCombo === data.total && data.total >= 3 && " — 전부 한 번에! 완벽해요!"}
+            </div>
+          )}
           {wrongCount > 0 && (
             <div className="finish-note">틀린 문제 {wrongCount}개는 오답 노트에 저장했어요.</div>
           )}
@@ -215,6 +252,23 @@ export default function QuizPage() {
           {SUBJECT_EMOJI[subject]} {answeredCount}/{data.total}
         </span>
       </div>
+
+      {/* 진행 중 콤보 표시 — 지금 몇 개 연속으로 맞혔는지 계속 보인다 */}
+      {(() => {
+        const look = comboLook(combo);
+        if (!look) return null;
+        return (
+          <div className={`combo-bar ${look.cls}`} key={combo}>
+            <span className="combo-emoji">{look.emoji}</span>
+            <b>{look.label}</b>
+            <span className="combo-flames">
+              {Array.from({ length: Math.min(combo, 10) }, (_, i) => (
+                <i key={i} />
+              ))}
+            </span>
+          </div>
+        );
+      })()}
 
       {phase === "question" && (
         <div className="card question-card">
@@ -266,6 +320,31 @@ export default function QuizPage() {
           <div className={`feedback-title ${last.record.correct ? "good" : "bad"}`}>
             {last.record.correct ? "정답이에요!" : "아쉬워요!"}
           </div>
+
+          {/* 콤보 축하 / 끊겼을 때 다시 시작 안내 */}
+          {(() => {
+            if (last.record.correct) {
+              const look = comboLook(last.combo);
+              if (!look) return null;
+              return (
+                <div className={`combo-pop ${look.cls}`}>
+                  <span className="combo-pop-emoji">{look.emoji}</span>
+                  <b>{look.label}</b>
+                  <span className="combo-pop-cheer">{COMBO_CHEER[look.cls]}</span>
+                </div>
+              );
+            }
+            // 콤보가 2 이상 쌓여 있다가 끊긴 경우에만 알려준다
+            if (last.bestCombo >= 2) {
+              return (
+                <div className="combo-break">
+                  연속 기록이 끊겼어요. 다시 쌓아볼까요? (최고 {last.bestCombo}연속)
+                </div>
+              );
+            }
+            return null;
+          })()}
+
           {!last.record.correct && (
             <div className="feedback-answer">
               정답: <b>{last.record.answerText}</b>
