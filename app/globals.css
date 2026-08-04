@@ -637,6 +637,116 @@ select.input {
   background: #fff0f7;
 }
 
+/* ---------- 연산 설정 ---------- */
+
+.calc-box {
+  border: 1.5px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+  background: #fdfbfe;
+}
+
+.calc-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14.5px;
+  font-weight: 800;
+}
+
+.calc-arrow {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.calc-sum {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  margin-top: 6px;
+  line-height: 1.45;
+  word-break: keep-all;
+}
+
+.op-row {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px;
+  background: #fff;
+}
+
+.op-on {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.op-on input,
+.op-check input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+  flex-shrink: 0;
+}
+
+.op-opts {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  padding-left: 26px;
+}
+
+.op-field {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.op-field select {
+  width: auto;
+  padding: 6px 8px;
+}
+
+.op-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.table-pick {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.table-pick button {
+  min-width: 42px;
+  min-height: 42px; /* 폰에서 손가락으로 누르기 좋은 크기 */
+  padding: 8px 6px;
+  border-radius: 10px;
+  background: #f6f1f8;
+  border: 2px solid transparent;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--ink-soft);
+}
+
+.table-pick button.on {
+  background: #fff0f7;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 .warn {
   background: #fff4d6;
   border: 1.5px solid #f0d48a;

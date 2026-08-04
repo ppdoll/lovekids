@@ -1,10 +1,11 @@
 import { bankProblems } from "./bank";
 import { todayKST, daysAgoKST } from "./date";
-import { genMathProblems } from "./mathgen";
+import { genCustomProblems, genMathProblems } from "./mathgen";
 import { kvGet, kvSet } from "./store";
 import {
   AnswerRecord,
   DailySet,
+  DEFAULT_CALC,
   DEFAULT_SETTINGS,
   History,
   Kid,
@@ -74,11 +75,23 @@ export async function getOrCreateSet(kidId: string, subject: Subject): Promise<S
 
   let problems: Problem[] = [];
   if (subject === "math") {
-    // 수학 = 연산(자동 생성) 60% + 문장제(문제은행) 40%
-    const wordTarget = Math.round(count * 0.4);
-    const word = await pickFromBank(kidId, "math", kid.grade, wordTarget);
-    const gen = genMathProblems(kid.grade, count - word.length);
-    problems = shuffle([...gen, ...word]);
+    const calc = kid.calc ?? DEFAULT_CALC;
+    const custom = calc.mode === "custom" ? genCustomProblems(calc, count) : [];
+
+    if (custom.length > 0) {
+      // 부모가 직접 고른 연산으로 출제. 문장제를 섞기로 했다면 일부를 문장제로 채운다.
+      const wordTarget = calc.includeWord ? Math.round(count * 0.3) : 0;
+      const word = await pickFromBank(kidId, "math", kid.grade, wordTarget);
+      const calcPart = custom.slice(0, count - word.length);
+      problems = shuffle([...calcPart, ...word]);
+    } else {
+      // 학년 자동 = 연산(자동 생성) 60% + 문장제(문제은행) 40%
+      // custom인데 켜진 연산이 하나도 없을 때도 여기로 와서 빈 숙제가 나오지 않게 한다.
+      const wordTarget = Math.round(count * 0.4);
+      const word = await pickFromBank(kidId, "math", kid.grade, wordTarget);
+      const gen = genMathProblems(kid.grade, count - word.length);
+      problems = shuffle([...gen, ...word]);
+    }
   } else {
     problems = await pickFromBank(kidId, subject, kid.grade, count);
     if (problems.length === 0) return { set: null, reason: "empty-bank" };

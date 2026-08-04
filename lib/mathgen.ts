@@ -1,4 +1,4 @@
-import { Problem } from "./types";
+import { CalcConfig, Problem } from "./types";
 
 /**
  * 학년별 수학 연산 문제 자동 생성기.
@@ -322,6 +322,171 @@ const g6: Gen[] = [
 ];
 
 const GENERATORS: Record<number, Gen[]> = { 1: g1, 2: g2, 3: g3, 4: g4, 5: g5, 6: g6 };
+
+/* ─────────── 부모가 직접 고른 설정으로 만드는 연산 문제 ─────────── */
+
+const clampInt = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, Math.round(v)));
+
+/** 자리수 d인 수의 범위 */
+function digitRange(d: number): [number, number] {
+  return [d === 1 ? 1 : 10 ** (d - 1), 10 ** d - 1];
+}
+
+const fromDigits = (ds: number[]) => ds.reduce((acc, v, i) => acc + v * 10 ** i, 0);
+
+/**
+ * 덧셈. 올림(받아올림) 여부를 우연에 맡기지 않고 자리별로 만들어 보장한다.
+ * - carry=false: 모든 자리의 합이 9 이하 → 올림이 절대 없음
+ * - carry=true: 일의 자리 합을 10 이상으로 만들어 올림이 반드시 한 번은 생김
+ */
+function genAdd(digits: number, carry: boolean): Problem {
+  const d = clampInt(digits, 1, 4);
+
+  if (d === 1) {
+    const a = carry ? ri(1, 9) : ri(1, 8);
+    const b = carry ? ri(Math.max(1, 10 - a), 9) : ri(1, 9 - a);
+    return short(`${a} + ${b} = ?`, [`${a + b}`], "덧셈", `${a} + ${b} = ${a + b}`);
+  }
+
+  const da: number[] = [];
+  const db: number[] = [];
+  if (carry) {
+    const oa = ri(1, 9);
+    da[0] = oa;
+    db[0] = ri(10 - oa, 9);
+  } else {
+    const oa = ri(0, 9);
+    da[0] = oa;
+    db[0] = ri(0, 9 - oa);
+  }
+  for (let i = 1; i < d; i++) {
+    const top = i === d - 1;
+    if (carry) {
+      da[i] = top ? ri(1, 9) : ri(0, 9);
+      db[i] = top ? ri(1, 9) : ri(0, 9);
+    } else {
+      const lo = top ? 1 : 0;
+      const x = ri(lo, top ? 8 : 9);
+      da[i] = x;
+      db[i] = ri(lo, 9 - x);
+    }
+  }
+  const a = fromDigits(da);
+  const b = fromDigits(db);
+  return short(
+    `${a} + ${b} = ?`,
+    [`${a + b}`],
+    "덧셈",
+    carry ? "자리 올림이 있어요. 일의 자리부터 차례로 더해요." : `${a} + ${b} = ${a + b}`,
+  );
+}
+
+/**
+ * 뺄셈. 빌려주기(내림) 여부를 만들면서 보장한다.
+ * - borrow=false: 모든 자리에서 위의 수가 아래 수보다 크거나 같음 → 빌려올 필요 없음
+ * - borrow=true: 일의 자리에서 반드시 빌려와야 하도록 만든다
+ */
+function genSub(digits: number, borrow: boolean): Problem {
+  const d = clampInt(digits, 1, 4);
+
+  // 한 자리 뺄셈에는 빌려주기가 존재하지 않는다
+  if (d === 1) {
+    const a = ri(2, 9);
+    const b = ri(1, a);
+    return short(`${a} - ${b} = ?`, [`${a - b}`], "뺄셈", `${a} - ${b} = ${a - b}`);
+  }
+
+  if (borrow) {
+    const oa = ri(0, 8);
+    const ob = ri(oa + 1, 9); // 일의 자리에서 빌려와야 함
+    const [ulo, uhi] = digitRange(d - 1);
+    const ua = ri(ulo + 1, uhi);
+    const ub = ri(ulo, ua - 1); // 윗자리는 a가 더 크므로 전체적으로 a > b
+    const a = ua * 10 + oa;
+    const b = ub * 10 + ob;
+    return short(`${a} - ${b} = ?`, [`${a - b}`], "뺄셈", "일의 자리에서 십의 자리에게 빌려와야 해요.");
+  }
+
+  // 모든 자리에서 a의 숫자가 b보다 크거나 같아야 빌려올 일이 없다.
+  // 게다가 최상위 자리는 a가 "확실히 더 크게" 만들어, 두 수가 같아지는 경우(답이 0)를 원천적으로 없앤다.
+  // (예전에는 a === b일 때 a에 1을 더해 피했는데, 일의 자리가 9면 자리올림이 생겨
+  //  "빌려주기 없음" 조건이 깨졌다.)
+  const da: number[] = [];
+  const db: number[] = [];
+  const oa = ri(0, 9);
+  da[0] = oa;
+  db[0] = ri(0, oa);
+  for (let i = 1; i < d; i++) {
+    const top = i === d - 1;
+    if (top) {
+      const x = ri(2, 9);
+      da[i] = x;
+      db[i] = ri(1, x - 1);
+    } else {
+      const x = ri(0, 9);
+      da[i] = x;
+      db[i] = ri(0, x);
+    }
+  }
+  const a = fromDigits(da);
+  const b = fromDigits(db);
+  return short(`${a} - ${b} = ?`, [`${a - b}`], "뺄셈", `${a} - ${b} = ${a - b}`);
+}
+
+/** 곱셈. 부모가 고른 단만 나온다 */
+function genMul(tables: number[]): Problem {
+  const pool = tables.length ? tables : [2, 3, 4, 5, 6, 7, 8, 9];
+  const t = pick(pool);
+  const m = ri(1, 9);
+  // 같은 단이라도 앞뒤로 번갈아 나오게 해서 외운 순서에만 의존하지 않도록
+  const [x, y] = Math.random() < 0.5 ? [t, m] : [m, t];
+  return short(`${x} × ${y} = ?`, [`${x * y}`], "곱셈", `${t}단 → ${t} × ${m} = ${t * m}`);
+}
+
+/**
+ * 나눗셈.
+ * remainder=true일 때는 몫과 나머지를 한 칸에 같이 적게 하지 않고 따로 묻는다.
+ * ("3...1" 같은 형식을 아이가 맞춰 쓰게 하면 아는데도 오답이 되기 쉽다)
+ */
+function genDiv(remainder: boolean, tables: number[]): Problem {
+  const pool = (tables.length ? tables : [2, 3, 4, 5, 6, 7, 8, 9]).filter((t) => t >= 2);
+  const b = pick(pool.length ? pool : [2, 3, 4, 5, 6, 7, 8, 9]);
+  const q = ri(2, 9);
+
+  if (!remainder || b < 2) {
+    const a = b * q;
+    return short(`${a} ÷ ${b} = ?`, [`${q}`], "나눗셈", `${b} × ${q} = ${a}이므로 몫은 ${q}예요.`);
+  }
+
+  const r = ri(1, b - 1);
+  const a = b * q + r;
+  // 나머지가 있는 나눗셈은 몫과 나머지를 번갈아 묻는다
+  return Math.random() < 0.5
+    ? short(`${a} ÷ ${b}의 몫은 얼마일까요?`, [`${q}`], "나눗셈", `${a} = ${b} × ${q} + ${r} → 몫 ${q}, 나머지 ${r}`)
+    : short(`${a} ÷ ${b}의 나머지는 얼마일까요?`, [`${r}`], "나눗셈", `${a} = ${b} × ${q} + ${r} → 몫 ${q}, 나머지 ${r}`);
+}
+
+/** 부모가 고른 연산 설정으로 문제 n개 생성. 켜진 연산이 없으면 빈 배열. */
+export function genCustomProblems(calc: CalcConfig, n: number): Problem[] {
+  const gens: Gen[] = [];
+  if (calc.add?.on) gens.push(() => genAdd(calc.add.digits, calc.add.carry));
+  if (calc.sub?.on) gens.push(() => genSub(calc.sub.digits, calc.sub.borrow));
+  if (calc.mul?.on) gens.push(() => genMul(calc.mul.tables ?? []));
+  if (calc.div?.on) gens.push(() => genDiv(calc.div.remainder, calc.mul?.tables ?? []));
+  if (gens.length === 0) return [];
+
+  const out: Problem[] = [];
+  const seen = new Set<string>();
+  let guard = 0;
+  while (out.length < n && guard < n * 40) {
+    guard++;
+    const p = pick(gens)();
+    if (seen.has(p.q)) continue;
+    seen.add(p.q);
+    out.push(p);
+  }
+  return out;
+}
 
 /** 학년에 맞는 연산 문제 n개 생성 (문제 텍스트 중복 없이) */
 export function genMathProblems(grade: number, n: number): Problem[] {

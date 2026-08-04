@@ -3,9 +3,12 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import {
+  CalcConfig,
+  DEFAULT_CALC,
   History,
   Kid,
   KID_EMOJIS,
+  MUL_TABLES,
   Subject,
   SUBJECT_EMOJI,
   SUBJECT_LABEL,
@@ -50,7 +53,20 @@ function newKid(): Kid {
     grade: 1,
     emoji: KID_EMOJIS[Math.floor(Math.random() * KID_EMOJIS.length)],
     perDay: { ko: 5, en: 5, math: 10 },
+    calc: structuredClone(DEFAULT_CALC),
   };
+}
+
+/** 연산 설정을 요약해 한 줄로 (설정을 펼치지 않아도 뭘 고른 상태인지 보이도록) */
+function calcSummary(c: CalcConfig): string {
+  if (c.mode === "auto") return "학년에 맞게 자동";
+  const parts: string[] = [];
+  if (c.add.on) parts.push(`＋ ${c.add.digits}자리${c.add.carry ? "·올림" : "·올림없이"}`);
+  if (c.sub.on) parts.push(`－ ${c.sub.digits}자리${c.sub.digits > 1 ? (c.sub.borrow ? "·빌려주기" : "·빌려주기없이") : ""}`);
+  if (c.mul.on) parts.push(`× ${c.mul.tables.join("·")}단`);
+  if (c.div.on) parts.push(`÷ ${c.div.remainder ? "나머지 있음" : "딱 나눠짐"}`);
+  if (parts.length === 0) return "고른 연산이 없어 학년 자동으로 나갑니다";
+  return parts.join("  /  ") + (c.includeWord ? "  + 문장제" : "");
 }
 
 export default function ParentPage() {
@@ -65,6 +81,12 @@ export default function ParentPage() {
   const [editKids, setEditKids] = useState<Kid[]>([]);
   const [newPin, setNewPin] = useState("");
   const [saveMsg, setSaveMsg] = useState("");
+  const [openCalc, setOpenCalc] = useState<number | null>(null);
+
+  const setCalc = (i: number, patch: (c: CalcConfig) => CalcConfig) =>
+    setEditKids((ks) =>
+      ks.map((k, j) => (j === i ? { ...k, calc: patch(k.calc ?? structuredClone(DEFAULT_CALC)) } : k)),
+    );
 
   // 달력/오답 상태
   const [selKid, setSelKid] = useState<string>("");
@@ -81,7 +103,17 @@ export default function ParentPage() {
     if (!res.ok) return false;
     const j = (await res.json()) as ParentData;
     setData(j);
-    setEditKids(j.kids.map(({ id, name, grade, emoji, perDay }) => ({ id, name, grade, emoji, perDay })));
+    // calc(연산 설정)를 빼먹으면 저장할 때마다 설정이 조용히 초기화된다
+    setEditKids(
+      j.kids.map(({ id, name, grade, emoji, perDay, calc }) => ({
+        id,
+        name,
+        grade,
+        emoji,
+        perDay,
+        calc: calc ?? structuredClone(DEFAULT_CALC),
+      })),
+    );
     if (!selKid && j.kids.length > 0) setSelKid(j.kids[0].id);
     if (j.kids.length === 0) setTab("settings");
     return true;
@@ -512,6 +544,254 @@ export default function ParentPage() {
                 <p className="muted" style={{ fontSize: 12 }}>
                   0으로 두면 그 과목은 숙제에서 빠져요.
                 </p>
+
+                {/* ── 수학 연산 설정 ── */}
+                <div className="calc-box">
+                  <button
+                    type="button"
+                    className="calc-head"
+                    onClick={() => setOpenCalc(openCalc === i ? null : i)}
+                  >
+                    <span>🧮 수학 연산 설정</span>
+                    <span className="calc-arrow">{openCalc === i ? "접기 ▲" : "고치기 ▼"}</span>
+                  </button>
+                  <div className="calc-sum">{calcSummary(k.calc ?? DEFAULT_CALC)}</div>
+
+                  {openCalc === i &&
+                    (() => {
+                      const c = k.calc ?? DEFAULT_CALC;
+                      return (
+                        <div className="stack" style={{ gap: 12, marginTop: 12 }}>
+                          <div className="chips" style={{ marginBottom: 0 }}>
+                            {(
+                              [
+                                ["auto", "학년에 맞게 자동"],
+                                ["custom", "직접 고르기"],
+                              ] as ["auto" | "custom", string][]
+                            ).map(([m, label]) => (
+                              <button
+                                key={m}
+                                type="button"
+                                className={`chip ${c.mode === m ? "active" : ""}`}
+                                onClick={() => setCalc(i, (x) => ({ ...x, mode: m }))}
+                              >
+                                {label}
+                              </button>
+                            ))}
+                          </div>
+
+                          {c.mode === "custom" && (
+                            <>
+                              {/* 더하기 */}
+                              <div className="op-row">
+                                <label className="op-on">
+                                  <input
+                                    type="checkbox"
+                                    checked={c.add.on}
+                                    onChange={(e) =>
+                                      setCalc(i, (x) => ({ ...x, add: { ...x.add, on: e.target.checked } }))
+                                    }
+                                  />
+                                  <b>＋ 더하기</b>
+                                </label>
+                                {c.add.on && (
+                                  <div className="op-opts">
+                                    <label className="op-field">
+                                      자리수
+                                      <select
+                                        className="input"
+                                        value={c.add.digits}
+                                        onChange={(e) =>
+                                          setCalc(i, (x) => ({
+                                            ...x,
+                                            add: { ...x.add, digits: Number(e.target.value) },
+                                          }))
+                                        }
+                                      >
+                                        {[1, 2, 3, 4].map((d) => (
+                                          <option key={d} value={d}>
+                                            {d}자리
+                                          </option>
+                                        ))}
+                                      </select>
+                                    </label>
+                                    <label className="op-check">
+                                      <input
+                                        type="checkbox"
+                                        checked={c.add.carry}
+                                        onChange={(e) =>
+                                          setCalc(i, (x) => ({
+                                            ...x,
+                                            add: { ...x.add, carry: e.target.checked },
+                                          }))
+                                        }
+                                      />
+                                      올림 있는 문제
+                                    </label>
+                                  </div>
+                                )}
+                              </div>
+
+                              {/* 빼기 */}
+                              <div className="op-row">
+                                <label className="op-on">
+                                  <input
+                                    type="checkbox"
+                                    checked={c.sub.on}
+                                    onChange={(e) =>
+                                      setCalc(i, (x) => ({ ...x, sub: { ...x.sub, on: e.target.checked } }))
+                                    }
+                                  />
+                                  <b>－ 빼기</b>
+                                </label>
+                                {c.sub.on && (
+                                  <div className="op-opts">
+                                    <label className="op-field">
+                                      자리수
+                                      <select
+                                        className="input"
+                                        value={c.sub.digits}
+                                        onChange={(e) =>
+                                          setCalc(i, (x) => ({
+                                            ...x,
+                                            sub: { ...x.sub, digits: Number(e.target.value) },
+                                          }))
+                                        }
+                                      >
+                                        {[1, 2, 3, 4].map((d) => (
+                                          <option key={d} value={d}>
+                                            {d}자리
+                                          </option>
+                                        ))}
+                                      </select>
+                                    </label>
+                                    {c.sub.digits > 1 ? (
+                                      <label className="op-check">
+                                        <input
+                                          type="checkbox"
+                                          checked={c.sub.borrow}
+                                          onChange={(e) =>
+                                            setCalc(i, (x) => ({
+                                              ...x,
+                                              sub: { ...x.sub, borrow: e.target.checked },
+                                            }))
+                                          }
+                                        />
+                                        빌려주기(내림) 있는 문제
+                                      </label>
+                                    ) : (
+                                      <span className="muted" style={{ fontSize: 12 }}>
+                                        한 자리 빼기엔 빌려주기가 없어요
+                                      </span>
+                                    )}
+                                  </div>
+                                )}
+                              </div>
+
+                              {/* 곱하기 */}
+                              <div className="op-row">
+                                <label className="op-on">
+                                  <input
+                                    type="checkbox"
+                                    checked={c.mul.on}
+                                    onChange={(e) =>
+                                      setCalc(i, (x) => ({ ...x, mul: { ...x.mul, on: e.target.checked } }))
+                                    }
+                                  />
+                                  <b>× 곱하기</b>
+                                </label>
+                                {c.mul.on && (
+                                  <div className="op-opts" style={{ flexDirection: "column", alignItems: "stretch" }}>
+                                    <span className="muted" style={{ fontSize: 12 }}>
+                                      문제에 나올 단을 고르세요
+                                    </span>
+                                    <div className="table-pick">
+                                      {MUL_TABLES.map((t) => {
+                                        const on = c.mul.tables.includes(t);
+                                        return (
+                                          <button
+                                            key={t}
+                                            type="button"
+                                            className={on ? "on" : ""}
+                                            onClick={() =>
+                                              setCalc(i, (x) => ({
+                                                ...x,
+                                                mul: {
+                                                  ...x.mul,
+                                                  tables: on
+                                                    ? x.mul.tables.filter((v) => v !== t)
+                                                    : [...x.mul.tables, t].sort((a, b) => a - b),
+                                                },
+                                              }))
+                                            }
+                                          >
+                                            {t}
+                                          </button>
+                                        );
+                                      })}
+                                    </div>
+                                    {c.mul.tables.length === 0 && (
+                                      <span style={{ fontSize: 12, color: "var(--bad)", fontWeight: 700 }}>
+                                        단을 하나도 안 고르면 2~9단이 기본으로 나갑니다
+                                      </span>
+                                    )}
+                                  </div>
+                                )}
+                              </div>
+
+                              {/* 나누기 */}
+                              <div className="op-row">
+                                <label className="op-on">
+                                  <input
+                                    type="checkbox"
+                                    checked={c.div.on}
+                                    onChange={(e) =>
+                                      setCalc(i, (x) => ({ ...x, div: { ...x.div, on: e.target.checked } }))
+                                    }
+                                  />
+                                  <b>÷ 나누기</b>
+                                </label>
+                                {c.div.on && (
+                                  <div className="op-opts" style={{ flexDirection: "column", alignItems: "stretch" }}>
+                                    <label className="op-check">
+                                      <input
+                                        type="checkbox"
+                                        checked={c.div.remainder}
+                                        onChange={(e) =>
+                                          setCalc(i, (x) => ({
+                                            ...x,
+                                            div: { ...x.div, remainder: e.target.checked },
+                                          }))
+                                        }
+                                      />
+                                      나머지가 있는 나눗셈 포함
+                                    </label>
+                                    <span className="muted" style={{ fontSize: 12 }}>
+                                      {c.div.remainder
+                                        ? "몫과 나머지를 따로 물어봅니다 (한 칸에 같이 쓰지 않아요)"
+                                        : "딱 나누어떨어지는 문제만 나옵니다"}
+                                      {c.mul.on && c.mul.tables.length > 0 && ` · 나누는 수는 위에서 고른 단을 씁니다`}
+                                    </span>
+                                  </div>
+                                )}
+                              </div>
+
+                              <label className="op-check" style={{ borderTop: "1px dashed var(--line)", paddingTop: 10 }}>
+                                <input
+                                  type="checkbox"
+                                  checked={c.includeWord}
+                                  onChange={(e) =>
+                                    setCalc(i, (x) => ({ ...x, includeWord: e.target.checked }))
+                                  }
+                                />
+                                문장제(이야기 문제)도 조금 섞기
+                              </label>
+                            </>
+                          )}
+                        </div>
+                      );
+                    })()}
+                </div>
               </div>
             ))}
             <button className="btn btn-ghost" onClick={() => setEditKids((ks) => [...ks, newKid()])}>
