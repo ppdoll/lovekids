@@ -1,0 +1,423 @@
+[
+  {
+    "id": "en1-001",
+    "type": "mc",
+    "q": "대문자 A의 소문자는 무엇인가요?",
+    "choices": [
+      "a",
+      "b",
+      "d",
+      "e"
+    ],
+    "answer": 0,
+    "explain": "대문자 A의 소문자는 a예요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en1-002",
+    "type": "mc",
+    "q": "소문자 b의 대문자는 무엇인가요?",
+    "choices": [
+      "D",
+      "B",
+      "P",
+      "R"
+    ],
+    "answer": 1,
+    "explain": "소문자 b의 대문자는 B예요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en1-003",
+    "type": "mc",
+    "q": "알파벳을 순서대로 말할 때 A, B, C 다음에 오는 글자는 무엇인가요?",
+    "choices": [
+      "D",
+      "E",
+      "F",
+      "G"
+    ],
+    "answer": 0,
+    "explain": "알파벳은 A, B, C, D 순서예요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en1-004",
+    "type": "mc",
+    "q": "대문자와 소문자가 바르게 짝지어진 것은 무엇인가요?",
+    "choices": [
+      "E - e",
+      "G - q",
+      "D - b",
+      "Q - g"
+    ],
+    "answer": 0,
+    "explain": "대문자 E의 소문자는 e예요.",
+    "tag": "알파벳",
+    "level": "normal"
+  },
+  {
+    "id": "en1-005",
+    "type": "mc",
+    "q": "대문자와 소문자의 짝이 틀린 것은 무엇인가요?",
+    "choices": [
+      "A - a",
+      "B - b",
+      "C - k",
+      "D - d"
+    ],
+    "answer": 2,
+    "explain": "대문자 C의 소문자는 c예요. k는 K의 소문자예요.",
+    "tag": "알파벳",
+    "level": "normal"
+  },
+  {
+    "id": "en1-006",
+    "type": "mc",
+    "q": "소문자 d의 대문자는 무엇인가요?",
+    "choices": [
+      "B",
+      "D",
+      "P",
+      "Q"
+    ],
+    "answer": 1,
+    "explain": "소문자 d의 대문자는 D예요. b와 모양이 비슷하니 조심해요.",
+    "tag": "알파벳",
+    "level": "hard"
+  },
+  {
+    "id": "en1-007",
+    "type": "mc",
+    "q": "알파벳 순서에서 H와 J 사이에 오는 글자는 무엇인가요?",
+    "choices": [
+      "I",
+      "G",
+      "K",
+      "L"
+    ],
+    "answer": 0,
+    "explain": "알파벳은 H, I, J 순서라서 사이에 I가 와요.",
+    "tag": "알파벳",
+    "level": "hard"
+  },
+  {
+    "id": "en1-008",
+    "type": "mc",
+    "q": "알파벳의 마지막 글자는 무엇인가요?",
+    "choices": [
+      "X",
+      "Y",
+      "Z",
+      "W"
+    ],
+    "answer": 2,
+    "explain": "알파벳은 A에서 시작해서 Z로 끝나요.",
+    "tag": "알파벳",
+    "level": "normal"
+  },
+  {
+    "id": "en1-009",
+    "type": "mc",
+    "q": "'cat'은 어떤 동물인가요?",
+    "choices": [
+      "고양이",
+      "강아지",
+      "토끼",
+      "곰"
+    ],
+    "answer": 0,
+    "explain": "cat은 고양이를 뜻하는 낱말이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-010",
+    "type": "mc",
+    "q": "'dog'은 어떤 동물인가요?",
+    "choices": [
+      "오리",
+      "강아지",
+      "돼지",
+      "소"
+    ],
+    "answer": 1,
+    "explain": "dog은 강아지(개)를 뜻하는 낱말이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-011",
+    "type": "mc",
+    "q": "'apple'은 어떤 과일인가요?",
+    "choices": [
+      "포도",
+      "바나나",
+      "사과",
+      "수박"
+    ],
+    "answer": 2,
+    "explain": "apple은 사과를 뜻하는 낱말이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-012",
+    "type": "mc",
+    "q": "'빨간색'을 뜻하는 영어 낱말은 무엇인가요?",
+    "choices": [
+      "red",
+      "blue",
+      "green",
+      "yellow"
+    ],
+    "answer": 0,
+    "explain": "red는 빨간색이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-013",
+    "type": "mc",
+    "q": "'blue'는 어떤 색인가요?",
+    "choices": [
+      "노란색",
+      "파란색",
+      "초록색",
+      "검은색"
+    ],
+    "answer": 1,
+    "explain": "blue는 파란색이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-014",
+    "type": "mc",
+    "q": "'three'는 어떤 수를 뜻하나요?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 1,
+    "explain": "one은 1, two는 2, three는 3이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-015",
+    "type": "mc",
+    "q": "숫자 5를 뜻하는 영어 낱말은 무엇인가요?",
+    "choices": [
+      "four",
+      "five",
+      "six",
+      "nine"
+    ],
+    "answer": 1,
+    "explain": "5는 영어로 five라고 해요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-016",
+    "type": "mc",
+    "q": "다음 중 가장 큰 수를 뜻하는 낱말은 무엇인가요?",
+    "choices": [
+      "two",
+      "five",
+      "nine",
+      "four"
+    ],
+    "answer": 2,
+    "explain": "two는 2, four는 4, five는 5, nine은 9라서 nine이 가장 커요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en1-017",
+    "type": "mc",
+    "q": "'우유'를 뜻하는 영어 낱말은 무엇인가요?",
+    "choices": [
+      "milk",
+      "water",
+      "juice",
+      "bread"
+    ],
+    "answer": 0,
+    "explain": "milk는 우유예요. water는 물, juice는 주스, bread는 빵이에요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en1-018",
+    "type": "mc",
+    "q": "친구를 만났을 때 하는 인사는 무엇인가요?",
+    "choices": [
+      "Hello",
+      "Bye",
+      "Sorry",
+      "Thank you"
+    ],
+    "answer": 0,
+    "explain": "만났을 때는 Hello(안녕)라고 인사해요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en1-019",
+    "type": "mc",
+    "q": "친구와 헤어질 때 하는 인사는 무엇인가요?",
+    "choices": [
+      "Good morning",
+      "Bye",
+      "Hello",
+      "Hi"
+    ],
+    "answer": 1,
+    "explain": "헤어질 때는 Bye(잘 가)라고 인사해요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en1-020",
+    "type": "mc",
+    "q": "아침에 만났을 때 하는 인사는 무엇인가요?",
+    "choices": [
+      "Good morning",
+      "Good night",
+      "Bye",
+      "Sorry"
+    ],
+    "answer": 0,
+    "explain": "아침 인사는 Good morning이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en1-021",
+    "type": "mc",
+    "q": "잠자리에 들기 전에 하는 인사는 무엇인가요?",
+    "choices": [
+      "Good night",
+      "Good morning",
+      "Hi",
+      "Hello"
+    ],
+    "answer": 0,
+    "explain": "잠자기 전에는 Good night(잘 자요)이라고 인사해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en1-022",
+    "type": "mc",
+    "q": "친구가 선물을 주었을 때 고마운 마음을 나타내는 말은 무엇인가요?",
+    "choices": [
+      "Thank you",
+      "Sorry",
+      "Bye",
+      "Hello"
+    ],
+    "answer": 0,
+    "explain": "고마울 때는 Thank you(고마워)라고 말해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en1-023",
+    "type": "short",
+    "q": "대문자 B의 소문자를 쓰세요.",
+    "answer": [
+      "b"
+    ],
+    "explain": "대문자 B의 소문자는 b예요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en1-024",
+    "type": "short",
+    "q": "알파벳 순서에서 F 다음에 오는 대문자를 쓰세요.",
+    "answer": [
+      "G"
+    ],
+    "explain": "알파벳은 F, G, H 순서예요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en1-025",
+    "type": "short",
+    "q": "'banana'의 뜻을 우리말로 쓰세요.",
+    "answer": [
+      "바나나"
+    ],
+    "explain": "banana는 바나나예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-026",
+    "type": "short",
+    "q": "숫자 2를 뜻하는 영어 낱말을 쓰세요.",
+    "answer": [
+      "two"
+    ],
+    "explain": "2는 영어로 two라고 해요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-027",
+    "type": "short",
+    "q": "'고양이'를 뜻하는 영어 낱말을 쓰세요.",
+    "answer": [
+      "cat"
+    ],
+    "explain": "고양이는 영어로 cat이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-028",
+    "type": "short",
+    "q": "친구와 헤어질 때 하는 영어 인사를 쓰세요.",
+    "answer": [
+      "Bye",
+      "Goodbye",
+      "Bye bye"
+    ],
+    "explain": "헤어질 때는 Bye 또는 Goodbye라고 인사해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en1-029",
+    "type": "short",
+    "q": "소문자 q의 대문자를 쓰세요.",
+    "answer": [
+      "Q"
+    ],
+    "explain": "소문자 q의 대문자는 Q예요. p와 헷갈리지 않게 조심해요.",
+    "tag": "알파벳",
+    "level": "hard"
+  },
+  {
+    "id": "en1-030",
+    "type": "short",
+    "q": "'ten'이 뜻하는 수를 숫자로 쓰세요.",
+    "answer": [
+      "10",
+      "십"
+    ],
+    "explain": "ten은 10을 뜻해요.",
+    "tag": "단어",
+    "level": "hard"
+  }
+]

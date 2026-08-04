@@ -1,0 +1,425 @@
+[
+  {
+    "id": "en5-001",
+    "type": "mc",
+    "q": "아픈 사람을 치료해 주는 직업을 나타내는 영어 단어는 어느 것인가요?",
+    "choices": [
+      "singer",
+      "farmer",
+      "doctor",
+      "pilot"
+    ],
+    "answer": 2,
+    "explain": "doctor는 의사예요. singer는 가수, farmer는 농부, pilot은 비행기 조종사예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en5-002",
+    "type": "mc",
+    "q": "책을 빌려 읽을 수 있는 장소를 나타내는 영어 단어는 어느 것인가요?",
+    "choices": [
+      "library",
+      "hospital",
+      "bakery",
+      "airport"
+    ],
+    "answer": 0,
+    "explain": "library는 도서관이에요. hospital은 병원, bakery는 빵집, airport는 공항이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en5-003",
+    "type": "mc",
+    "q": "'화가 난' 기분을 나타내는 영어 단어는 어느 것인가요?",
+    "choices": [
+      "happy",
+      "angry",
+      "sleepy",
+      "hungry"
+    ],
+    "answer": 1,
+    "explain": "angry는 화가 난 기분이에요. happy는 행복한, sleepy는 졸린, hungry는 배고픈이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en5-004",
+    "type": "mc",
+    "q": "다음 문장을 읽고 Kim 선생님의 직업으로 알맞은 것을 고르세요.\nMs. Kim teaches students at school.",
+    "choices": [
+      "a nurse",
+      "a cook",
+      "a police officer",
+      "a teacher"
+    ],
+    "answer": 3,
+    "explain": "teach는 '가르치다'라는 뜻이에요. 학교에서 학생들을 가르치는 사람은 teacher(교사)예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en5-005",
+    "type": "mc",
+    "q": "다음 중 '취미'를 나타내는 말이 아닌 것은 어느 것인가요?",
+    "choices": [
+      "reading books",
+      "a firefighter",
+      "playing soccer",
+      "drawing pictures"
+    ],
+    "answer": 1,
+    "explain": "a firefighter는 소방관이라는 직업이에요. 나머지는 책 읽기, 축구하기, 그림 그리기라는 취미예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en5-006",
+    "type": "short",
+    "q": "'happy(행복한)'와 뜻이 반대인 영어 단어를 쓰세요. (뜻: 슬픈)",
+    "answer": [
+      "sad"
+    ],
+    "explain": "happy(행복한)의 반대말은 sad(슬픈)예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en5-007",
+    "type": "short",
+    "q": "'병원'을 뜻하는 영어 단어를 쓰세요.",
+    "answer": [
+      "hospital"
+    ],
+    "explain": "병원은 hospital이에요. 아프거나 다쳤을 때 가는 곳이지요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en5-008",
+    "type": "short",
+    "q": "'과학자'를 뜻하는 영어 단어를 쓰세요.",
+    "answer": [
+      "scientist"
+    ],
+    "explain": "과학자는 scientist예요. science(과학)에서 나온 말이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en5-009",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nShe (   ) reading a book now.",
+    "choices": [
+      "is",
+      "am",
+      "are",
+      "be"
+    ],
+    "answer": 0,
+    "explain": "지금 하고 있는 일은 'be동사 + ~ing'로 나타내요. She 뒤에는 is를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en5-010",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nThey are (   ) soccer now.",
+    "choices": [
+      "play",
+      "plays",
+      "playing",
+      "played"
+    ],
+    "answer": 2,
+    "explain": "지금 하고 있는 일은 'be동사 + ~ing'로 나타내요. are 뒤에는 playing을 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en5-011",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nHe is (   ) in the pool.",
+    "choices": [
+      "swimming",
+      "swiming",
+      "swims",
+      "swimed"
+    ],
+    "answer": 0,
+    "explain": "swim은 마지막 글자 m을 한 번 더 쓰고 ing를 붙여서 swimming이 돼요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en5-012",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nI (   ) ride a bike.",
+    "choices": [
+      "is",
+      "are",
+      "be",
+      "can"
+    ],
+    "answer": 3,
+    "explain": "can은 '~할 수 있다'라는 뜻이에요. I can ride a bike.는 '나는 자전거를 탈 수 있어.'예요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en5-013",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nMy sister can (   ) very fast.",
+    "choices": [
+      "runs",
+      "run",
+      "running",
+      "ran"
+    ],
+    "answer": 1,
+    "explain": "can 뒤에는 동사의 원래 모양(동사원형)을 써요. 그래서 run이 맞아요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en5-014",
+    "type": "mc",
+    "q": "'그는 피아노를 칠 수 있나요?'를 영어로 바르게 옮긴 것은 어느 것인가요?",
+    "choices": [
+      "Does he can play the piano?",
+      "He can plays the piano?",
+      "Can he play the piano?",
+      "Is he play the piano?"
+    ],
+    "answer": 2,
+    "explain": "can이 있는 문장을 물어볼 때는 can을 문장 맨 앞으로 보내요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en5-015",
+    "type": "mc",
+    "q": "다음 중 어법에 맞는 문장은 어느 것인가요?",
+    "choices": [
+      "We are watching a movie.",
+      "She is play the piano.",
+      "I am drink water.",
+      "They is running."
+    ],
+    "answer": 0,
+    "explain": "지금 하고 있는 일은 'be동사 + ~ing'로 써요. We are watching a movie.가 바른 문장이에요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en5-016",
+    "type": "short",
+    "q": "빈칸에 알맞은 be동사 한 단어를 쓰세요.\nI (   ) doing my homework now.",
+    "answer": [
+      "am"
+    ],
+    "explain": "I 뒤에 오는 be동사는 am이에요. I am doing ~은 '나는 지금 ~하는 중이야.'라는 뜻이에요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en5-017",
+    "type": "short",
+    "q": "괄호 안의 단어를 알맞은 모양으로 바꿔 쓰세요.\nThe dog is (run) in the park.",
+    "answer": [
+      "running"
+    ],
+    "explain": "run은 마지막 글자 n을 한 번 더 쓰고 ing를 붙여서 running으로 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en5-018",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nA: (   ) is my bag?\nB: It's under the chair.",
+    "choices": [
+      "When",
+      "Where",
+      "Who",
+      "How"
+    ],
+    "answer": 1,
+    "explain": "대답이 '의자 아래'라는 장소이므로 장소를 묻는 Where를 써요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en5-019",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nA: (   ) is your birthday?\nB: It's May 5th.",
+    "choices": [
+      "Where",
+      "Who",
+      "How",
+      "When"
+    ],
+    "answer": 3,
+    "explain": "대답이 5월 5일이라는 날짜이므로 때를 묻는 When을 써요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en5-020",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nA: (   ) do you have taekwondo lessons?\nB: On Saturdays.",
+    "choices": [
+      "When",
+      "Where",
+      "Who",
+      "What"
+    ],
+    "answer": 0,
+    "explain": "'토요일마다'라고 때를 대답했으므로 때를 묻는 When이 알맞아요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en5-021",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nMy (   ) color is green. (내가 가장 좋아하는 색은 초록색이야.)",
+    "choices": [
+      "famous",
+      "different",
+      "favorite",
+      "difficult"
+    ],
+    "answer": 2,
+    "explain": "favorite은 '가장 좋아하는'이라는 뜻이에요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en5-022",
+    "type": "short",
+    "q": "우리말과 뜻이 같도록 빈칸에 알맞은 영어 단어 한 개를 쓰세요.\n내가 가장 좋아하는 계절은 겨울이야.\nMy (   ) season is winter.",
+    "answer": [
+      "favorite",
+      "favourite"
+    ],
+    "explain": "'가장 좋아하는'은 favorite이에요. My favorite season is winter.라고 말해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en5-023",
+    "type": "mc",
+    "q": "지호는 스케이트를 탈 수 있습니다. 지호의 대답으로 알맞은 것을 고르세요.\nA: Can you skate?\n지호: (   )",
+    "choices": [
+      "Yes, I can.",
+      "Yes, I am.",
+      "No, I can.",
+      "Yes, she can."
+    ],
+    "answer": 0,
+    "explain": "Can you ~?로 물으면 할 수 있을 때 Yes, I can.으로 대답해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en5-024",
+    "type": "mc",
+    "q": "빈칸에 알맞은 대답을 고르세요.\nA: Who is that girl?\nB: (   )",
+    "choices": [
+      "It's on the desk.",
+      "It's Monday.",
+      "I like pizza.",
+      "She is my cousin."
+    ],
+    "answer": 3,
+    "explain": "Who는 누구인지 묻는 말이므로 사람을 알려 주는 대답이 어울려요. cousin은 사촌이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en5-025",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nMy name is Jinu. I like sports. I play basketball after school. I can jump high.\n\n진우가 방과 후에 하는 운동은 무엇인가요?",
+    "choices": [
+      "축구",
+      "농구",
+      "수영",
+      "야구"
+    ],
+    "answer": 1,
+    "explain": "I play basketball after school.에서 방과 후에 농구를 한다는 것을 알 수 있어요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en5-026",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nHi, I'm Suji. My favorite subject is science. I want to be a scientist. I read science books every weekend.\n\n수지가 장래에 되고 싶어 하는 것은 무엇인가요?",
+    "choices": [
+      "요리사",
+      "의사",
+      "과학자",
+      "선생님"
+    ],
+    "answer": 2,
+    "explain": "I want to be a scientist.는 '나는 과학자가 되고 싶어.'라는 뜻이에요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en5-027",
+    "type": "mc",
+    "q": "다음 글을 읽고, 글의 내용과 일치하지 않는 것을 고르세요.\n\nTom is my friend. He is from Canada. He can speak English and Korean. He likes cooking.",
+    "choices": [
+      "톰은 나의 친구이다.",
+      "톰은 한국어를 할 수 있다.",
+      "톰은 요리를 좋아한다.",
+      "톰은 프랑스에서 왔다."
+    ],
+    "answer": 3,
+    "explain": "He is from Canada.라고 했으므로 톰은 캐나다에서 왔어요. 프랑스는 글의 내용과 달라요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en5-028",
+    "type": "mc",
+    "q": "다음 글을 읽고, 글의 내용과 일치하는 것을 고르세요.\n\nIt is Sunday. Mina is at the park with her family. She is riding a bike. Her brother is flying a kite.",
+    "choices": [
+      "미나는 자전거를 타고 있다.",
+      "미나는 연을 날리고 있다.",
+      "오늘은 토요일이다.",
+      "미나는 지금 학교에 있다."
+    ],
+    "answer": 0,
+    "explain": "She is riding a bike.에서 미나가 자전거를 타고 있다는 것을 알 수 있어요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en5-029",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nI'm Ben. I'm eleven years old. My birthday is in July. I like swimming.\n\n벤이 좋아하는 것은 무엇인가요?",
+    "choices": [
+      "달리기",
+      "그림 그리기",
+      "수영",
+      "독서"
+    ],
+    "answer": 2,
+    "explain": "I like swimming.은 '나는 수영을 좋아해.'라는 뜻이에요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en5-030",
+    "type": "short",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nEmma has a dog. Its name is Coco. Coco is three years old. Coco can catch a ball.\n\n에마가 기르는 개의 이름을 영어로 쓰세요.",
+    "answer": [
+      "Coco"
+    ],
+    "explain": "Its name is Coco.에서 개의 이름이 Coco라는 것을 알 수 있어요.",
+    "tag": "독해",
+    "level": "normal"
+  }
+]

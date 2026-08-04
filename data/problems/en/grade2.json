@@ -1,0 +1,429 @@
+[
+  {
+    "id": "en2-001",
+    "type": "mc",
+    "q": "'apple(사과)'의 첫 글자는 무엇인가요?",
+    "choices": [
+      "a",
+      "e",
+      "i",
+      "o"
+    ],
+    "answer": 0,
+    "explain": "apple은 a로 시작해요.",
+    "tag": "파닉스",
+    "level": "easy"
+  },
+  {
+    "id": "en2-002",
+    "type": "mc",
+    "q": "'dog(개)'의 첫 글자는 무엇인가요?",
+    "choices": [
+      "b",
+      "d",
+      "p",
+      "q"
+    ],
+    "answer": 1,
+    "explain": "dog는 d로 시작해요. b, d, p, q는 모양이 비슷하니 잘 봐요.",
+    "tag": "파닉스",
+    "level": "easy"
+  },
+  {
+    "id": "en2-003",
+    "type": "mc",
+    "q": "다음 중 b 소리로 시작하는 낱말은 어느 것인가요?",
+    "choices": [
+      "apple",
+      "bear",
+      "cat",
+      "egg"
+    ],
+    "answer": 1,
+    "explain": "bear(곰)는 b 소리로 시작해요.",
+    "tag": "파닉스",
+    "level": "normal"
+  },
+  {
+    "id": "en2-004",
+    "type": "mc",
+    "q": "'cat(고양이)'과 첫소리가 같은 낱말은 어느 것인가요?",
+    "choices": [
+      "sun",
+      "map",
+      "cup",
+      "pig"
+    ],
+    "answer": 2,
+    "explain": "cat과 cup은 둘 다 'ㅋ' 소리로 시작해요.",
+    "tag": "파닉스",
+    "level": "hard"
+  },
+  {
+    "id": "en2-005",
+    "type": "short",
+    "q": "'sun(해)'의 첫 글자를 알파벳으로 쓰세요.",
+    "answer": [
+      "s"
+    ],
+    "explain": "sun은 s로 시작해요.",
+    "tag": "파닉스",
+    "level": "easy"
+  },
+  {
+    "id": "en2-006",
+    "type": "mc",
+    "q": "대문자 G의 소문자는 어느 것인가요?",
+    "choices": [
+      "q",
+      "p",
+      "j",
+      "g"
+    ],
+    "answer": 3,
+    "explain": "대문자 G의 소문자는 g예요.",
+    "tag": "파닉스",
+    "level": "normal"
+  },
+  {
+    "id": "en2-007",
+    "type": "mc",
+    "q": "다음 중 m 소리로 시작하는 낱말은 어느 것인가요?",
+    "choices": [
+      "nose",
+      "rice",
+      "sun",
+      "milk"
+    ],
+    "answer": 3,
+    "explain": "milk(우유)는 m 소리로 시작해요.",
+    "tag": "파닉스",
+    "level": "normal"
+  },
+  {
+    "id": "en2-008",
+    "type": "short",
+    "q": "'pen(펜)'의 맨 마지막 글자를 쓰세요.",
+    "answer": [
+      "n"
+    ],
+    "explain": "pen은 p-e-n이라고 써요. 마지막 글자는 n이에요.",
+    "tag": "파닉스",
+    "level": "hard"
+  },
+  {
+    "id": "en2-009",
+    "type": "mc",
+    "q": "'red'는 무슨 색인가요?",
+    "choices": [
+      "파란색",
+      "노란색",
+      "빨간색",
+      "초록색"
+    ],
+    "answer": 2,
+    "explain": "red는 빨간색이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-010",
+    "type": "mc",
+    "q": "'노란색'을 뜻하는 영어 낱말은 어느 것인가요?",
+    "choices": [
+      "green",
+      "yellow",
+      "black",
+      "white"
+    ],
+    "answer": 1,
+    "explain": "노란색은 yellow예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-011",
+    "type": "short",
+    "q": "'seven'은 얼마인가요? 숫자로 쓰세요.",
+    "answer": [
+      "7",
+      "일곱",
+      "칠"
+    ],
+    "explain": "seven은 숫자 7이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-012",
+    "type": "short",
+    "q": "'blue'는 무슨 색인지 우리말로 쓰세요.",
+    "answer": [
+      "파란색",
+      "파랑"
+    ],
+    "explain": "blue는 파란색이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-013",
+    "type": "mc",
+    "q": "'rabbit'은 어떤 동물인가요?",
+    "choices": [
+      "곰",
+      "오리",
+      "토끼",
+      "사자"
+    ],
+    "answer": 2,
+    "explain": "rabbit은 토끼예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-014",
+    "type": "mc",
+    "q": "'고양이'를 뜻하는 영어 낱말은 어느 것인가요?",
+    "choices": [
+      "dog",
+      "cow",
+      "hen",
+      "cat"
+    ],
+    "answer": 3,
+    "explain": "고양이는 cat이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-015",
+    "type": "mc",
+    "q": "'grape'는 어떤 과일인가요?",
+    "choices": [
+      "포도",
+      "딸기",
+      "복숭아",
+      "배"
+    ],
+    "answer": 0,
+    "explain": "grape는 포도예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-016",
+    "type": "mc",
+    "q": "'책'을 뜻하는 낱말의 바른 철자는 어느 것인가요?",
+    "choices": [
+      "buk",
+      "bok",
+      "book",
+      "boook"
+    ],
+    "answer": 2,
+    "explain": "책은 b-o-o-k, book이라고 써요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-017",
+    "type": "mc",
+    "q": "'바나나'의 바른 철자는 어느 것인가요?",
+    "choices": [
+      "banena",
+      "banana",
+      "bananna",
+      "benana"
+    ],
+    "answer": 1,
+    "explain": "바나나는 b-a-n-a-n-a, banana라고 써요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en2-018",
+    "type": "short",
+    "q": "'mother'는 가족 중에서 누구인지 우리말로 쓰세요.",
+    "answer": [
+      "어머니",
+      "엄마"
+    ],
+    "explain": "mother는 어머니(엄마)예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-019",
+    "type": "mc",
+    "q": "'할아버지'를 뜻하는 영어 낱말은 어느 것인가요?",
+    "choices": [
+      "grandmother",
+      "father",
+      "grandfather",
+      "uncle"
+    ],
+    "answer": 2,
+    "explain": "할아버지는 grandfather예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-020",
+    "type": "mc",
+    "q": "다음 중 동물이 아닌 것은 어느 것인가요?",
+    "choices": [
+      "melon",
+      "pig",
+      "duck",
+      "horse"
+    ],
+    "answer": 0,
+    "explain": "melon(멜론)은 과일이에요. 나머지는 모두 동물이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-021",
+    "type": "short",
+    "q": "'개'를 뜻하는 영어 낱말을 쓰세요.",
+    "answer": [
+      "dog"
+    ],
+    "explain": "개는 dog라고 써요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-022",
+    "type": "mc",
+    "q": "친구에게 선물을 받았을 때 할 말로 알맞은 것은 어느 것인가요?",
+    "choices": [
+      "I'm sorry.",
+      "Good night.",
+      "Goodbye.",
+      "Thank you."
+    ],
+    "answer": 3,
+    "explain": "고마울 때는 Thank you.라고 말해요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en2-023",
+    "type": "mc",
+    "q": "실수로 친구의 발을 밟았을 때 할 말로 알맞은 것은 어느 것인가요?",
+    "choices": [
+      "I'm sorry.",
+      "Good morning.",
+      "Thank you.",
+      "Hello."
+    ],
+    "answer": 0,
+    "explain": "미안할 때는 I'm sorry.라고 말해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en2-024",
+    "type": "mc",
+    "q": "아침에 만난 친구에게 하는 인사로 알맞은 것은 어느 것인가요?",
+    "choices": [
+      "Good night.",
+      "Good morning.",
+      "I'm sorry.",
+      "Thank you."
+    ],
+    "answer": 1,
+    "explain": "아침 인사는 Good morning.이에요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en2-025",
+    "type": "mc",
+    "q": "잠자기 전에 가족에게 하는 인사로 알맞은 것은 어느 것인가요?",
+    "choices": [
+      "Good morning.",
+      "Hello.",
+      "Thank you.",
+      "Good night."
+    ],
+    "answer": 3,
+    "explain": "잠자기 전에는 Good night.이라고 인사해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en2-026",
+    "type": "mc",
+    "q": "처음 만난 친구에게 내 이름을 말할 때 쓰는 표현은 어느 것인가요?",
+    "choices": [
+      "My name is Jiho.",
+      "Good night.",
+      "I'm sorry.",
+      "See you."
+    ],
+    "answer": 0,
+    "explain": "이름을 말할 때는 My name is 뒤에 이름을 붙여 말해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en2-027",
+    "type": "mc",
+    "q": "친구가 \"How are you?\" 하고 안부를 물었어요. 대답으로 알맞은 것은 어느 것인가요?",
+    "choices": [
+      "Good night.",
+      "I'm sorry.",
+      "I'm fine, thank you.",
+      "It's a cat."
+    ],
+    "answer": 2,
+    "explain": "잘 지내는지 물으면 I'm fine, thank you.라고 대답할 수 있어요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en2-028",
+    "type": "mc",
+    "q": "친구와 헤어질 때 하는 인사로 알맞은 것은 어느 것인가요?",
+    "choices": [
+      "Good morning.",
+      "Goodbye.",
+      "Thank you.",
+      "I'm sorry."
+    ],
+    "answer": 1,
+    "explain": "헤어질 때는 Goodbye. 또는 Bye.라고 인사해요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en2-029",
+    "type": "mc",
+    "q": "친구가 \"Thank you.\" 하고 고마움을 전했어요. 대답으로 알맞은 것은 어느 것인가요?",
+    "choices": [
+      "I'm sorry.",
+      "Good night.",
+      "How are you?",
+      "You're welcome."
+    ],
+    "answer": 3,
+    "explain": "Thank you.에는 You're welcome.(천만에.)이라고 대답해요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en2-030",
+    "type": "short",
+    "q": "고마운 마음을 전하는 영어 인사를 쓰세요.",
+    "answer": [
+      "Thank you",
+      "Thank you."
+    ],
+    "explain": "고마울 때는 Thank you.라고 말해요.",
+    "tag": "표현",
+    "level": "hard"
+  }
+]
