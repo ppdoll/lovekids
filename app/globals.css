@@ -747,6 +747,25 @@ select.input {
 
 /* ---------- 오늘 탭: 리셋 / 문제 추가 ---------- */
 
+.kid-link-row {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kid-link-url {
+  font-size: 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: #f6f1f8;
+  border-radius: 8px;
+  padding: 8px 10px;
+  word-break: break-all;
+  user-select: all;
+}
+
 .add-count-bar {
   display: flex;
   align-items: center;

@@ -29,6 +29,7 @@ interface ParentKid extends Kid {
   wrong: WrongItem[];
   today: Record<Subject, SubjectToday>;
   streak: number;
+  accessToken?: string;
 }
 
 interface ParentData {
@@ -40,6 +41,8 @@ interface ParentData {
   storageEnv?: string[];
   storageError?: string | null;
   onVercel?: boolean;
+  googleEnabled?: boolean;
+  account?: { email?: string; name?: string } | null;
 }
 
 type Tab = "today" | "cal" | "wrong" | "settings";
@@ -85,6 +88,35 @@ export default function ParentPage() {
   const [actionMsg, setActionMsg] = useState<Record<string, string>>({});
   const [actionBusy, setActionBusy] = useState<string | null>(null);
   const [addCount, setAddCount] = useState(5);
+  const [linkMsg, setLinkMsg] = useState<Record<string, string>>({});
+
+  /** 아이 전용 접속 링크 발급 / 폐기 */
+  async function kidLink(kidId: string, action: "issue" | "revoke") {
+    if (action === "revoke" && !confirm("이 아이의 접속 링크를 없앨까요?\n아이가 지금 쓰던 링크로는 못 들어옵니다.")) {
+      return;
+    }
+    setLinkMsg((m) => ({ ...m, [kidId]: "" }));
+    const res = await fetch("/api/parent/kid-link", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ pin, kidId, action }),
+    }).catch(() => null);
+    if (res?.ok) {
+      setLinkMsg((m) => ({ ...m, [kidId]: action === "issue" ? "새 링크를 만들었어요 ✅" : "링크를 없앴어요" }));
+      await load(pin);
+    } else {
+      setLinkMsg((m) => ({ ...m, [kidId]: "실패했어요. 다시 시도해 주세요" }));
+    }
+  }
+
+  async function copyLink(url: string, kidId: string) {
+    try {
+      await navigator.clipboard.writeText(url);
+      setLinkMsg((m) => ({ ...m, [kidId]: "링크를 복사했어요 ✅" }));
+    } catch {
+      setLinkMsg((m) => ({ ...m, [kidId]: "복사가 안 됐어요. 링크를 길게 눌러 복사해 주세요" }));
+    }
+  }
 
   /** 오늘 숙제 리셋 / 문제 추가 */
   async function setAction(kidId: string, subject: Subject, action: "reset" | "add", hasProgress = false) {
@@ -251,6 +283,7 @@ export default function ParentPage() {
 
   const kid = data.kids.find((k) => k.id === selKid) ?? data.kids[0];
   const todayStr = data.date;
+  const origin = typeof window === "undefined" ? "" : window.location.origin;
 
   /* ---------- 달력 셀 계산 ---------- */
   function calCells() {
@@ -294,8 +327,20 @@ export default function ParentPage() {
           </Link>
           <span style={{ fontSize: 19, fontWeight: 800 }}>부모님 페이지</span>
         </div>
-        <span className="badge">{todayStr}</span>
+        <div className="row" style={{ gap: 6 }}>
+          <span className="badge">{todayStr}</span>
+          {data.googleEnabled && (
+            <a href="/api/auth/logout" className="badge" title={data.account?.email ?? ""}>
+              로그아웃
+            </a>
+          )}
+        </div>
       </div>
+      {data.googleEnabled && data.account?.email && (
+        <p className="muted" style={{ fontSize: 12, marginTop: -8, marginBottom: 12 }}>
+          {data.account.email} 계정으로 로그인됨
+        </p>
+      )}
 
       {data.storage === "memory" && (
         <div className="warn" style={{ marginBottom: 14 }}>
@@ -900,6 +945,50 @@ export default function ParentPage() {
               </p>
             )}
           </div>
+
+          {/* 아이 전용 접속 링크 — 아이는 로그인 없이 이 링크로 들어온다 */}
+          {data.googleEnabled && data.kids.length > 0 && (
+            <div className="card stack">
+              <div className="section-title">아이 전용 접속 링크</div>
+              <p className="muted" style={{ fontSize: 12.5, wordBreak: "keep-all" }}>
+                아이는 로그인하지 않습니다. 아래 링크를 아이 기기에서 한 번 열고 <b>홈 화면에 추가</b>해
+                주세요. 이 링크로 들어온 아이는 자기 숙제만 풀 수 있고, 부모님 페이지와 형제의 기록은
+                볼 수 없습니다.
+              </p>
+              {data.kids.map((k) => {
+                const url = k.accessToken ? `${origin}/k/${k.accessToken}` : null;
+                return (
+                  <div key={k.id} className="kid-link-row">
+                    <div className="row" style={{ gap: 8 }}>
+                      <span style={{ fontSize: 20 }}>{k.emoji}</span>
+                      <b style={{ fontSize: 14.5 }}>{k.name}</b>
+                    </div>
+                    {url ? (
+                      <>
+                        <div className="kid-link-url">{url}</div>
+                        <div className="row" style={{ gap: 6, flexWrap: "wrap" }}>
+                          <button className="mini-btn" onClick={() => copyLink(url, k.id)}>
+                            링크 복사
+                          </button>
+                          <button className="mini-btn" onClick={() => kidLink(k.id, "issue")}>
+                            새 링크로 바꾸기
+                          </button>
+                          <button className="mini-btn danger" onClick={() => kidLink(k.id, "revoke")}>
+                            링크 없애기
+                          </button>
+                        </div>
+                      </>
+                    ) : (
+                      <button className="mini-btn" onClick={() => kidLink(k.id, "issue")}>
+                        링크 만들기
+                      </button>
+                    )}
+                    {linkMsg[k.id] && <span className="mini-msg">{linkMsg[k.id]}</span>}
+                  </div>
+                );
+              })}
+            </div>
+          )}
 
           <div className="card">
             <div className="section-title" style={{ marginBottom: 8 }}>

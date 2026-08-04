@@ -12,9 +12,11 @@
     "check:code": "node scripts/test-familycode.mjs",
     "check:storage": "node scripts/test-storage.mjs",
     "check:calc": "node scripts/test-calc.mjs",
-    "check:parent": "node scripts/test-parent-actions.mjs"
+    "check:parent": "node scripts/test-parent-actions.mjs",
+    "check:isolation": "node scripts/test-isolation.mjs"
   },
   "dependencies": {
+    "jose": "^6.2.8",
     "next": "^16.3.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"

@@ -1,7 +1,7 @@
 import { bankProblems } from "./bank";
 import { todayKST, daysAgoKST } from "./date";
 import { genCustomProblems, genMathProblems } from "./mathgen";
-import { kvDel, kvGet, kvSet } from "./store";
+import { Store } from "./scope";
 import {
   AnswerRecord,
   DailySet,
@@ -17,14 +17,14 @@ import {
   WrongItem,
 } from "./types";
 
-export async function getSettings(): Promise<Settings> {
-  const s = await kvGet<Settings>("settings");
+export async function getSettings(store: Store): Promise<Settings> {
+  const s = await store.get<Settings>("settings");
   if (!s) return { ...DEFAULT_SETTINGS, kids: [] };
   return s;
 }
 
-export async function saveSettings(s: Settings): Promise<void> {
-  await kvSet("settings", s);
+export async function saveSettings(store: Store, s: Settings): Promise<void> {
+  await store.set("settings", s);
 }
 
 const setKey = (kidId: string, date: string, subject: Subject) => `set:${kidId}:${date}:${subject}`;
@@ -38,12 +38,12 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 /** 문제은행에서 최근에 안 나온 문제 위주로 n개 뽑기 (다 소진되면 처음부터 다시) */
-async function pickFromBank(kidId: string, subject: Subject, grade: number, n: number): Promise<Problem[]> {
+async function pickFromBank(store: Store, kidId: string, subject: Subject, grade: number, n: number): Promise<Problem[]> {
   if (n <= 0) return [];
   const all = bankProblems(subject, grade);
   if (all.length === 0) return [];
   const usedKey = `used:${kidId}:${subject}:${grade}`;
-  let used = (await kvGet<string[]>(usedKey)) ?? [];
+  let used = (await store.get<string[]>(usedKey)) ?? [];
   let avail = all.filter((p) => !used.includes(p.id));
   if (avail.length < n) {
     used = [];
@@ -52,7 +52,7 @@ async function pickFromBank(kidId: string, subject: Subject, grade: number, n: n
   const chosen = shuffle([...avail]).slice(0, Math.min(n, avail.length));
   const keep = Math.max(0, all.length - n);
   const newUsed = [...used, ...chosen.map((p) => p.id)].slice(-keep);
-  await kvSet(usedKey, newUsed);
+  await store.set(usedKey, newUsed);
   return chosen;
 }
 
@@ -64,11 +64,11 @@ export type SetResult =
  * 아이·과목에 맞는 문제 count개를 만든다.
  * 새 숙제를 낼 때와 부모가 문제를 더 낼 때 같은 규칙을 쓰도록 한 곳에 모아둔다.
  */
-async function buildProblems(kid: Kid, subject: Subject, count: number): Promise<Problem[]> {
+async function buildProblems(store: Store, kid: Kid, subject: Subject, count: number): Promise<Problem[]> {
   if (count <= 0) return [];
 
   if (subject !== "math") {
-    return pickFromBank(kid.id, subject, kid.grade, count);
+    return pickFromBank(store, kid.id, subject, kid.grade, count);
   }
 
   const calc = kid.calc ?? DEFAULT_CALC;
@@ -77,7 +77,7 @@ async function buildProblems(kid: Kid, subject: Subject, count: number): Promise
   if (custom.length > 0) {
     // 부모가 직접 고른 연산으로 출제. 문장제를 섞기로 했다면 일부를 문장제로 채운다.
     const wordTarget = calc.includeWord ? Math.round(count * 0.3) : 0;
-    const word = await pickFromBank(kid.id, "math", kid.grade, wordTarget);
+    const word = await pickFromBank(store, kid.id, "math", kid.grade, wordTarget);
     const calcPart = custom.slice(0, count - word.length);
     return shuffle([...calcPart, ...word]);
   }
@@ -85,25 +85,25 @@ async function buildProblems(kid: Kid, subject: Subject, count: number): Promise
   // 학년 자동 = 연산(자동 생성) 60% + 문장제(문제은행) 40%
   // custom인데 켜진 연산이 하나도 없을 때도 여기로 와서 빈 숙제가 나오지 않게 한다.
   const wordTarget = Math.round(count * 0.4);
-  const word = await pickFromBank(kid.id, "math", kid.grade, wordTarget);
+  const word = await pickFromBank(store, kid.id, "math", kid.grade, wordTarget);
   const gen = genMathProblems(kid.grade, count - word.length);
   return shuffle([...gen, ...word]);
 }
 
 /** 오늘의 문제 세트를 가져오거나, 없으면 새로 출제해서 저장 */
-export async function getOrCreateSet(kidId: string, subject: Subject): Promise<SetResult> {
+export async function getOrCreateSet(store: Store, kidId: string, subject: Subject): Promise<SetResult> {
   const date = todayKST();
   const key = setKey(kidId, date, subject);
-  const existing = await kvGet<DailySet>(key);
+  const existing = await store.get<DailySet>(key);
   if (existing) return { set: existing };
 
-  const settings = await getSettings();
+  const settings = await getSettings(store);
   const kid = settings.kids.find((k) => k.id === kidId);
   if (!kid) return { set: null, reason: "no-kid" };
   const count = kid.perDay[subject] ?? 0;
   if (count <= 0) return { set: null, reason: "off" };
 
-  const problems = await buildProblems(kid, subject, count);
+  const problems = await buildProblems(store, kid, subject, count);
   if (problems.length === 0) return { set: null, reason: "empty-bank" };
 
   const set: DailySet = {
@@ -116,22 +116,22 @@ export async function getOrCreateSet(kidId: string, subject: Subject): Promise<S
     bestCombo: 0,
     wrongPushedIdx: [],
   };
-  await kvSet(key, set);
+  await store.set(key, set);
   return { set };
 }
 
 /** 오늘 이 과목 숙제를 없애서 다시 처음부터 풀게 한다 (오답 노트는 남긴다) */
-export async function resetToday(kidId: string, subject: Subject): Promise<void> {
+export async function resetToday(store: Store, kidId: string, subject: Subject): Promise<void> {
   const date = todayKST();
-  await kvDel(setKey(kidId, date, subject));
+  await store.del(setKey(kidId, date, subject));
 
   // 완료 기록도 지워야 달력·연속 달성이 실제 상태와 맞는다
   const hKey = `history:${kidId}`;
-  const h = (await kvGet<History>(hKey)) ?? {};
+  const h = (await store.get<History>(hKey)) ?? {};
   if (h[date]?.[subject]) {
     delete h[date]![subject];
     if (Object.keys(h[date]!).length === 0) delete h[date];
-    await kvSet(hKey, h);
+    await store.set(hKey, h);
   }
 }
 
@@ -140,24 +140,24 @@ export type AddResult =
   | { error: "no-kid" | "off" | "no-more" };
 
 /** 오늘 이 과목에 문제를 n개 더 낸다 */
-export async function addToToday(kidId: string, subject: Subject, n: number): Promise<AddResult> {
-  const settings = await getSettings();
+export async function addToToday(store: Store, kidId: string, subject: Subject, n: number): Promise<AddResult> {
+  const settings = await getSettings(store);
   const kid = settings.kids.find((k) => k.id === kidId);
   if (!kid) return { error: "no-kid" };
 
   const date = todayKST();
   const key = setKey(kidId, date, subject);
-  let set = await kvGet<DailySet>(key);
+  let set = await store.get<DailySet>(key);
 
   // 아직 시작 안 한 과목이면 오늘 숙제를 먼저 만든다
   if (!set) {
-    const created = await getOrCreateSet(kidId, subject);
+    const created = await getOrCreateSet(store, kidId, subject);
     if (!created.set) return { error: created.reason === "off" ? "off" : "no-kid" };
     set = created.set;
   }
 
   const existing = new Set(set.problems.map((p) => p.q));
-  const fresh = (await buildProblems(kid, subject, n * 3)).filter((p) => {
+  const fresh = (await buildProblems(store, kid, subject, n * 3)).filter((p) => {
     if (existing.has(p.q)) return false;
     existing.add(p.q);
     return true;
@@ -172,14 +172,14 @@ export async function addToToday(kidId: string, subject: Subject, n: number): Pr
   if (set.completedAt) {
     set.completedAt = null;
     const hKey = `history:${kidId}`;
-    const h = (await kvGet<History>(hKey)) ?? {};
+    const h = (await store.get<History>(hKey)) ?? {};
     if (h[date]?.[subject]) {
       delete h[date]![subject];
       if (Object.keys(h[date]!).length === 0) delete h[date];
-      await kvSet(hKey, h);
+      await store.set(hKey, h);
     }
   }
-  await kvSet(key, set);
+  await store.set(key, set);
   return { added: add.length, total: set.problems.length };
 }
 
@@ -202,8 +202,8 @@ export function calcCombo(answers: (AnswerRecord | null)[]): { current: number; 
   return { current, best };
 }
 
-export async function loadSet(kidId: string, subject: Subject, date: string): Promise<DailySet | null> {
-  return kvGet<DailySet>(setKey(kidId, date, subject));
+export async function loadSet(store: Store, kidId: string, subject: Subject, date: string): Promise<DailySet | null> {
+  return store.get<DailySet>(setKey(kidId, date, subject));
 }
 
 /** 클라이언트에 보낼 때 정답·해설 제거 */
@@ -287,6 +287,7 @@ export interface SubmitOutcome {
 }
 
 export async function submitAnswer(
+  store: Store,
   kidId: string,
   subject: Subject,
   index: number,
@@ -294,7 +295,7 @@ export async function submitAnswer(
 ): Promise<SubmitOutcome | { error: string }> {
   const date = todayKST();
   const key = setKey(kidId, date, subject);
-  const set = await kvGet<DailySet>(key);
+  const set = await store.get<DailySet>(key);
   if (!set) return { error: "no-set" };
   if (index < 0 || index >= set.problems.length) return { error: "bad-index" };
 
@@ -326,9 +327,9 @@ export async function submitAnswer(
   if (justDone) {
     // 완료 기록 저장
     const hKey = `history:${kidId}`;
-    const h = (await kvGet<History>(hKey)) ?? {};
+    const h = (await store.get<History>(hKey)) ?? {};
     h[date] = { ...(h[date] ?? {}), [subject]: { done: true, correct: correctCount, total } };
-    await kvSet(hKey, h);
+    await store.set(hKey, h);
 
     // 오답 노트 적재 — 이미 올린 문제는 건너뛴다
     // (부모가 문제를 더 내면 다시 완료 처리되는데, 그때 앞 문제들이 또 쌓이면 안 된다)
@@ -350,12 +351,12 @@ export async function submitAnswer(
     set.wrongPushedIdx = [...pushed];
     if (wrongs.length > 0) {
       const wKey = `wrong:${kidId}`;
-      const w = (await kvGet<WrongItem[]>(wKey)) ?? [];
-      await kvSet(wKey, [...w, ...wrongs].slice(-120));
+      const w = (await store.get<WrongItem[]>(wKey)) ?? [];
+      await store.set(wKey, [...w, ...wrongs].slice(-120));
     }
   }
 
-  await kvSet(key, set);
+  await store.set(key, set);
 
   return {
     record: set.answers[index]!,
@@ -390,7 +391,7 @@ export interface SubjectToday {
   done: boolean;
 }
 
-export async function kidToday(kid: Kid): Promise<Record<Subject, SubjectToday>> {
+export async function kidToday(store: Store, kid: Kid): Promise<Record<Subject, SubjectToday>> {
   const date = todayKST();
   const out = {} as Record<Subject, SubjectToday>;
   for (const s of SUBJECTS) {
@@ -399,7 +400,7 @@ export async function kidToday(kid: Kid): Promise<Record<Subject, SubjectToday>>
       out[s] = { assigned: 0, answered: 0, total: 0, correct: 0, done: false };
       continue;
     }
-    const set = await kvGet<DailySet>(setKey(kid.id, date, s));
+    const set = await store.get<DailySet>(setKey(kid.id, date, s));
     if (!set) {
       out[s] = { assigned, answered: 0, total: assigned, correct: 0, done: false };
     } else {

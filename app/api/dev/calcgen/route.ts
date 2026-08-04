@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { authParent } from "@/lib/api-auth";
 import { genCustomProblems } from "@/lib/mathgen";
 import { CalcConfig } from "@/lib/types";
 
@@ -9,6 +10,8 @@ export async function POST(req: NextRequest) {
   if (process.env.NODE_ENV === "production") {
     return NextResponse.json({ error: "not-found" }, { status: 404 });
   }
+  const a = await authParent(req);
+  if (a instanceof NextResponse) return a;
   let body: { calc?: CalcConfig; n?: number };
   try {
     body = await req.json();

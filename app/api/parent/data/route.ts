@@ -1,19 +1,21 @@
 import { NextRequest, NextResponse } from "next/server";
+import { authParent } from "@/lib/api-auth";
 import { bankCounts } from "@/lib/bank";
 import { calcStreak, getSettings, kidToday } from "@/lib/daily";
-import { familyCodeBlocked } from "@/lib/guard";
-import { kvGet, storageEnvNames, storageMode, storageVia, storageWriteError } from "@/lib/store";
+import { storageEnvNames, storageMode, storageVia, storageWriteError } from "@/lib/store";
 import { todayKST } from "@/lib/date";
+import { googleEnabled } from "@/lib/session";
 import { History, WrongItem } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
 
 export async function GET(req: NextRequest) {
-  const blocked = familyCodeBlocked(req);
-  if (blocked) return blocked;
+  const a = await authParent(req);
+  if (a instanceof NextResponse) return a;
+  const { session, store } = a;
 
   const pin = req.headers.get("x-pin") ?? "";
-  const settings = await getSettings();
+  const settings = await getSettings(store);
   if (pin !== settings.parentPin) {
     return NextResponse.json({ error: "wrong-pin" }, { status: 403 });
   }
@@ -21,9 +23,9 @@ export async function GET(req: NextRequest) {
   const kids = [];
   for (const kid of settings.kids) {
     const [history, wrong, today] = await Promise.all([
-      kvGet<History>(`history:${kid.id}`),
-      kvGet<WrongItem[]>(`wrong:${kid.id}`),
-      kidToday(kid),
+      store.get<History>(`history:${kid.id}`),
+      store.get<WrongItem[]>(`wrong:${kid.id}`),
+      kidToday(store, kid),
     ]);
     kids.push({
       ...kid,
@@ -44,5 +46,7 @@ export async function GET(req: NextRequest) {
     storageEnv: storageEnvNames(),
     storageError: storageWriteError(),
     onVercel: !!process.env.VERCEL,
+    googleEnabled: googleEnabled(),
+    account: session.kind === "parent" ? { email: session.email, name: session.name } : null,
   });
 }

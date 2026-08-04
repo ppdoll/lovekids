@@ -1,13 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
+import { auth, canTouchKid } from "@/lib/api-auth";
 import { submitAnswer } from "@/lib/daily";
-import { familyCodeBlocked } from "@/lib/guard";
 import { Subject, SUBJECTS } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
 
 export async function POST(req: NextRequest) {
-  const blocked = familyCodeBlocked(req);
-  if (blocked) return blocked;
+  const a = await auth(req);
+  if (a instanceof NextResponse) return a;
+  const { session, store } = a;
 
   let body: { kidId?: string; subject?: string; index?: number; given?: string };
   try {
@@ -24,7 +25,11 @@ export async function POST(req: NextRequest) {
   ) {
     return NextResponse.json({ error: "bad-request" }, { status: 400 });
   }
-  const result = await submitAnswer(kidId, subject as Subject, index, given);
+  if (!canTouchKid(session, kidId)) {
+    return NextResponse.json({ error: "forbidden" }, { status: 403 });
+  }
+
+  const result = await submitAnswer(store, kidId, subject as Subject, index, given);
   if ("error" in result) {
     return NextResponse.json(result, { status: 400 });
   }

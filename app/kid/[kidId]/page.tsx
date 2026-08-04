@@ -23,10 +23,13 @@ interface KidState {
   streak: number;
 }
 
+type Role = "parent" | "kid";
+
 export default function KidPage() {
   const params = useParams<{ kidId: string }>();
   const [kid, setKid] = useState<KidState | null>(null);
   const [loaded, setLoaded] = useState(false);
+  const [role, setRole] = useState<Role>("parent");
 
   useEffect(() => {
     fetch("/api/state")
@@ -38,7 +41,10 @@ export default function KidPage() {
         return r.json();
       })
       .then((j) => {
-        if (j) setKid(j.kids.find((k: KidState) => k.id === params.kidId) ?? null);
+        if (j) {
+          setKid(j.kids.find((k: KidState) => k.id === params.kidId) ?? null);
+          if (j.role) setRole(j.role);
+        }
         setLoaded(true);
       })
       .catch(() => setLoaded(true));
@@ -72,9 +78,12 @@ export default function KidPage() {
   return (
     <main className="container">
       <div className="row" style={{ padding: "8px 0 16px" }}>
-        <Link href="/" className="close-btn">
-          ←
-        </Link>
+        {/* 아이 링크로 들어온 경우엔 홈에도 자기밖에 없으므로 뒤로 버튼을 숨긴다 */}
+        {role === "parent" && (
+          <Link href="/" className="close-btn">
+            ←
+          </Link>
+        )}
         <div className="kid-emoji" style={{ width: 52, height: 52, fontSize: 30 }}>
           {kid.emoji}
         </div>
@@ -131,6 +140,15 @@ export default function KidPage() {
           <div className="card center muted">아직 설정된 과목이 없어요. 부모님께 말씀드려 주세요!</div>
         )}
       </div>
+
+      {/* 부모가 자기 기기에서 아이 링크를 열었을 때 돌아갈 길 (아이 세션에서는 부모 페이지가 막혀 있다) */}
+      {role === "kid" && (
+        <p className="center" style={{ marginTop: 28 }}>
+          <a href="/api/auth/logout" className="badge">
+            👨‍👩‍👧 부모님이신가요?
+          </a>
+        </p>
+      )}
     </main>
   );
 }

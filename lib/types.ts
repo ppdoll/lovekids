@@ -62,6 +62,8 @@ export interface Kid {
   emoji: string;
   perDay: Record<Subject, number>; // 과목별 하루 문제 수 (0이면 과목 끔)
   calc?: CalcConfig; // 없으면 auto (예전에 등록한 아이도 그대로 동작)
+  /** 아이 전용 접속 링크 토큰 (/k/{token}). 아이는 로그인 없이 이 링크로 들어온다 */
+  accessToken?: string;
 }
 
 export interface Settings {

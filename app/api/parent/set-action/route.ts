@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
+import { authParent } from "@/lib/api-auth";
 import { addToToday, getSettings, resetToday } from "@/lib/daily";
-import { familyCodeBlocked } from "@/lib/guard";
 import { Subject, SUBJECTS } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
@@ -14,8 +14,9 @@ interface Body {
 }
 
 export async function POST(req: NextRequest) {
-  const blocked = familyCodeBlocked(req);
-  if (blocked) return blocked;
+  const a = await authParent(req);
+  if (a instanceof NextResponse) return a;
+  const { store } = a;
 
   let body: Body;
   try {
@@ -24,7 +25,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "bad-json" }, { status: 400 });
   }
 
-  const settings = await getSettings();
+  const settings = await getSettings(store);
   if ((body.pin ?? "") !== settings.parentPin) {
     return NextResponse.json({ error: "wrong-pin" }, { status: 403 });
   }
@@ -38,12 +39,12 @@ export async function POST(req: NextRequest) {
   }
 
   if (action === "reset") {
-    await resetToday(kidId, subject as Subject);
+    await resetToday(store, kidId, subject as Subject);
     return NextResponse.json({ ok: true });
   }
 
   const count = Math.min(20, Math.max(1, Math.round(Number(body.count ?? 5))));
-  const result = await addToToday(kidId, subject as Subject, count);
+  const result = await addToToday(store, kidId, subject as Subject, count);
   if ("error" in result) {
     return NextResponse.json(result, { status: result.error === "no-more" ? 409 : 400 });
   }

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
+import { authParent } from "@/lib/api-auth";
 import { getSettings, saveSettings } from "@/lib/daily";
-import { familyCodeBlocked } from "@/lib/guard";
 import { CalcConfig, DEFAULT_CALC, Kid, MUL_TABLES, Subject, SUBJECTS } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
@@ -67,22 +67,25 @@ function sanitizeKids(input: Partial<Kid>[], existing: Kid[]): Kid[] | null {
         ? raw.id
         : `k${Date.now().toString(36)}${Math.floor(Math.random() * 1000)}`;
     // 보낸 쪽이 calc를 빼먹었으면 이미 저장돼 있던 설정을 지키다 (실수로 초기화되는 것을 막는다)
-    const prev = existing.find((k) => k.id === id)?.calc;
+    const prevKid = existing.find((k) => k.id === id);
     out.push({
       id,
       name,
       grade,
       emoji,
       perDay,
-      calc: raw.calc === undefined && prev ? prev : sanitizeCalc(raw.calc),
+      calc: raw.calc === undefined && prevKid?.calc ? prevKid.calc : sanitizeCalc(raw.calc),
+      // 접속 토큰은 화면에서 오는 값을 믿지 않고, 서버에 저장된 것만 유지한다
+      ...(prevKid?.accessToken ? { accessToken: prevKid.accessToken } : {}),
     });
   }
   return out;
 }
 
 export async function POST(req: NextRequest) {
-  const blocked = familyCodeBlocked(req);
-  if (blocked) return blocked;
+  const a = await authParent(req);
+  if (a instanceof NextResponse) return a;
+  const { store } = a;
 
   let body: Body;
   try {
@@ -91,7 +94,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "bad-json" }, { status: 400 });
   }
 
-  const settings = await getSettings();
+  const settings = await getSettings(store);
   if ((body.pin ?? "") !== settings.parentPin) {
     return NextResponse.json({ error: "wrong-pin" }, { status: 403 });
   }
@@ -109,6 +112,6 @@ export async function POST(req: NextRequest) {
     settings.parentPin = body.newPin;
   }
 
-  await saveSettings(settings);
+  await saveSettings(store, settings);
   return NextResponse.json({ ok: true, kids: settings.kids });
 }

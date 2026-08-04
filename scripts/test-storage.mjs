@@ -97,7 +97,13 @@ async function run(envExtra, label, expectKv) {
         body: JSON.stringify({ pin: "0000", kids: [{ name: "저장확인", grade: 3, emoji: "🐻", perDay: { ko: 1, en: 0, math: 1 } }] }),
       });
       check(`  └ 저장 요청 성공`, saved.ok, `HTTP ${saved.status}`);
-      check(`  └ Redis에 실제로 기록됨`, store.has("settings"), `키 ${[...store.keys()].join(",") || "없음"}`);
+      // 실제 저장 키에 가정 접두사(hh:...)가 붙어야 한다 — 격리가 저장소까지 이어지는지 확인
+      const keys = [...store.keys()];
+      check(
+        `  └ Redis에 가정 접두사로 기록됨`,
+        keys.some((k) => /^hh:[A-Za-z0-9_-]+:settings$/.test(k)),
+        `키 ${keys.join(",") || "없음"}`,
+      );
       check(`  └ 토큰이 Authorization 헤더로 전달됨`, (sawAuth ?? "").startsWith("Bearer "), sawAuth ? "있음" : "없음");
       const back = await (await fetch(`${base}/api/state`)).json();
       check(`  └ 다시 읽어도 아이가 남아 있음`, back.kids?.[0]?.name === "저장확인", JSON.stringify(back.kids?.map((k) => k.name)));
