@@ -33,6 +33,10 @@ interface ParentData {
   kids: ParentKid[];
   bank: Record<Subject, Record<number, number>>;
   storage: "kv" | "file" | "memory";
+  storageVia?: string | null;
+  storageEnv?: string[];
+  storageError?: string | null;
+  onVercel?: boolean;
 }
 
 type Tab = "today" | "cal" | "wrong" | "settings";
@@ -227,9 +231,30 @@ export default function ParentPage() {
         <div className="warn" style={{ marginBottom: 14 }}>
           ⚠️ <b>저장소가 아직 연결되지 않았습니다.</b> 지금은 아이 등록·학습 기록이 잠시 뒤 사라집니다.
           <br />
-          Vercel 프로젝트 → <b>Storage</b> 탭 → <b>Upstash for Redis</b>(무료)를 만들어 이 프로젝트에
-          연결하고, <b>Deployments</b> 탭에서 <b>Redeploy</b>를 한 번 해주세요. 그 뒤부터 기록이 계속
-          남습니다.
+          {(data.storageEnv?.length ?? 0) === 0 ? (
+            <>
+              저장소 환경변수가 <b>하나도 안 보입니다.</b> Upstash를 이미 연결하셨다면 적용이 안 된
+              상태예요 — Vercel <b>Deployments</b> 탭 → 맨 위 배포의 <b>⋯</b> → <b>Redeploy</b>를 눌러
+              주세요. 환경변수는 재배포해야 반영됩니다.
+            </>
+          ) : (
+            <>
+              환경변수는 있는데 짝이 맞는 접속 정보를 못 찾았습니다. 아래 이름을 알려주시면 맞춰
+              드릴게요.
+              <br />
+              <code style={{ fontSize: 12, wordBreak: "break-all" }}>
+                {data.storageEnv!.join(", ")}
+              </code>
+            </>
+          )}
+        </div>
+      )}
+
+      {data.storage === "kv" && data.storageError && (
+        <div className="warn" style={{ marginBottom: 14 }}>
+          ⚠️ <b>저장소에 쓰지 못했습니다.</b> {data.storageError}
+          <br />
+          Upstash 데이터베이스가 살아 있는지, 무료 한도를 넘지 않았는지 확인해 주세요.
         </div>
       )}
 

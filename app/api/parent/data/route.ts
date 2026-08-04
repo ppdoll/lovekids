@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { bankCounts } from "@/lib/bank";
 import { calcStreak, getSettings, kidToday } from "@/lib/daily";
 import { familyCodeBlocked } from "@/lib/guard";
-import { kvGet, storageMode } from "@/lib/store";
+import { kvGet, storageEnvNames, storageMode, storageVia, storageWriteError } from "@/lib/store";
 import { todayKST } from "@/lib/date";
 import { History, WrongItem } from "@/lib/types";
 
@@ -39,5 +39,10 @@ export async function GET(req: NextRequest) {
     kids,
     bank: bankCounts(),
     storage: storageMode(),
+    // 저장소가 안 잡힐 때 원인을 화면에서 바로 알 수 있도록 (변수 이름만, 값은 절대 포함하지 않음)
+    storageVia: storageVia(),
+    storageEnv: storageEnvNames(),
+    storageError: storageWriteError(),
+    onVercel: !!process.env.VERCEL,
   });
 }

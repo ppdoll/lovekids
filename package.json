@@ -9,7 +9,8 @@
     "check:bank": "node scripts/validate-bank.mjs",
     "fix:bank": "node scripts/fix-bank.mjs",
     "check:math": "node scripts/test-mathgen.mjs",
-    "check:code": "node scripts/test-familycode.mjs"
+    "check:code": "node scripts/test-familycode.mjs",
+    "check:storage": "node scripts/test-storage.mjs"
   },
   "dependencies": {
     "next": "^16.3.0",
