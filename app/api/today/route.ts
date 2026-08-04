@@ -1,10 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getOrCreateSet, toPublic } from "@/lib/daily";
+import { familyCodeBlocked } from "@/lib/guard";
 import { Subject, SUBJECTS } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
 
 export async function GET(req: NextRequest) {
+  const blocked = familyCodeBlocked(req);
+  if (blocked) return blocked;
+
   const kidId = req.nextUrl.searchParams.get("kid") ?? "";
   const subject = req.nextUrl.searchParams.get("subject") ?? "";
   if (!kidId || !SUBJECTS.includes(subject as Subject)) {

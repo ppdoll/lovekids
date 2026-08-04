@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSettings, saveSettings } from "@/lib/daily";
+import { familyCodeBlocked } from "@/lib/guard";
 import { Kid, Subject, SUBJECTS } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
@@ -33,6 +34,9 @@ function sanitizeKids(input: Partial<Kid>[]): Kid[] | null {
 }
 
 export async function POST(req: NextRequest) {
+  const blocked = familyCodeBlocked(req);
+  if (blocked) return blocked;
+
   let body: Body;
   try {
     body = await req.json();

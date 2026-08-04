@@ -1,10 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { submitAnswer } from "@/lib/daily";
+import { familyCodeBlocked } from "@/lib/guard";
 import { Subject, SUBJECTS } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
 
 export async function POST(req: NextRequest) {
+  const blocked = familyCodeBlocked(req);
+  if (blocked) return blocked;
+
   let body: { kidId?: string; subject?: string; index?: number; given?: string };
   try {
     body = await req.json();

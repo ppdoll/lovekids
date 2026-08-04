@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { bankCounts } from "@/lib/bank";
 import { calcStreak, getSettings, kidToday } from "@/lib/daily";
+import { familyCodeBlocked } from "@/lib/guard";
 import { kvGet, storageMode } from "@/lib/store";
 import { todayKST } from "@/lib/date";
 import { History, WrongItem } from "@/lib/types";
@@ -8,6 +9,9 @@ import { History, WrongItem } from "@/lib/types";
 export const dynamic = "force-dynamic";
 
 export async function GET(req: NextRequest) {
+  const blocked = familyCodeBlocked(req);
+  if (blocked) return blocked;
+
   const pin = req.headers.get("x-pin") ?? "";
   const settings = await getSettings();
   if (pin !== settings.parentPin) {

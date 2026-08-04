@@ -91,6 +91,37 @@ try {
     body: JSON.stringify({ code: `  ${CODE} ` }),
   });
   check("앞뒤 공백 섞여도 통과", r.status === 200, `HTTP ${r.status}`);
+
+  // --- 우회 공격 차단 확인 ---
+  // Next.js에 있었던 프록시(미들웨어) 우회 취약점(CVE-2025-29927)은 헤더 하나로
+  // 검사 계층을 건너뛰게 만들었다. 아래 시도는 모두 막혀야 한다.
+  const bypassHeaders = [
+    "middleware",
+    "src/middleware",
+    "pages/_middleware",
+    "middleware:middleware:middleware:middleware:middleware",
+    "proxy",
+    "src/proxy",
+    "proxy:proxy:proxy:proxy:proxy",
+  ];
+  for (const h of bypassHeaders) {
+    const res = await fetch(`${BASE}/api/parent/data`, {
+      headers: { "x-middleware-subrequest": h, "x-pin": "0000" },
+    });
+    check(`우회 시도 차단: x-middleware-subrequest: ${h.slice(0, 28)}`, res.status === 401, `HTTP ${res.status}`);
+  }
+
+  // 아이 데이터를 내려주는 API들도 코드 없이는 모두 막혀야 한다
+  for (const p of ["/api/state", "/api/today?kid=x&subject=ko", "/api/parent/data"]) {
+    const res = await fetch(`${BASE}${p}`, { headers: { "x-middleware-subrequest": "middleware" } });
+    check(`우회 헤더로도 ${p} 차단`, res.status === 401, `HTTP ${res.status}`);
+  }
+  const post = await fetch(`${BASE}/api/parent/settings`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "x-middleware-subrequest": "middleware" },
+    body: JSON.stringify({ pin: "0000", kids: [] }),
+  });
+  check("우회 헤더로도 설정 변경 차단", post.status === 401, `HTTP ${post.status}`);
 } catch (e) {
   console.error("✗ " + e.message);
   failed++;
