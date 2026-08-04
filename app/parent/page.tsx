@@ -225,8 +225,11 @@ export default function ParentPage() {
 
       {data.storage === "memory" && (
         <div className="warn" style={{ marginBottom: 14 }}>
-          ⚠️ 저장소가 연결되지 않아 기록이 유지되지 않아요. Vercel 프로젝트의 Storage 탭에서{" "}
-          <b>Upstash for Redis</b>(무료)를 연동해 주세요.
+          ⚠️ <b>저장소가 아직 연결되지 않았습니다.</b> 지금은 아이 등록·학습 기록이 잠시 뒤 사라집니다.
+          <br />
+          Vercel 프로젝트 → <b>Storage</b> 탭 → <b>Upstash for Redis</b>(무료)를 만들어 이 프로젝트에
+          연결하고, <b>Deployments</b> 탭에서 <b>Redeploy</b>를 한 번 해주세요. 그 뒤부터 기록이 계속
+          남습니다.
         </div>
       )}
 

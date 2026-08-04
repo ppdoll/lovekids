@@ -17,6 +17,9 @@ let fileWritable: boolean | null = null;
 
 export function storageMode(): "kv" | "file" | "memory" {
   if (REST_URL && REST_TOKEN) return "kv";
+  // 서버리스(Vercel)에서는 파일에 써도 남지 않는다.
+  // 첫 저장을 시도해 볼 때까지 기다리지 않고 바로 알려야, 설정이 사라지는 일을 겪지 않는다.
+  if (process.env.VERCEL) return "memory";
   if (fileWritable === false) return "memory";
   return "file";
 }
