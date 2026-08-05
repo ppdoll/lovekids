@@ -271,6 +271,19 @@ try {
   const kidOwn = await KID.json(`/api/today?kid=${aKidId}&subject=math`);
   check("아이는 자기 숙제를 정상적으로 받음", kidOwn.status === 200 && kidOwn.body.total === 4, `HTTP ${kidOwn.status}`);
 
+  // 기존 데이터를 아무나 가져가지 못하는지 (OWNER_EMAIL 지정 시)
+  console.log("\n=== 기존 데이터 인수 제한 ===");
+  check(
+    "먼저 로그인한 A가 기존('home') 가정을 이어받음",
+    (await A.json("/api/state")).body.kids.length === 1,
+    "",
+  );
+  check(
+    "나중에 로그인한 B는 빈 가정으로 시작 (남의 데이터를 못 가져감)",
+    (await B.json("/api/state")).body.kids.every((k) => k.name !== "가A아이"),
+    "",
+  );
+
   // 링크를 다시 발급하면 이전 링크는 무효
   const re = await A.json("/api/parent/kid-link", {
     method: "POST",

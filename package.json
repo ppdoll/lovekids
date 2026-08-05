@@ -16,7 +16,8 @@
     "check:isolation": "node scripts/test-isolation.mjs",
     "check:word": "node scripts/test-wordgen.mjs",
     "check:pwa": "node scripts/test-pwa.mjs",
-    "make:images": "node scripts/make-images.mjs"
+    "make:images": "node scripts/make-images.mjs",
+    "check:owner": "node scripts/test-owner.mjs"
   },
   "dependencies": {
     "jose": "^6.2.8",

@@ -29,13 +29,20 @@ function randomId(len = 16): string {
  * 접두사 없는 옛 데이터가 있으면 새 가정으로 옮겨 준다.
  * 안 그러면 지금까지 쌓인 기록이 사라진 것처럼 보인다.
  */
-export async function ensureHousehold(sub: string): Promise<string> {
+export async function ensureHousehold(sub: string, email?: string): Promise<string> {
   const existing = await globalStore.get<string>(userKey(sub));
   if (existing) return existing;
 
-  // 첫 로그인: 아직 아무 계정도 연결되지 않았다면 기존 데이터를 물려받는다
+  // 구글 로그인을 붙이기 전에 쌓인 데이터를 원래 주인이 이어받게 하는 절차.
+  //
+  // 여기서 주의할 점: "먼저 로그인한 사람이 가져간다"로 두면, 주인이 로그인하기 전에
+  // 남이 먼저 로그인하는 순간 그 사람이 아이들 기록의 주인이 되어 버린다.
+  // 그래서 OWNER_EMAIL을 정해 두면 그 계정만 이어받을 수 있게 한다.
+  const owner = process.env.OWNER_EMAIL?.trim().toLowerCase();
   const claimed = await globalStore.get<string>("soloClaimedBy");
-  if (!claimed) {
+  const isOwner = !owner || owner === email?.trim().toLowerCase();
+
+  if (!claimed && isOwner) {
     await migrateSoloData();
     await globalStore.set("soloClaimedBy", sub);
     await globalStore.set(userKey(sub), SOLO_HOUSEHOLD);

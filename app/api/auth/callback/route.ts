@@ -24,7 +24,7 @@ export async function GET(req: NextRequest) {
   const user = await exchangeCode(code, redirectUriFor(req));
   if (!user) return fail(req, "exchange");
 
-  const hh = await ensureHousehold(user.sub);
+  const hh = await ensureHousehold(user.sub, user.email);
   const token = await signSession({
     kind: "parent",
     hh,
