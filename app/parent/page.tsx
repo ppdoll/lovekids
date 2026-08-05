@@ -1017,8 +1017,10 @@ export default function ParentPage() {
               </tbody>
             </table>
             <p className="muted" style={{ marginTop: 8, fontSize: 12.5 }}>
-              수학 연산 문제는 무한 자동 생성이라 표에 포함되지 않아요. 문제가 부족해지면 Claude Code에게
-              &quot;문제은행 리필해줘&quot;라고 요청하세요.
+              수학의 <b>＋－×÷ 연산</b>과 <b>문장제</b>는 그때그때 자동으로 만들어져 마르지 않습니다
+              (학년당 수천 가지). 위 표의 수학은 손으로 쓴 문장제만 센 것이고, 자동 생성 문장제와 섞어
+              출제합니다. 국어·영어 문제가 부족해지면 Claude Code에게 &quot;문제은행 리필해줘&quot;라고
+              요청하세요.
             </p>
           </div>
         </div>

@@ -13,7 +13,8 @@
     "check:storage": "node scripts/test-storage.mjs",
     "check:calc": "node scripts/test-calc.mjs",
     "check:parent": "node scripts/test-parent-actions.mjs",
-    "check:isolation": "node scripts/test-isolation.mjs"
+    "check:isolation": "node scripts/test-isolation.mjs",
+    "check:word": "node scripts/test-wordgen.mjs"
   },
   "dependencies": {
     "jose": "^6.2.8",

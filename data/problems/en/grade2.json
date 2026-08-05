@@ -425,5 +425,995 @@
     "explain": "고마울 때는 Thank you.라고 말해요.",
     "tag": "표현",
     "level": "hard"
+  },
+  {
+    "id": "en2-031",
+    "type": "mc",
+    "q": "'ball(공)'의 첫 글자는 무엇인가요?",
+    "choices": [
+      "b",
+      "d",
+      "g",
+      "p"
+    ],
+    "answer": 0,
+    "explain": "ball은 b로 시작해요.",
+    "tag": "파닉스",
+    "level": "easy"
+  },
+  {
+    "id": "en2-032",
+    "type": "mc",
+    "q": "'fish(물고기)'의 첫 글자는 무엇인가요?",
+    "choices": [
+      "f",
+      "v",
+      "t",
+      "h"
+    ],
+    "answer": 0,
+    "explain": "fish는 f로 시작해요.",
+    "tag": "파닉스",
+    "level": "easy"
+  },
+  {
+    "id": "en2-033",
+    "type": "mc",
+    "q": "다음 중 s 소리로 시작하는 낱말은 어느 것인가요?",
+    "choices": [
+      "star",
+      "moon",
+      "kite",
+      "hat"
+    ],
+    "answer": 0,
+    "explain": "star(별)는 s 소리로 시작해요.",
+    "tag": "파닉스",
+    "level": "normal"
+  },
+  {
+    "id": "en2-034",
+    "type": "mc",
+    "q": "'hat(모자)'의 마지막 글자는 무엇인가요?",
+    "choices": [
+      "t",
+      "d",
+      "p",
+      "k"
+    ],
+    "answer": 0,
+    "explain": "hat은 h-a-t이라고 써요. 마지막 글자는 t예요.",
+    "tag": "파닉스",
+    "level": "easy"
+  },
+  {
+    "id": "en2-035",
+    "type": "short",
+    "q": "'milk(우유)'의 첫 글자를 알파벳으로 쓰세요.",
+    "answer": [
+      "m"
+    ],
+    "explain": "milk는 m으로 시작해요.",
+    "tag": "파닉스",
+    "level": "easy"
+  },
+  {
+    "id": "en2-036",
+    "type": "mc",
+    "q": "'ten(열)'과 첫소리가 같은 낱말은 어느 것인가요?",
+    "choices": [
+      "dog",
+      "toy",
+      "pen",
+      "net"
+    ],
+    "answer": 1,
+    "explain": "ten과 toy는 둘 다 t 소리로 시작해요.",
+    "tag": "파닉스",
+    "level": "normal"
+  },
+  {
+    "id": "en2-037",
+    "type": "mc",
+    "q": "'bag(가방)'과 끝소리가 같은 낱말은 어느 것인가요?",
+    "choices": [
+      "cat",
+      "leg",
+      "bus",
+      "map"
+    ],
+    "answer": 1,
+    "explain": "bag과 leg는 둘 다 g 소리로 끝나요.",
+    "tag": "파닉스",
+    "level": "hard"
+  },
+  {
+    "id": "en2-038",
+    "type": "mc",
+    "q": "대문자 B의 소문자는 어느 것인가요?",
+    "choices": [
+      "d",
+      "b",
+      "p",
+      "h"
+    ],
+    "answer": 1,
+    "explain": "대문자 B의 소문자는 b예요.",
+    "tag": "파닉스",
+    "level": "easy"
+  },
+  {
+    "id": "en2-039",
+    "type": "short",
+    "q": "대문자 R의 소문자를 쓰세요.",
+    "answer": [
+      "r"
+    ],
+    "explain": "대문자 R의 소문자는 r이에요.",
+    "tag": "파닉스",
+    "level": "normal"
+  },
+  {
+    "id": "en2-040",
+    "type": "mc",
+    "q": "알파벳 순서에서 c 바로 다음에 오는 글자는 어느 것인가요?",
+    "choices": [
+      "b",
+      "d",
+      "e",
+      "f"
+    ],
+    "answer": 1,
+    "explain": "알파벳은 a, b, c, d 순서예요. c 다음은 d예요.",
+    "tag": "파닉스",
+    "level": "normal"
+  },
+  {
+    "id": "en2-041",
+    "type": "mc",
+    "q": "'zoo(동물원)'의 첫 글자는 무엇인가요?",
+    "choices": [
+      "s",
+      "x",
+      "z",
+      "j"
+    ],
+    "answer": 2,
+    "explain": "zoo는 z로 시작해요.",
+    "tag": "파닉스",
+    "level": "easy"
+  },
+  {
+    "id": "en2-042",
+    "type": "mc",
+    "q": "다음 중 첫소리가 나머지와 다른 낱말은 어느 것인가요?",
+    "choices": [
+      "pen",
+      "pig",
+      "park",
+      "dog"
+    ],
+    "answer": 3,
+    "explain": "pen, pig, park는 p로 시작하지만 dog는 d로 시작해요.",
+    "tag": "파닉스",
+    "level": "normal"
+  },
+  {
+    "id": "en2-043",
+    "type": "short",
+    "q": "'cup(컵)'의 마지막 글자를 쓰세요.",
+    "answer": [
+      "p"
+    ],
+    "explain": "cup은 c-u-p이라고 써요. 마지막 글자는 p예요.",
+    "tag": "파닉스",
+    "level": "hard"
+  },
+  {
+    "id": "en2-044",
+    "type": "mc",
+    "q": "'nose(코)'와 첫소리가 같은 낱말은 어느 것인가요?",
+    "choices": [
+      "milk",
+      "net",
+      "lion",
+      "rain"
+    ],
+    "answer": 1,
+    "explain": "nose와 net은 둘 다 n 소리로 시작해요.",
+    "tag": "파닉스",
+    "level": "hard"
+  },
+  {
+    "id": "en2-045",
+    "type": "mc",
+    "q": "'jump(뛰다)'의 첫 글자는 무엇인가요?",
+    "choices": [
+      "g",
+      "j",
+      "y",
+      "i"
+    ],
+    "answer": 1,
+    "explain": "jump는 j로 시작해요.",
+    "tag": "파닉스",
+    "level": "easy"
+  },
+  {
+    "id": "en2-046",
+    "type": "mc",
+    "q": "다음 중 w 소리로 시작하는 낱말은 어느 것인가요?",
+    "choices": [
+      "water",
+      "van",
+      "yellow",
+      "rabbit"
+    ],
+    "answer": 0,
+    "explain": "water(물)는 w 소리로 시작해요.",
+    "tag": "파닉스",
+    "level": "normal"
+  },
+  {
+    "id": "en2-047",
+    "type": "short",
+    "q": "'egg(달걀)'의 첫 글자를 알파벳으로 쓰세요.",
+    "answer": [
+      "e"
+    ],
+    "explain": "egg는 e로 시작해요.",
+    "tag": "파닉스",
+    "level": "easy"
+  },
+  {
+    "id": "en2-048",
+    "type": "mc",
+    "q": "'kite(연)'와 첫소리가 같은 낱말은 어느 것인가요?",
+    "choices": [
+      "king",
+      "hat",
+      "tiger",
+      "gate"
+    ],
+    "answer": 0,
+    "explain": "kite와 king은 둘 다 'ㅋ' 소리로 시작해요.",
+    "tag": "파닉스",
+    "level": "hard"
+  },
+  {
+    "id": "en2-049",
+    "type": "mc",
+    "q": "'green'은 무슨 색인가요?",
+    "choices": [
+      "초록색",
+      "보라색",
+      "갈색",
+      "분홍색"
+    ],
+    "answer": 0,
+    "explain": "green은 초록색이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-050",
+    "type": "mc",
+    "q": "'검은색'을 뜻하는 영어 낱말은 어느 것인가요?",
+    "choices": [
+      "white",
+      "brown",
+      "black",
+      "blue"
+    ],
+    "answer": 2,
+    "explain": "검은색은 black이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-051",
+    "type": "short",
+    "q": "'하얀색'을 뜻하는 영어 낱말을 쓰세요.",
+    "answer": [
+      "white"
+    ],
+    "explain": "하얀색은 white라고 써요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-052",
+    "type": "mc",
+    "q": "다음 중 색깔을 나타내는 낱말이 아닌 것은 어느 것인가요?",
+    "choices": [
+      "pink",
+      "purple",
+      "orange",
+      "circle"
+    ],
+    "answer": 3,
+    "explain": "circle은 동그라미 모양이에요. 나머지는 모두 색깔이에요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en2-053",
+    "type": "mc",
+    "q": "'three'는 숫자로 얼마인가요?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 2,
+    "explain": "three는 숫자 3이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-054",
+    "type": "mc",
+    "q": "숫자 10을 뜻하는 영어 낱말은 어느 것인가요?",
+    "choices": [
+      "nine",
+      "ten",
+      "twelve",
+      "two"
+    ],
+    "answer": 1,
+    "explain": "10은 ten이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-055",
+    "type": "short",
+    "q": "'five'는 얼마인가요? 숫자로 쓰세요.",
+    "answer": [
+      "5",
+      "다섯",
+      "오"
+    ],
+    "explain": "five는 숫자 5예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-056",
+    "type": "mc",
+    "q": "'twelve'는 숫자로 얼마인가요?",
+    "choices": [
+      "2",
+      "12",
+      "20",
+      "21"
+    ],
+    "answer": 1,
+    "explain": "twelve는 숫자 12예요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en2-057",
+    "type": "mc",
+    "q": "숫자 20을 뜻하는 영어 낱말은 어느 것인가요?",
+    "choices": [
+      "twelve",
+      "twenty",
+      "two",
+      "eleven"
+    ],
+    "answer": 1,
+    "explain": "20은 twenty예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-058",
+    "type": "short",
+    "q": "'fifteen'은 얼마인가요? 숫자로 쓰세요.",
+    "answer": [
+      "15",
+      "열다섯",
+      "십오"
+    ],
+    "explain": "fifteen은 숫자 15예요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en2-059",
+    "type": "mc",
+    "q": "'bird'는 어떤 동물인가요?",
+    "choices": [
+      "새",
+      "물고기",
+      "말",
+      "곰"
+    ],
+    "answer": 0,
+    "explain": "bird는 새예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-060",
+    "type": "mc",
+    "q": "'원숭이'를 뜻하는 영어 낱말은 어느 것인가요?",
+    "choices": [
+      "monkey",
+      "mouse",
+      "tiger",
+      "frog"
+    ],
+    "answer": 0,
+    "explain": "원숭이는 monkey예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-061",
+    "type": "mc",
+    "q": "'fish'는 어떤 동물인가요?",
+    "choices": [
+      "개구리",
+      "물고기",
+      "닭",
+      "양"
+    ],
+    "answer": 1,
+    "explain": "fish는 물고기예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-062",
+    "type": "short",
+    "q": "'곰'을 뜻하는 영어 낱말을 쓰세요.",
+    "answer": [
+      "bear"
+    ],
+    "explain": "곰은 bear라고 써요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-063",
+    "type": "mc",
+    "q": "다음 중 날개가 있어 하늘을 나는 동물은 어느 것인가요?",
+    "choices": [
+      "bird",
+      "fish",
+      "cow",
+      "pig"
+    ],
+    "answer": 0,
+    "explain": "bird(새)는 날개로 하늘을 날아요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-064",
+    "type": "mc",
+    "q": "'strawberry'는 어떤 과일인가요?",
+    "choices": [
+      "딸기",
+      "수박",
+      "포도",
+      "레몬"
+    ],
+    "answer": 0,
+    "explain": "strawberry는 딸기예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-065",
+    "type": "mc",
+    "q": "'수박'을 뜻하는 영어 낱말은 어느 것인가요?",
+    "choices": [
+      "watermelon",
+      "strawberry",
+      "orange",
+      "peach"
+    ],
+    "answer": 0,
+    "explain": "수박은 watermelon이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-066",
+    "type": "short",
+    "q": "'apple'은 무슨 과일인지 우리말로 쓰세요.",
+    "answer": [
+      "사과"
+    ],
+    "explain": "apple은 사과예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-067",
+    "type": "mc",
+    "q": "다음 중 과일이 아닌 것은 어느 것인가요?",
+    "choices": [
+      "lemon",
+      "peach",
+      "pencil",
+      "melon"
+    ],
+    "answer": 2,
+    "explain": "pencil(연필)은 학용품이에요. 나머지는 모두 과일이에요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en2-068",
+    "type": "mc",
+    "q": "'pencil'은 우리말로 무엇인가요?",
+    "choices": [
+      "연필",
+      "지우개",
+      "가위",
+      "공책"
+    ],
+    "answer": 0,
+    "explain": "pencil은 연필이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-069",
+    "type": "mc",
+    "q": "'지우개'를 뜻하는 영어 낱말은 어느 것인가요?",
+    "choices": [
+      "ruler",
+      "eraser",
+      "crayon",
+      "glue"
+    ],
+    "answer": 1,
+    "explain": "지우개는 eraser예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-070",
+    "type": "mc",
+    "q": "'book'은 우리말로 무엇인가요?",
+    "choices": [
+      "가방",
+      "책",
+      "의자",
+      "창문"
+    ],
+    "answer": 1,
+    "explain": "book은 책이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-071",
+    "type": "short",
+    "q": "'가방'을 뜻하는 영어 낱말을 쓰세요.",
+    "answer": [
+      "bag"
+    ],
+    "explain": "가방은 bag라고 써요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-072",
+    "type": "mc",
+    "q": "다음 중 학용품이 아닌 것은 어느 것인가요?",
+    "choices": [
+      "ruler",
+      "crayon",
+      "apple",
+      "pencil"
+    ],
+    "answer": 2,
+    "explain": "apple(사과)은 과일이에요. 나머지는 모두 학용품이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-073",
+    "type": "mc",
+    "q": "'hand'는 몸의 어느 부분인가요?",
+    "choices": [
+      "손",
+      "발",
+      "눈",
+      "귀"
+    ],
+    "answer": 0,
+    "explain": "hand는 손이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-074",
+    "type": "mc",
+    "q": "얼굴에 있는 '눈'을 뜻하는 영어 낱말은 어느 것인가요?",
+    "choices": [
+      "ear",
+      "eye",
+      "nose",
+      "mouth"
+    ],
+    "answer": 1,
+    "explain": "눈은 eye예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-075",
+    "type": "short",
+    "q": "'foot'은 몸의 어느 부분인지 우리말로 쓰세요.",
+    "answer": [
+      "발"
+    ],
+    "explain": "foot은 발이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-076",
+    "type": "mc",
+    "q": "'nose'는 몸의 어느 부분인가요?",
+    "choices": [
+      "입",
+      "코",
+      "목",
+      "머리"
+    ],
+    "answer": 1,
+    "explain": "nose는 코예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-077",
+    "type": "mc",
+    "q": "다음 중 몸의 부분을 나타내는 낱말이 아닌 것은 어느 것인가요?",
+    "choices": [
+      "arm",
+      "leg",
+      "head",
+      "desk"
+    ],
+    "answer": 3,
+    "explain": "desk는 책상이에요. 나머지는 팔, 다리, 머리로 몸의 부분이에요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en2-078",
+    "type": "mc",
+    "q": "'father'는 가족 중에서 누구인가요?",
+    "choices": [
+      "아버지",
+      "형",
+      "삼촌",
+      "할머니"
+    ],
+    "answer": 0,
+    "explain": "father는 아버지(아빠)예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-079",
+    "type": "mc",
+    "q": "'언니·누나'를 뜻하는 영어 낱말은 어느 것인가요?",
+    "choices": [
+      "brother",
+      "sister",
+      "cousin",
+      "aunt"
+    ],
+    "answer": 1,
+    "explain": "언니와 누나는 모두 sister라고 해요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-080",
+    "type": "short",
+    "q": "'할머니'를 뜻하는 영어 낱말을 쓰세요.",
+    "answer": [
+      "grandmother",
+      "grandma"
+    ],
+    "explain": "할머니는 grandmother 또는 grandma라고 해요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-081",
+    "type": "mc",
+    "q": "'baby'는 우리말로 무엇인가요?",
+    "choices": [
+      "아기",
+      "어른",
+      "친구",
+      "이웃"
+    ],
+    "answer": 0,
+    "explain": "baby는 아기예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-082",
+    "type": "mc",
+    "q": "'물'을 뜻하는 낱말의 바른 철자는 어느 것인가요?",
+    "choices": [
+      "woter",
+      "water",
+      "wader",
+      "watter"
+    ],
+    "answer": 1,
+    "explain": "물은 w-a-t-e-r, water라고 써요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en2-083",
+    "type": "mc",
+    "q": "'big(큰)'의 반대말은 어느 것인가요?",
+    "choices": [
+      "small",
+      "tall",
+      "long",
+      "new"
+    ],
+    "answer": 0,
+    "explain": "big(큰)의 반대말은 small(작은)이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-084",
+    "type": "mc",
+    "q": "'hot(뜨거운)'의 반대말은 어느 것인가요?",
+    "choices": [
+      "warm",
+      "cold",
+      "wet",
+      "fast"
+    ],
+    "answer": 1,
+    "explain": "hot(뜨거운)의 반대말은 cold(차가운)예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-085",
+    "type": "short",
+    "q": "'up(위로)'의 반대말을 영어로 쓰세요.",
+    "answer": [
+      "down"
+    ],
+    "explain": "up(위로)의 반대말은 down(아래로)이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-086",
+    "type": "mc",
+    "q": "'long(긴)'의 반대말은 어느 것인가요?",
+    "choices": [
+      "short",
+      "big",
+      "old",
+      "slow"
+    ],
+    "answer": 0,
+    "explain": "long(긴)의 반대말은 short(짧은)이에요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en2-087",
+    "type": "mc",
+    "q": "'day(낮)'의 반대말은 어느 것인가요?",
+    "choices": [
+      "night",
+      "sun",
+      "week",
+      "noon"
+    ],
+    "answer": 0,
+    "explain": "day(낮)의 반대말은 night(밤)이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-088",
+    "type": "mc",
+    "q": "고양이 두 마리를 바르게 나타낸 것은 어느 것인가요?",
+    "choices": [
+      "two cat",
+      "two cats",
+      "two cates",
+      "two catss"
+    ],
+    "answer": 1,
+    "explain": "둘 이상일 때는 낱말 뒤에 -s를 붙여 two cats라고 해요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-089",
+    "type": "mc",
+    "q": "'book'이 여러 권일 때 알맞게 쓴 것은 어느 것인가요?",
+    "choices": [
+      "books",
+      "bookes",
+      "bookss",
+      "bookies"
+    ],
+    "answer": 0,
+    "explain": "여러 권일 때는 book 뒤에 -s를 붙여 books라고 써요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-090",
+    "type": "short",
+    "q": "'pen'이 여러 개일 때 낱말 뒤에 붙이는 글자 하나를 쓰세요.",
+    "answer": [
+      "s"
+    ],
+    "explain": "여러 개일 때는 -s를 붙여 pens라고 써요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-091",
+    "type": "mc",
+    "q": "다음 중 하나가 아니라 여럿을 나타내는 낱말은 어느 것인가요?",
+    "choices": [
+      "apple",
+      "apples",
+      "banana",
+      "grape"
+    ],
+    "answer": 1,
+    "explain": "끝에 -s가 붙은 apples가 여럿을 나타내요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en2-092",
+    "type": "mc",
+    "q": "선생님을 만났을 때 하는 인사말로 알맞은 것은 어느 것인가요?",
+    "choices": [
+      "Hello.",
+      "Goodbye.",
+      "I'm sorry.",
+      "Good night."
+    ],
+    "answer": 0,
+    "explain": "사람을 만나면 Hello.라고 인사해요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en2-093",
+    "type": "mc",
+    "q": "친구가 \"What's your name?\"이라고 물었어요. 대답으로 알맞은 것은 어느 것인가요?",
+    "choices": [
+      "I'm seven.",
+      "I'm Mina.",
+      "It's a dog.",
+      "Thank you."
+    ],
+    "answer": 1,
+    "explain": "이름을 물으면 I'm 뒤에 내 이름을 붙여 대답해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en2-094",
+    "type": "short",
+    "q": "아침에 만난 사람에게 하는 영어 인사를 쓰세요.",
+    "answer": [
+      "Good morning",
+      "Good morning."
+    ],
+    "explain": "아침 인사는 Good morning.이에요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en2-095",
+    "type": "mc",
+    "q": "친구가 잘 지내는지 물어볼 때 쓰는 표현으로 알맞은 것은 어느 것인가요?",
+    "choices": [
+      "How are you?",
+      "Good night.",
+      "You're welcome.",
+      "I'm sorry."
+    ],
+    "answer": 0,
+    "explain": "안부를 물을 때는 How are you?라고 해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en2-096",
+    "type": "short",
+    "q": "미안한 마음을 전할 때 쓰는 영어 표현을 쓰세요.",
+    "answer": [
+      "I'm sorry",
+      "I'm sorry.",
+      "Sorry"
+    ],
+    "explain": "미안할 때는 I'm sorry.라고 말해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en2-097",
+    "type": "mc",
+    "q": "새 친구가 \"Nice to meet you.\"라고 했어요. 대답으로 알맞은 것은 어느 것인가요?",
+    "choices": [
+      "Nice to meet you, too.",
+      "Good night.",
+      "I'm sorry.",
+      "No, thank you."
+    ],
+    "answer": 0,
+    "explain": "만나서 반갑다는 인사에는 Nice to meet you, too.라고 답해요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en2-098",
+    "type": "mc",
+    "q": "생일을 맞은 친구에게 하는 말로 알맞은 것은 어느 것인가요?",
+    "choices": [
+      "Happy birthday!",
+      "Good night.",
+      "I'm sorry.",
+      "See you tomorrow."
+    ],
+    "answer": 0,
+    "explain": "생일에는 Happy birthday!라고 축하해 줘요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en2-099",
+    "type": "short",
+    "q": "친구와 헤어질 때 하는 영어 인사를 한 가지 쓰세요.",
+    "answer": [
+      "Goodbye",
+      "Goodbye.",
+      "Bye",
+      "Bye."
+    ],
+    "explain": "헤어질 때는 Goodbye. 또는 Bye.라고 인사해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en2-100",
+    "type": "short",
+    "q": "\"Thank you.\"라는 말을 들었을 때 하는 대답을 영어로 쓰세요.",
+    "answer": [
+      "You're welcome",
+      "You're welcome."
+    ],
+    "explain": "고맙다는 말에는 You're welcome.(천만에.)이라고 답해요.",
+    "tag": "표현",
+    "level": "hard"
   }
 ]

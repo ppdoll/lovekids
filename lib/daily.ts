@@ -1,6 +1,7 @@
 import { bankProblems } from "./bank";
 import { todayKST, daysAgoKST } from "./date";
 import { genCustomProblems, genMathProblems } from "./mathgen";
+import { genWordProblems } from "./wordgen";
 import { Store } from "./scope";
 import {
   AnswerRecord,
@@ -64,6 +65,22 @@ export type SetResult =
  * 아이·과목에 맞는 문제 count개를 만든다.
  * 새 숙제를 낼 때와 부모가 문제를 더 낼 때 같은 규칙을 쓰도록 한 곳에 모아둔다.
  */
+/**
+ * 문장제를 문제은행 + 자동 생성으로 반씩 섞어 target개 만든다.
+ * 문제은행(손으로 쓴 문장제)은 표현이 풍부하지만 개수가 한정되고,
+ * 자동 생성은 무한하지만 문장 틀이 반복된다. 섞으면 서로의 약점을 덮는다.
+ */
+async function buildWordProblems(
+  store: Store,
+  kid: Kid,
+  target: number,
+): Promise<Problem[]> {
+  if (target <= 0) return [];
+  const fromBank = await pickFromBank(store, kid.id, "math", kid.grade, Math.ceil(target / 2));
+  const generated = genWordProblems(kid.grade, target - fromBank.length);
+  return [...fromBank, ...generated];
+}
+
 async function buildProblems(store: Store, kid: Kid, subject: Subject, count: number): Promise<Problem[]> {
   if (count <= 0) return [];
 
@@ -76,16 +93,14 @@ async function buildProblems(store: Store, kid: Kid, subject: Subject, count: nu
 
   if (custom.length > 0) {
     // 부모가 직접 고른 연산으로 출제. 문장제를 섞기로 했다면 일부를 문장제로 채운다.
-    const wordTarget = calc.includeWord ? Math.round(count * 0.3) : 0;
-    const word = await pickFromBank(store, kid.id, "math", kid.grade, wordTarget);
+    const word = await buildWordProblems(store, kid, calc.includeWord ? Math.round(count * 0.3) : 0);
     const calcPart = custom.slice(0, count - word.length);
     return shuffle([...calcPart, ...word]);
   }
 
-  // 학년 자동 = 연산(자동 생성) 60% + 문장제(문제은행) 40%
+  // 학년 자동 = 연산(자동 생성) 60% + 문장제 40%
   // custom인데 켜진 연산이 하나도 없을 때도 여기로 와서 빈 숙제가 나오지 않게 한다.
-  const wordTarget = Math.round(count * 0.4);
-  const word = await pickFromBank(store, kid.id, "math", kid.grade, wordTarget);
+  const word = await buildWordProblems(store, kid, Math.round(count * 0.4));
   const gen = genMathProblems(kid.grade, count - word.length);
   return shuffle([...gen, ...word]);
 }

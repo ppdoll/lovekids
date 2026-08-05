@@ -421,5 +421,988 @@
     "explain": "Its name is Coco.에서 개의 이름이 Coco라는 것을 알 수 있어요.",
     "tag": "독해",
     "level": "normal"
+  },
+  {
+    "id": "en5-031",
+    "type": "mc",
+    "q": "불을 끄고 사람을 구하는 직업을 나타내는 영어 단어는 어느 것인가요?",
+    "choices": [
+      "driver",
+      "firefighter",
+      "dentist",
+      "writer"
+    ],
+    "answer": 1,
+    "explain": "firefighter는 소방관이에요. driver는 운전기사, dentist는 치과 의사, writer는 작가예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en5-032",
+    "type": "mc",
+    "q": "편지와 소포를 부칠 수 있는 장소를 나타내는 영어 단어는 어느 것인가요?",
+    "choices": [
+      "post office",
+      "zoo",
+      "school",
+      "beach"
+    ],
+    "answer": 0,
+    "explain": "post office는 우체국이에요. zoo는 동물원, school은 학교, beach는 해변이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en5-033",
+    "type": "mc",
+    "q": "'팔'을 뜻하는 영어 단어는 어느 것인가요?",
+    "choices": [
+      "arm",
+      "leg",
+      "nose",
+      "hair"
+    ],
+    "answer": 0,
+    "explain": "arm은 팔이에요. leg는 다리, nose는 코, hair는 머리카락이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en5-034",
+    "type": "mc",
+    "q": "'지하철'을 뜻하는 영어 단어는 어느 것인가요?",
+    "choices": [
+      "subway",
+      "bicycle",
+      "truck",
+      "boat"
+    ],
+    "answer": 0,
+    "explain": "subway는 지하철이에요. bicycle은 자전거, truck은 트럭, boat는 배예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en5-035",
+    "type": "mc",
+    "q": "'신나는, 들뜬' 기분을 나타내는 영어 단어는 어느 것인가요?",
+    "choices": [
+      "bored",
+      "excited",
+      "tired",
+      "sick"
+    ],
+    "answer": 1,
+    "explain": "excited는 신나고 들뜬 기분이에요. bored는 지루한, tired는 피곤한, sick은 아픈이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en5-036",
+    "type": "mc",
+    "q": "'사진 찍기'라는 취미를 나타내는 영어 표현은 어느 것인가요?",
+    "choices": [
+      "taking pictures",
+      "washing dishes",
+      "brushing teeth",
+      "wearing shoes"
+    ],
+    "answer": 0,
+    "explain": "take a picture는 사진을 찍다라는 뜻이라 taking pictures가 사진 찍기예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en5-037",
+    "type": "mc",
+    "q": "다음 설명에 알맞은 직업을 고르세요.\nThis person flies an airplane.",
+    "choices": [
+      "a pilot",
+      "a baker",
+      "a painter",
+      "a dancer"
+    ],
+    "answer": 0,
+    "explain": "fly an airplane은 비행기를 조종하다라는 뜻이에요. 비행기를 모는 사람은 pilot이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en5-038",
+    "type": "mc",
+    "q": "다음 설명에 알맞은 장소를 고르세요.\nYou can see many animals here.",
+    "choices": [
+      "a bank",
+      "a zoo",
+      "a bookstore",
+      "a station"
+    ],
+    "answer": 1,
+    "explain": "동물을 많이 볼 수 있는 곳은 zoo(동물원)예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en5-039",
+    "type": "mc",
+    "q": "발표를 앞두고 '긴장한' 기분을 나타내는 영어 단어는 어느 것인가요?",
+    "choices": [
+      "nervous",
+      "proud",
+      "funny",
+      "kind"
+    ],
+    "answer": 0,
+    "explain": "nervous는 긴장한이에요. proud는 자랑스러운, funny는 웃긴, kind는 친절한이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en5-040",
+    "type": "mc",
+    "q": "다음 설명에 알맞은 교통수단을 고르세요.\nIt carries people on the sea.",
+    "choices": [
+      "a train",
+      "a ship",
+      "a bus",
+      "a bike"
+    ],
+    "answer": 1,
+    "explain": "바다 위에서 사람을 실어 나르는 것은 ship(배)이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en5-041",
+    "type": "mc",
+    "q": "다음 설명에 알맞은 신체 부분을 고르세요.\nYou hear sounds with them.",
+    "choices": [
+      "eyes",
+      "ears",
+      "hands",
+      "knees"
+    ],
+    "answer": 1,
+    "explain": "소리를 듣는 곳은 ears(귀)예요. eyes는 눈, hands는 손, knees는 무릎이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en5-042",
+    "type": "mc",
+    "q": "다음 중 나머지 셋과 종류가 다른 단어는 어느 것인가요?",
+    "choices": [
+      "museum",
+      "bakery",
+      "market",
+      "elbow"
+    ],
+    "answer": 3,
+    "explain": "museum, bakery, market은 모두 장소예요. elbow는 팔꿈치라는 신체 부분이에요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en5-043",
+    "type": "mc",
+    "q": "다음 중 교통수단을 나타내는 말이 아닌 것은 어느 것인가요?",
+    "choices": [
+      "taxi",
+      "train",
+      "bank",
+      "airplane"
+    ],
+    "answer": 2,
+    "explain": "bank는 은행이라는 장소예요. taxi, train, airplane은 모두 교통수단이에요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en5-044",
+    "type": "short",
+    "q": "'박물관'을 뜻하는 영어 단어를 쓰세요.",
+    "answer": [
+      "museum"
+    ],
+    "explain": "박물관은 museum이에요. 옛날 물건을 볼 수 있는 곳이지요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en5-045",
+    "type": "short",
+    "q": "'자전거'를 뜻하는 영어 단어를 쓰세요.",
+    "answer": [
+      "bike",
+      "bicycle"
+    ],
+    "explain": "자전거는 bike 또는 bicycle이라고 해요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en5-046",
+    "type": "short",
+    "q": "'경찰관'을 뜻하는 영어 표현을 쓰세요.",
+    "answer": [
+      "police officer",
+      "policeman"
+    ],
+    "explain": "경찰관은 police officer라고 해요. policeman이라고도 말해요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en5-047",
+    "type": "short",
+    "q": "'무서워하는, 겁먹은' 기분을 나타내는 영어 단어를 쓰세요.",
+    "answer": [
+      "scared",
+      "afraid"
+    ],
+    "explain": "무서워하는 기분은 scared 또는 afraid로 나타내요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en5-048",
+    "type": "mc",
+    "q": "'tooth(이 한 개)'가 여러 개일 때 쓰는 말로 알맞은 것은 어느 것인가요?",
+    "choices": [
+      "tooths",
+      "toothes",
+      "teeth",
+      "tooth"
+    ],
+    "answer": 2,
+    "explain": "tooth의 복수형은 s를 붙이지 않고 teeth로 모양이 바뀌어요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en5-049",
+    "type": "mc",
+    "q": "'playing the guitar'는 어떤 취미를 뜻하나요?",
+    "choices": [
+      "기타 연주하기",
+      "피아노 치기",
+      "노래 부르기",
+      "춤추기"
+    ],
+    "answer": 0,
+    "explain": "guitar는 기타예요. play the guitar는 기타를 연주하다라는 뜻이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en5-050",
+    "type": "mc",
+    "q": "다음 설명에 알맞은 직업을 고르세요.\nThis person takes care of sick people at a hospital.",
+    "choices": [
+      "a nurse",
+      "a farmer",
+      "a driver",
+      "a singer"
+    ],
+    "answer": 0,
+    "explain": "take care of는 돌보다라는 뜻이에요. 병원에서 아픈 사람을 돌보는 사람은 nurse(간호사)예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en5-051",
+    "type": "mc",
+    "q": "영화를 보는 장소를 나타내는 영어 표현은 어느 것인가요?",
+    "choices": [
+      "a movie theater",
+      "a library",
+      "a park",
+      "a bakery"
+    ],
+    "answer": 0,
+    "explain": "movie theater는 영화관이에요. 영국에서는 cinema라고도 해요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en5-052",
+    "type": "short",
+    "q": "'공항'을 뜻하는 영어 단어를 쓰세요.",
+    "answer": [
+      "airport"
+    ],
+    "explain": "공항은 airport예요. air(공중)와 port(항구)가 합쳐진 말이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en5-053",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nThe cats (   ) sleeping on the sofa.",
+    "choices": [
+      "is",
+      "am",
+      "are",
+      "be"
+    ],
+    "answer": 2,
+    "explain": "The cats는 둘 이상이므로 be동사는 are를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en5-054",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nMy mom is (   ) dinner in the kitchen.",
+    "choices": [
+      "cook",
+      "cooks",
+      "cooking",
+      "cooked"
+    ],
+    "answer": 2,
+    "explain": "is 뒤에는 동사에 ing를 붙여요. is cooking은 요리하는 중이라는 뜻이에요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en5-055",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nTom is my friend. (   ) is very kind.",
+    "choices": [
+      "She",
+      "He",
+      "It",
+      "They"
+    ],
+    "answer": 1,
+    "explain": "Tom은 남자 한 명이므로 He로 받아요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en5-056",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nThis is Mina. (   ) hair is long.",
+    "choices": [
+      "He",
+      "His",
+      "Her",
+      "Their"
+    ],
+    "answer": 2,
+    "explain": "Mina는 여자 한 명이므로 그녀의를 뜻하는 소유격 Her를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en5-057",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nI (   ) swim. I'm afraid of deep water.",
+    "choices": [
+      "can",
+      "can't",
+      "am",
+      "do"
+    ],
+    "answer": 1,
+    "explain": "깊은 물이 무섭다고 했으므로 할 수 없다는 뜻의 can't가 알맞아요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en5-058",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nJane and I (   ) making a paper airplane.",
+    "choices": [
+      "am",
+      "is",
+      "are",
+      "be"
+    ],
+    "answer": 2,
+    "explain": "Jane and I는 두 사람이므로 be동사 are를 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en5-059",
+    "type": "mc",
+    "q": "괄호 안 동사를 ~ing 형태로 바르게 바꾼 것을 고르세요.\nShe is (write) a letter.",
+    "choices": [
+      "writeing",
+      "writing",
+      "writting",
+      "writes"
+    ],
+    "answer": 1,
+    "explain": "write처럼 e로 끝나는 동사는 e를 빼고 ing를 붙여 writing이 돼요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en5-060",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nSumi and Jiho are my friends. (   ) are in my class.",
+    "choices": [
+      "He",
+      "She",
+      "We",
+      "They"
+    ],
+    "answer": 3,
+    "explain": "수미와 지호 두 사람을 가리키므로 They로 받아요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en5-061",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nLook at that bird. (   ) wings are white.",
+    "choices": [
+      "It",
+      "Its",
+      "He",
+      "Their"
+    ],
+    "answer": 1,
+    "explain": "그것의라는 뜻의 소유격은 Its예요. 새 한 마리이므로 Their는 쓸 수 없어요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en5-062",
+    "type": "mc",
+    "q": "'그녀는 바이올린을 켤 수 없다.'를 영어로 바르게 옮긴 것은 어느 것인가요?",
+    "choices": [
+      "She can't plays the violin.",
+      "She doesn't can play the violin.",
+      "She can't play the violin.",
+      "She isn't play the violin."
+    ],
+    "answer": 2,
+    "explain": "can의 부정은 can't이고, 그 뒤에는 동사원형 play를 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en5-063",
+    "type": "mc",
+    "q": "다음 중 어법에 맞지 않는 문장은 어느 것인가요?",
+    "choices": [
+      "He is washing his hands.",
+      "The boys are singing.",
+      "I am read a book.",
+      "We are eating lunch."
+    ],
+    "answer": 2,
+    "explain": "be동사 뒤에는 동사에 ing를 붙여야 해요. I am reading a book.이 바른 문장이에요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en5-064",
+    "type": "mc",
+    "q": "빈칸에 알맞은 대답을 고르세요.\nA: Can your brothers ride a horse?\nB: No, (   ).",
+    "choices": [
+      "they can",
+      "they can't",
+      "he can't",
+      "they aren't"
+    ],
+    "answer": 1,
+    "explain": "your brothers를 they로 받고, No로 대답할 때는 they can't라고 해요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en5-065",
+    "type": "mc",
+    "q": "다음 중 ~ing 형태가 잘못 쓰인 것은 어느 것인가요?",
+    "choices": [
+      "coming",
+      "geting",
+      "running",
+      "dancing"
+    ],
+    "answer": 1,
+    "explain": "get은 마지막 글자 t를 한 번 더 쓰고 ing를 붙여 getting이 돼요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en5-066",
+    "type": "short",
+    "q": "빈칸에 알맞은 be동사 한 단어를 쓰세요.\nThe baby (   ) crying now.",
+    "answer": [
+      "is"
+    ],
+    "explain": "The baby는 한 명이므로 be동사 is를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en5-067",
+    "type": "short",
+    "q": "빈칸에 알맞은 be동사 한 단어를 쓰세요.\nMy brother and I (   ) watching TV.",
+    "answer": [
+      "are"
+    ],
+    "explain": "My brother and I는 두 사람이므로 be동사 are를 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en5-068",
+    "type": "short",
+    "q": "괄호 안의 단어를 알맞은 모양으로 바꿔 쓰세요.\nDad is (make) sandwiches.",
+    "answer": [
+      "making"
+    ],
+    "explain": "make는 e를 빼고 ing를 붙여 making으로 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en5-069",
+    "type": "short",
+    "q": "빈칸에 알맞은 소유격 한 단어를 쓰세요.\nI have a cat. (   ) name is Nabi.",
+    "answer": [
+      "Its"
+    ],
+    "explain": "동물이나 사물의 소유격은 Its예요. 고양이의 이름을 말할 때 Its name이라고 해요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en5-070",
+    "type": "short",
+    "q": "우리말과 뜻이 같도록 빈칸에 알맞은 말을 쓰세요.\n나는 스케이트를 탈 수 없어.\nI (   ) skate.",
+    "answer": [
+      "can't",
+      "cannot"
+    ],
+    "explain": "할 수 없다는 can't 또는 cannot으로 나타내요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en5-071",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nLook at the ball. (   ) is red.",
+    "choices": [
+      "He",
+      "She",
+      "It",
+      "They"
+    ],
+    "answer": 2,
+    "explain": "the ball은 사물 하나이므로 It으로 받아요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en5-072",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nWe are in the same class. (   ) teacher is Mr. Park.",
+    "choices": [
+      "Our",
+      "Your",
+      "My",
+      "Their"
+    ],
+    "answer": 0,
+    "explain": "We의 소유격은 Our(우리의)예요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en5-073",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nA: (   ) are you so happy?\nB: Because today is my birthday.",
+    "choices": [
+      "Where",
+      "Why",
+      "Who",
+      "When"
+    ],
+    "answer": 1,
+    "explain": "Because로 이유를 대답했으므로 이유를 묻는 Why가 알맞아요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en5-074",
+    "type": "mc",
+    "q": "빈칸에 알맞은 대답을 고르세요.\nA: Who is the man in the picture?\nB: (   )",
+    "choices": [
+      "He is my uncle.",
+      "It is a pencil.",
+      "It's five o'clock.",
+      "I go to school."
+    ],
+    "answer": 0,
+    "explain": "Who는 누구인지 묻는 말이므로 사람을 알려 주는 He is my uncle.이 알맞아요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en5-075",
+    "type": "mc",
+    "q": "빈칸에 알맞은 대답을 고르세요.\nA: Where do you live?\nB: (   )",
+    "choices": [
+      "I live in Busan.",
+      "I am ten years old.",
+      "It's Friday.",
+      "Because I like it."
+    ],
+    "answer": 0,
+    "explain": "Where는 장소를 묻는 말이므로 사는 곳을 알려 주는 대답이 알맞아요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en5-076",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nA: What is your favorite sport?\nB: My favorite sport (   ) badminton.",
+    "choices": [
+      "is",
+      "are",
+      "do",
+      "can"
+    ],
+    "answer": 0,
+    "explain": "My favorite sport는 하나이므로 be동사 is를 써요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en5-077",
+    "type": "mc",
+    "q": "빈칸에 알맞은 대답을 고르세요.\nA: Why do you like winter?\nB: (   )",
+    "choices": [
+      "Because I like making snowmen.",
+      "In the park.",
+      "He is my brother.",
+      "At six o'clock."
+    ],
+    "answer": 0,
+    "explain": "Why로 이유를 물으면 Because로 시작해서 이유를 말해요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en5-078",
+    "type": "mc",
+    "q": "다음 중 대화가 자연스럽지 않은 것은 어느 것인가요?",
+    "choices": [
+      "A: Where is my cap? B: It's on the bed.",
+      "A: When is the school festival? B: It's in October.",
+      "A: Who is your best friend? B: It's in my bag.",
+      "A: Can you play the drums? B: Yes, I can."
+    ],
+    "answer": 2,
+    "explain": "Who는 사람을 묻는 말인데 It's in my bag.은 물건이 있는 곳을 말하는 대답이라 어색해요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en5-079",
+    "type": "mc",
+    "q": "빈칸에 알맞은 대답을 고르세요.\nA: Can you help me, please?\nB: (   )",
+    "choices": [
+      "Sure, I can.",
+      "No, I am.",
+      "Yes, you are.",
+      "It's my bag."
+    ],
+    "answer": 0,
+    "explain": "Can you ~?로 부탁하면 Sure, I can.처럼 대답할 수 있어요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en5-080",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nA: (   ) does the concert begin?\nB: It begins at seven o'clock.",
+    "choices": [
+      "Who",
+      "Where",
+      "When",
+      "Why"
+    ],
+    "answer": 2,
+    "explain": "7시라는 시각을 대답했으므로 때를 묻는 When이 알맞아요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en5-081",
+    "type": "short",
+    "q": "Why로 묻는 말에 이유를 대답할 때 문장 맨 앞에 쓰는 '왜냐하면'이라는 뜻의 영어 단어를 쓰세요.",
+    "answer": [
+      "Because"
+    ],
+    "explain": "이유를 말할 때는 Because로 문장을 시작해요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en5-082",
+    "type": "short",
+    "q": "우리말과 뜻이 같도록 빈칸에 알맞은 영어 단어 한 개를 쓰세요.\n내가 가장 좋아하는 과목은 음악이야.\nMy favorite subject is (   ).",
+    "answer": [
+      "music"
+    ],
+    "explain": "음악 과목은 music이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en5-083",
+    "type": "short",
+    "q": "빈칸에 알맞은 의문사 한 단어를 쓰세요.\nA: (   ) are you going now?\nB: I'm going to the library.",
+    "answer": [
+      "Where"
+    ],
+    "explain": "도서관이라는 장소를 대답했으므로 장소를 묻는 Where를 써요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en5-084",
+    "type": "mc",
+    "q": "'내가 가장 좋아하는 동물은 토끼야.'를 영어로 바르게 옮긴 것은 어느 것인가요?",
+    "choices": [
+      "My favorite animal is a rabbit.",
+      "My animal favorite is a rabbit.",
+      "I favorite animal a rabbit.",
+      "A rabbit favorite is my animal."
+    ],
+    "answer": 0,
+    "explain": "가장 좋아하는 것을 말할 때는 My favorite + 명사 + is ~ 순서로 써요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en5-085",
+    "type": "mc",
+    "q": "B의 대답을 보고, 빈칸에 알맞은 질문을 고르세요.\nA: (   )\nB: Because he lost his puppy.",
+    "choices": [
+      "Where is he going?",
+      "Why is he crying?",
+      "Who is that boy?",
+      "When is his birthday?"
+    ],
+    "answer": 1,
+    "explain": "Because로 이유를 대답했으므로 이유를 묻는 Why 질문이 알맞아요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en5-086",
+    "type": "short",
+    "q": "수영을 못하는 민호의 대답이 되도록 빈칸에 알맞은 말을 쓰세요.\nA: Can you swim, Minho?\nB: No, I (   ).",
+    "answer": [
+      "can't",
+      "cannot"
+    ],
+    "explain": "Can you ~?에 아니라고 대답할 때는 No, I can't.라고 해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en5-087",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nHello. I'm Sora. I live in Daegu. My favorite season is spring. I like spring flowers.\n\n소라가 가장 좋아하는 계절은 무엇인가요?",
+    "choices": [
+      "봄",
+      "여름",
+      "가을",
+      "겨울"
+    ],
+    "answer": 0,
+    "explain": "My favorite season is spring.에서 소라가 봄을 가장 좋아한다는 것을 알 수 있어요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en5-088",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nThis is my brother Mark. He is twelve years old. He can play the violin. He practices every evening.\n\n마크가 연주할 수 있는 악기는 무엇인가요?",
+    "choices": [
+      "피아노",
+      "바이올린",
+      "기타",
+      "드럼"
+    ],
+    "answer": 1,
+    "explain": "He can play the violin.에서 마크가 바이올린을 켤 수 있다는 것을 알 수 있어요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en5-089",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nToday is Saturday. Dad is washing the car. Mom is watering the flowers. I am cleaning my room.\n\n엄마가 지금 하고 있는 일은 무엇인가요?",
+    "choices": [
+      "세차하기",
+      "꽃에 물 주기",
+      "방 청소하기",
+      "설거지하기"
+    ],
+    "answer": 1,
+    "explain": "Mom is watering the flowers.는 엄마가 꽃에 물을 주고 있다는 뜻이에요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en5-090",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nMy uncle works at a big hospital. He helps sick children every day. He goes to work by subway. He is always busy.\n\n삼촌이 출근할 때 이용하는 교통수단은 무엇인가요?",
+    "choices": [
+      "버스",
+      "지하철",
+      "자전거",
+      "택시"
+    ],
+    "answer": 1,
+    "explain": "by subway는 지하철을 타고라는 뜻이에요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en5-091",
+    "type": "mc",
+    "q": "다음 글을 읽고, 글의 내용과 일치하지 않는 것을 고르세요.\n\nLisa is at the beach with her family. She can't swim, so she is making a sandcastle. Her father is swimming in the sea. Her mother is reading a book.",
+    "choices": [
+      "리사는 해변에 있다.",
+      "리사는 수영을 할 수 없다.",
+      "리사의 아버지는 바다에서 수영하고 있다.",
+      "리사의 어머니는 모래성을 만들고 있다."
+    ],
+    "answer": 3,
+    "explain": "어머니는 책을 읽고 있고, 모래성을 만드는 사람은 리사예요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en5-092",
+    "type": "mc",
+    "q": "다음 글을 읽고, 글의 내용과 일치하는 것을 고르세요.\n\nHi, I'm Daniel. I'm from Australia. I can speak English, but I can't speak Korean well. I want to learn Korean.",
+    "choices": [
+      "다니엘은 한국에서 왔다.",
+      "다니엘은 영어를 할 수 있다.",
+      "다니엘은 한국어를 아주 잘한다.",
+      "다니엘은 중국어를 배우고 싶어 한다."
+    ],
+    "answer": 1,
+    "explain": "I can speak English.에서 다니엘이 영어를 할 수 있다는 것을 알 수 있어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en5-093",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nMy name is Yuna. My favorite hobby is drawing. I draw pictures of my dog. I want to be an artist.\n\n유나의 취미는 무엇인가요?",
+    "choices": [
+      "그림 그리기",
+      "노래하기",
+      "춤추기",
+      "요리하기"
+    ],
+    "answer": 0,
+    "explain": "My favorite hobby is drawing.은 가장 좋아하는 취미가 그림 그리기라는 뜻이에요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en5-094",
+    "type": "mc",
+    "q": "다음 글을 읽고, 글에서 알 수 없는 것을 고르세요.\n\nEvery Friday, my family goes to the market. We buy apples and fish there. The market is near my house, so we walk. I like the smell of the bread shop.",
+    "choices": [
+      "시장에 가는 요일",
+      "시장에서 사는 것",
+      "시장에 가는 방법",
+      "시장에서 쓰는 돈"
+    ],
+    "answer": 3,
+    "explain": "금요일에 걸어서 가고 사과와 생선을 산다고 했지만, 돈에 대한 이야기는 나오지 않아요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en5-095",
+    "type": "short",
+    "q": "다음 글을 읽고, 빈칸에 알맞은 한 단어를 글에서 찾아 쓰세요.\n\nJinho is in his room. He is doing his homework. His sister is playing the piano in the living room. Their dog is sleeping under the table.\n\nJinho's sister is playing the (   ).",
+    "answer": [
+      "piano"
+    ],
+    "explain": "His sister is playing the piano.에서 누나가 피아노를 치고 있다는 것을 알 수 있어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en5-096",
+    "type": "short",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nI'm Mia. I have two pets. My cat is white and my rabbit is brown. I love them.\n\n미아가 기르는 동물 중 흰색인 동물을 영어 한 단어로 쓰세요.",
+    "answer": [
+      "cat"
+    ],
+    "explain": "My cat is white.에서 흰색인 동물이 cat(고양이)이라는 것을 알 수 있어요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en5-097",
+    "type": "short",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nSam gets up at seven. He goes to school by bus. After school, he plays badminton with his friends. He goes to bed at nine.\n\n샘이 방과 후에 친구들과 하는 운동을 영어로 쓰세요.",
+    "answer": [
+      "badminton"
+    ],
+    "explain": "he plays badminton with his friends에서 방과 후에 배드민턴을 친다는 것을 알 수 있어요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en5-098",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nLook at this photo. This is my family. My father is a cook. My mother is a police officer. My sister is a middle school student.\n\n글쓴이의 아버지의 직업은 무엇인가요?",
+    "choices": [
+      "요리사",
+      "경찰관",
+      "선생님",
+      "학생"
+    ],
+    "answer": 0,
+    "explain": "My father is a cook.에서 아버지가 요리사라는 것을 알 수 있어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en5-099",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nHi! I'm Leo. I'm in the fifth grade. My favorite day is Friday. I go to the swimming pool on Fridays.\n\n레오가 금요일마다 가는 곳은 어디인가요?",
+    "choices": [
+      "수영장",
+      "도서관",
+      "박물관",
+      "공원"
+    ],
+    "answer": 0,
+    "explain": "I go to the swimming pool on Fridays.에서 금요일마다 수영장에 간다는 것을 알 수 있어요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en5-100",
+    "type": "short",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nNari has an English class on Tuesday. She likes her teacher, Mr. Brown. He is funny and kind. Nari's favorite subject is English.\n\n나리가 가장 좋아하는 과목을 영어 한 단어로 쓰세요.",
+    "answer": [
+      "English"
+    ],
+    "explain": "Nari's favorite subject is English.에서 가장 좋아하는 과목이 영어라는 것을 알 수 있어요.",
+    "tag": "독해",
+    "level": "normal"
   }
 ]

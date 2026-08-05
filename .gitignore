@@ -11,3 +11,10 @@ next-env.d.ts
 # 내 컴퓨터에만 쓰는 로컬 설정 / 실행 중 생기는 파일
 .claude/settings.local.json
 .claude/scheduled_tasks.lock
+
+# 비밀값이 담긴 파일은 절대 올리지 않는다.
+# 구글 클라우드 콘솔에서 받는 OAuth 클라이언트 JSON이 여기 해당한다.
+# 클라이언트 ID/시크릿은 파일이 아니라 Vercel 환경변수에 넣는다.
+*client_secret*.json
+*.credentials.json
+secrets/
