@@ -57,47 +57,49 @@ console.log("\n=== 생성된 문장에 어색한 조사가 없는지 ===");
 const all = [];
 for (let g = 1; g <= 9; g++) all.push(...genWordProblems(g, 600).map((p) => ({ g, ...p })));
 
-/**
- * 문장 전체에서 조사를 찾아 검사하면 "있는", "나가고" 같은 동사 활용까지 걸려 오탐이 난다.
- * 그래서 생성기가 실제로 쓰는 낱말(물건·단위·이름·사람) 뒤의 조사만 정확히 검사한다.
- */
-const NOUNS = [
-  "사탕", "색종이", "구슬", "딸기", "연필", "공책", "스티커", "젤리", "귤", "블록",
-  "카드", "방울토마토", "클립", "도토리", "종이컵",
-  "개", "장", "자루", "권", "명", "점", "원",
-  "지우", "서준", "하윤", "민재", "예은", "도현", "수아", "지호", "채원", "은우",
-  "다온", "시윤", "나윤", "준서", "소율", "현우", "지안", "예린", "유진", "태윤",
-  "동생", "형", "누나", "언니", "오빠", "친구", "짝꿍", "사촌",
-  "상자", "바구니", "봉지", "접시", "필통", "의자", "물통", "텃밭",
-];
 const hasJong = (w) => {
   const c = w.charCodeAt(w.length - 1) - 0xac00;
   return c >= 0 && c <= 11171 ? c % 28 !== 0 : null;
 };
-/** 받침 유무에 따라 올바른 조사 짝 */
-const PAIRS = [
-  ["은", "는"],
-  ["이", "가"],
-  ["을", "를"],
-  ["과", "와"],
-];
+
+/**
+ * 문장에 나온 **모든** 낱말 뒤의 조사를 검사한다.
+ *
+ * 예전에는 검사할 낱말을 여기에 적어두고 그 낱말만 봤는데, 그러면 생성기에 새 낱말을
+ * 넣을 때마다 여기에도 적어야 하고, 잊으면 검사가 조용히 새어 나간다.
+ * 실제로 "옷차림는 모두 몇 가지인가요?"가 그렇게 통과했다.
+ *
+ * 대신 "한글 낱말 + 조사 + (공백·문장부호·끝)" 을 전부 찾아 받침과 맞는지 본다.
+ * 동사 활용("있는", "나가고")은 조사 뒤에 공백이 오는 형태가 아니거나 받침 규칙에
+ * 어긋나지 않아 걸리지 않는다 — 현재 생성 문장 5,400개에서 오탐 0건.
+ *
+ * "이"는 이름 뒤 접미사이기도 하므로(서준이는) 받침 없는 낱말 뒤에서는 넘어간다.
+ */
+const RIGHT = { 은: true, 이: true, 을: true, 과: true, 는: false, 가: false, 를: false, 와: false };
+function awkwardParticles(sentence) {
+  const found = [];
+  for (const m of sentence.matchAll(/([가-힣]{2,})(은|는|이|가|을|를|과|와)(?=[\s,.?!)]|$)/g)) {
+    const [whole, word, part] = m;
+    const j = hasJong(word);
+    if (j === null) continue;
+    if (RIGHT[part] === j) continue;
+    if (!j && part === "이") continue; // "지우이는"이 아니라 "지우이" 형태는 이름 접미사
+    found.push(whole);
+  }
+  return found;
+}
+
+// 검사기 자체가 망가지면 조용히 통과하므로, 일부러 틀린 문장으로 먼저 시험한다
+check(
+  "조사 검사기가 잘못된 조사를 실제로 잡아내는지",
+  awkwardParticles("만들 수 있는 옷차림는 모두 몇 가지인가요?").includes("옷차림는") &&
+    awkwardParticles("사탕를 3개 먹었습니다.").includes("사탕를") &&
+    awkwardParticles("딸기는 몇 개인가요?").length === 0,
+);
 
 const awkward = [];
 for (const p of all) {
-  for (const noun of NOUNS) {
-    const j = hasJong(noun);
-    if (j === null) continue;
-    for (const [withJ, withoutJ] of PAIRS) {
-      // 받침 있는 낱말인데 받침 없는 형태가 붙었거나, 그 반대인 경우를 찾는다
-      const wrong = j ? withoutJ : withJ;
-      // 이름 뒤 접미사 "이"(서준이는)는 정상이므로 제외
-      if (!j && wrong === "이") continue;
-      const re = new RegExp(`${noun}${wrong}(?=[\\s,.?)]|$)`, "g");
-      for (const m of p.q.matchAll(re)) {
-        awkward.push(`[${p.g}학년] "${m[0]}" ← ${p.q.slice(0, 45)}`);
-      }
-    }
-  }
+  for (const w of awkwardParticles(p.q)) awkward.push(`[${p.g}학년] "${w}" ← ${p.q.slice(0, 45)}`);
 }
 check(
   `생성 문장 ${all.length}개의 조사 검사`,

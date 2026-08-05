@@ -71,10 +71,46 @@ function answerValue(p) {
   return Number.isNaN(n) ? null : n;
 }
 
+/**
+ * 식을 교과서 표기대로 썼는지.
+ *
+ * "y = 3x + 0", "y = 1x", "x² + 1x - 6", "(x + 0)²" 은 답은 맞지만 아이가 배운 표기와
+ * 달라서 문제가 잘못된 것처럼 보인다. 계수 1은 생략하고 0인 항은 쓰지 않아야 한다.
+ * 소수("6.9 + 0.9")와 좌표 계산("(-6 - 0) ÷ 2")은 정상이므로 건드리지 않는다.
+ */
+const NOTATION = [
+  [/[+\-] 0(?![.\d])/, "0인 항을 그대로 씀"],
+  [/(^|[^\d.])1(x|y)/, "계수 1을 그대로 씀"],
+  [/\(x [+\-] 0\)/, "(x + 0)"],
+];
+/** 검사할 부분: 문제 문장만 본다 (해설의 좌표 계산에는 "- 0"이 정상으로 나온다) */
+function notationErrors(q) {
+  return NOTATION.filter(([re]) => re.test(q)).map(([, why]) => why);
+}
+
 let bad = 0;
 let checked = 0;
 const diversity = [];
 const samples = new Map();
+const notationSeen = new Set();
+
+// 검사기가 망가지면 조용히 통과하므로 일부러 틀린 식으로 먼저 시험한다
+for (const [wrong, why] of [
+  ["일차함수 y = 3x + 0 에서 x = 1일 때 y의 값은?", "0인 항"],
+  ["일차함수 y = 1x - 2 에서 x = 1일 때 y의 값은?", "계수 1"],
+  ["이차함수 y = (x + 0)² + 3 의 꼭짓점의 x좌표는?", "(x + 0)"],
+]) {
+  if (notationErrors(wrong).length === 0) {
+    console.error(`✗ 표기 검사기가 "${why}"를 잡아내지 못합니다: ${wrong}`);
+    bad++;
+  }
+}
+for (const ok of ["6.9 + 0.9 = ?", "정비례 관계 y = 2x 에서 x = 3일 때 y의 값은?", "10 + 5 = ?"]) {
+  if (notationErrors(ok).length > 0) {
+    console.error(`✗ 표기 검사기가 정상 문제를 오탐합니다: ${ok}`);
+    bad++;
+  }
+}
 
 for (let grade = 1; grade <= 9; grade++) {
   // 1) 하루 최대 설정치가 서로 겹치지 않아야 한다
@@ -109,6 +145,15 @@ for (let grade = 1; grade <= 9; grade++) {
     ) {
       console.error(`✗ ${grade}학년 short answer: ${p.q} → ${JSON.stringify(p.answer)}`);
       bad++;
+    }
+
+    for (const why of notationErrors(p.q)) {
+      const key = `${grade}|${why}|${p.tag}`;
+      if (!notationSeen.has(key)) {
+        notationSeen.add(key);
+        console.error(`✗ ${grade}학년 ${why}: ${p.q.replace(/\n/g, " / ")}`);
+        bad++;
+      }
     }
 
     const expected = evalExpr(p.q.split("\n")[0]);

@@ -27,6 +27,20 @@ function distinctInts(min: number, max: number, k: number): number[] {
 /** 소수를 불필요한 0 없이 문자열로 */
 const fmt = (x: number) => parseFloat(x.toFixed(4)).toString();
 
+/**
+ * 식을 교과서에서 쓰는 대로 적는다.
+ * "y = 3x + 0", "y = 1x", "x² + 1x - 6" 처럼 나오면 답은 맞아도 아이가 배운 표기와 달라
+ * 문제가 잘못된 것처럼 보인다. 계수 1은 생략하고, 0인 항은 아예 쓰지 않는다.
+ */
+/** 맨 앞 항: 3x / x / -x */
+const term = (coef: number, v: string) => (coef === 1 ? v : coef === -1 ? `-${v}` : `${coef}${v}`);
+/** 뒤에 더해지는 항: " + 3" / " - 3" / " + x" / 0이면 빈 문자열 */
+const addend = (n: number, v = "") => {
+  if (n === 0) return "";
+  const size = Math.abs(n);
+  return ` ${n > 0 ? "+" : "-"} ${v && size === 1 ? v : `${size}${v}`}`;
+};
+
 let seq = 0;
 function short(q: string, answers: string[], tag: string, explain = ""): Problem {
   seq = (seq + 1) % 100000;
@@ -364,8 +378,8 @@ const g7: Gen[] = [
     const a = ri(2, 9);
     const x = ri(-9, 9) || 4;
     const b = ri(-20, 20);
-    return short(`${a}x ${b >= 0 ? "+" : "-"} ${Math.abs(b)} = ${a * x + b} 일 때, x의 값은?`,
-      [`${x}`], "일차방정식", `${a}x = ${a * x} → x = ${x}`);
+    return short(`${term(a, "x")}${addend(b)} = ${a * x + b} 일 때, x의 값은?`,
+      [`${x}`], "일차방정식", `${term(a, "x")} = ${a * x} → x = ${x}`);
   },
   () => {
     // 양변에 x가 있는 일차방정식
@@ -374,8 +388,8 @@ const g7: Gen[] = [
     const x = ri(-8, 8) || 3;
     const b = ri(-15, 15);
     const d = (a - c) * x + b;
-    return short(`${a}x ${b >= 0 ? "+" : "-"} ${Math.abs(b)} = ${c}x ${d >= 0 ? "+" : "-"} ${Math.abs(d)} 일 때, x의 값은?`,
-      [`${x}`], "일차방정식", `${a - c}x = ${d - b} → x = ${x}`);
+    return short(`${term(a, "x")}${addend(b)} = ${term(c, "x")}${addend(d)} 일 때, x의 값은?`,
+      [`${x}`], "일차방정식", `${term(a - c, "x")} = ${d - b} → x = ${x}`);
   },
   () => {
     const a = ri(2, 9), b = ri(2, 9), k = ri(2, 6);
@@ -447,7 +461,7 @@ const g8: Gen[] = [
     const a = ri(1, 5), b = ri(1, 5), c = ri(1, 5), d = ri(1, 5);
     if (a * d - b * c === 0) return g8[4]();
     return short(
-      `연립방정식\n${a}x + ${b}y = ${a * x + b * y}\n${c}x + ${d}y = ${c * x + d * y}\n의 해에서 x의 값은?`,
+      `연립방정식\n${term(a, "x")}${addend(b, "y")} = ${a * x + b * y}\n${term(c, "x")}${addend(d, "y")} = ${c * x + d * y}\n의 해에서 x의 값은?`,
       [`${x}`],
       "연립방정식",
       `x = ${x}, y = ${y}`,
@@ -471,8 +485,8 @@ const g8: Gen[] = [
     const a = ri(-5, 5) || 3;
     const b = ri(-10, 10);
     const x = ri(-6, 6);
-    return short(`일차함수 y = ${a}x ${b >= 0 ? "+" : "-"} ${Math.abs(b)} 에서 x = ${x}일 때 y의 값은?`,
-      [`${a * x + b}`], "일차함수", `${a} × ${x} ${b >= 0 ? "+" : "-"} ${Math.abs(b)} = ${a * x + b}`);
+    return short(`일차함수 y = ${term(a, "x")}${addend(b)} 에서 x = ${x}일 때 y의 값은?`,
+      [`${a * x + b}`], "일차함수", `${a} × (${x})${addend(b)} = ${a * x + b}`);
   },
   () => {
     // 피타고라스 (정수 삼각형)
@@ -538,7 +552,7 @@ const g9: Gen[] = [
     const c = p * q;
     const big = Math.max(p, q);
     return short(
-      `이차방정식 x² ${b >= 0 ? "+" : "-"} ${Math.abs(b)}x ${c >= 0 ? "+" : "-"} ${Math.abs(c)} = 0 의 두 근 중 큰 값은?`,
+      `이차방정식 x²${addend(b, "x")}${addend(c)} = 0 의 두 근 중 큰 값은?`,
       [`${big}`],
       "이차방정식",
       `(x ${-p >= 0 ? "+" : "-"} ${Math.abs(p)})(x ${-q >= 0 ? "+" : "-"} ${Math.abs(q)}) = 0 → x = ${p} 또는 x = ${q}`,
@@ -550,7 +564,7 @@ const g9: Gen[] = [
     const b = -(p + q);
     const c = p * q;
     return short(
-      `이차방정식 x² ${b >= 0 ? "+" : "-"} ${Math.abs(b)}x ${c >= 0 ? "+" : "-"} ${Math.abs(c)} = 0 의 두 근의 합은?`,
+      `이차방정식 x²${addend(b, "x")}${addend(c)} = 0 의 두 근의 합은?`,
       [`${p + q}`],
       "이차방정식",
       `두 근의 합은 -(일차항 계수) → ${p + q}`,
@@ -572,7 +586,7 @@ const g9: Gen[] = [
     const q = ri(-10, 10);
     const a = pick([1, -1, 2, -2]);
     return short(
-      `이차함수 y = ${a === 1 ? "" : a === -1 ? "-" : a}(x ${-p >= 0 ? "+" : "-"} ${Math.abs(p)})² ${q >= 0 ? "+" : "-"} ${Math.abs(q)} 의 꼭짓점의 x좌표는?`,
+      `이차함수 y = ${term(a, "")}${p === 0 ? "x²" : `(x${addend(-p)})²`}${addend(q)} 의 꼭짓점의 x좌표는?`,
       [`${p}`],
       "이차함수",
       `꼭짓점은 (${p}, ${q})`,
