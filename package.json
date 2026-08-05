@@ -17,7 +17,8 @@
     "check:word": "node scripts/test-wordgen.mjs",
     "check:pwa": "node scripts/test-pwa.mjs",
     "make:images": "node scripts/make-images.mjs",
-    "check:owner": "node scripts/test-owner.mjs"
+    "check:owner": "node scripts/test-owner.mjs",
+    "check:grading": "node scripts/test-grading.mjs"
   },
   "dependencies": {
     "jose": "^6.2.8",

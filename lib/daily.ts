@@ -244,8 +244,25 @@ export function toPublic(set: DailySet) {
   };
 }
 
+/**
+ * 채점용 정규화.
+ *
+ * 아는데도 오답이 되는 일을 줄이는 것이 목적이다.
+ *  - 대소문자·띄어쓰기는 무시한다 ("Cat" = "cat", "다섯 마리" = "다섯마리")
+ *  - 따옴표와 문장 끝 마침표·물음표·쉼표도 무시한다
+ *    ("The cat is on the sofa." 를 마침표 없이 써도 정답)
+ *
+ * 주의: 마침표는 **끝에 붙은 것만** 떼어낸다. 가운데 마침표까지 지우면
+ * 소수 답("3.14")이 "314"가 되어 완전히 다른 값이 된다.
+ */
 function normText(s: string): string {
-  return s.trim().toLowerCase().replace(/\s+/g, "");
+  return s
+    .trim()
+    .toLowerCase()
+    .replace(/[”“"'‘’]/g, "")
+    .replace(/[,、]/g, "")
+    .replace(/[.!?。]+$/, "")
+    .replace(/\s+/g, "");
 }
 
 /** "12개", "3/4", "2.8", "1,200" 등을 숫자로 해석 (분수 지원) */

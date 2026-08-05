@@ -5,6 +5,17 @@ import path from "path";
 const ROOT = path.join(process.cwd(), "data", "problems");
 const SUBJECTS = ["ko", "en", "math"];
 const LEVELS = new Set(["easy", "normal", "hard"]);
+
+/**
+ * 단답형 정답의 최대 길이.
+ * 이보다 길면 문장을 받는 문제라는 뜻이고, 그런 문제는 아이가 답을 알아도
+ * 조사·어순이 조금 다르면 오답이 되어 버린다.
+ */
+const MAX_ANSWER_LEN = 24;
+
+/** 서술형을 걸러내는 표현 (사람이 읽어야 채점되는 문제는 이 앱에서 쓸 수 없다) */
+const ESSAY_WORDS =
+  /설명하시오|설명해\s*보시오|서술하시오|서술해\s*보시오|논술|이유를\s*쓰시오|까닭을\s*쓰시오|자유롭게\s*쓰|문장으로\s*쓰시오|감상을\s*쓰/;
 const TAGS = new Map();
 
 let errors = 0;
@@ -73,10 +84,21 @@ for (const sub of SUBJECTS) {
             fail(`${at} short answer에 빈 문자열이 있습니다`);
           const norm = p.answer.map((a) => String(a).trim().toLowerCase().replace(/\s+/g, ""));
           if (new Set(norm).size !== norm.length) fail(`${at} short answer에 중복 정답이 있습니다`);
+          // 정답이 문장급으로 길면 자동 채점이 사실상 불가능하다.
+          // 아이가 조사 하나만 다르게 써도 오답이 되므로 낱말·숫자 수준으로 제한한다.
+          const tooLong = p.answer.filter((a) => String(a).trim().length > MAX_ANSWER_LEN);
+          if (tooLong.length)
+            fail(
+              `${at} short 정답이 너무 깁니다(${MAX_ANSWER_LEN}자 초과) — 낱말이나 숫자로 답할 수 있게 문제를 바꾸세요: ${JSON.stringify(tooLong[0])}`,
+            );
         }
       } else {
         fail(`${at} type이 mc/short가 아닙니다 (${p.type})`);
       }
+
+      // 서술형은 채점할 수 없다 (사람이 읽어야 하므로 이 앱에서는 쓸 수 없음)
+      if (typeof p.q === "string" && ESSAY_WORDS.test(p.q))
+        fail(`${at} 서술형으로 보입니다 — 자동 채점이 안 됩니다 ("${p.q.match(ESSAY_WORDS)?.[0]}")`);
 
       if (p.explain !== undefined && typeof p.explain !== "string") fail(`${at} explain이 문자열이 아닙니다`);
       if (p.tag !== undefined && typeof p.tag !== "string") fail(`${at} tag가 문자열이 아닙니다`);
