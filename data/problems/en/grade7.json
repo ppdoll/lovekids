@@ -1,0 +1,1403 @@
+[
+  {
+    "id": "en7-001",
+    "type": "mc",
+    "q": "다음 중 '과학'을 뜻하는 영어 단어는 무엇인가요?",
+    "choices": [
+      "science",
+      "second",
+      "silence",
+      "subject"
+    ],
+    "answer": 0,
+    "explain": "science는 '과학'이라는 뜻의 학교 과목 이름이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en7-002",
+    "type": "mc",
+    "q": "'uncle'의 뜻으로 알맞은 것은 무엇인가요?",
+    "choices": [
+      "사촌",
+      "삼촌",
+      "이모",
+      "조카"
+    ],
+    "answer": 1,
+    "explain": "uncle은 '삼촌(외삼촌)'이에요. 이모는 aunt, 사촌은 cousin이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en7-003",
+    "type": "mc",
+    "q": "냄새를 맡을 때 쓰는 신체 부위를 뜻하는 영어 단어는 무엇인가요?",
+    "choices": [
+      "knee",
+      "hand",
+      "nose",
+      "ear"
+    ],
+    "answer": 2,
+    "explain": "nose는 '코'예요. ear는 귀, hand는 손, knee는 무릎이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en7-004",
+    "type": "short",
+    "q": "눈이 내리고 가장 추운 계절을 뜻하는 영어 단어를 쓰세요.",
+    "answer": [
+      "winter"
+    ],
+    "explain": "가장 추운 계절인 겨울은 영어로 winter예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en7-005",
+    "type": "mc",
+    "q": "아침에 먹는 식사를 뜻하는 영어 단어는 무엇인가요?",
+    "choices": [
+      "dinner",
+      "lunch",
+      "dessert",
+      "breakfast"
+    ],
+    "answer": 3,
+    "explain": "breakfast는 '아침 식사'예요. 점심은 lunch, 저녁은 dinner예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en7-006",
+    "type": "mc",
+    "q": "'sad'와 반대되는 뜻을 가진 낱말은 무엇인가요?",
+    "choices": [
+      "happy",
+      "angry",
+      "hungry",
+      "tired"
+    ],
+    "answer": 0,
+    "explain": "sad는 '슬픈', happy는 '행복한'으로 서로 반대말이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en7-007",
+    "type": "short",
+    "q": "'세 번째'를 뜻하는 서수를 영어 한 단어로 쓰세요.",
+    "answer": [
+      "third"
+    ],
+    "explain": "three의 서수는 third예요. 순서를 말할 때 써요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en7-008",
+    "type": "mc",
+    "q": "눈이 내리는 날씨를 나타내는 영어 단어는 무엇인가요?",
+    "choices": [
+      "windy",
+      "snowy",
+      "foggy",
+      "sunny"
+    ],
+    "answer": 1,
+    "explain": "snow(눈)에서 온 snowy가 '눈이 오는'이라는 뜻이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en7-009",
+    "type": "mc",
+    "q": "'hobby'의 뜻으로 알맞은 것은 무엇인가요?",
+    "choices": [
+      "직업",
+      "습관",
+      "취미",
+      "숙제"
+    ],
+    "answer": 2,
+    "explain": "hobby는 '취미'예요. 습관은 habit, 직업은 job이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en7-010",
+    "type": "short",
+    "q": "숫자 12를 영어 단어 하나로 쓰세요.",
+    "answer": [
+      "twelve"
+    ],
+    "explain": "12는 twelve라고 써요. 11은 eleven이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en7-011",
+    "type": "mc",
+    "q": "글씨를 지울 때 쓰는 학용품을 뜻하는 영어 단어는 무엇인가요?",
+    "choices": [
+      "scissors",
+      "ruler",
+      "glue",
+      "eraser"
+    ],
+    "answer": 3,
+    "explain": "eraser는 '지우개'예요. ruler는 자, glue는 풀이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en7-012",
+    "type": "mc",
+    "q": "다음 중 나머지 셋과 종류가 다른 낱말은 무엇인가요?",
+    "choices": [
+      "pencil",
+      "apple",
+      "banana",
+      "grape"
+    ],
+    "answer": 0,
+    "explain": "pencil(연필)만 학용품이고, 나머지는 모두 과일이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en7-013",
+    "type": "short",
+    "q": "'뜨거운(hot)'과 반대되는 뜻의 영어 단어를 쓰세요.",
+    "answer": [
+      "cold"
+    ],
+    "explain": "hot의 반대말은 cold(차가운, 추운)예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en7-014",
+    "type": "mc",
+    "q": "빈칸에 알맞은 과목 이름은 무엇인가요?\nI love numbers, so my favorite subject is (    ).",
+    "choices": [
+      "music",
+      "math",
+      "history",
+      "art"
+    ],
+    "answer": 1,
+    "explain": "숫자를 좋아한다고 했으므로 수학, 즉 math가 알맞아요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en7-015",
+    "type": "mc",
+    "q": "'excited'의 뜻으로 알맞은 것은 무엇인가요?",
+    "choices": [
+      "지루한",
+      "무서운",
+      "신이 난",
+      "부끄러운"
+    ],
+    "answer": 2,
+    "explain": "excited는 '신이 난, 들뜬'이에요. 지루한은 bored예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en7-016",
+    "type": "mc",
+    "q": "'shoulder'가 가리키는 신체 부위는 어디인가요?",
+    "choices": [
+      "무릎",
+      "발목",
+      "팔꿈치",
+      "어깨"
+    ],
+    "answer": 3,
+    "explain": "shoulder는 '어깨'예요. 팔꿈치는 elbow, 발목은 ankle이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en7-017",
+    "type": "short",
+    "q": "빈칸에 알맞은 낱말을 영어 한 단어로 쓰세요.\nMy brother is not tall. He is (    ).",
+    "answer": [
+      "short"
+    ],
+    "explain": "tall(키가 큰)의 반대말은 short(키가 작은)예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en7-018",
+    "type": "mc",
+    "q": "다음 중 채소(vegetable)가 아닌 것은 무엇인가요?",
+    "choices": [
+      "chicken",
+      "carrot",
+      "potato",
+      "onion"
+    ],
+    "answer": 0,
+    "explain": "chicken은 닭고기예요. 당근, 양파, 감자는 모두 채소예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en7-019",
+    "type": "mc",
+    "q": "빈칸에 알맞은 날씨 표현은 무엇인가요?\nThe sky is gray and I cannot see the sun. It is (    ) today.",
+    "choices": [
+      "hot",
+      "cloudy",
+      "sunny",
+      "dry"
+    ],
+    "answer": 1,
+    "explain": "하늘이 회색이고 해가 보이지 않으니 '흐린(cloudy)' 날씨예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en7-020",
+    "type": "short",
+    "q": "'다섯 번째'를 뜻하는 서수를 영어 한 단어로 쓰세요.",
+    "answer": [
+      "fifth"
+    ],
+    "explain": "five의 서수는 fifth예요. 철자에서 ve가 f로 바뀌어요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en7-021",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nMy hobby is taking (    ). I always carry my camera.",
+    "choices": [
+      "notes",
+      "showers",
+      "pictures",
+      "lessons"
+    ],
+    "answer": 2,
+    "explain": "카메라를 들고 다닌다고 했으니 take pictures(사진을 찍다)가 알맞아요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en7-022",
+    "type": "mc",
+    "q": "'cafeteria'는 학교에서 어떤 곳을 가리키나요?",
+    "choices": [
+      "보건실",
+      "도서관",
+      "체육관",
+      "급식실"
+    ],
+    "answer": 3,
+    "explain": "cafeteria는 밥을 먹는 급식실(구내식당)이에요. 체육관은 gym이에요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en7-023",
+    "type": "mc",
+    "q": "'brave'의 뜻으로 알맞은 것은 무엇인가요?",
+    "choices": [
+      "용감한",
+      "게으른",
+      "조용한",
+      "친절한"
+    ],
+    "answer": 0,
+    "explain": "brave는 '용감한'이에요. 친절한은 kind, 게으른은 lazy예요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en7-024",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nMy (    )parents live in Busan. I visit them every summer.",
+    "choices": [
+      "big",
+      "grand",
+      "old",
+      "great"
+    ],
+    "answer": 1,
+    "explain": "grandparents는 '조부모님'이에요. grand-를 붙여 한 단어로 써요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en7-025",
+    "type": "short",
+    "q": "'맛있는'을 뜻하는 영어 단어를 쓰세요. (힌트: d로 시작하는 9글자)",
+    "answer": [
+      "delicious"
+    ],
+    "explain": "맛있는 음식을 말할 때 delicious를 써요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en7-026",
+    "type": "mc",
+    "q": "빈칸에 알맞은 be동사는 무엇인가요?\nI (    ) a middle school student.",
+    "choices": [
+      "are",
+      "is",
+      "am",
+      "be"
+    ],
+    "answer": 2,
+    "explain": "주어가 I일 때 be동사는 언제나 am을 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en7-027",
+    "type": "mc",
+    "q": "빈칸에 알맞은 be동사는 무엇인가요?\nTom and I (    ) good friends.",
+    "choices": [
+      "was",
+      "is",
+      "am",
+      "are"
+    ],
+    "answer": 3,
+    "explain": "Tom and I는 두 사람, 즉 복수 주어이므로 are를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en7-028",
+    "type": "short",
+    "q": "빈칸에 알맞은 be동사를 쓰세요.\nMs. Park (    ) my English teacher.",
+    "answer": [
+      "is"
+    ],
+    "explain": "Ms. Park은 3인칭 단수 주어이므로 be동사는 is예요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en7-029",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nMy father (    ) coffee every morning.",
+    "choices": [
+      "drinks",
+      "to drink",
+      "drink",
+      "drinking"
+    ],
+    "answer": 0,
+    "explain": "주어가 3인칭 단수(My father)이고 현재시제이므로 drinks를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en7-030",
+    "type": "short",
+    "q": "빈칸에 알맞은 관사를 쓰세요. (a 또는 an)\nI need (    ) umbrella. It is raining.",
+    "answer": [
+      "an"
+    ],
+    "explain": "umbrella는 모음 소리로 시작하므로 관사 an을 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en7-031",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nLook! The baby (    ) on the sofa now.",
+    "choices": [
+      "are sleeping",
+      "is sleeping",
+      "sleeps",
+      "sleep"
+    ],
+    "answer": 1,
+    "explain": "now(지금)가 있으므로 현재진행형 「is + 동사ing」를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en7-032",
+    "type": "mc",
+    "q": "빈칸에 알맞은 조동사는 무엇인가요?\nBirds (    ) fly, but they cannot swim like fish.",
+    "choices": [
+      "must",
+      "do",
+      "can",
+      "are"
+    ],
+    "answer": 2,
+    "explain": "'~할 수 있다'는 능력을 나타낼 때 조동사 can을 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en7-033",
+    "type": "short",
+    "q": "괄호 안의 동사를 알맞은 형태로 바꿔 쓰세요.\nThey are (play) soccer in the park right now.",
+    "answer": [
+      "playing"
+    ],
+    "explain": "are 뒤에는 동사에 -ing를 붙여 현재진행형을 만들어요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en7-034",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nThere (    ) three books on my desk.",
+    "choices": [
+      "am",
+      "is",
+      "have",
+      "are"
+    ],
+    "answer": 3,
+    "explain": "뒤에 오는 명사가 복수(three books)이므로 There are를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en7-035",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\n(    ) the window, please. It is very hot in here.",
+    "choices": [
+      "Open",
+      "Opens",
+      "Opening",
+      "You open"
+    ],
+    "answer": 0,
+    "explain": "명령문은 주어를 쓰지 않고 동사원형으로 시작해요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en7-036",
+    "type": "short",
+    "q": "빈칸에 알맞은 대명사를 한 단어로 쓰세요.\nThis is my sister Jina. (    ) is twelve years old.",
+    "answer": [
+      "She"
+    ],
+    "explain": "여자 한 사람을 다시 가리킬 때 주격 대명사 She를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en7-037",
+    "type": "mc",
+    "q": "빈칸에 알맞은 전치사는 무엇인가요?\nI get up (    ) seven o'clock every day.",
+    "choices": [
+      "on",
+      "at",
+      "to",
+      "in"
+    ],
+    "answer": 1,
+    "explain": "시각 앞에는 전치사 at을 써요. 요일은 on, 월·계절은 in이에요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en7-038",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nMinho (    ) like carrots. He never eats them.",
+    "choices": [
+      "don't",
+      "not",
+      "doesn't",
+      "isn't"
+    ],
+    "answer": 2,
+    "explain": "3인칭 단수 주어의 일반동사 부정문은 doesn't + 동사원형이에요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en7-039",
+    "type": "short",
+    "q": "빈칸에 알맞은 말을 한 단어로 쓰세요.\nA: (    ) you have a pencil?\nB: Yes, I do.",
+    "answer": [
+      "Do"
+    ],
+    "explain": "일반동사 have의 의문문은 Do로 시작하고, 대답도 do로 해요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en7-040",
+    "type": "mc",
+    "q": "빈도부사 always의 위치가 알맞은 문장은 무엇인가요?",
+    "choices": [
+      "She is kind always to me.",
+      "She always is kind to me.",
+      "Always she is kind to me.",
+      "She is always kind to me."
+    ],
+    "answer": 3,
+    "explain": "빈도부사는 be동사 뒤에 와요. 일반동사일 때는 동사 앞에 와요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en7-041",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\n(    ) a beautiful flower it is!",
+    "choices": [
+      "What",
+      "How",
+      "So",
+      "Very"
+    ],
+    "answer": 0,
+    "explain": "「What + a/an + 형용사 + 명사」 형태의 감탄문이에요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en7-042",
+    "type": "short",
+    "q": "빈칸에 알맞은 관사를 한 단어로 쓰세요.\nI have a dog and a cat. (    ) dog is very big.",
+    "answer": [
+      "The"
+    ],
+    "explain": "앞에서 이미 말한 것을 다시 가리킬 때는 정관사 The를 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en7-043",
+    "type": "mc",
+    "q": "빈칸에 알맞은 조동사는 무엇인가요?\nYou (    ) wear a helmet when you ride a bike. It is a rule.",
+    "choices": [
+      "may",
+      "must",
+      "can",
+      "are"
+    ],
+    "answer": 1,
+    "explain": "규칙이라서 반드시 해야 한다는 뜻이므로 must를 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en7-044",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nA: (    ) I use your eraser?\nB: Sure, here you are.",
+    "choices": [
+      "Are",
+      "Does",
+      "May",
+      "Am"
+    ],
+    "answer": 2,
+    "explain": "허락을 구할 때 「May I ~?」를 써요. '~해도 될까요?'라는 뜻이에요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en7-045",
+    "type": "short",
+    "q": "빈칸에 알맞은 대명사를 한 단어로 쓰세요.\nMina is my classmate. I often help (    ) with math.",
+    "answer": [
+      "her"
+    ],
+    "explain": "동사 help의 목적어 자리이므로 목적격 대명사 her를 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en7-046",
+    "type": "mc",
+    "q": "빈칸에 알맞은 전치사는 무엇인가요?\nThe cat is sitting (    ) the table. It wants my fish.",
+    "choices": [
+      "to",
+      "of",
+      "at",
+      "on"
+    ],
+    "answer": 3,
+    "explain": "표면에 닿아 위에 있을 때는 전치사 on을 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en7-047",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nMy sister (    ) TV now. She is doing her homework.",
+    "choices": [
+      "is not watching",
+      "not is watching",
+      "does not watching",
+      "is not watch"
+    ],
+    "answer": 0,
+    "explain": "현재진행형의 부정은 「be동사 + not + 동사ing」예요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en7-048",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\n(    ) fast the horse runs!",
+    "choices": [
+      "What",
+      "How",
+      "Where",
+      "Which"
+    ],
+    "answer": 1,
+    "explain": "뒤에 형용사·부사가 바로 오는 감탄문은 How로 시작해요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en7-049",
+    "type": "short",
+    "q": "빈칸에 알맞은 말을 쓰세요. (부정 명령문)\n(    ) run in the hallway. It is dangerous.",
+    "answer": [
+      "Don't",
+      "Do not"
+    ],
+    "explain": "'~하지 마라'는 부정 명령문은 Don't + 동사원형으로 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en7-050",
+    "type": "mc",
+    "q": "다음 중 어법상 알맞은 문장은 무엇인가요?",
+    "choices": [
+      "There have two cats on the sofa.",
+      "There are a cat on the sofa.",
+      "There are two cats on the sofa.",
+      "There is two cats on the sofa."
+    ],
+    "answer": 2,
+    "explain": "복수 명사 two cats 앞에는 There are를 써야 해요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en7-051",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nA: (    ) go swimming this Saturday.\nB: That sounds great!",
+    "choices": [
+      "Does",
+      "We're",
+      "Let",
+      "Let's"
+    ],
+    "answer": 3,
+    "explain": "'~하자'라고 함께 하자고 권하는 청유문은 Let's + 동사원형이에요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en7-052",
+    "type": "mc",
+    "q": "빈칸에 알맞은 관사는 무엇인가요?\nMy aunt is (    ) music teacher.",
+    "choices": [
+      "a",
+      "an",
+      "the",
+      "some"
+    ],
+    "answer": 0,
+    "explain": "music은 자음 소리로 시작하므로 관사 a를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en7-053",
+    "type": "short",
+    "q": "빈칸에 알맞은 말을 한 단어로 쓰세요.\nA: (    ) you hungry?\nB: Yes, I am.",
+    "answer": [
+      "Are"
+    ],
+    "explain": "be동사 의문문은 be동사를 주어 앞으로 보내요. 주어가 you이므로 Are예요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en7-054",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nThis is Jinho. (    ) father works at a hospital.",
+    "choices": [
+      "Him",
+      "His",
+      "He is",
+      "He"
+    ],
+    "answer": 1,
+    "explain": "명사 father 앞에서 '그의'를 나타내려면 소유격 His를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en7-055",
+    "type": "mc",
+    "q": "빈칸에 알맞은 전치사는 무엇인가요?\nMy birthday is (    ) May.",
+    "choices": [
+      "at",
+      "on",
+      "in",
+      "for"
+    ],
+    "answer": 2,
+    "explain": "달(월) 이름 앞에는 전치사 in을 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en7-056",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nA: (    ) your brother like pizza?\nB: Yes, he does.",
+    "choices": [
+      "Is",
+      "Do",
+      "Are",
+      "Does"
+    ],
+    "answer": 3,
+    "explain": "3인칭 단수 주어의 일반동사 의문문은 Does로 시작해요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en7-057",
+    "type": "short",
+    "q": "괄호 안의 동사를 알맞은 형태로 바꿔 쓰세요.\nMy mother (make) cookies every Sunday.",
+    "answer": [
+      "makes"
+    ],
+    "explain": "every Sunday는 반복되는 일이므로 현재시제, 3인칭 단수 makes를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en7-058",
+    "type": "mc",
+    "q": "처음 만난 사람에게 자기를 소개할 때 알맞은 말은 무엇인가요?",
+    "choices": [
+      "Nice to meet you. My name is Sora.",
+      "See you tomorrow, Sora.",
+      "I am sorry. I am late.",
+      "How much is this cap?"
+    ],
+    "answer": 0,
+    "explain": "처음 만났을 때는 Nice to meet you.와 함께 이름을 말해요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en7-059",
+    "type": "mc",
+    "q": "지금 몇 시인지 물을 때 알맞은 표현은 무엇인가요?",
+    "choices": [
+      "How is the weather?",
+      "What time is it now?",
+      "How old are you?",
+      "Where are you from?"
+    ],
+    "answer": 1,
+    "explain": "시간을 물을 때는 What time is it?이라고 해요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en7-060",
+    "type": "short",
+    "q": "전화에서 '실례지만 누구세요?'에 해당하도록 빈칸을 한 단어로 채우세요.\nWho's (    ), please?",
+    "answer": [
+      "calling"
+    ],
+    "explain": "Who's calling, please?는 전화한 사람이 누구인지 묻는 표현이에요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en7-061",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nA: Excuse me. How can I (    ) to the subway station?\nB: Go straight and turn left.",
+    "choices": [
+      "make",
+      "take",
+      "get",
+      "give"
+    ],
+    "answer": 2,
+    "explain": "How can I get to ~?는 '~에 어떻게 가나요?'라는 길 묻기 표현이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en7-062",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nA: How (    ) going to the movies tonight?\nB: Sounds good!",
+    "choices": [
+      "long",
+      "much",
+      "many",
+      "about"
+    ],
+    "answer": 3,
+    "explain": "How about + 동사ing?는 '~하는 게 어때?'라고 제안하는 표현이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en7-063",
+    "type": "mc",
+    "q": "빈칸에 알맞은 응답은 무엇인가요?\nA: Hello. May I speak to Jenny?\nB: (    )",
+    "choices": [
+      "Speaking. This is Jenny.",
+      "You're welcome.",
+      "It's a nice day, isn't it?",
+      "I'm fine, thank you."
+    ],
+    "answer": 0,
+    "explain": "전화에서 자기가 그 사람일 때 Speaking. 또는 This is she[he].라고 해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en7-064",
+    "type": "short",
+    "q": "빈칸에 알맞은 말을 한 단어로 쓰세요.\nA: Excuse me. Where is the post office?\nB: It's next (    ) the bank.",
+    "answer": [
+      "to"
+    ],
+    "explain": "next to는 '~의 바로 옆에'라는 뜻의 위치 표현이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en7-065",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nA: Where are you (    )?\nB: I'm from Canada.",
+    "choices": [
+      "in",
+      "from",
+      "with",
+      "to"
+    ],
+    "answer": 1,
+    "explain": "Where are you from?은 출신을 묻는 자기소개 표현이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en7-066",
+    "type": "mc",
+    "q": "빈칸에 알맞은 응답은 무엇인가요?\nA: Let's have lunch together after class.\nB: (    )",
+    "choices": [
+      "You're welcome.",
+      "It's ten o'clock.",
+      "Sure, why not?",
+      "Here you are."
+    ],
+    "answer": 2,
+    "explain": "제안을 받아들일 때는 Sure. / Sounds good. / Why not? 등으로 답해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en7-067",
+    "type": "mc",
+    "q": "'두 블록 곧장 가서 오른쪽으로 도세요.'에 해당하는 영어 표현은 무엇인가요?",
+    "choices": [
+      "Take a rest for two hours and come back.",
+      "Turn off the light and close the door.",
+      "Wait for two friends in front of the shop.",
+      "Go straight two blocks and turn right."
+    ],
+    "answer": 3,
+    "explain": "go straight(곧장 가다), turn right(오른쪽으로 돌다)는 길 안내 표현이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en7-068",
+    "type": "mc",
+    "q": "시각 3시 30분을 읽는 방법으로 알맞은 것은 무엇인가요?",
+    "choices": [
+      "three thirty",
+      "thirty three",
+      "thirty o'clock",
+      "third thirty"
+    ],
+    "answer": 0,
+    "explain": "시각은 시 다음에 분을 읽어요. 3:30은 three thirty예요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en7-069",
+    "type": "short",
+    "q": "빈칸에 알맞은 말을 한 단어로 쓰세요.\nA: Thank you for helping me with my bag.\nB: You're (    ).",
+    "answer": [
+      "welcome"
+    ],
+    "explain": "고맙다는 말에 대한 대답은 You're welcome.이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en7-070",
+    "type": "mc",
+    "q": "전화를 받은 사람이 '메시지를 남기시겠어요?'라고 물을 때 알맞은 표현은 무엇인가요?",
+    "choices": [
+      "Do you want more soup?",
+      "Can I take a message?",
+      "May I have your ticket?",
+      "Can you carry this box?"
+    ],
+    "answer": 1,
+    "explain": "Can I take a message?는 전화에서 메시지를 받아 적겠다는 표현이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en7-071",
+    "type": "mc",
+    "q": "대화가 자연스럽게 이어지도록 빈칸에 알맞은 말은 무엇인가요?\nA: Excuse me. Is there a bank near here?\nB: (    ) It's across from the library.",
+    "choices": [
+      "Sorry, I'm late.",
+      "Yes, I do.",
+      "Yes, there is.",
+      "No, thank you."
+    ],
+    "answer": 2,
+    "explain": "Is there ~?로 물으면 Yes, there is.로 답해요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en7-072",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nA: How do you (    ) your name?\nB: J-I-N-H-O.",
+    "choices": [
+      "say",
+      "read",
+      "call",
+      "spell"
+    ],
+    "answer": 3,
+    "explain": "철자를 하나씩 말해 주었으므로 spell(철자를 말하다)이 알맞아요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en7-073",
+    "type": "short",
+    "q": "빈칸에 알맞은 말을 한 단어로 쓰세요. (제안하는 표현)\nA: (    ) don't we take a walk after dinner?\nB: Good idea!",
+    "answer": [
+      "Why"
+    ],
+    "explain": "Why don't we ~?는 '우리 ~하는 게 어때?'라고 제안하는 표현이에요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en7-074",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요? (전화 표현)\nA: May I speak to Mr. Kim?\nB: Just a moment. Hold (    ), please.",
+    "choices": [
+      "on",
+      "up",
+      "out",
+      "in"
+    ],
+    "answer": 0,
+    "explain": "Hold on, please.는 전화에서 '잠시만 기다리세요'라는 뜻이에요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en7-075",
+    "type": "mc",
+    "q": "빈칸에 알맞은 응답은 무엇인가요?\nA: What time does the concert start?\nB: (    )",
+    "choices": [
+      "It is on Saturday.",
+      "It starts at six thirty.",
+      "It is in the school gym.",
+      "It is very popular."
+    ],
+    "answer": 1,
+    "explain": "What time으로 물었으니 시각으로 답해야 해요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en7-076",
+    "type": "mc",
+    "q": "빈칸에 알맞은 응답은 무엇인가요?\nA: How old are you?\nB: (    )",
+    "choices": [
+      "It's Monday today.",
+      "I'm from Busan.",
+      "I'm thirteen years old.",
+      "I'm fine, thanks."
+    ],
+    "answer": 2,
+    "explain": "How old are you?는 나이를 묻는 말이므로 나이로 답해요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en7-077",
+    "type": "mc",
+    "q": "헤어질 때 하는 인사로 알맞은 것은 무엇인가요?",
+    "choices": [
+      "Long time no see.",
+      "How do you do?",
+      "Nice to meet you.",
+      "Good bye. See you later."
+    ],
+    "answer": 3,
+    "explain": "See you later.는 헤어질 때 쓰는 인사예요. 나머지는 만났을 때 인사예요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en7-078",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nA: I am so tired today.\nB: (    )",
+    "choices": [
+      "Why don't you take a rest?",
+      "Congratulations!",
+      "Happy birthday to you!",
+      "You're welcome."
+    ],
+    "answer": 0,
+    "explain": "피곤하다는 말에는 쉬라고 제안하는 Why don't you ~?가 알맞아요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en7-079",
+    "type": "short",
+    "q": "빈칸에 알맞은 말을 한 단어로 쓰세요.\nA: What's your (    )?\nB: My name is Suji.",
+    "answer": [
+      "name"
+    ],
+    "explain": "이름을 물을 때 What's your name?이라고 해요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en7-080",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nMy name is Minji. I am a middle school student. I go to school at eight thirty. My favorite subject is science. After school, I play badminton with my friends.\n글의 내용과 일치하는 것은 무엇인가요?",
+    "choices": [
+      "민지는 아홉 시에 학교에 간다.",
+      "민지는 방과 후에 배드민턴을 친다.",
+      "민지는 초등학생이다.",
+      "민지가 가장 좋아하는 과목은 음악이다."
+    ],
+    "answer": 1,
+    "explain": "마지막 문장에서 방과 후에 친구들과 배드민턴을 친다고 했어요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en7-081",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nThere are four people in my family. My father is a cook, and my mother is a nurse. I have one younger brother. He is ten years old. We all love our dog, Coco.\n글쓴이의 가족은 몇 명인가요?",
+    "choices": [
+      "다섯 명",
+      "세 명",
+      "네 명",
+      "여섯 명"
+    ],
+    "answer": 2,
+    "explain": "첫 문장 There are four people in my family.에서 네 명임을 알 수 있어요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en7-082",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nToday is Saturday. It is sunny and warm outside. My sister and I are flying a kite in the park. Many children are playing there, too. We are very happy.\n오늘 날씨는 어떠한가요?",
+    "choices": [
+      "눈이 내린다",
+      "춥고 바람이 분다",
+      "비가 내린다",
+      "맑고 따뜻하다"
+    ],
+    "answer": 3,
+    "explain": "It is sunny and warm outside.에서 맑고 따뜻한 날씨임을 알 수 있어요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en7-083",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nJunho has an interesting hobby. He makes small robots with old toy parts. He usually works on them on Sunday afternoon. His robots can move their arms and legs. He wants to be a robot engineer.\n준호의 취미는 무엇인가요?",
+    "choices": [
+      "낡은 장난감 부품으로 작은 로봇을 만드는 것",
+      "장난감 가게에서 물건을 파는 것",
+      "로봇이 나오는 만화를 그리는 것",
+      "일요일마다 조립 대회에 나가는 것"
+    ],
+    "answer": 0,
+    "explain": "He makes small robots with old toy parts.가 준호의 취미예요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en7-084",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nJunho has an interesting hobby. He makes small robots with old toy parts. He usually works on them on Sunday afternoon. His robots can move their arms and legs. He wants to be a robot engineer.\n준호가 되고 싶어 하는 것은 무엇인가요?",
+    "choices": [
+      "과학 선생님",
+      "로봇 공학자",
+      "장난감 가게 주인",
+      "만화가"
+    ],
+    "answer": 1,
+    "explain": "마지막 문장 He wants to be a robot engineer.에서 알 수 있어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en7-085",
+    "type": "short",
+    "q": "다음 글을 읽고 물음에 답하세요.\nSumin loves Korean food. Her favorite dish is bibimbap. She eats it every Friday at the school cafeteria. She does not like spicy food, so she uses only a little red pepper paste. Her brother likes bulgogi better.\n수민이가 가장 좋아하는 음식을 지문에서 찾아 영어 한 단어로 쓰세요.",
+    "answer": [
+      "bibimbap"
+    ],
+    "explain": "Her favorite dish is bibimbap.에서 답을 찾을 수 있어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en7-086",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nSumin loves Korean food. Her favorite dish is bibimbap. She eats it every Friday at the school cafeteria. She does not like spicy food, so she uses only a little red pepper paste. Her brother likes bulgogi better.\n수민이의 오빠가 더 좋아하는 음식은 무엇인가요?",
+    "choices": [
+      "pizza",
+      "kimchi",
+      "bulgogi",
+      "bibimbap"
+    ],
+    "answer": 2,
+    "explain": "Her brother likes bulgogi better.에서 알 수 있어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en7-087",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nOur school has some simple rules. We must wear our name tags every day. We must not run in the hallway. We can use our phones only after lunch. Teachers say these rules keep us safe.\n학교 규칙으로 알맞은 것은 무엇인가요?",
+    "choices": [
+      "이름표는 금요일에만 달면 된다.",
+      "복도에서 뛰어다녀도 된다.",
+      "휴대전화를 하루 종일 쓸 수 있다.",
+      "매일 이름표를 달아야 한다."
+    ],
+    "answer": 3,
+    "explain": "We must wear our name tags every day.가 규칙으로 나와 있어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en7-088",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nI have a cat. Her name is Nabi. She is white and very small. She sleeps on my bed all day. At night, she runs around the house and plays with her ball.\nNabi에 대한 설명으로 알맞은 것은 무엇인가요?",
+    "choices": [
+      "밤에 집 안을 뛰어다닌다.",
+      "밤에도 잠만 잔다.",
+      "검은색 고양이다.",
+      "몸집이 아주 크다."
+    ],
+    "answer": 0,
+    "explain": "At night, she runs around the house에서 밤에 뛰어다님을 알 수 있어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en7-089",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nThere are four seasons in Korea. In spring, many flowers open. Summer is hot and rainy. In fall, the leaves turn red and yellow. Winter is cold, and children make snowmen.\n가을(fall)에 대한 설명으로 알맞은 것은 무엇인가요?",
+    "choices": [
+      "아이들이 눈사람을 만든다.",
+      "나뭇잎이 빨갛고 노랗게 변한다.",
+      "덥고 비가 많이 온다.",
+      "꽃이 많이 핀다."
+    ],
+    "answer": 1,
+    "explain": "In fall, the leaves turn red and yellow.가 가을에 대한 설명이에요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en7-090",
+    "type": "short",
+    "q": "다음 글을 읽고 물음에 답하세요.\nThere are four seasons in Korea. In spring, many flowers open. Summer is hot and rainy. In fall, the leaves turn red and yellow. Winter is cold, and children make snowmen.\n여름 날씨를 설명한 낱말 중 '비가 많이 오는'을 뜻하는 단어를 지문에서 찾아 쓰세요.",
+    "answer": [
+      "rainy"
+    ],
+    "explain": "Summer is hot and rainy.에서 rainy가 '비가 오는'이라는 뜻이에요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en7-091",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nMy town is small but nice. There is a big park next to the library. A new bakery is across from the school. On weekends, my family walks to the park. We often buy bread on the way home.\n도서관 옆에 있는 것은 무엇인가요?",
+    "choices": [
+      "새 빵집",
+      "학교",
+      "큰 공원",
+      "글쓴이의 집"
+    ],
+    "answer": 2,
+    "explain": "There is a big park next to the library.에서 알 수 있어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en7-092",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nMy town is small but nice. There is a big park next to the library. A new bakery is across from the school. On weekends, my family walks to the park. We often buy bread on the way home.\n글쓴이의 가족이 집으로 돌아오는 길에 자주 하는 일은 무엇인가요?",
+    "choices": [
+      "책을 빌린다",
+      "자전거를 탄다",
+      "사진을 찍는다",
+      "빵을 산다"
+    ],
+    "answer": 3,
+    "explain": "We often buy bread on the way home.에서 알 수 있어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en7-093",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nJiwon is in the school tennis club. The club meets on Tuesday and Thursday. She wants me to join the club. I like tennis very much. But I have a piano lesson on Tuesday, so I can go only on Thursday.\n'나'가 화요일에 동아리에 갈 수 없는 이유는 무엇인가요?",
+    "choices": [
+      "피아노 수업이 있어서",
+      "동아리가 쉬는 날이어서",
+      "숙제가 너무 많아서",
+      "테니스를 싫어해서"
+    ],
+    "answer": 0,
+    "explain": "I have a piano lesson on Tuesday가 갈 수 없는 이유예요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en7-094",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nMy family is planning a trip to Gyeongju. We are leaving on Friday morning. My mother is packing our bags now. My father is checking the map. I am very excited because I love old temples.\n글쓴이가 신이 난 이유는 무엇인가요?",
+    "choices": [
+      "금요일이 생일이어서",
+      "오래된 절을 좋아해서",
+      "새 가방을 사서",
+      "지도를 잘 그려서"
+    ],
+    "answer": 1,
+    "explain": "I am very excited because I love old temples.에서 이유를 알 수 있어요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en7-095",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nMy family is planning a trip to Gyeongju. We are leaving on Friday morning. My mother is packing our bags now. My father is checking the map. I am very excited because I love old temples.\n지금 아버지가 하고 있는 일은 무엇인가요?",
+    "choices": [
+      "차를 운전하고 있다",
+      "가방을 싸고 있다",
+      "지도를 살펴보고 있다",
+      "기차표를 사고 있다"
+    ],
+    "answer": 2,
+    "explain": "My father is checking the map.은 현재진행형으로 '지금 하고 있는 일'이에요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en7-096",
+    "type": "short",
+    "q": "다음 글을 읽고 물음에 답하세요.\nHealth is important for everyone. I ride my bike to school every day. I also drink a lot of water. I never eat snacks late at night. My doctor says these habits are very good.\n글쓴이가 매일 학교에 갈 때 타는 것을 지문에서 찾아 영어 한 단어로 쓰세요.",
+    "answer": [
+      "bike"
+    ],
+    "explain": "I ride my bike to school every day.에서 bike를 찾을 수 있어요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en7-097",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nHealth is important for everyone. I ride my bike to school every day. I also drink a lot of water. I never eat snacks late at night. My doctor says these habits are very good.\n글쓴이의 습관으로 알맞지 않은 것은 무엇인가요?",
+    "choices": [
+      "물을 많이 마신다.",
+      "자전거를 타고 등교한다.",
+      "건강을 중요하게 생각한다.",
+      "밤늦게 간식을 먹는다."
+    ],
+    "answer": 3,
+    "explain": "I never eat snacks late at night.이므로 밤늦게 간식을 먹지 않아요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en7-098",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nToday is a hard day for Mina. She cannot find her math notebook. She looks in her bag and under her desk. Her friend Suho helps her. Finally they find the notebook in the lost and found box.\n공책을 찾은 곳은 어디인가요?",
+    "choices": [
+      "분실물 보관함",
+      "미나의 가방 속",
+      "책상 아래",
+      "수호의 사물함"
+    ],
+    "answer": 0,
+    "explain": "the lost and found box는 '분실물 보관함'이라는 뜻이에요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en7-099",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nMaking a sandwich is easy. First, put some butter on the bread. Next, add cheese and a slice of tomato. Then put another piece of bread on top. Finally, cut it in half and enjoy.\n샌드위치를 만드는 순서로 알맞은 것은 무엇인가요?",
+    "choices": [
+      "반으로 자르기 → 버터 바르기 → 빵 덮기 → 치즈 올리기",
+      "버터 바르기 → 치즈와 토마토 올리기 → 빵 덮기 → 반으로 자르기",
+      "빵 덮기 → 버터 바르기 → 토마토 올리기 → 치즈 올리기",
+      "치즈 올리기 → 버터 바르기 → 반으로 자르기 → 빵 덮기"
+    ],
+    "answer": 1,
+    "explain": "First(버터) → Next(치즈와 토마토) → Then(빵 덮기) → Finally(반으로 자르기) 순서예요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en7-100",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nOur school festival is in October. Each class prepares one show. Our class is practicing a short play. We practice in the gym after school. Everyone is busy, but we are having fun.\n글의 제목으로 가장 알맞은 것은 무엇인가요?",
+    "choices": [
+      "체육관 이용 규칙",
+      "10월의 날씨 변화",
+      "축제를 준비하는 우리 반",
+      "연극배우가 되는 방법"
+    ],
+    "answer": 2,
+    "explain": "학교 축제에서 공연할 연극을 방과 후에 연습하는 내용이 글 전체의 중심 내용이에요.",
+    "tag": "독해",
+    "level": "hard"
+  }
+]

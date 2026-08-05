@@ -988,8 +988,15 @@ select.input {
   50% { transform: translateY(-10px); }
 }
 
+/* 학년이 9개라 좁은 화면에서는 표만 가로로 넘겨 본다 (페이지 전체가 밀리지 않게) */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .bank-table {
   width: 100%;
+  min-width: 460px;
   border-collapse: collapse;
   font-size: 13px;
 }

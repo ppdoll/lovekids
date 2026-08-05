@@ -76,7 +76,7 @@ let checked = 0;
 const diversity = [];
 const samples = new Map();
 
-for (let grade = 1; grade <= 6; grade++) {
+for (let grade = 1; grade <= 9; grade++) {
   // 1) 하루 최대 설정치가 서로 겹치지 않아야 한다
   const daily = (await get(`${BASE}/api/dev/mathgen?grade=${grade}&n=30`)).problems;
   const uniq = new Set(daily.map((p) => p.q)).size;
@@ -87,7 +87,7 @@ for (let grade = 1; grade <= 6; grade++) {
 
   // 2~4) 대량 표본으로 형식·정답 검증
   const problems = (await get(`${BASE}/api/dev/mathgen?grade=${grade}&n=600`)).problems;
-  diversity.push({ 학년: `${grade}학년`, "서로 다른 문제 상한(약)": problems.length });
+  diversity.push({ 학년: grade <= 6 ? `초${grade}` : `중${grade - 6}`, "서로 다른 문제 상한(약)": problems.length });
 
   for (const p of problems) {
     if (p.type === "mc") {
@@ -120,7 +120,7 @@ for (let grade = 1; grade <= 6; grade++) {
         bad++;
       }
     } else {
-      const key = `${grade}학년 · ${p.tag}`;
+      const key = `${grade <= 6 ? "초" + grade : "중" + (grade - 6)} · ${p.tag}`;
       if (!samples.has(key))
         samples.set(key, `${p.q.replace(/\n/g, " / ")}  →  ${p.type === "mc" ? p.choices[p.answer] : p.answer.join(" | ")}`);
     }

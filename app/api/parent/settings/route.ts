@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { authParent } from "@/lib/api-auth";
 import { getSettings, saveSettings } from "@/lib/daily";
-import { CalcConfig, DEFAULT_CALC, Kid, MUL_TABLES, Subject, SUBJECTS } from "@/lib/types";
+import { CalcConfig, clampGrade, DEFAULT_CALC, Kid, MUL_TABLES, Subject, SUBJECTS } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
 
@@ -55,7 +55,7 @@ function sanitizeKids(input: Partial<Kid>[], existing: Kid[]): Kid[] | null {
   for (const raw of input) {
     const name = String(raw.name ?? "").trim().slice(0, 12);
     if (!name) return null;
-    const grade = Math.min(6, Math.max(1, Math.round(Number(raw.grade ?? 1))));
+    const grade = clampGrade(Number(raw.grade ?? 1));
     const emoji = String(raw.emoji ?? "🦁").slice(0, 4);
     const perDay = {} as Record<Subject, number>;
     for (const s of SUBJECTS) {

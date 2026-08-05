@@ -55,6 +55,26 @@ export const DEFAULT_CALC: CalcConfig = {
 
 export const MUL_TABLES = [2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19];
 
+/**
+ * 학년은 1~9로 이어서 센다. 7~9는 중학교 1~3학년이다.
+ * (초·중을 따로 두면 저장된 데이터와 문제은행 파일 이름이 복잡해진다)
+ */
+export const MIN_GRADE = 1;
+export const MAX_GRADE = 9;
+export const ALL_GRADES = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+/** 화면에 보여줄 학년 이름 */
+export function gradeLabel(g: number): string {
+  return g <= 6 ? `초등 ${g}학년` : `중학 ${g - 6}학년`;
+}
+
+/** 좁은 자리용 짧은 이름 */
+export function gradeShort(g: number): string {
+  return g <= 6 ? `초${g}` : `중${g - 6}`;
+}
+
+export const clampGrade = (g: number) => Math.min(MAX_GRADE, Math.max(MIN_GRADE, Math.round(g)));
+
 export interface Kid {
   id: string;
   name: string;

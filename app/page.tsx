@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { SUBJECT_EMOJI, SUBJECT_LABEL, Subject, SUBJECTS } from "@/lib/types";
+import { SUBJECT_EMOJI, SUBJECT_LABEL, Subject, SUBJECTS, gradeLabel } from "@/lib/types";
 
 interface SubjectToday {
   assigned: number;
@@ -104,7 +104,7 @@ export default function Home() {
                   <div style={{ flex: 1 }}>
                     <div className="row">
                       <span className="kid-name">{kid.name}</span>
-                      <span className="badge">{kid.grade}학년</span>
+                      <span className="badge">{gradeLabel(kid.grade)}</span>
                       {kid.streak > 0 && <span className="badge fire">🔥 {kid.streak}일 연속</span>}
                     </div>
                     <div className="subject-dots">

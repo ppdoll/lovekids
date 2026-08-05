@@ -1,4 +1,4 @@
-import { CalcConfig, Problem } from "./types";
+import { CalcConfig, clampGrade, Problem } from "./types";
 
 /**
  * 학년별 수학 연산 문제 자동 생성기.
@@ -321,7 +321,286 @@ const g6: Gen[] = [
   },
 ];
 
-const GENERATORS: Record<number, Gen[]> = { 1: g1, 2: g2, 3: g3, 4: g4, 5: g5, 6: g6 };
+/* ─────────── 중학교 ───────────
+ *
+ * 답은 전부 "숫자 하나"로 나오게 만든다.
+ * "(x+2)(x+3)" 같은 식을 답으로 받으면 쓰는 방식이 사람마다 달라서
+ * 아는데도 오답 처리되기 쉽다. 그래서 근의 값, 계수, 지수처럼 숫자를 묻는다.
+ */
+
+/** 음수를 식에 넣을 때 괄호를 씌운다: 5 + (-3) */
+const sg = (n: number) => (n < 0 ? `(${n})` : `${n}`);
+
+/* ── 중1 (7학년): 정수와 유리수, 문자와 식, 일차방정식, 도형 ── */
+const g7: Gen[] = [
+  () => {
+    const a = ri(-20, 20) || 3;
+    const b = ri(-20, 20) || -5;
+    return short(`${sg(a)} + ${sg(b)} = ?`, [`${a + b}`], "정수의 계산", `${a} + (${b}) = ${a + b}`);
+  },
+  () => {
+    const a = ri(-15, 15) || 7;
+    const b = ri(-15, 15) || -4;
+    return short(`${sg(a)} - ${sg(b)} = ?`, [`${a - b}`], "정수의 계산", `빼기는 부호를 바꿔 더한다 → ${a} + ${-b} = ${a - b}`);
+  },
+  () => {
+    const a = ri(-12, 12) || -6;
+    const b = ri(-12, 12) || 4;
+    return short(`${sg(a)} × ${sg(b)} = ?`, [`${a * b}`], "정수의 계산", `부호가 ${a * b < 0 ? "다르므로 음수" : "같으므로 양수"} → ${a * b}`);
+  },
+  () => {
+    const b = ri(2, 12) * (Math.random() < 0.5 ? 1 : -1);
+    const q = ri(-12, 12) || 3;
+    return short(`${sg(b * q)} ÷ ${sg(b)} = ?`, [`${q}`], "정수의 계산", `${b} × ${q} = ${b * q}`);
+  },
+  () => {
+    const base = ri(-5, -2);
+    const exp = ri(2, 3);
+    return short(`(${base})^${exp} 의 값은?`, [`${base ** exp}`], "거듭제곱",
+      `음수를 ${exp}번 곱하면 ${exp % 2 === 0 ? "양수" : "음수"} → ${base ** exp}`);
+  },
+  () => {
+    // 일차방정식 ax + b = c (정수해)
+    const a = ri(2, 9);
+    const x = ri(-9, 9) || 4;
+    const b = ri(-20, 20);
+    return short(`${a}x ${b >= 0 ? "+" : "-"} ${Math.abs(b)} = ${a * x + b} 일 때, x의 값은?`,
+      [`${x}`], "일차방정식", `${a}x = ${a * x} → x = ${x}`);
+  },
+  () => {
+    // 양변에 x가 있는 일차방정식
+    const a = ri(3, 9);
+    const c = ri(1, a - 1);
+    const x = ri(-8, 8) || 3;
+    const b = ri(-15, 15);
+    const d = (a - c) * x + b;
+    return short(`${a}x ${b >= 0 ? "+" : "-"} ${Math.abs(b)} = ${c}x ${d >= 0 ? "+" : "-"} ${Math.abs(d)} 일 때, x의 값은?`,
+      [`${x}`], "일차방정식", `${a - c}x = ${d - b} → x = ${x}`);
+  },
+  () => {
+    const a = ri(2, 9), b = ri(2, 9), k = ri(2, 6);
+    return short(`비례식 ${a} : ${b} = ${a * k} : x 에서 x의 값은?`, [`${b * k}`], "비례식",
+      `${a}에 ${k}를 곱했으므로 ${b}에도 ${k}를 곱한다 → ${b * k}`);
+  },
+  () => {
+    // 부채꼴: 답을 π의 계수로 물어 숫자로 만든다
+    const r = ri(2, 12);
+    const deg = pick([30, 45, 60, 90, 120, 135, 150, 180]);
+    const arcNum = 2 * r * deg;
+    if (arcNum % 360 !== 0) return g7[8]();
+    return short(
+      `반지름이 ${r}, 중심각이 ${deg}°인 부채꼴의 호의 길이는 aπ입니다. a의 값은?`,
+      [`${arcNum / 360}`],
+      "부채꼴",
+      `호의 길이 = 2π×${r}×${deg}/360 = ${arcNum / 360}π`,
+    );
+  },
+  () => {
+    const a = ri(2, 9);
+    const x = ri(2, 9);
+    return short(`정비례 관계 y = ${a}x 에서 x = ${x}일 때 y의 값은?`, [`${a * x}`], "정비례",
+      `${a} × ${x} = ${a * x}`);
+  },
+  () => {
+    const k = ri(2, 12) * ri(2, 6);
+    const divs = [];
+    for (let d = 1; d <= k; d++) if (k % d === 0) divs.push(d);
+    return short(`${k}의 약수는 모두 몇 개인가요?`, [`${divs.length}`], "약수와 배수",
+      `약수: ${divs.join(", ")}`);
+  },
+];
+
+/* ── 중2 (8학년): 식의 계산, 부등식, 연립방정식, 일차함수, 피타고라스, 확률 ── */
+const g8: Gen[] = [
+  () => {
+    const m = ri(2, 7), n = ri(2, 7);
+    return short(`x^${m} × x^${n} = x^k 일 때, k의 값은?`, [`${m + n}`], "지수법칙",
+      `밑이 같은 거듭제곱의 곱셈은 지수를 더한다 → ${m} + ${n} = ${m + n}`);
+  },
+  () => {
+    const m = ri(3, 9), n = ri(2, m - 1);
+    return short(`x^${m} ÷ x^${n} = x^k 일 때, k의 값은?`, [`${m - n}`], "지수법칙",
+      `나눗셈은 지수를 뺀다 → ${m} - ${n} = ${m - n}`);
+  },
+  () => {
+    const m = ri(2, 6), n = ri(2, 5);
+    return short(`(x^${m})^${n} = x^k 일 때, k의 값은?`, [`${m * n}`], "지수법칙",
+      `거듭제곱의 거듭제곱은 지수를 곱한다 → ${m} × ${n} = ${m * n}`);
+  },
+  () => {
+    // 일차부등식의 자연수 해의 개수
+    const a = ri(2, 6);
+    const limit = ri(3, 12);
+    const b = ri(1, 15);
+    const rhs = a * limit + b;
+    return short(
+      `부등식 ${a}x + ${b} < ${rhs} 을 만족하는 자연수 x는 모두 몇 개인가요?`,
+      [`${limit - 1}`],
+      "부등식",
+      `${a}x < ${rhs - b} → x < ${limit} 이므로 1부터 ${limit - 1}까지 ${limit - 1}개`,
+    );
+  },
+  () => {
+    // 연립방정식 (정수해) — x의 값을 묻는다
+    const x = ri(-6, 8) || 2;
+    const y = ri(-6, 8) || 3;
+    const a = ri(1, 5), b = ri(1, 5), c = ri(1, 5), d = ri(1, 5);
+    if (a * d - b * c === 0) return g8[4]();
+    return short(
+      `연립방정식\n${a}x + ${b}y = ${a * x + b * y}\n${c}x + ${d}y = ${c * x + d * y}\n의 해에서 x의 값은?`,
+      [`${x}`],
+      "연립방정식",
+      `x = ${x}, y = ${y}`,
+    );
+  },
+  () => {
+    // 두 점을 지나는 직선의 기울기 (정수)
+    const x1 = ri(-6, 6), dx = pick([1, 2, 3, 4]);
+    const x2 = x1 + dx;
+    const m = ri(-5, 5) || 2;
+    const y1 = ri(-8, 8);
+    const y2 = y1 + m * dx;
+    return short(
+      `두 점 (${x1}, ${y1}), (${x2}, ${y2})을 지나는 직선의 기울기는?`,
+      [`${m}`],
+      "일차함수",
+      `(${y2} - ${y1}) ÷ (${x2} - ${x1}) = ${m}`,
+    );
+  },
+  () => {
+    const a = ri(-5, 5) || 3;
+    const b = ri(-10, 10);
+    const x = ri(-6, 6);
+    return short(`일차함수 y = ${a}x ${b >= 0 ? "+" : "-"} ${Math.abs(b)} 에서 x = ${x}일 때 y의 값은?`,
+      [`${a * x + b}`], "일차함수", `${a} × ${x} ${b >= 0 ? "+" : "-"} ${Math.abs(b)} = ${a * x + b}`);
+  },
+  () => {
+    // 피타고라스 (정수 삼각형)
+    const triples: [number, number, number][] = [
+      [3, 4, 5], [6, 8, 10], [5, 12, 13], [9, 12, 15], [8, 15, 17], [7, 24, 25], [20, 21, 29], [12, 16, 20],
+    ];
+    const [a, b, c] = pick(triples);
+    return Math.random() < 0.6
+      ? short(`직각삼각형의 두 변의 길이가 ${a}, ${b}일 때 빗변의 길이는? (두 변은 직각을 낀 변)`,
+          [`${c}`], "피타고라스", `${a}² + ${b}² = ${a * a + b * b} = ${c}²`)
+      : short(`빗변의 길이가 ${c}이고 한 변의 길이가 ${a}인 직각삼각형에서 나머지 한 변의 길이는?`,
+          [`${b}`], "피타고라스", `${c}² - ${a}² = ${c * c - a * a} = ${b}²`);
+  },
+  () => {
+    // 확률 — 분모를 물어 숫자로
+    const kind = pick(["dice", "coin"]);
+    if (kind === "dice") {
+      const target = pick([
+        ["짝수", 3], ["3의 배수", 2], ["4 이상", 3], ["소수", 3],
+      ] as [string, number][]);
+      return short(
+        `주사위 한 개를 던질 때 ${target[0]}의 눈이 나올 확률은 a/6 입니다. a의 값은?`,
+        [`${target[1]}`],
+        "확률",
+        `해당하는 눈이 ${target[1]}가지이므로 ${target[1]}/6`,
+      );
+    }
+    const n = ri(2, 4);
+    return short(
+      `동전 ${n}개를 동시에 던질 때 나올 수 있는 모든 경우의 수는?`,
+      [`${2 ** n}`],
+      "확률",
+      `2를 ${n}번 곱한다 → ${2 ** n}`,
+    );
+  },
+];
+
+/* ── 중3 (9학년): 제곱근, 인수분해, 이차방정식, 이차함수, 삼각비 ── */
+const g9: Gen[] = [
+  () => {
+    const n = ri(2, 20);
+    return short(`√${n * n} 의 값은?`, [`${n}`], "제곱근", `${n}² = ${n * n}`);
+  },
+  () => {
+    // √(k²m) = k√m 꼴에서 k를 묻는다
+    const k = ri(2, 6);
+    const m = pick([2, 3, 5, 6, 7, 10]);
+    return short(`√${k * k * m} 을 a√${m} 꼴로 나타낼 때 a의 값은?`, [`${k}`], "제곱근",
+      `√${k * k * m} = √${k * k} × √${m} = ${k}√${m}`);
+  },
+  () => {
+    // a√m + b√m
+    const m = pick([2, 3, 5, 7]);
+    const a = ri(2, 7), b = ri(2, 7);
+    return short(`${a}√${m} + ${b}√${m} = a√${m} 일 때 a의 값은?`, [`${a + b}`], "근호의 계산",
+      `같은 근호끼리 계수를 더한다 → ${a} + ${b} = ${a + b}`);
+  },
+  () => {
+    // 인수분해 → 두 근
+    const p = ri(-9, 9) || 2;
+    const q = ri(-9, 9) || -3;
+    const b = -(p + q);
+    const c = p * q;
+    const big = Math.max(p, q);
+    return short(
+      `이차방정식 x² ${b >= 0 ? "+" : "-"} ${Math.abs(b)}x ${c >= 0 ? "+" : "-"} ${Math.abs(c)} = 0 의 두 근 중 큰 값은?`,
+      [`${big}`],
+      "이차방정식",
+      `(x ${-p >= 0 ? "+" : "-"} ${Math.abs(p)})(x ${-q >= 0 ? "+" : "-"} ${Math.abs(q)}) = 0 → x = ${p} 또는 x = ${q}`,
+    );
+  },
+  () => {
+    const p = ri(-8, 8) || 3;
+    const q = ri(-8, 8) || -4;
+    const b = -(p + q);
+    const c = p * q;
+    return short(
+      `이차방정식 x² ${b >= 0 ? "+" : "-"} ${Math.abs(b)}x ${c >= 0 ? "+" : "-"} ${Math.abs(c)} = 0 의 두 근의 합은?`,
+      [`${p + q}`],
+      "이차방정식",
+      `두 근의 합은 -(일차항 계수) → ${p + q}`,
+    );
+  },
+  () => {
+    // x² + bx + c 인수분해에서 (x+p)(x+q)의 p+q
+    const p = ri(1, 9), q = ri(1, 9);
+    return short(
+      `x² + ${p + q}x + ${p * q} 을 (x + a)(x + b) 로 인수분해할 때, a × b 의 값은?`,
+      [`${p * q}`],
+      "인수분해",
+      `합이 ${p + q}, 곱이 ${p * q}인 두 수는 ${p}와 ${q}`,
+    );
+  },
+  () => {
+    // 이차함수 꼭짓점
+    const p = ri(-6, 6);
+    const q = ri(-10, 10);
+    const a = pick([1, -1, 2, -2]);
+    return short(
+      `이차함수 y = ${a === 1 ? "" : a === -1 ? "-" : a}(x ${-p >= 0 ? "+" : "-"} ${Math.abs(p)})² ${q >= 0 ? "+" : "-"} ${Math.abs(q)} 의 꼭짓점의 x좌표는?`,
+      [`${p}`],
+      "이차함수",
+      `꼭짓점은 (${p}, ${q})`,
+    );
+  },
+  () => {
+    // 특수각 삼각비 — 유리수 값만 묻는다
+    const cases: [string, string][] = [
+      ["sin 30°", "1/2"], ["cos 60°", "1/2"], ["tan 45°", "1"], ["sin 90°", "1"],
+      ["cos 0°", "1"], ["sin 0°", "0"], ["cos 90°", "0"], ["tan 0°", "0"],
+    ];
+    const [q, a] = pick(cases);
+    return short(`${q} 의 값은? (분수는 1/2 처럼 쓰세요)`, [a], "삼각비", `${q} = ${a}`);
+  },
+  () => {
+    // 직각삼각형에서의 삼각비 (3-4-5 계열)
+    const triples: [number, number, number][] = [[3, 4, 5], [6, 8, 10], [5, 12, 13], [8, 15, 17]];
+    const [a, b, c] = pick(triples);
+    return short(
+      `직각삼각형에서 밑변 ${b}, 높이 ${a}, 빗변 ${c}일 때 sinθ = a/${c} 입니다. (θ는 밑변과 빗변 사이의 각) a의 값은?`,
+      [`${a}`],
+      "삼각비",
+      `sinθ = 높이/빗변 = ${a}/${c}`,
+    );
+  },
+];
+
+const GENERATORS: Record<number, Gen[]> = { 1: g1, 2: g2, 3: g3, 4: g4, 5: g5, 6: g6, 7: g7, 8: g8, 9: g9 };
 
 /* ─────────── 부모가 직접 고른 설정으로 만드는 연산 문제 ─────────── */
 
@@ -490,7 +769,7 @@ export function genCustomProblems(calc: CalcConfig, n: number): Problem[] {
 
 /** 학년에 맞는 연산 문제 n개 생성 (문제 텍스트 중복 없이) */
 export function genMathProblems(grade: number, n: number): Problem[] {
-  const gens = GENERATORS[Math.min(6, Math.max(1, grade))];
+  const gens = GENERATORS[clampGrade(grade)];
   const out: Problem[] = [];
   const seen = new Set<string>();
   let guard = 0;

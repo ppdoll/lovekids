@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "en8-001",
+    "type": "mc",
+    "q": "다음 중 '여행하다'라는 뜻의 동사는 무엇인가요?",
+    "choices": [
+      "travel",
+      "trouble",
+      "treat",
+      "trade"
+    ],
+    "answer": 0,
+    "explain": "travel은 '여행하다'라는 뜻이에요. trade는 '거래하다'예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en8-002",
+    "type": "mc",
+    "q": "'pollution'의 뜻으로 알맞은 것은 무엇인가요?",
+    "choices": [
+      "오염",
+      "인구",
+      "경찰",
+      "정거장"
+    ],
+    "answer": 0,
+    "explain": "pollution은 공기나 물이 더러워지는 '오염'을 뜻해요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en8-003",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nI (    ) to the museum with my class last Friday.",
+    "choices": [
+      "go",
+      "went",
+      "will go",
+      "going"
+    ],
+    "answer": 1,
+    "explain": "last Friday(지난 금요일)는 과거이므로 go의 과거형 went를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en8-004",
+    "type": "short",
+    "q": "괄호 안의 동사를 과거형으로 바꿔 한 단어로 쓰세요.\nMy dad (buy) a new bike for me last month.",
+    "answer": [
+      "bought"
+    ],
+    "explain": "buy의 과거형은 불규칙 변화로 bought예요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en8-005",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nLook at the dark clouds! It (    ) rain soon.",
+    "choices": [
+      "is going to",
+      "was going to",
+      "goes to",
+      "is go to"
+    ],
+    "answer": 0,
+    "explain": "눈앞의 증거를 보고 예측할 때는 be going to를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en8-006",
+    "type": "mc",
+    "q": "감기에 걸린 친구에게 해 줄 조언으로 가장 알맞은 말은 무엇인가요?",
+    "choices": [
+      "You should drink warm water and get some rest.",
+      "You should run in the cold rain.",
+      "You should stay up all night.",
+      "You should skip your breakfast."
+    ],
+    "answer": 0,
+    "explain": "should는 조언할 때 쓰는 말이고, 따뜻한 물과 휴식이 알맞은 조언이에요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en8-007",
+    "type": "short",
+    "q": "설명에 알맞은 직업 이름을 영어로 쓰세요. (힌트: p로 시작하는 5글자)\nThis person flies an airplane.",
+    "answer": [
+      "pilot"
+    ],
+    "explain": "비행기를 조종하는 사람은 pilot(조종사)이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en8-008",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nMy brother is (    ) than me.",
+    "choices": [
+      "tall",
+      "taller",
+      "tallest",
+      "more tall"
+    ],
+    "answer": 1,
+    "explain": "than이 있으면 비교급을 써요. tall의 비교급은 taller예요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en8-009",
+    "type": "mc",
+    "q": "'경기에서 이기다'를 뜻하는 동사는 무엇인가요?",
+    "choices": [
+      "win",
+      "lose",
+      "miss",
+      "join"
+    ],
+    "answer": 0,
+    "explain": "win은 '이기다', lose는 '지다'예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en8-010",
+    "type": "mc",
+    "q": "가게에서 물건의 값을 물어볼 때 알맞은 표현은 무엇인가요?",
+    "choices": [
+      "How much is this jacket?",
+      "How many is this jacket?",
+      "How old is this jacket?",
+      "How far is this jacket?"
+    ],
+    "answer": 0,
+    "explain": "값을 물을 때는 How much ~?를 써요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en8-011",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nMinji went to Busan with her family last weekend.\nThey took the KTX early in the morning.\nFirst, they visited Haeundae Beach and walked on the sand.\nFor lunch, they ate fresh fish at a small restaurant.\nIn the afternoon, Minji's brother swam in the sea.\nMinji did not swim, but she took many pictures.\n\n민지가 오후에 한 일은 무엇인가요?",
+    "choices": [
+      "바다에서 수영했다.",
+      "사진을 많이 찍었다.",
+      "모래성을 만들었다.",
+      "식당에서 생선을 요리했다."
+    ],
+    "answer": 1,
+    "explain": "Minji did not swim, but she took many pictures.에서 사진을 찍었음을 알 수 있어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en8-012",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nI (    ) never been to Canada.",
+    "choices": [
+      "have",
+      "has",
+      "am",
+      "did"
+    ],
+    "answer": 0,
+    "explain": "주어가 I이므로 현재완료는 have + p.p. 형태인 have been을 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-013",
+    "type": "short",
+    "q": "괄호 안의 동사를 알맞은 형태로 바꿔 두 단어로 쓰세요.\nI want (go) to Europe someday.",
+    "answer": [
+      "to go"
+    ],
+    "explain": "want는 to부정사를 목적어로 쓰므로 to go가 알맞아요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-014",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nMy sister enjoys (    ) badminton after school.",
+    "choices": [
+      "play",
+      "plays",
+      "playing",
+      "to play"
+    ],
+    "answer": 2,
+    "explain": "enjoy는 동명사(-ing)를 목적어로 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-015",
+    "type": "short",
+    "q": "빈칸에 알맞은 낱말을 쓰세요. (힌트: e로 시작하는 6글자)\nWe can save (    ) by turning off the lights.",
+    "answer": [
+      "energy"
+    ],
+    "explain": "불을 끄면 에너지(energy)를 아낄 수 있어요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en8-016",
+    "type": "mc",
+    "q": "대화의 빈칸에 알맞은 말은 무엇인가요?\nA: (    ) you ever tried Indian food?\nB: Yes, I have. It was really spicy.",
+    "choices": [
+      "Have",
+      "Did",
+      "Are",
+      "Do"
+    ],
+    "answer": 0,
+    "explain": "대답이 Yes, I have.이므로 경험을 묻는 현재완료 Have you ever ~?가 알맞아요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en8-017",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nOur school started a green project last month.\nEvery Monday, students bring their own cups to school.\nThey also turn off the lights when they leave the classroom.\nThe art club made posters about saving water.\nLast week, the science club planted twenty small trees behind the gym.\nMany students say the school looks greener now.\n\n지난주에 과학 동아리가 한 일은 무엇인가요?",
+    "choices": [
+      "물 절약 포스터를 만들었다.",
+      "체육관 뒤에 작은 나무 스무 그루를 심었다.",
+      "교실 전등을 새것으로 바꾸었다.",
+      "학생들에게 컵을 나누어 주었다."
+    ],
+    "answer": 1,
+    "explain": "the science club planted twenty small trees behind the gym에서 알 수 있어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en8-018",
+    "type": "short",
+    "q": "빈칸에 알맞은 낱말을 쓰세요. (힌트: v로 시작하는 9글자)\nMany students do (    ) work at the animal shelter on weekends.",
+    "answer": [
+      "volunteer"
+    ],
+    "explain": "volunteer work는 '자원봉사 활동'을 뜻해요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en8-019",
+    "type": "mc",
+    "q": "빈칸에 알맞은 접속사는 무엇인가요?\nWe stayed at home (    ) it snowed a lot.",
+    "choices": [
+      "because",
+      "but",
+      "or",
+      "so"
+    ],
+    "answer": 0,
+    "explain": "눈이 많이 온 것이 집에 있은 '이유'이므로 because가 알맞아요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-020",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nThis chicken soup (    ) delicious.",
+    "choices": [
+      "tastes",
+      "tastes like",
+      "is tasting",
+      "taste"
+    ],
+    "answer": 0,
+    "explain": "감각동사 taste 뒤에 형용사가 오면 '~한 맛이 나다'예요. like는 명사 앞에 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-021",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nMr. Park is a firefighter in a small city.\nHe usually starts work at seven in the morning.\nHis job is not easy because he must be ready all day.\nLast winter, he saved a cat from a tall tree.\nThe cat was scared, so it did not want to come down.\nMr. Park says the best part of his job is helping people.\n\n글의 내용과 일치하는 것은 무엇인가요?",
+    "choices": [
+      "박 씨는 큰 도시에서 일한다.",
+      "박 씨는 저녁 일곱 시에 일을 시작한다.",
+      "고양이는 겁을 먹어서 내려오려 하지 않았다.",
+      "박 씨는 자신의 일이 쉽다고 말한다."
+    ],
+    "answer": 2,
+    "explain": "The cat was scared, so it did not want to come down.과 일치해요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en8-022",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nThis old bridge (    ) in 1998.",
+    "choices": [
+      "built",
+      "was built",
+      "has built",
+      "is building"
+    ],
+    "answer": 1,
+    "explain": "다리는 '지어진' 것이므로 과거 수동태 was built를 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-023",
+    "type": "short",
+    "q": "괄호 안의 말을 최상급으로 바꿔 빈칸에 알맞게 쓰세요. (두 단어)\nSoccer is the (popular) sport in our class.",
+    "answer": [
+      "most popular"
+    ],
+    "explain": "popular처럼 긴 형용사의 최상급은 the most popular로 만들어요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-024",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nSujin was often tired at school last year.\nShe usually went to bed after one in the morning.\nHer doctor told her to sleep at least eight hours every night.\nSujin also began to walk to school instead of taking the bus.\nAfter two months, she felt much better than before.\nNow she says good habits are stronger than any medicine.\n\n글의 내용과 일치하는 것은 무엇인가요?",
+    "choices": [
+      "수진이는 작년에 밤 열 시에 잠자리에 들었다.",
+      "의사는 수진이에게 매일 밤 최소 여덟 시간 자라고 했다.",
+      "수진이는 지금도 버스를 타고 학교에 간다.",
+      "수진이는 두 달이 지나도 달라진 점을 느끼지 못했다."
+    ],
+    "answer": 1,
+    "explain": "Her doctor told her to sleep at least eight hours every night.와 일치해요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en8-025",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nThe good news made us (    ).",
+    "choices": [
+      "happy",
+      "happily",
+      "to happy",
+      "happiness"
+    ],
+    "answer": 0,
+    "explain": "make + 목적어 + 형용사 형태이므로 부사가 아닌 형용사 happy를 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-026",
+    "type": "mc",
+    "q": "'전통의, 전통적인'이라는 뜻의 낱말은 무엇인가요?",
+    "choices": [
+      "traditional",
+      "terrible",
+      "thankful",
+      "tiny"
+    ],
+    "answer": 0,
+    "explain": "traditional은 '전통의'라는 뜻으로 traditional food(전통 음식)처럼 써요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en8-027",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nWe (    ) bibimbap for dinner yesterday.",
+    "choices": [
+      "eat",
+      "ate",
+      "eaten",
+      "eating"
+    ],
+    "answer": 1,
+    "explain": "yesterday가 있으므로 eat의 과거형 ate를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en8-028",
+    "type": "short",
+    "q": "설명에 알맞은 낱말을 영어로 쓰세요. (힌트: c로 시작하는 5글자)\nThis person teaches and trains a sports team.",
+    "answer": [
+      "coach"
+    ],
+    "explain": "운동 팀을 지도하는 사람은 coach(감독, 코치)예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en8-029",
+    "type": "mc",
+    "q": "대화의 빈칸에 들어갈 대답으로 알맞은 것은 무엇인가요?\nA: What are you going to do this weekend?\nB: (    )",
+    "choices": [
+      "I'm going to visit my grandparents.",
+      "I visited my grandparents last year.",
+      "I was very busy last weekend.",
+      "I usually visited my grandparents."
+    ],
+    "answer": 0,
+    "explain": "주말 계획을 묻고 있으므로 be going to로 계획을 말하는 대답이 알맞아요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en8-030",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nDon't worry. I (    ) help you tomorrow.",
+    "choices": [
+      "will",
+      "was",
+      "did",
+      "am"
+    ],
+    "answer": 0,
+    "explain": "tomorrow에 대한 약속이므로 미래를 나타내는 will을 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en8-031",
+    "type": "short",
+    "q": "괄호 안의 동사를 과거형으로 바꿔 한 단어로 쓰세요.\nThe bus (stop) in front of my school.",
+    "answer": [
+      "stopped"
+    ],
+    "explain": "'단모음+단자음'으로 끝나는 stop은 p를 한 번 더 쓰고 -ed를 붙여 stopped가 돼요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en8-032",
+    "type": "mc",
+    "q": "'headache'의 뜻으로 알맞은 것은 무엇인가요?",
+    "choices": [
+      "두통",
+      "기침",
+      "열",
+      "콧물"
+    ],
+    "answer": 0,
+    "explain": "head(머리) + ache(아픔)이므로 headache는 '두통'이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en8-033",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nThis book is (    ) than that one.",
+    "choices": [
+      "interestinger",
+      "more interesting",
+      "most interesting",
+      "the interesting"
+    ],
+    "answer": 1,
+    "explain": "interesting처럼 긴 형용사의 비교급은 앞에 more를 붙여요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en8-034",
+    "type": "mc",
+    "q": "옷 가게에서 더 큰 치수를 입어 보고 싶을 때 알맞은 말은 무엇인가요?",
+    "choices": [
+      "Can I try a bigger size?",
+      "Can I try a bigger price?",
+      "How long is this store?",
+      "How many is this shirt?"
+    ],
+    "answer": 0,
+    "explain": "size는 '치수'이고, try는 옷을 '입어 보다'라는 뜻으로 써요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en8-035",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nTom is a new student from Australia.\nHe came to Korea two months ago.\nAt first, Korean food was too spicy for him.\nNow he loves kimchi jjigae and tteokbokki.\nHis favorite class is music because he plays the guitar well.\nOn Saturdays, he learns Korean at the community center.\n\nTom이 음악 수업을 가장 좋아하는 이유는 무엇인가요?",
+    "choices": [
+      "한국어를 배울 수 있어서",
+      "기타를 잘 쳐서",
+      "친구를 많이 사귈 수 있어서",
+      "호주에서 배운 적이 있어서"
+    ],
+    "answer": 1,
+    "explain": "because he plays the guitar well에서 이유를 알 수 있어요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en8-036",
+    "type": "mc",
+    "q": "대화의 빈칸에 알맞은 말은 무엇인가요?\nA: Can you help me with the dishes?\nB: Sorry, I (    ) my homework yet.",
+    "choices": [
+      "haven't finished",
+      "didn't finished",
+      "don't finished",
+      "am not finish"
+    ],
+    "answer": 0,
+    "explain": "yet과 함께 '아직 ~하지 않았다'는 현재완료 haven't + p.p.로 나타내요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-037",
+    "type": "short",
+    "q": "괄호 안의 동사를 알맞은 형태로 바꿔 두 단어로 쓰세요. (목적을 나타내는 말)\nI went to the stadium (see) the baseball game.",
+    "answer": [
+      "to see"
+    ],
+    "explain": "'~하기 위해'라는 목적은 to부정사 to see로 나타내요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-038",
+    "type": "mc",
+    "q": "'여행 가방을 싸다'라는 뜻의 표현은 무엇인가요?",
+    "choices": [
+      "pack a suitcase",
+      "park a suitcase",
+      "pick a suitcase",
+      "paint a suitcase"
+    ],
+    "answer": 0,
+    "explain": "pack은 '짐을 싸다', suitcase는 '여행 가방'이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en8-039",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nIn Korea, people eat tteokguk on New Year's Day.\nIn Japan, many families eat long noodles on New Year's Eve.\nIn Spain, people eat twelve grapes at midnight.\nThese foods have different shapes and tastes.\nHowever, they all carry the same wish.\nPeople hope for good luck in the new year.\n\n글의 주제로 알맞은 것은 무엇인가요?",
+    "choices": [
+      "새해 음식은 나라마다 다르지만 모두 행운을 바라는 마음을 담고 있다.",
+      "긴 국수는 세계에서 가장 건강한 음식이다.",
+      "스페인 사람들은 포도 농사를 많이 짓는다.",
+      "떡국은 세계에서 가장 인기 있는 음식이다."
+    ],
+    "answer": 0,
+    "explain": "마지막 두 문장에서 모두 새해의 행운을 바란다는 공통점을 말하고 있어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en8-040",
+    "type": "mc",
+    "q": "빈칸에 알맞은 접속사는 무엇인가요?\n(    ) I opened the door, my dog ran to me.",
+    "choices": [
+      "When",
+      "But",
+      "So",
+      "That"
+    ],
+    "answer": 0,
+    "explain": "'~할 때'라는 시간을 나타내므로 When이 알맞아요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-041",
+    "type": "short",
+    "q": "빈칸에 알맞은 낱말을 쓰세요. (힌트: f로 시작하는 8글자)\nOur school (    ) is held every October, and students sing and dance on the stage.",
+    "answer": [
+      "festival"
+    ],
+    "explain": "학교 축제는 school festival이라고 해요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en8-042",
+    "type": "mc",
+    "q": "다음 가격표를 보고 알맞은 문장을 고르세요.\nBag A: 30,000 won\nBag B: 45,000 won",
+    "choices": [
+      "Bag B is more expensive than Bag A.",
+      "Bag A is more expensive than Bag B.",
+      "Bag B is cheaper than Bag A.",
+      "Bag A and Bag B cost the same."
+    ],
+    "answer": 0,
+    "explain": "45,000원인 Bag B가 더 비싸므로 more expensive than을 써요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en8-043",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nOur class had a sports day last Friday.\nThe weather was cloudy but not cold.\nIn the morning, we played dodgeball and ran relay races.\nMy team lost the dodgeball game, but we won the relay.\nAt lunchtime, our teacher brought us cold watermelon.\nEveryone was tired, but no one wanted to go home.\n\n글쓴이의 팀이 이긴 경기는 무엇인가요?",
+    "choices": [
+      "피구",
+      "계주",
+      "축구",
+      "줄다리기"
+    ],
+    "answer": 1,
+    "explain": "we lost the dodgeball game, but we won the relay에서 계주에서 이겼음을 알 수 있어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en8-044",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nMy uncle gave a nice camera (    ) me.",
+    "choices": [
+      "to",
+      "for",
+      "of",
+      "at"
+    ],
+    "answer": 0,
+    "explain": "give는 4형식을 3형식으로 바꿀 때 전치사 to를 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-045",
+    "type": "short",
+    "q": "괄호 안의 말을 비교급으로 바꿔 두 단어로 쓰세요.\nThe second movie was (interesting) than the first one.",
+    "answer": [
+      "more interesting"
+    ],
+    "explain": "3음절 이상의 형용사는 앞에 more를 붙여 비교급을 만들어요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-046",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nLast year, our town had a big problem with plastic waste.\nThe city put new recycling bins on every street.\nVolunteers visited each school and explained the rules.\nSome people thought the rules were too difficult at first.\nAfter six months, the amount of plastic waste fell by half.\nNow other towns are copying our idea.\n\n글의 내용과 일치하지 않는 것은 무엇인가요?",
+    "choices": [
+      "시에서 거리마다 새 재활용 통을 설치했다.",
+      "자원봉사자들이 학교를 찾아가 규칙을 설명했다.",
+      "여섯 달 뒤 플라스틱 쓰레기가 절반으로 줄었다.",
+      "다른 마을들은 이 방법에 관심을 보이지 않았다."
+    ],
+    "answer": 3,
+    "explain": "마지막 문장에서 다른 마을들이 이 방법을 따라 하고 있다고 했어요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en8-047",
+    "type": "mc",
+    "q": "다음 문장을 수동태로 바꿀 때 빈칸에 알맞은 말은 무엇인가요?\nMany people love this song.\n→ This song (    ) by many people.",
+    "choices": [
+      "is loved",
+      "loves",
+      "is loving",
+      "was love"
+    ],
+    "answer": 0,
+    "explain": "수동태는 be동사 + 과거분사이므로 is loved가 알맞아요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-048",
+    "type": "short",
+    "q": "괄호 안의 동사를 알맞은 형태로 바꿔 한 단어로 쓰세요.\nI have (see) that movie three times.",
+    "answer": [
+      "seen"
+    ],
+    "explain": "see의 과거분사는 seen이며, have seen은 '본 적이 있다'는 경험을 나타내요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-049",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nIf it (    ) tomorrow, we will cancel the picnic.",
+    "choices": [
+      "rains",
+      "will rain",
+      "rained",
+      "is going to rained"
+    ],
+    "answer": 0,
+    "explain": "조건을 나타내는 if절에서는 미래의 일도 현재시제로 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-050",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nJiwoo wants to become a game designer.\nShe has already made two small games with her friends.\nHer parents worry because the job is hard to get.\nSo Jiwoo studies math and drawing every evening.\nShe also joined an online club to learn coding.\nShe believes hard work is more important than talent.\n\n지우에 대한 설명으로 알맞은 것은 무엇인가요?",
+    "choices": [
+      "지우는 아직 게임을 만들어 본 적이 없다.",
+      "지우의 부모님은 그 직업에 대해 걱정한다.",
+      "지우는 저녁마다 운동을 한다.",
+      "지우는 재능이 노력보다 중요하다고 믿는다."
+    ],
+    "answer": 1,
+    "explain": "Her parents worry because the job is hard to get.과 일치해요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en8-051",
+    "type": "mc",
+    "q": "'reuse'의 뜻으로 알맞은 것은 무엇인가요?",
+    "choices": [
+      "다시 사용하다",
+      "내다 버리다",
+      "불에 태우다",
+      "새로 사다"
+    ],
+    "answer": 0,
+    "explain": "re(다시) + use(쓰다)이므로 reuse는 '다시 사용하다'예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en8-052",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nI (    ) go to school last Monday because I was sick.",
+    "choices": [
+      "didn't",
+      "don't",
+      "wasn't",
+      "haven't"
+    ],
+    "answer": 0,
+    "explain": "일반동사 과거의 부정은 didn't + 동사원형으로 나타내요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en8-053",
+    "type": "short",
+    "q": "설명에 알맞은 낱말을 영어로 쓰세요. (힌트: a로 시작하는 7글자)\nPlanes take off and land here.",
+    "answer": [
+      "airport"
+    ],
+    "explain": "비행기가 뜨고 내리는 곳은 airport(공항)예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en8-054",
+    "type": "mc",
+    "q": "'나는 제주도에 두 번 가 본 적이 있다.'를 영어로 알맞게 나타낸 것은 무엇인가요?",
+    "choices": [
+      "I have been to Jeju Island twice.",
+      "I am going to Jeju Island twice.",
+      "I will be to Jeju Island twice.",
+      "I was going to Jeju Island twice."
+    ],
+    "answer": 0,
+    "explain": "have been to ~는 '~에 가 본 적이 있다'는 경험을 나타내요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en8-055",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\n(    ) breakfast every day is good for your health.",
+    "choices": [
+      "Eating",
+      "Eat",
+      "Ate",
+      "Eats"
+    ],
+    "answer": 0,
+    "explain": "문장의 주어 자리에는 동명사(-ing)를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en8-056",
+    "type": "short",
+    "q": "빈칸에 알맞은 be동사의 과거형을 한 단어로 쓰세요.\nThe streets (    ) very crowded last night.",
+    "answer": [
+      "were"
+    ],
+    "explain": "주어 The streets가 복수이고 last night이므로 were를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en8-057",
+    "type": "mc",
+    "q": "식당에서 음식을 만드는 '요리사'를 뜻하는 낱말은 무엇인가요?",
+    "choices": [
+      "chef",
+      "chief",
+      "chest",
+      "cheer"
+    ],
+    "answer": 0,
+    "explain": "chef는 전문 요리사를 뜻해요. chief는 '우두머리'예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en8-058",
+    "type": "mc",
+    "q": "대화의 빈칸에 알맞은 말은 무엇인가요?\nA: Let's go camping this Saturday.\nB: That (    ) great!",
+    "choices": [
+      "sounds",
+      "sounds like",
+      "hears",
+      "listens"
+    ],
+    "answer": 0,
+    "explain": "감각동사 sound 뒤에 형용사 great이 왔으므로 sounds가 알맞아요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en8-059",
+    "type": "mc",
+    "q": "가게에서 '카드로 계산해도 되나요?'라고 물을 때 알맞은 말은 무엇인가요?",
+    "choices": [
+      "Can I pay by card?",
+      "Can I pay by cart?",
+      "How much do I sell?",
+      "Do you need my size?"
+    ],
+    "answer": 0,
+    "explain": "pay by card는 '카드로 지불하다'라는 뜻이에요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en8-060",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nMy family visited a small farm last Sunday.\nWe fed cows and picked strawberries.\nMy little sister was afraid of the big cows at first.\nLater, she gave them grass with a big smile.\nWe also made strawberry jam in the farm kitchen.\nIt was sweeter than the jam from the store.\n\n글쓴이의 여동생에 대한 설명으로 알맞은 것은 무엇인가요?",
+    "choices": [
+      "처음에는 큰 소를 무서워했다.",
+      "딸기를 하나도 따지 않았다.",
+      "잼 만들기에 참여하지 않았다.",
+      "농장에 가는 것을 싫어했다."
+    ],
+    "answer": 0,
+    "explain": "My little sister was afraid of the big cows at first.와 일치해요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en8-061",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nI have a lot of homework (    ) tonight.",
+    "choices": [
+      "to do",
+      "doing",
+      "did",
+      "does"
+    ],
+    "answer": 0,
+    "explain": "명사 homework를 꾸며 주는 to부정사의 형용사적 용법이에요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-062",
+    "type": "short",
+    "q": "괄호 안의 말을 최상급으로 바꿔 한 단어로 쓰세요.\nJanuary is the (cold) month in Korea.",
+    "answer": [
+      "coldest"
+    ],
+    "explain": "짧은 형용사의 최상급은 -est를 붙여 coldest로 만들어요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-063",
+    "type": "mc",
+    "q": "'exercise(운동하다)'와 바꿔 쓸 수 있는 표현은 무엇인가요?",
+    "choices": [
+      "work out",
+      "work on",
+      "give up",
+      "take off"
+    ],
+    "answer": 0,
+    "explain": "work out은 '운동하다'라는 뜻의 표현이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en8-064",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nOur school will hold a book fair next week.\nStudents can bring old books and trade them for new ones.\nThe library club will read stories to younger children.\nTeachers plan to sell hot chocolate at the gate.\nAll the money will go to a children's hospital.\nMs. Kim hopes every student will join the event.\n\n모은 돈은 어디에 쓰인다고 했나요?",
+    "choices": [
+      "도서관에 새 책을 사는 데 쓰인다.",
+      "어린이 병원에 보내진다.",
+      "학생들에게 나누어 준다.",
+      "학교 축제 비용으로 쓰인다."
+    ],
+    "answer": 1,
+    "explain": "All the money will go to a children's hospital.에서 알 수 있어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en8-065",
+    "type": "mc",
+    "q": "빈칸에 알맞은 접속사는 무엇인가요?\nI think (    ) this song will be popular with teenagers.",
+    "choices": [
+      "that",
+      "what",
+      "because",
+      "so"
+    ],
+    "answer": 0,
+    "explain": "think 뒤에 문장이 이어질 때는 접속사 that을 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-066",
+    "type": "short",
+    "q": "빈칸에 알맞은 조동사를 한 단어로 쓰세요. (조언할 때 쓰는 말, sh로 시작)\nYou look really tired. You (    ) go to bed early tonight.",
+    "answer": [
+      "should"
+    ],
+    "explain": "should는 '~하는 게 좋겠다'라고 조언할 때 쓰는 조동사예요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en8-067",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nThese cookies (    ) every morning by my grandmother.",
+    "choices": [
+      "are made",
+      "are making",
+      "make",
+      "makes"
+    ],
+    "answer": 0,
+    "explain": "쿠키는 '만들어지는' 것이므로 현재 수동태 are made를 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-068",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nHana joined the school swimming team in March.\nAt first, she could not swim twenty-five meters.\nHer coach told her to practice every day after school.\nShe was often tired, but she never missed a practice.\nIn July, she finished second in the city contest.\nHer coach said her effort was the real prize.\n\n하나의 코치가 마지막에 한 말은 무엇인가요?",
+    "choices": [
+      "수영을 그만두는 게 좋겠다고 했다.",
+      "아침마다 운동하라고 했다.",
+      "하나의 노력이 진짜 상이라고 했다.",
+      "다음 대회에는 나가지 말라고 했다."
+    ],
+    "answer": 2,
+    "explain": "Her coach said her effort was the real prize.와 일치해요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en8-069",
+    "type": "mc",
+    "q": "'예의 바른'이라는 뜻의 낱말은 무엇인가요?",
+    "choices": [
+      "polite",
+      "proud",
+      "quiet",
+      "brave"
+    ],
+    "answer": 0,
+    "explain": "polite는 '예의 바른'이라는 뜻이에요. brave는 '용감한'이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en8-070",
+    "type": "short",
+    "q": "빈칸에 알맞은 낱말을 쓰세요. (힌트: s로 시작하는 8글자, '기념품')\nWe bought a small (    ) at the museum shop to remember our trip.",
+    "answer": [
+      "souvenir"
+    ],
+    "explain": "여행을 기억하려고 사는 기념품은 souvenir예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en8-071",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nA young man in Norway invented a special net last year.\nThe net catches plastic bottles in rivers before they reach the sea.\nIt costs less than most machines.\nLocal students helped him test it for three months.\nDuring the test, the net collected more than four thousand bottles.\nThree cities now plan to use it next spring.\n\n그 그물에 대한 설명으로 알맞은 것은 무엇인가요?",
+    "choices": [
+      "바다에 이미 도착한 병만 잡는다.",
+      "대부분의 기계보다 비용이 적게 든다.",
+      "학생들은 실험에 참여하지 않았다.",
+      "세 도시가 이미 사용하고 있다."
+    ],
+    "answer": 1,
+    "explain": "It costs less than most machines.와 일치해요. 세 도시는 내년 봄에 쓸 '계획'이에요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en8-072",
+    "type": "mc",
+    "q": "다음 중 어법상 어색한 문장은 무엇인가요?",
+    "choices": [
+      "She finished reading the book.",
+      "He wants to join our club.",
+      "They enjoyed to play soccer.",
+      "I hope to see you soon."
+    ],
+    "answer": 2,
+    "explain": "enjoy는 동명사를 목적어로 쓰므로 enjoyed playing soccer가 맞아요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-073",
+    "type": "short",
+    "q": "다음 문장을 수동태로 바꿀 때 빈칸에 알맞은 말을 두 단어로 쓰세요.\nMany tourists visit this temple.\n→ This temple (    ) by many tourists.",
+    "answer": [
+      "is visited"
+    ],
+    "explain": "주어 This temple이 단수이고 현재시제이므로 is + visited를 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-074",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nThe new road is (    ) safer than the old one.",
+    "choices": [
+      "much",
+      "very",
+      "many",
+      "so much of"
+    ],
+    "answer": 0,
+    "explain": "비교급을 강조할 때는 very가 아니라 much(훨씬)를 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-075",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nLast month I bought a jacket from an online store.\nWhen it arrived, the color was different from the picture.\nI sent an email to the store on the same day.\nThey answered in two hours and said sorry.\nI could choose a refund or a new jacket.\nI chose the new jacket, and it came three days later.\n\n글쓴이가 선택한 것은 무엇인가요?",
+    "choices": [
+      "환불받는 것",
+      "새 재킷을 받는 것",
+      "할인 쿠폰을 받는 것",
+      "그대로 사용하는 것"
+    ],
+    "answer": 1,
+    "explain": "I chose the new jacket에서 새 재킷을 선택했음을 알 수 있어요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en8-076",
+    "type": "mc",
+    "q": "'경기장'을 뜻하는 낱말은 무엇인가요?",
+    "choices": [
+      "stadium",
+      "station",
+      "statue",
+      "stairs"
+    ],
+    "answer": 0,
+    "explain": "stadium은 축구나 야구 경기를 하는 '경기장'이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en8-077",
+    "type": "short",
+    "q": "빈칸에 알맞은 낱말을 쓰세요. (힌트: p로 시작하는 7글자)\nWe should not use too much (    ) because it harms the earth.",
+    "answer": [
+      "plastic"
+    ],
+    "explain": "plastic은 '플라스틱'으로, 환경을 해치는 대표적인 재료예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en8-078",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nShe (    ) many photos at the concert last night.",
+    "choices": [
+      "took",
+      "take",
+      "taken",
+      "takes"
+    ],
+    "answer": 0,
+    "explain": "last night이므로 take의 과거형 took을 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en8-079",
+    "type": "mc",
+    "q": "대화의 빈칸에 알맞은 말은 무엇인가요?\nA: Have you ever ridden a horse?\nB: (    ) I rode one at a farm last year.",
+    "choices": [
+      "Yes, I have.",
+      "No, I haven't.",
+      "Yes, I will.",
+      "No, I don't."
+    ],
+    "answer": 0,
+    "explain": "작년에 타 봤다고 했으므로 경험을 인정하는 Yes, I have.가 알맞아요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en8-080",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nWe (    ) going to clean the park this Saturday.",
+    "choices": [
+      "are",
+      "is",
+      "am",
+      "be"
+    ],
+    "answer": 0,
+    "explain": "주어가 We이므로 be going to의 be동사는 are를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en8-081",
+    "type": "short",
+    "q": "괄호 안의 동사를 과거형으로 바꿔 한 단어로 쓰세요.\nMy sister (win) first prize in the speech contest.",
+    "answer": [
+      "won"
+    ],
+    "explain": "win의 과거형은 불규칙 변화로 won이에요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en8-082",
+    "type": "mc",
+    "q": "'field trip'의 뜻으로 알맞은 것은 무엇인가요?",
+    "choices": [
+      "현장 체험 학습",
+      "학교 운동회",
+      "졸업식",
+      "방학 숙제"
+    ],
+    "answer": 0,
+    "explain": "field trip은 학교 밖으로 나가는 현장 체험 학습을 뜻해요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en8-083",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nMy math score is (    ) than yours.",
+    "choices": [
+      "better",
+      "gooder",
+      "best",
+      "more good"
+    ],
+    "answer": 0,
+    "explain": "good의 비교급은 불규칙 변화로 better예요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en8-084",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nEvery May our class visits a nursing home.\nWe sing songs and play the recorder for the old people.\nLast year, one grandmother taught us a folk song.\nThis year, we will bring flowers from our school garden.\nMy friend Sujin practiced the piano for two weeks.\nShe wants to play for them alone this time.\n\n수진이가 두 주 동안 연습한 것은 무엇인가요?",
+    "choices": [
+      "리코더",
+      "피아노",
+      "민요 부르기",
+      "꽃꽂이"
+    ],
+    "answer": 1,
+    "explain": "Sujin practiced the piano for two weeks.에서 알 수 있어요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en8-085",
+    "type": "short",
+    "q": "설명에 알맞은 낱말을 영어로 쓰세요. (힌트: t로 시작하는 6글자)\nYou need this to get on a train or a plane.",
+    "answer": [
+      "ticket"
+    ],
+    "explain": "기차나 비행기를 타려면 ticket(표)이 필요해요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en8-086",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nFood trucks are popular in many cities now.\nThey can move to busy places at lunchtime.\nThe food is usually cheaper than restaurant food.\nSome owners change their menu every season.\nIn winter, hot soup sells better than cold drinks.\nMany young cooks start their first business this way.\n\n글의 내용과 일치하는 것은 무엇인가요?",
+    "choices": [
+      "푸드트럭 음식은 식당 음식보다 대체로 비싸다.",
+      "겨울에는 찬 음료가 뜨거운 수프보다 잘 팔린다.",
+      "일부 주인은 계절마다 메뉴를 바꾼다.",
+      "푸드트럭은 한 자리에서만 장사할 수 있다."
+    ],
+    "answer": 2,
+    "explain": "Some owners change their menu every season.과 일치해요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en8-087",
+    "type": "mc",
+    "q": "'우리는 그를 Little Giant라고 부른다.'를 영어로 알맞게 나타낸 것은 무엇인가요?",
+    "choices": [
+      "We call him Little Giant.",
+      "We call Little Giant him.",
+      "We call to him Little Giant.",
+      "We call him to Little Giant."
+    ],
+    "answer": 0,
+    "explain": "call + 목적어 + 목적격보어 순서로 '~을 …라고 부르다'를 나타내요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-088",
+    "type": "short",
+    "q": "괄호 안의 동사를 알맞은 형태로 바꿔 한 단어로 쓰세요.\nHave you ever (be) to a foreign country?",
+    "answer": [
+      "been"
+    ],
+    "explain": "have been to ~는 '~에 가 본 적이 있다'는 경험을 나타내요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-089",
+    "type": "mc",
+    "q": "'reporter'가 하는 일로 알맞은 것은 무엇인가요?",
+    "choices": [
+      "뉴스를 취재해서 사람들에게 전한다.",
+      "건물을 설계한다.",
+      "아픈 동물을 치료한다.",
+      "비행기를 수리한다."
+    ],
+    "answer": 0,
+    "explain": "reporter는 소식을 취재해 전하는 '기자'예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en8-090",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nMany teenagers use their phones late at night.\nThe light from the screen makes sleep difficult.\nDoctors say we should stop using phones an hour before bed.\nReading a paper book is a better way to relax.\nSome students leave their phones in another room.\nThey say they fall asleep much faster now.\n\n의사들이 권한 내용은 무엇인가요?",
+    "choices": [
+      "잠자기 한 시간 전에는 휴대전화 사용을 멈추기",
+      "밤에는 화면을 더 밝게 하기",
+      "잠들기 직전에 운동하기",
+      "휴대전화를 침대 옆에 두기"
+    ],
+    "answer": 0,
+    "explain": "Doctors say we should stop using phones an hour before bed.와 일치해요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en8-091",
+    "type": "mc",
+    "q": "빈칸에 알맞은 접속사는 무엇인가요?\nYou can join our art club (    ) you like painting.",
+    "choices": [
+      "if",
+      "but",
+      "or",
+      "that"
+    ],
+    "answer": 0,
+    "explain": "'만약 ~라면'이라는 조건을 나타내므로 if가 알맞아요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-092",
+    "type": "short",
+    "q": "빈칸에 알맞은 낱말을 한 단어로 쓰세요. ('달러'를 뜻하는 낱말의 복수형)\nA: How much is this cap?\nB: It's fifteen (    ).",
+    "answer": [
+      "dollars"
+    ],
+    "explain": "15는 복수이므로 dollar에 -s를 붙여 dollars로 써요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en8-093",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말은 무엇인가요?\nThat white cloud (    ) a big elephant.",
+    "choices": [
+      "looks like",
+      "looks",
+      "sees",
+      "watches"
+    ],
+    "answer": 0,
+    "explain": "감각동사 look 뒤에 명사가 오면 look like(~처럼 보이다)를 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-094",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nOur class went on a school trip to Gyeongju in April.\nOn the first day, we visited Bulguksa Temple in the rain.\nThe next morning the sky was clear and warm.\nWe rode bikes around a large old pond.\nOur teacher told us stories about the Silla Kingdom.\nEveryone agreed that the second day was the best.\n\n글의 내용과 일치하는 것은 무엇인가요?",
+    "choices": [
+      "첫날에는 비가 내렸다.",
+      "학생들은 이틀 내내 자전거를 탔다.",
+      "선생님은 조선 시대 이야기를 들려주었다.",
+      "학생들은 첫날이 가장 좋았다고 했다."
+    ],
+    "answer": 0,
+    "explain": "we visited Bulguksa Temple in the rain에서 첫날 비가 왔음을 알 수 있어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en8-095",
+    "type": "short",
+    "q": "괄호 안의 동사를 알맞은 형태로 바꿔 한 단어로 쓰세요.\nHow about (go) to the science museum this Sunday?",
+    "answer": [
+      "going"
+    ],
+    "explain": "How about 뒤에는 동명사(-ing)를 써서 제안해요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-096",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nMs. Yoon repairs old clothes for a living.\nTen years ago, few people brought her their jackets.\nNow her small shop is busy every weekend.\nShe thinks people care more about waste than before.\nHer customers save money, and the earth gets less trash.\nShe also teaches a free sewing class on Wednesdays.\n\n윤 씨의 가게가 바빠진 까닭으로 글에 나타난 것은 무엇인가요?",
+    "choices": [
+      "옷값이 갑자기 크게 올랐기 때문이다.",
+      "사람들이 예전보다 쓰레기 문제에 더 관심을 갖기 때문이다.",
+      "무료 바느질 수업이 날마다 열리기 때문이다.",
+      "근처에 새 옷을 파는 가게가 없어졌기 때문이다."
+    ],
+    "answer": 1,
+    "explain": "She thinks people care more about waste than before.에서 까닭을 알 수 있어요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en8-097",
+    "type": "mc",
+    "q": "다음 네 문장 중 현재완료를 잘못 쓴 문장은 무엇인가요?",
+    "choices": [
+      "I have lost my umbrella.",
+      "She has visited Busan last year.",
+      "They have already eaten lunch.",
+      "We have known each other for five years."
+    ],
+    "answer": 1,
+    "explain": "last year처럼 분명한 과거 시점은 현재완료와 함께 쓸 수 없어요. visited Busan last year가 맞아요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-098",
+    "type": "short",
+    "q": "어법상 어색한 부분을 바르게 고쳐 한 단어로 쓰세요.\nMy plan is to visiting three cities in Japan.",
+    "answer": [
+      "visit"
+    ],
+    "explain": "to 뒤에는 동사원형을 쓰므로 to visiting이 아니라 to visit이 맞아요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-099",
+    "type": "mc",
+    "q": "빈칸에 알맞은 전치사는 무엇인가요?\nMy mom made a birthday cake (    ) me.",
+    "choices": [
+      "for",
+      "to",
+      "of",
+      "with"
+    ],
+    "answer": 0,
+    "explain": "make는 4형식을 3형식으로 바꿀 때 전치사 for를 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-100",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nTwo new cafes opened near our school last month.\nThe Blue Cup is bigger and has more seats.\nThe Green Bean is smaller but much quieter.\nDrinks at the Blue Cup cost about a thousand won more.\nMost students go to the Blue Cup after school.\nHowever, students who want to study choose the Green Bean.\n\n글의 내용과 일치하는 것은 무엇인가요?",
+    "choices": [
+      "Green Bean이 Blue Cup보다 자리가 더 많다.",
+      "Blue Cup의 음료가 약 천 원 더 비싸다.",
+      "공부하려는 학생들은 Blue Cup에 간다.",
+      "두 카페는 작년에 문을 열었다."
+    ],
+    "answer": 1,
+    "explain": "Drinks at the Blue Cup cost about a thousand won more.와 일치해요.",
+    "tag": "독해",
+    "level": "hard"
+  }
+]

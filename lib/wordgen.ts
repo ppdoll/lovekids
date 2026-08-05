@@ -1,4 +1,4 @@
-import { Problem } from "./types";
+import { clampGrade, Problem } from "./types";
 
 /**
  * 수학 문장제(이야기 문제) 자동 생성기.
@@ -273,17 +273,139 @@ function 이름과(n: string): string {
   return hasJong(n) ? `${n}이와` : `${n}와`;
 }
 
+/* ── 중학생(7~9학년): 방정식 활용, 속력, 농도, 경우의 수 ──
+ *
+ * 중학생에게 "사탕을 나눠 가지기" 같은 문제를 내면 시시하다.
+ * 식을 세워야 풀리는 문제로 바꾸되, 답은 숫자 하나로 떨어지게 만든다.
+ */
+const middleGens: Gen[] = [
+  () => {
+    // 나이 문제 (일차방정식 활용)
+    const years = ri(3, 20);
+    const k = pick([2, 3]);
+    const child = ri(8, 18);
+    const parent = k * (child + years) - years;
+    if (parent <= child || parent > 70) return middleGens[1]();
+    return short(
+      `현재 아버지의 나이는 ${parent}살, 아이의 나이는 ${child}살입니다. 아버지의 나이가 아이의 나이의 ${k}배가 되는 것은 몇 년 후인가요?`,
+      withUnit(years, "년"),
+      `${parent} + x = ${k}(${child} + x) → x = ${years}`,
+    );
+  },
+  () => {
+    // 거리 = 속력 × 시간
+    const speed = ri(3, 12) * 10;
+    const hours = pick([1.5, 2, 2.5, 3, 4]);
+    const dist = speed * hours;
+    if (!Number.isInteger(dist)) return middleGens[2]();
+    const label = Number.isInteger(hours) ? `${hours}시간` : `${Math.floor(hours)}시간 30분`;
+    return short(
+      `시속 ${speed}km로 ${label} 동안 달렸다면 이동한 거리는 몇 km인가요?`,
+      withUnit(dist, "km"),
+      `거리 = 속력 × 시간 = ${speed} × ${hours} = ${dist}`,
+    );
+  },
+  () => {
+    // 소금물 농도
+    const pct = pick([5, 8, 10, 12, 15, 20, 25]);
+    const g = pick([100, 150, 200, 250, 300, 400]);
+    const salt = (g * pct) / 100;
+    if (!Number.isInteger(salt)) return middleGens[3]();
+    return short(
+      `농도가 ${pct}%인 소금물 ${g}g에 녹아 있는 소금은 몇 g인가요?`,
+      withUnit(salt, "g"),
+      `소금의 양 = ${g} × ${pct}/100 = ${salt}`,
+    );
+  },
+  () => {
+    // 다리 개수 (연립방정식 활용)
+    const chicken = ri(4, 20);
+    const pig = ri(3, 15);
+    const heads = chicken + pig;
+    const legs = chicken * 2 + pig * 4;
+    return short(
+      `닭과 돼지가 합해서 ${heads}마리 있고, 다리는 모두 ${legs}개입니다. 닭은 몇 마리인가요?`,
+      withUnit(chicken, "마리"),
+      `닭 x, 돼지 y → x + y = ${heads}, 2x + 4y = ${legs} → x = ${chicken}`,
+    );
+  },
+  () => {
+    // 어떤 수 구하기 (일차방정식)
+    const x = ri(-12, 20) || 7;
+    const a = ri(2, 9);
+    const b = ri(-15, 15);
+    return short(
+      `어떤 수를 ${a}배 한 뒤 ${b >= 0 ? `${b}을 더하면` : `${-b}을 빼면`} ${a * x + b}이 됩니다. 어떤 수는 얼마인가요?`,
+      [`${x}`],
+      `${a}x ${b >= 0 ? "+" : "-"} ${Math.abs(b)} = ${a * x + b} → x = ${x}`,
+    );
+  },
+  () => {
+    // 경우의 수 (곱의 법칙)
+    const a = ri(3, 7);
+    const b = ri(2, 6);
+    const items = pick([
+      ["티셔츠", "바지", "옷차림"],
+      ["빵", "음료", "세트"],
+      ["윗옷", "신발", "차림"],
+    ]);
+    return short(
+      `서로 다른 ${items[0]} ${a}가지와 ${items[1]} ${b}가지가 있습니다. 하나씩 골라 만들 수 있는 ${items[2]}는 모두 몇 가지인가요?`,
+      withUnit(a * b, "가지"),
+      `${a} × ${b} = ${a * b}`,
+    );
+  },
+  () => {
+    // 정가 = 원가 + 이익
+    const cost = ri(4, 30) * 1000;
+    const rate = pick([10, 20, 25, 30, 50]);
+    const price = cost + (cost * rate) / 100;
+    return short(
+      `원가가 ${cost}원인 물건에 ${rate}%의 이익을 붙여 정가를 정했습니다. 정가는 얼마인가요? (숫자만 쓰세요)`,
+      withUnit(price, "원"),
+      `${cost} + ${cost} × ${rate}/100 = ${price}`,
+    );
+  },
+  () => {
+    // 이차방정식 활용 (직사각형)
+    const w = ri(3, 15);
+    const gap = ri(2, 8);
+    const area = w * (w + gap);
+    return short(
+      `가로가 세로보다 ${gap}cm 긴 직사각형의 넓이가 ${area}cm²입니다. 세로의 길이는 몇 cm인가요?`,
+      withUnit(w, "cm"),
+      `x(x + ${gap}) = ${area} → x = ${w}`,
+    );
+  },
+  () => {
+    // 연속하는 수
+    const n = pick([3, 5]);
+    const mid = ri(5, 40);
+    const nums = Array.from({ length: n }, (_, i) => mid - Math.floor(n / 2) + i);
+    const sum = nums.reduce((s, v) => s + v, 0);
+    return short(
+      `연속하는 ${n}개의 자연수의 합이 ${sum}입니다. 가장 작은 수는 얼마인가요?`,
+      [`${nums[0]}`],
+      `가운데 수가 ${mid}이므로 ${nums.join(" + ")} = ${sum}`,
+    );
+  },
+];
+
 /** 학년에 맞는 문장제 후보 (겹치게 넣어 가중치를 준다) */
 function gensFor(grade: number): Gen[] {
   if (grade <= 2) return easyGens;
   if (grade <= 4) return [...easyGens, ...midGens, ...midGens];
-  return [...midGens, ...hardGens, ...hardGens];
+  // 중학생(7~9)에게 초등 문장제를 내면 시시하다. 비율·평균 같은 실생활 문제 위주로 둔다.
+  if (grade <= 6) return [...midGens, ...hardGens, ...hardGens];
+  // 중학생에게 "사탕 나눠 갖기"는 시시하다. 식을 세워야 풀리는 문제 위주로 두고,
+  // 비율·평균 같은 실생활 문제를 조금 섞는다.
+  return [...middleGens, ...middleGens, ...hardGens];
 }
 
 /** 학년에 맞는 문장제 n개 생성 (문제 텍스트 중복 없이) */
 export function genWordProblems(grade: number, n: number): Problem[] {
   if (n <= 0) return [];
-  const gens = gensFor(Math.min(6, Math.max(1, grade)));
+  const gens = gensFor(clampGrade(grade));
   const out: Problem[] = [];
   const seen = new Set<string>();
   let guard = 0;

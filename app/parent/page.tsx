@@ -3,8 +3,11 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import {
+  ALL_GRADES,
   CalcConfig,
   DEFAULT_CALC,
+  gradeLabel,
+  gradeShort,
   History,
   Kid,
   KID_EMOJIS,
@@ -418,7 +421,7 @@ export default function ParentPage() {
               <div className="row" style={{ marginBottom: 10 }}>
                 <span style={{ fontSize: 26 }}>{k.emoji}</span>
                 <b>{k.name}</b>
-                <span className="badge">{k.grade}학년</span>
+                <span className="badge">{gradeLabel(k.grade)}</span>
                 {k.streak > 0 && <span className="badge fire">🔥 {k.streak}일</span>}
               </div>
               <div className="stack" style={{ gap: 10 }}>
@@ -639,9 +642,9 @@ export default function ParentPage() {
                       )
                     }
                   >
-                    {[1, 2, 3, 4, 5, 6].map((g) => (
+                    {ALL_GRADES.map((g) => (
                       <option key={g} value={g}>
-                        {g}학년
+                        {gradeLabel(g)}
                       </option>
                     ))}
                   </select>
@@ -994,33 +997,43 @@ export default function ParentPage() {
             <div className="section-title" style={{ marginBottom: 8 }}>
               문제은행 보유량
             </div>
-            <table className="bank-table">
-              <thead>
-                <tr>
-                  <th>과목</th>
-                  {[1, 2, 3, 4, 5, 6].map((g) => (
-                    <th key={g}>{g}학년</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {SUBJECTS.map((s) => (
-                  <tr key={s}>
-                    <td>
-                      {SUBJECT_EMOJI[s]} {SUBJECT_LABEL[s]}
-                    </td>
-                    {[1, 2, 3, 4, 5, 6].map((g) => (
-                      <td key={g}>{data.bank[s]?.[g] ?? 0}</td>
+            {/* 학년이 9개라 좁은 화면에서는 표가 넘친다 — 표만 가로로 넘겨 볼 수 있게 한다 */}
+            <div className="table-scroll">
+              <table className="bank-table">
+                <thead>
+                  <tr>
+                    <th>과목</th>
+                    {ALL_GRADES.map((g) => (
+                      <th key={g}>{gradeShort(g)}</th>
                     ))}
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {SUBJECTS.map((s) => (
+                    <tr key={s}>
+                      <td>
+                        {SUBJECT_EMOJI[s]} {SUBJECT_LABEL[s]}
+                      </td>
+                      {ALL_GRADES.map((g) => {
+                        const n = data.bank[s]?.[g] ?? 0;
+                        // 수학은 자동 생성이 주력이라 0이어도 문제가 없다.
+                        // 숫자 0을 그대로 두면 "문제가 없다"로 오해하므로 다르게 보여준다.
+                        return (
+                          <td key={g} className={n === 0 ? "muted" : undefined}>
+                            {n === 0 ? "자동" : n}
+                          </td>
+                        );
+                      })}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
             <p className="muted" style={{ marginTop: 8, fontSize: 12.5 }}>
-              수학의 <b>＋－×÷ 연산</b>과 <b>문장제</b>는 그때그때 자동으로 만들어져 마르지 않습니다
-              (학년당 수천 가지). 위 표의 수학은 손으로 쓴 문장제만 센 것이고, 자동 생성 문장제와 섞어
-              출제합니다. 국어·영어 문제가 부족해지면 Claude Code에게 &quot;문제은행 리필해줘&quot;라고
-              요청하세요.
+              수학은 <b>＋－×÷ 연산</b>과 <b>문장제</b> 모두 그때그때 자동으로 만들어져 마르지 않습니다
+              (학년당 수천 가지). 표의 수학 숫자는 손으로 쓴 문장제만 센 것이라,{" "}
+              <b>&quot;자동&quot;으로 표시돼도 문제가 부족한 것이 아닙니다.</b> 국어·영어가 부족해지면
+              Claude Code에게 &quot;문제은행 리필해줘&quot;라고 요청하세요.
             </p>
           </div>
         </div>

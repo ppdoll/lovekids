@@ -9,7 +9,7 @@
  * 실행: node scripts/test-wordgen.mjs
  */
 import { execSync } from "child_process";
-import { mkdtempSync, writeFileSync } from "fs";
+import { mkdtempSync, readFileSync, writeFileSync } from "fs";
 import { tmpdir } from "os";
 import path from "path";
 import { pathToFileURL } from "url";
@@ -22,6 +22,11 @@ execSync(
   { stdio: "inherit" },
 );
 writeFileSync(path.join(out, "package.json"), '{"type":"module"}');
+// tsc는 상대 경로 import에 .js를 붙여주지 않는데, Node의 ESM은 확장자를 요구한다
+for (const f of ["wordgen.js", "types.js"]) {
+  const p = path.join(out, f);
+  writeFileSync(p, readFileSync(p, "utf8").replace(/from "(\.\/[^"]+?)"/g, 'from "$1.js"'));
+}
 const { genWordProblems, _particles } = await import(pathToFileURL(path.join(out, "wordgen.js")).href);
 
 let failed = 0;
@@ -50,7 +55,7 @@ check("조사 규칙 12가지", bad.length === 0, bad.join(" / ") || "모두 일
 /* ─────────── 2) 생성된 문장의 어색한 조사 ─────────── */
 console.log("\n=== 생성된 문장에 어색한 조사가 없는지 ===");
 const all = [];
-for (let g = 1; g <= 6; g++) all.push(...genWordProblems(g, 600).map((p) => ({ g, ...p })));
+for (let g = 1; g <= 9; g++) all.push(...genWordProblems(g, 600).map((p) => ({ g, ...p })));
 
 /**
  * 문장 전체에서 조사를 찾아 검사하면 "있는", "나가고" 같은 동사 활용까지 걸려 오탐이 난다.
@@ -140,6 +145,19 @@ for (const p of all) {
     continue;
   }
 
+  // "연속하는 N개의 자연수의 합" 문제는 해설의 식이 합(21)이고 정답은 가장 작은 수(6)라
+  // 등호 양변만으로는 검증할 수 없다. 문제 문장의 수로 직접 계산해 비교한다.
+  const seq = p.q.match(/연속하는 (\d+)개의 자연수의 합이 (\d+)/);
+  if (seq) {
+    checkedAns++;
+    const n = Number(seq[1]);
+    const sum = Number(seq[2]);
+    const want = sum / n - Math.floor(n / 2);
+    const got = Number(String(p.answer[0]).replace(/[^\d.\-]/g, ""));
+    if (want !== got) mismatch.push(`${p.q.slice(0, 45)} | 정답 ${p.answer[0]} | 실제 ${want}`);
+    continue;
+  }
+
   // 해설에 "a op b = c" 형태가 있으면 좌변을 계산해 정답과 비교
   const m = p.explain.match(/([\d\s+\-×÷/,]+)=\s*([\d.]+)/);
   if (!m) continue;
@@ -154,16 +172,21 @@ for (const p of all) {
 }
 check(`해설 식과 정답 대조 ${checkedAns}건`, mismatch.length === 0, mismatch.slice(0, 3).join(" || ") || "모두 일치");
 
-// 음수·소수점 답이 나오지 않는지 (초등 문장제로 부적절)
+// 답이 정수인지. 음수는 중학교(7~9학년) 정수 단원에서는 정상이지만 초등에서는 나오면 안 된다.
 const weird = all.filter((p) => {
   const v = Number(String(p.answer[0]).replace(/[^\d.\-]/g, ""));
-  return !Number.isFinite(v) || v < 0 || !Number.isInteger(v);
+  if (!Number.isFinite(v) || !Number.isInteger(v)) return true;
+  return v < 0 && p.g <= 6;
 });
-check("음수나 소수 답이 없음", weird.length === 0, weird.slice(0, 3).map((p) => `${p.q.slice(0, 40)} → ${p.answer[0]}`).join(" | ") || "");
+check(
+  "답이 정수이고, 초등에는 음수 답이 없음",
+  weird.length === 0,
+  weird.slice(0, 3).map((p) => `${p.g}학년 ${p.q.slice(0, 40)} → ${p.answer[0]}`).join(" | ") || "",
+);
 
 /* ─────────── 4) 다양성 ─────────── */
 console.log("\n=== 만들 수 있는 서로 다른 문장제 수 ===");
-for (let g = 1; g <= 6; g++) {
+for (let g = 1; g <= 9; g++) {
   const seen = new Set();
   for (let i = 0; i < 4000; i++) for (const p of genWordProblems(g, 1)) seen.add(p.q);
   console.log(`  ${g}학년: ${seen.size.toLocaleString()}개`);
