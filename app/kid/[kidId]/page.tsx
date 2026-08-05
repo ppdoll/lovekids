@@ -11,6 +11,8 @@ interface SubjectToday {
   total: number;
   correct: number;
   done: boolean;
+  wrongTotal: number;
+  retryLeft: number;
 }
 
 interface KidState {
@@ -119,20 +121,48 @@ export default function KidPage() {
             desc = `오늘 ${t.total}문제`;
             btnLabel = "시작하기!";
           }
+          // 다 풀고 나서만 보여준다. 푸는 중에 눈에 띄면 지금 풀 문제에 집중하기 어렵다.
+          const showRetry = t.done && (t.wrongTotal ?? 0) > 0;
           return (
-            <div key={s} className="card subject-card">
-              <div className={`subject-icon ${s}`}>{SUBJECT_EMOJI[s]}</div>
-              <div style={{ flex: 1 }}>
-                <div className="subject-name">{SUBJECT_LABEL[s]}</div>
-                <div className="subject-desc">{desc}</div>
+            <div key={s} className="stack" style={{ gap: 0 }}>
+              <div className="card subject-card">
+                <div className={`subject-icon ${s}`}>{SUBJECT_EMOJI[s]}</div>
+                <div style={{ flex: 1 }}>
+                  <div className="subject-name">{SUBJECT_LABEL[s]}</div>
+                  <div className="subject-desc">{desc}</div>
+                </div>
+                {t.done ? (
+                  <span className="go-btn done">완료 ✓</span>
+                ) : (
+                  <Link href={`/kid/${kid.id}/quiz/${s}`} className={`go-btn ${s}`}>
+                    {btnLabel}
+                  </Link>
+                )}
               </div>
-              {t.done ? (
-                <span className="go-btn done">완료 ✓</span>
-              ) : (
-                <Link href={`/kid/${kid.id}/quiz/${s}`} className={`go-btn ${s}`}>
-                  {btnLabel}
-                </Link>
-              )}
+              {showRetry &&
+                (t.retryLeft > 0 ? (
+                  <Link href={`/kid/${kid.id}/quiz/${s}?mode=retry`} className="retry-row">
+                    <span className="retry-icon">🔁</span>
+                    <span className="retry-text">
+                      틀린 문제 다시 풀기
+                      <span className="retry-sub">
+                        {t.wrongTotal - t.retryLeft > 0
+                          ? `${t.wrongTotal}개 중 ${t.retryLeft}개 남았어요`
+                          : `${t.retryLeft}문제`}
+                      </span>
+                    </span>
+                    <span className="retry-go">풀기 →</span>
+                  </Link>
+                ) : (
+                  <div className="retry-row fixed">
+                    <span className="retry-icon">🎯</span>
+                    <span className="retry-text">
+                      틀린 문제 {t.wrongTotal}개를 모두 고쳤어요!
+                      <span className="retry-sub">복습까지 끝냈어요. 정말 잘했어요!</span>
+                    </span>
+                    <span className="retry-go done">완료 ✓</span>
+                  </div>
+                ))}
             </div>
           );
         })}

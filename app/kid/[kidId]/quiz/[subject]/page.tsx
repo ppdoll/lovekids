@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useParams } from "next/navigation";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useParams, useSearchParams } from "next/navigation";
+import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { SUBJECT_EMOJI, SUBJECT_LABEL, Subject } from "@/lib/types";
 
 interface PublicProblem {
@@ -29,6 +29,15 @@ interface SetData {
   completedAt: string | null;
   combo: number;
   bestCombo: number;
+  /** 문제 번호 → 다시 풀기 결과 */
+  retry: Record<string, AnswerRecord>;
+}
+
+interface RetryRes {
+  record: AnswerRecord;
+  left: number;
+  wrongTotal: number;
+  fixed: number;
 }
 
 interface SubmitRes {
@@ -67,10 +76,30 @@ const PRAISE_LOW = ["끝까지 푼 게 제일 멋져요! 👏", "괜찮아요, �
 
 const CONFETTI = ["🎉", "⭐", "💖", "🎈", "✨", "🍀"];
 
+const RETRY_PRAISE_ALL = ["전부 고쳤어요! 이제 완전히 알아요! 🎯", "하나도 안 남았어요! 대단해요! 🏆"];
+const RETRY_PRAISE_SOME = ["고친 만큼 실력이 늘었어요! 💪", "잘했어요! 남은 문제는 다음에 또 해볼까요? 🌱"];
+const RETRY_PRAISE_NONE = ["해설을 잘 읽어봤나요? 다음에 다시 해봐요! 📖", "괜찮아요. 어려운 문제였어요! 🧠"];
+
+const LOADING = (
+  <main className="container">
+    <div className="loading">
+      <span className="spin">✏️</span>
+      <div style={{ marginTop: 10 }}>문제를 준비하는 중...</div>
+    </div>
+  </main>
+);
+
+/** useSearchParams는 Suspense 경계 안에서 써야 한다 */
 export default function QuizPage() {
+  return <Suspense fallback={LOADING}>{<Quiz />}</Suspense>;
+}
+
+function Quiz() {
   const params = useParams<{ kidId: string; subject: string }>();
   const kidId = params.kidId;
   const subject = params.subject as Subject;
+  /** 틀린 문제 다시 풀기 모드 (?mode=retry) */
+  const isRetry = useSearchParams().get("mode") === "retry";
 
   const [data, setData] = useState<SetData | null>(null);
   const [failReason, setFailReason] = useState<string | null>(null);
@@ -79,6 +108,14 @@ export default function QuizPage() {
   const [last, setLast] = useState<SubmitRes | null>(null);
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
+
+  /**
+   * 다시 풀 문제 번호 목록. 페이지를 열 때 한 번 정해두고 바꾸지 않는다 —
+   * 푸는 도중에 목록이 줄어들면 화면이 앞뒤로 튀어 아이가 헷갈린다.
+   */
+  const [queue, setQueue] = useState<number[]>([]);
+  const [pos, setPos] = useState(0);
+  const [fixed, setFixed] = useState(0);
   const [combo, setCombo] = useState(0);
   const [bestCombo, setBestCombo] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -102,6 +139,24 @@ export default function QuizPage() {
         setData(j);
         setCombo(j.combo ?? 0);
         setBestCombo(j.bestCombo ?? 0);
+
+        if (isRetry) {
+          // 첫 시도에 틀렸고 아직 다시 풀어서 맞히지 못한 문제만 모은다
+          const q = j.answers
+            .map((a, i) => ({ a, i }))
+            .filter(({ a, i }) => a && !a.correct && !j.retry?.[String(i)]?.correct)
+            .map(({ i }) => i);
+          setQueue(q);
+          setPos(0);
+          if (q.length === 0) {
+            setPhase("finished");
+          } else {
+            setIdx(q[0]);
+            setPhase("question");
+          }
+          return;
+        }
+
         const firstOpen = j.answers.findIndex((a) => a === null);
         if (firstOpen === -1) {
           setPhase("finished");
@@ -111,7 +166,7 @@ export default function QuizPage() {
         }
       })
       .catch(() => setFailReason("network"));
-  }, [kidId, subject]);
+  }, [kidId, subject, isRetry]);
 
   const answeredCount = data ? data.answers.filter(Boolean).length : 0;
   const correctCount = data ? data.answers.filter((a) => a?.correct).length : 0;
@@ -129,13 +184,25 @@ export default function QuizPage() {
   async function submit(given: string) {
     if (!data || busy) return;
     setBusy(true);
-    const res = await fetch("/api/answer", {
+    const res = await fetch(isRetry ? "/api/retry" : "/api/answer", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ kidId, subject, index: idx, given }),
     }).catch(() => null);
     setBusy(false);
     if (!res || !res.ok) return;
+
+    if (isRetry) {
+      const j = (await res.json()) as RetryRes;
+      setData({ ...data, retry: { ...data.retry, [String(idx)]: j.record } });
+      if (j.record.correct) setFixed((n) => n + 1);
+      // 다시 풀기에는 콤보를 붙이지 않는다. 콤보는 처음 풀 때의 기록이고,
+      // 정답을 이미 본 문제로 기록을 쌓으면 의미가 없다.
+      setLast({ record: j.record, answered: 0, total: 0, correctCount: 0, done: false, combo: 0, bestCombo: 0 });
+      setPhase("feedback");
+      return;
+    }
+
     const j = (await res.json()) as SubmitRes;
     const answers = [...data.answers];
     answers[idx] = j.record;
@@ -148,9 +215,23 @@ export default function QuizPage() {
 
   function next() {
     if (!data) return;
-    const nextOpen = data.answers.findIndex((a) => a === null);
     setInput("");
     setLast(null);
+
+    if (isRetry) {
+      const np = pos + 1;
+      if (np >= queue.length) {
+        setPhase("finished");
+      } else {
+        setPos(np);
+        setIdx(queue[np]);
+        setPhase("question");
+        setTimeout(() => inputRef.current?.focus(), 50);
+      }
+      return;
+    }
+
+    const nextOpen = data.answers.findIndex((a) => a === null);
     if (nextOpen === -1) {
       setPhase("finished");
     } else {
@@ -179,12 +260,37 @@ export default function QuizPage() {
     );
   }
 
-  if (phase === "loading" || !data) {
+  if (phase === "loading" || !data) return LOADING;
+
+  if (isRetry && phase === "finished") {
+    // 이번에 다시 풀기로 들어온 문제 수 (0이면 고칠 게 없어서 바로 이 화면)
+    const tried = queue.length;
+    const pool = tried === 0 || fixed === tried ? RETRY_PRAISE_ALL : fixed > 0 ? RETRY_PRAISE_SOME : RETRY_PRAISE_NONE;
+    const praise = pool[Math.floor(Math.random() * pool.length)];
     return (
-      <main className="container">
-        <div className="loading">
-          <span className="spin">✏️</span>
-          <div style={{ marginTop: 10 }}>문제를 준비하는 중...</div>
+      <main className="container" style={{ maxWidth: 480 }}>
+        <div className="card finish">
+          {fixed === tried &&
+            confetti.map((c, i) => (
+              <span key={i} className="confetti" style={{ left: `${c.left}%`, animationDelay: `${c.delay}s` }}>
+                {c.emoji}
+              </span>
+            ))}
+          <div className="finish-stars">{tried === 0 || fixed === tried ? "🎯" : "🔁"}</div>
+          <div className="finish-score">
+            {tried === 0 ? "다 고쳤어요!" : `${fixed} / ${tried}`}
+          </div>
+          <div className="finish-praise">{praise}</div>
+          {tried > fixed && (
+            <div className="finish-note">
+              아직 못 고친 {tried - fixed}문제는 그대로 남겨뒀어요. 해설을 읽고 다시 도전해 보세요!
+            </div>
+          )}
+          <div style={{ marginTop: 20 }}>
+            <Link href={`/kid/${kidId}`} className="btn btn-primary btn-block">
+              돌아가기
+            </Link>
+          </div>
         </div>
       </main>
     );
@@ -224,8 +330,14 @@ export default function QuizPage() {
           {wrongCount > 0 && (
             <div className="finish-note">틀린 문제 {wrongCount}개는 오답 노트에 저장했어요.</div>
           )}
-          <div style={{ marginTop: 20 }}>
-            <Link href={`/kid/${kidId}`} className="btn btn-primary btn-block">
+          <div style={{ marginTop: 20 }} className="stack">
+            {/* 다 풀고 나서 바로 복습할 수 있게 여기에도 길을 둔다 */}
+            {wrongCount > 0 && (
+              <Link href={`/kid/${kidId}/quiz/${subject}?mode=retry`} className="btn btn-retry btn-block">
+                🔁 틀린 문제 {wrongCount}개 다시 풀기
+              </Link>
+            )}
+            <Link href={`/kid/${kidId}`} className={`btn btn-block ${wrongCount > 0 ? "btn-ghost" : "btn-primary"}`}>
               돌아가기
             </Link>
           </div>
@@ -235,6 +347,10 @@ export default function QuizPage() {
   }
 
   const p = data.problems[idx];
+  // 진행 표시: 보통은 푼 문제 수, 다시 풀기에서는 이번에 처리한 문제 수
+  const doneCount = isRetry ? pos + (phase === "feedback" ? 1 : 0) : answeredCount;
+  const barTotal = isRetry ? queue.length : data.total;
+  const isLast = isRetry ? pos + 1 >= queue.length : data.answers.every(Boolean);
 
   return (
     <main className="container" style={{ maxWidth: 560 }}>
@@ -243,18 +359,22 @@ export default function QuizPage() {
           ✕
         </Link>
         <div className="progress-track">
-          <div
-            className="progress-fill"
-            style={{ width: `${(answeredCount / data.total) * 100}%` }}
-          />
+          <div className="progress-fill" style={{ width: `${(doneCount / barTotal) * 100}%` }} />
         </div>
         <span className="progress-label">
-          {SUBJECT_EMOJI[subject]} {answeredCount}/{data.total}
+          {isRetry ? "🔁" : SUBJECT_EMOJI[subject]} {doneCount}/{barTotal}
         </span>
       </div>
 
+      {isRetry && (
+        <div className="retry-banner">
+          🔁 <b>틀린 문제 다시 풀기</b> — 아까 틀린 문제만 모았어요
+        </div>
+      )}
+
       {/* 진행 중 콤보 표시 — 지금 몇 개 연속으로 맞혔는지 계속 보인다 */}
       {(() => {
+        if (isRetry) return null; // 다시 풀기에는 콤보를 쓰지 않는다
         const look = comboLook(combo);
         if (!look) return null;
         return (
@@ -275,6 +395,7 @@ export default function QuizPage() {
           <div className="row" style={{ justifyContent: "space-between" }}>
             {p.tag ? <span className="q-tag">{p.tag}</span> : <span />}
             <span className="muted" style={{ fontSize: 12 }}>
+              {/* 다시 풀기에서도 원래 문제 번호를 보여준다 — 아이가 어느 문제였는지 알아볼 수 있게 */}
               {idx + 1}번 · {SUBJECT_LABEL[subject]}
             </span>
           </div>
@@ -316,10 +437,20 @@ export default function QuizPage() {
 
       {phase === "feedback" && last && (
         <div className="card feedback">
-          <div className="feedback-mark">{last.record.correct ? "⭕" : "❌"}</div>
+          <div className="feedback-mark">{last.record.correct ? (isRetry ? "🎯" : "⭕") : "❌"}</div>
           <div className={`feedback-title ${last.record.correct ? "good" : "bad"}`}>
-            {last.record.correct ? "정답이에요!" : "아쉬워요!"}
+            {last.record.correct
+              ? isRetry
+                ? "이번엔 맞혔어요!"
+                : "정답이에요!"
+              : isRetry
+                ? "아직 아니에요"
+                : "아쉬워요!"}
           </div>
+
+          {isRetry && !last.record.correct && (
+            <div className="retry-keep">해설을 읽어보고 다음에 또 도전해요. 이 문제는 남겨둘게요.</div>
+          )}
 
           {/* 콤보 축하 / 끊겼을 때 다시 시작 안내 */}
           {(() => {
@@ -353,7 +484,7 @@ export default function QuizPage() {
           {last.record.explain && <div className="feedback-explain">💡 {last.record.explain}</div>}
           <div style={{ marginTop: 18 }}>
             <button className="btn btn-primary btn-block" onClick={next}>
-              {data.answers.every(Boolean) ? "결과 보기 🎉" : "다음 문제 →"}
+              {isLast ? "결과 보기 🎉" : "다음 문제 →"}
             </button>
           </div>
         </div>

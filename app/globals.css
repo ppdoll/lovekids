@@ -1012,3 +1012,104 @@ select.input {
   color: var(--ink-soft);
   font-weight: 700;
 }
+
+/* ---------- 틀린 문제 다시 풀기 ---------- */
+
+/*
+ * 과목 카드 바로 아래에 붙는 줄. 위쪽 모서리를 각지게 해서 과목 카드에 딸린 것으로 보이게 한다
+ * (따로 뜬 카드처럼 보이면 어느 과목의 오답인지 헷갈린다).
+ */
+.retry-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: -6px 10px 0;
+  padding: 11px 14px 12px;
+  background: #fff4e9;
+  border: 1px solid #ffd9b8;
+  border-top: none;
+  border-radius: 0 0 18px 18px;
+  font-weight: 700;
+}
+
+.retry-row.fixed {
+  background: var(--math-bg);
+  border-color: #b6e6d0;
+}
+
+.retry-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.retry-text {
+  flex: 1;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  word-break: keep-all;
+}
+
+.retry-sub {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin-top: 1px;
+}
+
+.retry-go {
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 800;
+  color: #fff;
+  background: var(--ko);
+  border-radius: 12px;
+  padding: 7px 12px;
+}
+
+.retry-go.done {
+  background: var(--math);
+}
+
+.btn-retry {
+  background: linear-gradient(135deg, #ffb066, #ff8a3d);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(255, 138, 61, 0.3);
+}
+
+/* 다시 풀기 화면임을 알려주는 띠 — 아이가 지금 어느 화면인지 헷갈리지 않게 */
+.retry-banner {
+  background: #fff4e9;
+  border: 1px solid #ffd9b8;
+  border-radius: 14px;
+  padding: 9px 13px;
+  margin-bottom: 12px;
+  font-size: 13.5px;
+  color: var(--ink);
+  word-break: keep-all;
+}
+
+.retry-keep {
+  margin-top: 12px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ink-soft);
+  background: #fff4e9;
+  border-radius: 14px;
+  padding: 10px 12px;
+  word-break: keep-all;
+}
+
+/* 오답 노트에서 아이가 다시 풀어 고친 문제 */
+.wrong-fixed {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #fff;
+  background: var(--math);
+  border-radius: 999px;
+  padding: 2px 8px;
+  margin-left: 6px;
+}

@@ -221,6 +221,95 @@ export async function loadSet(store: Store, kidId: string, subject: Subject, dat
   return store.get<DailySet>(setKey(kidId, date, subject));
 }
 
+/* ─────────── 틀린 문제 다시 풀기 ─────────── */
+
+/** 첫 시도에서 틀린 문제 번호 */
+export function wrongIndexes(set: DailySet): number[] {
+  const out: number[] = [];
+  set.answers.forEach((a, i) => {
+    if (a && !a.correct) out.push(i);
+  });
+  return out;
+}
+
+/**
+ * 아직 다시 풀어서 맞히지 못한 문제 번호.
+ *
+ * 다시 풀다가 또 틀리면 그대로 남겨 다음에 또 나오게 한다. 한 번에 맞힐 때까지
+ * 같은 문제를 계속 물으면, 정답을 이미 보여준 뒤이므로 그대로 베껴 쓰기만 하면 되고
+ * "고쳤다"는 숫자가 아무 뜻이 없어진다.
+ */
+export function unfixedWrongIndexes(set: DailySet): number[] {
+  return wrongIndexes(set).filter((i) => !set.retry?.[String(i)]?.correct);
+}
+
+export interface RetryOutcome {
+  record: AnswerRecord;
+  /** 이번에 다시 풀어야 할 문제 수 (다시 풀기를 시작한 시점 기준이 아니라 현재 남은 수) */
+  left: number;
+  /** 오늘 이 과목에서 틀렸던 문제 수 */
+  wrongTotal: number;
+  /** 그중 다시 풀어서 맞힌 수 */
+  fixed: number;
+}
+
+/**
+ * 틀린 문제를 다시 채점한다.
+ *
+ * 첫 시도 기록(answers)·완료 시각·최고 콤보·달력 기록은 건드리지 않는다.
+ * 다시 풀기는 복습이지 점수를 고치는 수단이 아니다.
+ */
+export async function submitRetry(
+  store: Store,
+  kidId: string,
+  subject: Subject,
+  index: number,
+  given: string,
+): Promise<RetryOutcome | { error: string }> {
+  const date = todayKST();
+  const key = setKey(kidId, date, subject);
+  const set = await store.get<DailySet>(key);
+  if (!set) return { error: "no-set" };
+  if (index < 0 || index >= set.problems.length) return { error: "bad-index" };
+
+  const first = set.answers[index];
+  if (!first) return { error: "not-answered" };
+  if (first.correct) return { error: "not-wrong" };
+  // 이미 고친 문제는 다시 받지 않는다. 화면에서는 고친 문제가 목록에서 빠지므로 이 경로로
+  // 올 일이 없지만, 받아 주면 "고친 개수"가 줄어들 수 있어 아이가 헷갈린다.
+  if (set.retry?.[String(index)]?.correct) return { error: "already-fixed" };
+
+  const p = set.problems[index];
+  const correct = isCorrect(p, given);
+  const record: AnswerRecord = {
+    given,
+    correct,
+    answerText: answerTextOf(p),
+    explain: p.explain ?? "",
+  };
+  set.retry = { ...(set.retry ?? {}), [String(index)]: record };
+  await store.set(key, set);
+
+  // 부모의 오답 노트에도 고쳤다고 표시한다 (이미 해결된 문제를 또 붙잡지 않도록).
+  // 문제 문장으로 찾는다 — 오답 노트에는 문제 번호를 저장하지 않기 때문이다.
+  if (correct) {
+    const wKey = `wrong:${kidId}`;
+    const w = (await store.get<WrongItem[]>(wKey)) ?? [];
+    let touched = false;
+    for (const item of w) {
+      if (item.date === date && item.subject === subject && item.q === p.q && !item.fixedAt) {
+        item.fixedAt = new Date().toISOString();
+        touched = true;
+      }
+    }
+    if (touched) await store.set(wKey, w);
+  }
+
+  const wrong = wrongIndexes(set);
+  const left = unfixedWrongIndexes(set).length;
+  return { record, left, wrongTotal: wrong.length, fixed: wrong.length - left };
+}
+
 /** 클라이언트에 보낼 때 정답·해설 제거 */
 export function toPublic(set: DailySet) {
   const problems: PublicProblem[] = set.problems.map((p) => ({
@@ -241,6 +330,7 @@ export function toPublic(set: DailySet) {
     completedAt: set.completedAt,
     combo: combo.current, // 새로고침해도 콤보가 이어지도록
     bestCombo: Math.max(set.bestCombo ?? 0, combo.best),
+    retry: set.retry ?? {}, // 다시 풀기로 이미 고친 문제를 클라이언트가 알 수 있게
   };
 }
 
@@ -421,6 +511,10 @@ export interface SubjectToday {
   total: number;
   correct: number;
   done: boolean;
+  /** 오늘 이 과목에서 틀린 문제 수 (다시 풀기 대상) */
+  wrongTotal: number;
+  /** 그중 아직 다시 풀어서 맞히지 못한 수 */
+  retryLeft: number;
 }
 
 export async function kidToday(store: Store, kid: Kid): Promise<Record<Subject, SubjectToday>> {
@@ -429,12 +523,12 @@ export async function kidToday(store: Store, kid: Kid): Promise<Record<Subject, 
   for (const s of SUBJECTS) {
     const assigned = kid.perDay[s] ?? 0;
     if (assigned <= 0) {
-      out[s] = { assigned: 0, answered: 0, total: 0, correct: 0, done: false };
+      out[s] = { assigned: 0, answered: 0, total: 0, correct: 0, done: false, wrongTotal: 0, retryLeft: 0 };
       continue;
     }
     const set = await store.get<DailySet>(setKey(kid.id, date, s));
     if (!set) {
-      out[s] = { assigned, answered: 0, total: assigned, correct: 0, done: false };
+      out[s] = { assigned, answered: 0, total: assigned, correct: 0, done: false, wrongTotal: 0, retryLeft: 0 };
     } else {
       out[s] = {
         assigned,
@@ -442,6 +536,8 @@ export async function kidToday(store: Store, kid: Kid): Promise<Record<Subject, 
         total: set.problems.length,
         correct: set.answers.filter((a) => a?.correct).length,
         done: !!set.completedAt,
+        wrongTotal: wrongIndexes(set).length,
+        retryLeft: unfixedWrongIndexes(set).length,
       };
     }
   }

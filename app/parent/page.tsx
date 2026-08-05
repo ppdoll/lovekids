@@ -574,6 +574,8 @@ export default function ParentPage() {
                 <div key={i} className="wrong-item">
                   <div className="wrong-meta">
                     {w.date} · {SUBJECT_EMOJI[w.subject]} {SUBJECT_LABEL[w.subject]}
+                    {/* 아이가 스스로 다시 풀어 맞힌 문제는 표시해 둔다 — 이미 해결된 것을 또 붙잡지 않도록 */}
+                    {w.fixedAt && <span className="wrong-fixed">🎯 다시 풀어서 맞혔어요</span>}
                   </div>
                   <div className="wrong-q">{w.q}</div>
                   <div className="wrong-ans">

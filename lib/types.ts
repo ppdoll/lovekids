@@ -109,6 +109,17 @@ export interface DailySet {
   bestCombo?: number;
   /** 오답 노트에 이미 올린 문제 번호 (문제를 추가해 다시 완료할 때 중복 기록되지 않도록) */
   wrongPushedIdx?: number[];
+  /**
+   * 틀린 문제를 다시 풀어서 남긴 기록 (문제 번호 → 마지막으로 다시 푼 결과).
+   *
+   * 첫 시도 기록인 answers는 절대 고치지 않는다. 점수·달력·연속 달성이 모두
+   * answers에서 나오므로, 다시 풀어 맞힌 것을 처음부터 맞힌 것처럼 바꿔 버리면
+   * 부모가 보는 기록이 사실과 달라진다.
+   *
+   * 배열이 아니라 번호를 키로 쓰는 이유: 틀린 문제만 드물게 들어가므로
+   * 30칸 배열에 null을 잔뜩 저장하지 않아도 된다.
+   */
+  retry?: Record<string, AnswerRecord>;
 }
 
 export interface DayResult {
@@ -128,6 +139,8 @@ export interface WrongItem {
   given: string;
   answerText: string;
   explain: string;
+  /** 아이가 "틀린 문제 다시 풀기"로 고친 시각. 부모가 이미 해결된 문제를 또 붙잡지 않도록 표시한다. */
+  fixedAt?: string;
 }
 
 export const DEFAULT_SETTINGS: Settings = {
