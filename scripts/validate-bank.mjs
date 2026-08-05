@@ -13,6 +13,29 @@ const LEVELS = new Set(["easy", "normal", "hard"]);
  */
 const MAX_ANSWER_LEN = 24;
 
+/**
+ * "고쳐 쓰라"고 했는데 고친 답이 원래 문장과 구분되지 않는 문제를 걸러낸다.
+ *
+ * 채점은 띄어쓰기·문장 끝 마침표를 무시한다("다섯 마리" = "다섯마리").
+ * 아이가 답을 알고도 형식 때문에 오답이 되는 걸 막는 규칙인데, 그 때문에
+ * "띄어쓰기를 고쳐 쓰세요" 같은 문제는 **원래 틀린 문장을 그대로 써도 정답**이 된다.
+ * 아무것도 가르치지 못하므로 이런 문제는 객관식으로 내야 한다.
+ *
+ * 주의: "시에서 흉내 내는 말을 찾아 쓰세요"처럼 답이 지문에 있는 것이 당연한
+ * 문제는 정상이므로, "고쳐/바르게/다시 쓰라"고 요구한 경우에만 검사한다.
+ */
+const REWRITE_ASK = /고쳐\s*(써|쓰)|바르게\s*(고쳐|써|쓰)|다시\s*(써|쓰)/;
+
+/** 채점과 같은 방식으로 정규화 (lib/daily.ts의 normText와 같은 규칙) */
+const gradeNorm = (s) =>
+  String(s)
+    .trim()
+    .toLowerCase()
+    .replace(/[”“"'‘’]/g, "")
+    .replace(/[,、]/g, "")
+    .replace(/[.!?。]+$/, "")
+    .replace(/\s+/g, "");
+
 /** 서술형을 걸러내는 표현 (사람이 읽어야 채점되는 문제는 이 앱에서 쓸 수 없다) */
 const ESSAY_WORDS =
   /설명하시오|설명해\s*보시오|서술하시오|서술해\s*보시오|논술|이유를\s*쓰시오|까닭을\s*쓰시오|자유롭게\s*쓰|문장으로\s*쓰시오|감상을\s*쓰/;
@@ -122,6 +145,26 @@ for (const sub of SUBJECTS) {
       // 서술형은 채점할 수 없다 (사람이 읽어야 하므로 이 앱에서는 쓸 수 없음)
       if (typeof p.q === "string" && ESSAY_WORDS.test(p.q))
         fail(`${at} 서술형으로 보입니다 — 자동 채점이 안 됩니다 ("${p.q.match(ESSAY_WORDS)?.[0]}")`);
+
+      // "고쳐 쓰라"고 했는데 고친 답이 문제에 나온 문장과 채점상 똑같으면,
+      // 아이가 틀린 문장을 그대로 베껴도 정답이 된다.
+      //
+      // 여기서 "포함"이 아니라 "완전히 같은지"를 본다. 포함으로 검사하면
+      // "to visiting을 고쳐 쓰세요 → visit" 처럼 정상적인 문제까지 걸린다
+      // ("visit"이 "visiting" 안에 들어 있으므로).
+      if (p.type === "short" && typeof p.q === "string" && REWRITE_ASK.test(p.q) && Array.isArray(p.answer)) {
+        // 문제에 등장하는 후보 문장들: 줄 단위 + 따옴표로 묶인 부분
+        const pieces = [
+          ...p.q.split("\n"),
+          ...[...p.q.matchAll(/['‘’"“”]([^'‘’"“”]+)['‘’"“”]/g)].map((m) => m[1]),
+        ].map(gradeNorm);
+        const answersNorm = p.answer.map(gradeNorm);
+        const copyable = p.answer.find((a, i) => pieces.includes(answersNorm[i]));
+        if (copyable)
+          fail(
+            `${at} 고쳐 쓰라고 했지만 정답이 문제에 나온 문장과 채점상 똑같습니다 — 틀린 문장을 그대로 베껴도 정답이 됩니다. 객관식으로 바꾸세요 (정답: "${copyable}")`,
+          );
+      }
 
       if (p.explain !== undefined && typeof p.explain !== "string") fail(`${at} explain이 문자열이 아닙니다`);
       if (p.tag !== undefined && typeof p.tag !== "string") fail(`${at} tag가 문자열이 아닙니다`);
