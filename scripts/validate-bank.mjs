@@ -16,6 +16,24 @@ const MAX_ANSWER_LEN = 24;
 /** 서술형을 걸러내는 표현 (사람이 읽어야 채점되는 문제는 이 앱에서 쓸 수 없다) */
 const ESSAY_WORDS =
   /설명하시오|설명해\s*보시오|서술하시오|서술해\s*보시오|논술|이유를\s*쓰시오|까닭을\s*쓰시오|자유롭게\s*쓰|문장으로\s*쓰시오|감상을\s*쓰/;
+
+/**
+ * 같은 문제를 번호만 바꿔 여러 번 넣는 것을 막는다.
+ *
+ * "문제 텍스트가 똑같으면 안 된다"는 규칙만 두면,
+ * "각도 문제(1): 직각은 몇 도?", "각도 문제(2): 직각은 몇 도?" 처럼
+ * 번호를 붙여 규칙을 피해 갈 수 있다. 아이는 같은 문제를 수십 번 보게 된다.
+ * 그래서 번호와 숫자를 지운 "골격"이 몇 번 반복되는지도 센다.
+ *
+ * 기준: 실제 데이터에서 골격이 겹치는 최대 횟수는 2회였다(같은 지문에 문제 두 개).
+ * 여유를 두어 3회까지 허용한다.
+ */
+const MAX_SAME_SHAPE = 3;
+const questionShape = (q) =>
+  String(q)
+    .replace(/\(\s*\d+\s*\)/g, "") // (1), (2) 같은 번호 제거
+    .replace(/\d+/g, "#")
+    .replace(/\s+/g, "");
 const TAGS = new Map();
 
 let errors = 0;
@@ -47,6 +65,7 @@ for (const sub of SUBJECTS) {
 
     const ids = new Set();
     const qs = new Set();
+    const shapes = new Map(); // 번호를 지운 문제 골격 → 나온 횟수
     let mc = 0,
       short = 0;
     const levelCount = { easy: 0, normal: 0, hard: 0 };
@@ -60,7 +79,11 @@ for (const sub of SUBJECTS) {
 
       if (typeof p.q !== "string" || !p.q.trim()) fail(`${at} q 누락`);
       else if (qs.has(p.q.trim())) fail(`${at} 문제 텍스트 중복`);
-      else qs.add(p.q.trim());
+      else {
+        qs.add(p.q.trim());
+        const shape = questionShape(p.q);
+        shapes.set(shape, (shapes.get(shape) ?? 0) + 1);
+      }
 
       if (p.type === "mc") {
         mc++;
@@ -109,9 +132,19 @@ for (const sub of SUBJECTS) {
       }
     });
 
+    // 같은 문제를 번호만 바꿔 여러 번 넣었는지 (검사를 피해 가는 흔한 방법)
+    for (const [shape, n] of shapes) {
+      if (n > MAX_SAME_SHAPE) {
+        fail(
+          `같은 문제가 ${n}번 반복됩니다(번호만 다름) — 서로 다른 문제로 바꾸세요: "${shape.slice(0, 45)}..."`,
+        );
+      }
+    }
+
     rows.push({
       파일: rel,
       문항: arr.length,
+      "질문 종류": shapes.size,
       객관식: mc,
       단답: short,
       easy: levelCount.easy,
