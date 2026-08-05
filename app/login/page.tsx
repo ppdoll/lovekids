@@ -11,11 +11,22 @@ const MESSAGES: Record<string, string> = {
 
 export default function LoginPage() {
   const [error, setError] = useState("");
+  const [help, setHelp] = useState(false);
+  const [cfg, setCfg] = useState<{ redirectUri?: string; source?: string } | null>(null);
 
   useEffect(() => {
     const e = new URLSearchParams(location.search).get("error");
     if (e) setError(MESSAGES[e] ?? "로그인에 문제가 생겼어요. 다시 시도해 주세요.");
   }, []);
+
+  useEffect(() => {
+    if (help && !cfg) {
+      fetch("/api/auth/config")
+        .then((r) => r.json())
+        .then(setCfg)
+        .catch(() => setCfg({}));
+    }
+  }, [help, cfg]);
 
   return (
     <main className="container" style={{ maxWidth: 420 }}>
@@ -38,6 +49,34 @@ export default function LoginPage() {
         <a href="/api/auth/google" className="btn btn-primary btn-block">
           <span style={{ fontSize: 18 }}>🔐</span> 구글로 로그인
         </a>
+
+        <button className="badge" onClick={() => setHelp((v) => !v)}>
+          구글 로그인이 안 되나요?
+        </button>
+
+        {help && (
+          <div className="login-help">
+            <p style={{ wordBreak: "keep-all" }}>
+              <b>redirect_uri_mismatch</b> 오류가 나면, 구글 클라우드 콘솔의 <b>승인된 리디렉션 URI</b>에
+              아래 주소가 <b>정확히</b> 등록되어 있어야 합니다.
+            </p>
+            <div className="login-help-url">{cfg?.redirectUri ?? "확인하는 중..."}</div>
+            {cfg?.redirectUri && (
+              <>
+                <button
+                  className="mini-btn"
+                  onClick={() => navigator.clipboard?.writeText(cfg.redirectUri!)}
+                >
+                  주소 복사
+                </button>
+                <p className="muted" style={{ fontSize: 11.5, marginTop: 6 }}>
+                  이 주소는 <b>{cfg.source}</b>에서 정했습니다. 배포 주소와 다르면 Vercel 환경변수{" "}
+                  <code>APP_URL</code>에 실제 주소(예: https://내주소.vercel.app)를 넣고 재배포하세요.
+                </p>
+              </>
+            )}
+          </div>
+        )}
       </div>
     </main>
   );

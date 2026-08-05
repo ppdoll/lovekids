@@ -747,6 +747,27 @@ select.input {
 
 /* ---------- 오늘 탭: 리셋 / 문제 추가 ---------- */
 
+.login-help {
+  text-align: left;
+  background: #f8f5fa;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.login-help-url {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin: 8px 0;
+  word-break: break-all;
+  user-select: all;
+}
+
 .kid-link-row {
   border: 1px solid var(--line);
   border-radius: 12px;

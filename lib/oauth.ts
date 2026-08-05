@@ -103,9 +103,26 @@ export async function exchangeCode(code: string, redirectUri: string): Promise<G
   };
 }
 
-/** 배포 주소를 신뢰할 수 있는 값으로만 만든다 (Host 헤더를 그대로 쓰면 위조에 쓰일 수 있다) */
+/**
+ * 구글에 알려줄 콜백 주소를 만든다.
+ *
+ * 주의: Vercel의 VERCEL_URL은 **배포할 때마다 바뀌는 고유 주소**라서 쓰면 안 된다.
+ * (lovekids-a1b2c3-계정.vercel.app 같은 형태 → 구글에 등록해 둔 주소와 달라
+ *  redirect_uri_mismatch 오류가 난다)
+ * 고정 주소인 VERCEL_PROJECT_PRODUCTION_URL을 쓰고, 그것도 없으면 요청이 들어온 주소를 쓴다.
+ */
 export function redirectUriFor(req: Request): string {
-  const configured = process.env.APP_URL || (process.env.VERCEL_URL && `https://${process.env.VERCEL_URL}`);
-  if (configured) return new URL("/api/auth/callback", configured).toString();
-  return new URL("/api/auth/callback", new URL(req.url).origin).toString();
+  const base = appBaseUrl(req);
+  return new URL("/api/auth/callback", base).toString();
+}
+
+/** 이 앱이 서비스되는 기준 주소 */
+export function appBaseUrl(req: Request): string {
+  if (process.env.APP_URL) return process.env.APP_URL;
+  // Vercel이 넣어주는 "고정" 운영 도메인 (배포마다 바뀌지 않는다)
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  }
+  // 로컬 개발이나 미리보기 배포: 지금 접속한 주소를 그대로 쓴다
+  return new URL(req.url).origin;
 }

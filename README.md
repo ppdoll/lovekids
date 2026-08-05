@@ -55,6 +55,8 @@ npm run dev
 2. **OAuth 클라이언트 ID 만들기** → 애플리케이션 유형 **웹 애플리케이션**
 3. **승인된 리디렉션 URI**에 `https://<내-주소>/api/auth/callback` 추가
    (로컬 테스트도 하려면 `http://localhost:3000/api/auth/callback` 도 함께)
+   - 정확히 어떤 주소를 등록해야 하는지는 배포된 사이트의 **로그인 화면 → "구글 로그인이 안 되나요?"**
+     를 누르면 그대로 보여줍니다. `redirect_uri_mismatch` 오류가 나면 여기부터 확인하세요.
 4. 발급된 클라이언트 ID/보안 비밀을 Vercel 환경변수 `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET` 에 넣기
 5. `SESSION_SECRET` 에 아무 긴 문자열을 넣고 재배포
 
