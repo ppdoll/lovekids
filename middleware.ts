@@ -12,14 +12,28 @@ import { googleEnabled, SESSION_COOKIE, verifySession } from "@/lib/session";
  * 여기서 막는 것은 1차 방어선이고, 각 API 안에서 한 번 더 확인한다.
  */
 
-/** 로그인 없이 열어야 하는 경로 */
+/**
+ * 로그인 없이 열어야 하는 경로.
+ *
+ * 앱 아이콘·매니페스트·공유 미리보기 이미지가 여기 포함돼야 하는 이유:
+ *  - 매니페스트와 아이콘이 막히면 "홈 화면에 추가"(앱 설치)가 동작하지 않는다.
+ *  - 공유 미리보기 이미지는 카카오톡·페이스북 크롤러가 로그인 없이 가져간다.
+ * 모두 개인정보가 없는 파일이다.
+ */
 function isPublic(pathname: string): boolean {
   return (
     pathname === "/login" ||
     pathname.startsWith("/api/auth/") ||
     pathname.startsWith("/k/") || // 아이 전용 접속 링크
     pathname.startsWith("/enter") ||
-    pathname.startsWith("/api/enter")
+    pathname.startsWith("/api/enter") ||
+    // PWA·공유 미리보기용 정적 파일
+    pathname === "/manifest.webmanifest" ||
+    pathname === "/sw.js" ||
+    pathname === "/og.png" ||
+    pathname === "/apple-touch-icon.png" ||
+    pathname === "/icon.svg" ||
+    pathname.startsWith("/icons/")
   );
 }
 

@@ -14,7 +14,9 @@
     "check:calc": "node scripts/test-calc.mjs",
     "check:parent": "node scripts/test-parent-actions.mjs",
     "check:isolation": "node scripts/test-isolation.mjs",
-    "check:word": "node scripts/test-wordgen.mjs"
+    "check:word": "node scripts/test-wordgen.mjs",
+    "check:pwa": "node scripts/test-pwa.mjs",
+    "make:images": "node scripts/make-images.mjs"
   },
   "dependencies": {
     "jose": "^6.2.8",
