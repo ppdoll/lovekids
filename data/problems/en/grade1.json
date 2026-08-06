@@ -331,94 +331,123 @@
   },
   {
     "id": "en1-023",
-    "type": "short",
-    "q": "대문자 B의 소문자를 쓰세요.",
-    "answer": [
-      "b"
-    ],
+    "type": "mc",
+    "q": "대문자 B의 소문자를 고르세요.",
+    "answer": 3,
     "explain": "대문자 B의 소문자는 b예요.",
     "tag": "알파벳",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "d",
+      "p",
+      "q",
+      "b"
+    ]
   },
   {
     "id": "en1-024",
-    "type": "short",
-    "q": "알파벳 순서에서 F 다음에 오는 대문자를 쓰세요.",
-    "answer": [
-      "G"
-    ],
+    "type": "mc",
+    "q": "알파벳 순서에서 F 다음에 오는 대문자를 고르세요.",
+    "answer": 0,
     "explain": "알파벳은 F, G, H 순서예요.",
     "tag": "알파벳",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "G",
+      "E",
+      "H",
+      "D"
+    ]
   },
   {
     "id": "en1-025",
-    "type": "short",
-    "q": "'banana'의 뜻을 우리말로 쓰세요.",
-    "answer": [
-      "바나나"
-    ],
+    "type": "mc",
+    "q": "'banana'의 뜻을 우리말로 고르세요.",
+    "answer": 1,
     "explain": "banana는 바나나예요.",
     "tag": "단어",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "사과",
+      "바나나",
+      "딸기",
+      "포도"
+    ]
   },
   {
     "id": "en1-026",
-    "type": "short",
-    "q": "숫자 2를 뜻하는 영어 낱말을 쓰세요.",
-    "answer": [
-      "two"
-    ],
+    "type": "mc",
+    "q": "숫자 2를 뜻하는 영어 낱말을 고르세요.",
+    "answer": 2,
     "explain": "2는 영어로 two라고 해요.",
     "tag": "단어",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "one",
+      "three",
+      "two",
+      "ten"
+    ]
   },
   {
     "id": "en1-027",
-    "type": "short",
-    "q": "'고양이'를 뜻하는 영어 낱말을 쓰세요.",
-    "answer": [
-      "cat"
-    ],
+    "type": "mc",
+    "q": "'고양이'를 뜻하는 영어 낱말을 고르세요.",
+    "answer": 3,
     "explain": "고양이는 영어로 cat이에요.",
     "tag": "단어",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "dog",
+      "cow",
+      "pig",
+      "cat"
+    ]
   },
   {
     "id": "en1-028",
-    "type": "short",
-    "q": "친구와 헤어질 때 하는 영어 인사를 쓰세요.",
-    "answer": [
-      "Bye",
-      "Goodbye",
-      "Bye bye"
-    ],
+    "type": "mc",
+    "q": "친구와 헤어질 때 하는 영어 인사를 고르세요.",
+    "answer": 0,
     "explain": "헤어질 때는 Bye 또는 Goodbye라고 인사해요.",
     "tag": "표현",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "Goodbye",
+      "Hello",
+      "Thank you",
+      "Sorry"
+    ]
   },
   {
     "id": "en1-029",
-    "type": "short",
-    "q": "소문자 q의 대문자를 쓰세요.",
-    "answer": [
-      "Q"
-    ],
+    "type": "mc",
+    "q": "소문자 q의 대문자를 고르세요.",
+    "answer": 1,
     "explain": "소문자 q의 대문자는 Q예요. p와 헷갈리지 않게 조심해요.",
     "tag": "알파벳",
-    "level": "hard"
+    "level": "hard",
+    "choices": [
+      "P",
+      "Q",
+      "O",
+      "G"
+    ]
   },
   {
     "id": "en1-030",
-    "type": "short",
-    "q": "'ten'이 뜻하는 수를 숫자로 쓰세요.",
-    "answer": [
-      "10",
-      "십"
-    ],
+    "type": "mc",
+    "q": "'ten'이 뜻하는 수를 고르세요.",
+    "answer": 2,
     "explain": "ten은 10을 뜻해요.",
     "tag": "단어",
-    "level": "hard"
+    "level": "hard",
+    "choices": [
+      "2",
+      "7",
+      "10",
+      "12"
+    ]
   },
   {
     "id": "en1-031",
@@ -647,58 +676,78 @@
   },
   {
     "id": "en1-046",
-    "type": "short",
-    "q": "대문자 E의 소문자를 쓰세요.",
-    "answer": [
-      "e"
-    ],
+    "type": "mc",
+    "q": "대문자 E의 소문자를 고르세요.",
+    "answer": 2,
     "explain": "대문자 E의 소문자는 e예요.",
     "tag": "알파벳",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "a",
+      "c",
+      "e",
+      "o"
+    ]
   },
   {
     "id": "en1-047",
-    "type": "short",
-    "q": "소문자 f의 대문자를 쓰세요.",
-    "answer": [
-      "F"
-    ],
+    "type": "mc",
+    "q": "소문자 f의 대문자를 고르세요.",
+    "answer": 3,
     "explain": "소문자 f의 대문자는 F예요.",
     "tag": "알파벳",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "E",
+      "T",
+      "P",
+      "F"
+    ]
   },
   {
     "id": "en1-048",
-    "type": "short",
-    "q": "알파벳 순서에서 M 다음에 오는 대문자를 쓰세요.",
-    "answer": [
-      "N"
-    ],
+    "type": "mc",
+    "q": "알파벳 순서에서 M 다음에 오는 대문자를 고르세요.",
+    "answer": 0,
     "explain": "알파벳은 M, N, O 순서예요.",
     "tag": "알파벳",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "N",
+      "L",
+      "O",
+      "K"
+    ]
   },
   {
     "id": "en1-049",
-    "type": "short",
-    "q": "알파벳 순서에서 P 바로 앞에 오는 대문자를 쓰세요.",
-    "answer": [
-      "O"
-    ],
+    "type": "mc",
+    "q": "알파벳 순서에서 P 바로 앞에 오는 대문자를 고르세요.",
+    "answer": 1,
     "explain": "알파벳은 N, O, P 순서라서 P 앞에는 O가 와요.",
     "tag": "알파벳",
-    "level": "hard"
+    "level": "hard",
+    "choices": [
+      "Q",
+      "O",
+      "N",
+      "R"
+    ]
   },
   {
     "id": "en1-050",
-    "type": "short",
-    "q": "'dog'의 첫소리에 오는 알파벳 소문자를 쓰세요.",
-    "answer": [
-      "d"
-    ],
+    "type": "mc",
+    "q": "'dog'의 첫소리에 오는 알파벳 소문자를 고르세요.",
+    "answer": 2,
     "explain": "dog은 d로 시작해요.",
     "tag": "알파벳",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "b",
+      "g",
+      "d",
+      "o"
+    ]
   },
   {
     "id": "en1-051",
@@ -777,14 +826,18 @@
   },
   {
     "id": "en1-056",
-    "type": "short",
-    "q": "'곰'을 뜻하는 영어 낱말을 쓰세요.",
-    "answer": [
-      "bear"
-    ],
+    "type": "mc",
+    "q": "'곰'을 뜻하는 영어 낱말을 고르세요.",
+    "answer": 0,
     "explain": "곰은 영어로 bear예요.",
     "tag": "단어",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "bear",
+      "bird",
+      "bee",
+      "bus"
+    ]
   },
   {
     "id": "en1-057",
@@ -848,28 +901,33 @@
   },
   {
     "id": "en1-061",
-    "type": "short",
-    "q": "'분홍색'을 뜻하는 영어 낱말을 쓰세요.",
-    "answer": [
-      "pink"
-    ],
+    "type": "mc",
+    "q": "'분홍색'을 뜻하는 영어 낱말을 고르세요.",
+    "answer": 1,
     "explain": "분홍색은 영어로 pink예요.",
     "tag": "단어",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "blue",
+      "pink",
+      "green",
+      "black"
+    ]
   },
   {
     "id": "en1-062",
-    "type": "short",
-    "q": "'white'의 뜻을 우리말로 쓰세요.",
-    "answer": [
-      "흰색",
-      "하얀색",
-      "하양",
-      "백색"
-    ],
+    "type": "mc",
+    "q": "'white'의 뜻을 우리말로 고르세요.",
+    "answer": 2,
     "explain": "white는 흰색이에요.",
     "tag": "단어",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "검은색",
+      "노란색",
+      "흰색",
+      "빨간색"
+    ]
   },
   {
     "id": "en1-063",
@@ -933,27 +991,33 @@
   },
   {
     "id": "en1-067",
-    "type": "short",
-    "q": "'six'가 뜻하는 수를 숫자로 쓰세요.",
-    "answer": [
-      "6",
-      "육",
-      "여섯"
-    ],
+    "type": "mc",
+    "q": "'six'가 뜻하는 수를 고르세요.",
+    "answer": 3,
     "explain": "six는 6을 뜻해요.",
     "tag": "단어",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "4",
+      "5",
+      "9",
+      "6"
+    ]
   },
   {
     "id": "en1-068",
-    "type": "short",
-    "q": "숫자 9를 뜻하는 영어 낱말을 쓰세요.",
-    "answer": [
-      "nine"
-    ],
+    "type": "mc",
+    "q": "숫자 9를 뜻하는 영어 낱말을 고르세요.",
+    "answer": 0,
     "explain": "9는 영어로 nine이라고 해요.",
     "tag": "단어",
-    "level": "hard"
+    "level": "hard",
+    "choices": [
+      "nine",
+      "five",
+      "seven",
+      "ten"
+    ]
   },
   {
     "id": "en1-069",
@@ -1017,14 +1081,18 @@
   },
   {
     "id": "en1-073",
-    "type": "short",
-    "q": "'apple'을 우리말로 쓰세요.",
-    "answer": [
-      "사과"
-    ],
+    "type": "mc",
+    "q": "'apple'을 우리말로 고르세요.",
+    "answer": 1,
     "explain": "apple은 사과예요.",
     "tag": "단어",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "배",
+      "사과",
+      "수박",
+      "오렌지"
+    ]
   },
   {
     "id": "en1-074",
@@ -1103,14 +1171,18 @@
   },
   {
     "id": "en1-079",
-    "type": "short",
-    "q": "'책'을 뜻하는 영어 낱말을 쓰세요.",
-    "answer": [
-      "book"
-    ],
+    "type": "mc",
+    "q": "'책'을 뜻하는 영어 낱말을 고르세요.",
+    "answer": 3,
     "explain": "책은 영어로 book이에요.",
     "tag": "단어",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "desk",
+      "bag",
+      "pen",
+      "book"
+    ]
   },
   {
     "id": "en1-080",
@@ -1174,16 +1246,18 @@
   },
   {
     "id": "en1-084",
-    "type": "short",
-    "q": "'엄마'를 뜻하는 영어 낱말을 쓰세요.",
-    "answer": [
-      "mom",
-      "mommy",
-      "mother"
-    ],
+    "type": "mc",
+    "q": "'엄마'를 뜻하는 영어 낱말을 고르세요.",
+    "answer": 0,
     "explain": "엄마는 영어로 mom이라고 해요.",
     "tag": "단어",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "mom",
+      "dad",
+      "sister",
+      "brother"
+    ]
   },
   {
     "id": "en1-085",
@@ -1232,14 +1306,18 @@
   },
   {
     "id": "en1-088",
-    "type": "short",
-    "q": "'star'의 뜻을 우리말로 쓰세요.",
-    "answer": [
-      "별"
-    ],
+    "type": "mc",
+    "q": "'star'의 뜻을 우리말로 고르세요.",
+    "answer": 0,
     "explain": "star는 별이에요.",
     "tag": "단어",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "별",
+      "달",
+      "해",
+      "구름"
+    ]
   },
   {
     "id": "en1-089",
@@ -1258,14 +1336,18 @@
   },
   {
     "id": "en1-090",
-    "type": "short",
-    "q": "'꽃'을 뜻하는 영어 낱말을 쓰세요.",
-    "answer": [
-      "flower"
-    ],
+    "type": "mc",
+    "q": "'꽃'을 뜻하는 영어 낱말을 고르세요.",
+    "answer": 2,
     "explain": "꽃은 영어로 flower예요.",
     "tag": "단어",
-    "level": "hard"
+    "level": "hard",
+    "choices": [
+      "tree",
+      "grass",
+      "flower",
+      "leaf"
+    ]
   },
   {
     "id": "en1-091",
@@ -1344,27 +1426,33 @@
   },
   {
     "id": "en1-096",
-    "type": "short",
-    "q": "누군가 도와주었을 때 고맙다고 하는 영어 인사를 쓰세요.",
-    "answer": [
-      "Thank you",
-      "Thanks"
-    ],
+    "type": "mc",
+    "q": "누군가 도와주었을 때 고맙다고 하는 영어 인사를 고르세요.",
+    "answer": 0,
     "explain": "고마울 때는 Thank you 또는 Thanks라고 말해요.",
     "tag": "표현",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "Thank you",
+      "I'm sorry",
+      "Good night",
+      "See you"
+    ]
   },
   {
     "id": "en1-097",
-    "type": "short",
-    "q": "친구를 만났을 때 하는 인사 중 H로 시작하는 영어 낱말을 쓰세요.",
-    "answer": [
-      "Hello",
-      "Hi"
-    ],
+    "type": "mc",
+    "q": "친구를 만났을 때 하는 영어 인사를 고르세요.",
+    "answer": 1,
     "explain": "만났을 때는 Hello나 Hi라고 인사해요.",
     "tag": "표현",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "Goodbye",
+      "Hello",
+      "Thank you",
+      "Good night"
+    ]
   },
   {
     "id": "en1-098",
@@ -1383,15 +1471,18 @@
   },
   {
     "id": "en1-099",
-    "type": "short",
-    "q": "미안한 마음을 나타내는 영어 낱말을 쓰세요.",
-    "answer": [
-      "Sorry",
-      "I'm sorry"
-    ],
+    "type": "mc",
+    "q": "미안한 마음을 나타내는 영어 낱말을 고르세요.",
+    "answer": 3,
     "explain": "미안할 때는 Sorry라고 말해요.",
     "tag": "표현",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "Please",
+      "Hello",
+      "Welcome",
+      "Sorry"
+    ]
   },
   {
     "id": "en1-100",

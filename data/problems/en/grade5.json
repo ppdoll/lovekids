@@ -76,36 +76,48 @@
   },
   {
     "id": "en5-006",
-    "type": "short",
-    "q": "'happy(행복한)'와 뜻이 반대인 영어 단어를 쓰세요. (뜻: 슬픈)",
-    "answer": [
-      "sad"
-    ],
+    "type": "mc",
+    "q": "'happy(행복한)'와 뜻이 반대인 영어 단어를 고르세요. (뜻: 슬픈)",
+    "answer": 2,
     "explain": "happy(행복한)의 반대말은 sad(슬픈)예요.",
     "tag": "단어",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "glad",
+      "mad",
+      "sad",
+      "bad"
+    ]
   },
   {
     "id": "en5-007",
-    "type": "short",
-    "q": "'병원'을 뜻하는 영어 단어를 쓰세요.",
-    "answer": [
-      "hospital"
-    ],
+    "type": "mc",
+    "q": "'병원'을 뜻하는 영어 단어를 고르세요.",
+    "answer": 3,
     "explain": "병원은 hospital이에요. 아프거나 다쳤을 때 가는 곳이지요.",
     "tag": "단어",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "library",
+      "museum",
+      "market",
+      "hospital"
+    ]
   },
   {
     "id": "en5-008",
-    "type": "short",
-    "q": "'과학자'를 뜻하는 영어 단어를 쓰세요.",
-    "answer": [
-      "scientist"
-    ],
+    "type": "mc",
+    "q": "'과학자'를 뜻하는 영어 단어를 고르세요.",
+    "answer": 0,
     "explain": "과학자는 scientist예요. science(과학)에서 나온 말이에요.",
     "tag": "단어",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "scientist",
+      "science",
+      "teacher",
+      "doctor"
+    ]
   },
   {
     "id": "en5-009",
@@ -214,25 +226,33 @@
   },
   {
     "id": "en5-016",
-    "type": "short",
-    "q": "빈칸에 알맞은 be동사 한 단어를 쓰세요.\nI (   ) doing my homework now.",
-    "answer": [
-      "am"
-    ],
+    "type": "mc",
+    "q": "빈칸에 알맞은 be동사를 고르세요.\nI (   ) doing my homework now.",
+    "answer": 0,
     "explain": "I 뒤에 오는 be동사는 am이에요. I am doing ~은 '나는 지금 ~하는 중이야.'라는 뜻이에요.",
     "tag": "문법",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "am",
+      "is",
+      "are",
+      "be"
+    ]
   },
   {
     "id": "en5-017",
-    "type": "short",
-    "q": "괄호 안의 단어를 알맞은 모양으로 바꿔 쓰세요.\nThe dog is (run) in the park.",
-    "answer": [
-      "running"
-    ],
+    "type": "mc",
+    "q": "괄호 안의 단어를 알맞은 모양으로 바꾼 것을 고르세요.\nThe dog is (run) in the park.",
+    "answer": 1,
     "explain": "run은 마지막 글자 n을 한 번 더 쓰고 ing를 붙여서 running으로 써요.",
     "tag": "문법",
-    "level": "hard"
+    "level": "hard",
+    "choices": [
+      "run",
+      "running",
+      "runs",
+      "runing"
+    ]
   },
   {
     "id": "en5-018",
@@ -296,15 +316,18 @@
   },
   {
     "id": "en5-022",
-    "type": "short",
-    "q": "우리말과 뜻이 같도록 빈칸에 알맞은 영어 단어 한 개를 쓰세요.\n내가 가장 좋아하는 계절은 겨울이야.\nMy (   ) season is winter.",
-    "answer": [
-      "favorite",
-      "favourite"
-    ],
+    "type": "mc",
+    "q": "우리말과 뜻이 같도록 빈칸에 알맞은 영어 단어를 고르세요.\n내가 가장 좋아하는 계절은 겨울이야.\nMy (   ) season is winter.",
+    "answer": 2,
     "explain": "'가장 좋아하는'은 favorite이에요. My favorite season is winter.라고 말해요.",
     "tag": "표현",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "favor",
+      "famous",
+      "favorite",
+      "first"
+    ]
   },
   {
     "id": "en5-023",
@@ -413,14 +436,18 @@
   },
   {
     "id": "en5-030",
-    "type": "short",
-    "q": "다음 글을 읽고 물음에 답하세요.\n\nEmma has a dog. Its name is Coco. Coco is three years old. Coco can catch a ball.\n\n에마가 기르는 개의 이름을 영어로 쓰세요.",
-    "answer": [
-      "Coco"
-    ],
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nEmma has a dog. Its name is Coco. Coco is three years old. Coco can catch a ball.\n\n에마가 기르는 개의 이름을 고르세요.",
+    "answer": 2,
     "explain": "Its name is Coco.에서 개의 이름이 Coco라는 것을 알 수 있어요.",
     "tag": "독해",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "Emma",
+      "Cocoa",
+      "Coco",
+      "Choco"
+    ]
   },
   {
     "id": "en5-031",
@@ -619,50 +646,63 @@
   },
   {
     "id": "en5-044",
-    "type": "short",
-    "q": "'박물관'을 뜻하는 영어 단어를 쓰세요.",
-    "answer": [
-      "museum"
-    ],
+    "type": "mc",
+    "q": "'박물관'을 뜻하는 영어 단어를 고르세요.",
+    "answer": 0,
     "explain": "박물관은 museum이에요. 옛날 물건을 볼 수 있는 곳이지요.",
     "tag": "단어",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "museum",
+      "music",
+      "market",
+      "mountain"
+    ]
   },
   {
     "id": "en5-045",
-    "type": "short",
-    "q": "'자전거'를 뜻하는 영어 단어를 쓰세요.",
-    "answer": [
-      "bike",
-      "bicycle"
-    ],
+    "type": "mc",
+    "q": "'자전거'를 뜻하는 영어 단어를 고르세요.",
+    "answer": 1,
     "explain": "자전거는 bike 또는 bicycle이라고 해요.",
     "tag": "단어",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "bus",
+      "bicycle",
+      "boat",
+      "bridge"
+    ]
   },
   {
     "id": "en5-046",
-    "type": "short",
-    "q": "'경찰관'을 뜻하는 영어 표현을 쓰세요.",
-    "answer": [
-      "police officer",
-      "policeman"
-    ],
+    "type": "mc",
+    "q": "'경찰관'을 뜻하는 영어 표현을 고르세요.",
+    "answer": 2,
     "explain": "경찰관은 police officer라고 해요. policeman이라고도 말해요.",
     "tag": "단어",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "postal worker",
+      "fire fighter",
+      "police officer",
+      "office worker"
+    ]
   },
   {
     "id": "en5-047",
-    "type": "short",
-    "q": "'무서워하는, 겁먹은' 기분을 나타내는 영어 단어를 쓰세요.",
-    "answer": [
-      "scared",
-      "afraid"
-    ],
+    "type": "mc",
+    "q": "'무서워하는, 겁먹은' 기분을 나타내는 영어 단어를 고르세요.",
+    "answer": 3,
     "explain": "무서워하는 기분은 scared 또는 afraid로 나타내요.",
     "tag": "단어",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "bored",
+      "tired",
+      "excited",
+      "scared"
+    ]
   },
   {
     "id": "en5-048",
@@ -726,14 +766,18 @@
   },
   {
     "id": "en5-052",
-    "type": "short",
-    "q": "'공항'을 뜻하는 영어 단어를 쓰세요.",
-    "answer": [
-      "airport"
-    ],
+    "type": "mc",
+    "q": "'공항'을 뜻하는 영어 단어를 고르세요.",
+    "answer": 0,
     "explain": "공항은 airport예요. air(공중)와 port(항구)가 합쳐진 말이에요.",
     "tag": "단어",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "airport",
+      "airplane",
+      "seaport",
+      "station"
+    ]
   },
   {
     "id": "en5-053",
@@ -932,59 +976,78 @@
   },
   {
     "id": "en5-066",
-    "type": "short",
-    "q": "빈칸에 알맞은 be동사 한 단어를 쓰세요.\nThe baby (   ) crying now.",
-    "answer": [
-      "is"
-    ],
+    "type": "mc",
+    "q": "빈칸에 알맞은 be동사를 고르세요.\nThe baby (   ) crying now.",
+    "answer": 2,
     "explain": "The baby는 한 명이므로 be동사 is를 써요.",
     "tag": "문법",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "am",
+      "are",
+      "is",
+      "be"
+    ]
   },
   {
     "id": "en5-067",
-    "type": "short",
-    "q": "빈칸에 알맞은 be동사 한 단어를 쓰세요.\nMy brother and I (   ) watching TV.",
-    "answer": [
-      "are"
-    ],
+    "type": "mc",
+    "q": "빈칸에 알맞은 be동사를 고르세요.\nMy brother and I (   ) watching TV.",
+    "answer": 3,
     "explain": "My brother and I는 두 사람이므로 be동사 are를 써요.",
     "tag": "문법",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "am",
+      "is",
+      "be",
+      "are"
+    ]
   },
   {
     "id": "en5-068",
-    "type": "short",
-    "q": "괄호 안의 단어를 알맞은 모양으로 바꿔 쓰세요.\nDad is (make) sandwiches.",
-    "answer": [
-      "making"
-    ],
+    "type": "mc",
+    "q": "괄호 안의 단어를 알맞은 모양으로 바꾼 것을 고르세요.\nDad is (make) sandwiches.",
+    "answer": 0,
     "explain": "make는 e를 빼고 ing를 붙여 making으로 써요.",
     "tag": "문법",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "making",
+      "make",
+      "makes",
+      "makeing"
+    ]
   },
   {
     "id": "en5-069",
-    "type": "short",
-    "q": "빈칸에 알맞은 소유격 한 단어를 쓰세요.\nI have a cat. (   ) name is Nabi.",
-    "answer": [
-      "Its"
-    ],
+    "type": "mc",
+    "q": "빈칸에 알맞은 소유격을 고르세요.\nI have a cat. (   ) name is Nabi.",
+    "answer": 1,
     "explain": "동물이나 사물의 소유격은 Its예요. 고양이의 이름을 말할 때 Its name이라고 해요.",
     "tag": "문법",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "It",
+      "Its",
+      "It's",
+      "Their"
+    ]
   },
   {
     "id": "en5-070",
-    "type": "short",
-    "q": "우리말과 뜻이 같도록 빈칸에 알맞은 말을 쓰세요.\n나는 스케이트를 탈 수 없어.\nI (   ) skate.",
-    "answer": [
-      "can't",
-      "cannot"
-    ],
+    "type": "mc",
+    "q": "우리말과 뜻이 같도록 빈칸에 알맞은 말을 고르세요.\n나는 스케이트를 탈 수 없어.\nI (   ) skate.",
+    "answer": 2,
     "explain": "할 수 없다는 can't 또는 cannot으로 나타내요.",
     "tag": "문법",
-    "level": "hard"
+    "level": "hard",
+    "choices": [
+      "can",
+      "don't",
+      "can't",
+      "am not"
+    ]
   },
   {
     "id": "en5-071",
@@ -1138,36 +1201,48 @@
   },
   {
     "id": "en5-081",
-    "type": "short",
-    "q": "Why로 묻는 말에 이유를 대답할 때 문장 맨 앞에 쓰는 '왜냐하면'이라는 뜻의 영어 단어를 쓰세요.",
-    "answer": [
-      "Because"
-    ],
+    "type": "mc",
+    "q": "Why로 묻는 말에 이유를 대답할 때 문장 맨 앞에 쓰는 '왜냐하면'이라는 뜻의 영어 단어를 고르세요.",
+    "answer": 1,
     "explain": "이유를 말할 때는 Because로 문장을 시작해요.",
     "tag": "표현",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "Before",
+      "Because",
+      "Between",
+      "But"
+    ]
   },
   {
     "id": "en5-082",
-    "type": "short",
-    "q": "우리말과 뜻이 같도록 빈칸에 알맞은 영어 단어 한 개를 쓰세요.\n내가 가장 좋아하는 과목은 음악이야.\nMy favorite subject is (   ).",
-    "answer": [
-      "music"
-    ],
+    "type": "mc",
+    "q": "우리말과 뜻이 같도록 빈칸에 알맞은 영어 단어를 고르세요.\n내가 가장 좋아하는 과목은 음악이야.\nMy favorite subject is (   ).",
+    "answer": 2,
     "explain": "음악 과목은 music이에요.",
     "tag": "표현",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "math",
+      "art",
+      "music",
+      "science"
+    ]
   },
   {
     "id": "en5-083",
-    "type": "short",
-    "q": "빈칸에 알맞은 의문사 한 단어를 쓰세요.\nA: (   ) are you going now?\nB: I'm going to the library.",
-    "answer": [
-      "Where"
-    ],
+    "type": "mc",
+    "q": "빈칸에 알맞은 의문사를 고르세요.\nA: (   ) are you going now?\nB: I'm going to the library.",
+    "answer": 3,
     "explain": "도서관이라는 장소를 대답했으므로 장소를 묻는 Where를 써요.",
     "tag": "표현",
-    "level": "hard"
+    "level": "hard",
+    "choices": [
+      "What",
+      "When",
+      "Who",
+      "Where"
+    ]
   },
   {
     "id": "en5-084",
@@ -1201,15 +1276,18 @@
   },
   {
     "id": "en5-086",
-    "type": "short",
-    "q": "수영을 못하는 민호의 대답이 되도록 빈칸에 알맞은 말을 쓰세요.\nA: Can you swim, Minho?\nB: No, I (   ).",
-    "answer": [
-      "can't",
-      "cannot"
-    ],
+    "type": "mc",
+    "q": "수영을 못하는 민호의 대답이 되도록 빈칸에 알맞은 말을 고르세요.\nA: Can you swim, Minho?\nB: No, I (   ).",
+    "answer": 2,
     "explain": "Can you ~?에 아니라고 대답할 때는 No, I can't.라고 해요.",
     "tag": "표현",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "can",
+      "don't",
+      "can't",
+      "am not"
+    ]
   },
   {
     "id": "en5-087",
@@ -1333,36 +1411,48 @@
   },
   {
     "id": "en5-095",
-    "type": "short",
-    "q": "다음 글을 읽고, 빈칸에 알맞은 한 단어를 글에서 찾아 쓰세요.\n\nJinho is in his room. He is doing his homework. His sister is playing the piano in the living room. Their dog is sleeping under the table.\n\nJinho's sister is playing the (   ).",
-    "answer": [
-      "piano"
-    ],
+    "type": "mc",
+    "q": "다음 글을 읽고, 빈칸에 알맞은 말을 고르세요.\n\nJinho is in his room. He is doing his homework. His sister is playing the piano in the living room. Their dog is sleeping under the table.\n\nJinho's sister is playing the (   ).",
+    "answer": 3,
     "explain": "His sister is playing the piano.에서 누나가 피아노를 치고 있다는 것을 알 수 있어요.",
     "tag": "독해",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "guitar",
+      "violin",
+      "drum",
+      "piano"
+    ]
   },
   {
     "id": "en5-096",
-    "type": "short",
-    "q": "다음 글을 읽고 물음에 답하세요.\n\nI'm Mia. I have two pets. My cat is white and my rabbit is brown. I love them.\n\n미아가 기르는 동물 중 흰색인 동물을 영어 한 단어로 쓰세요.",
-    "answer": [
-      "cat"
-    ],
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nI'm Mia. I have two pets. My cat is white and my rabbit is brown. I love them.\n\n미아가 기르는 동물 중 흰색인 동물을 고르세요.",
+    "answer": 0,
     "explain": "My cat is white.에서 흰색인 동물이 cat(고양이)이라는 것을 알 수 있어요.",
     "tag": "독해",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "cat",
+      "rabbit",
+      "dog",
+      "bird"
+    ]
   },
   {
     "id": "en5-097",
-    "type": "short",
-    "q": "다음 글을 읽고 물음에 답하세요.\n\nSam gets up at seven. He goes to school by bus. After school, he plays badminton with his friends. He goes to bed at nine.\n\n샘이 방과 후에 친구들과 하는 운동을 영어로 쓰세요.",
-    "answer": [
-      "badminton"
-    ],
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nSam gets up at seven. He goes to school by bus. After school, he plays badminton with his friends. He goes to bed at nine.\n\n샘이 방과 후에 친구들과 하는 운동을 고르세요.",
+    "answer": 1,
     "explain": "he plays badminton with his friends에서 방과 후에 배드민턴을 친다는 것을 알 수 있어요.",
     "tag": "독해",
-    "level": "hard"
+    "level": "hard",
+    "choices": [
+      "basketball",
+      "badminton",
+      "baseball",
+      "soccer"
+    ]
   },
   {
     "id": "en5-098",
@@ -1396,13 +1486,17 @@
   },
   {
     "id": "en5-100",
-    "type": "short",
-    "q": "다음 글을 읽고 물음에 답하세요.\n\nNari has an English class on Tuesday. She likes her teacher, Mr. Brown. He is funny and kind. Nari's favorite subject is English.\n\n나리가 가장 좋아하는 과목을 영어 한 단어로 쓰세요.",
-    "answer": [
-      "English"
-    ],
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nNari has an English class on Tuesday. She likes her teacher, Mr. Brown. He is funny and kind. Nari's favorite subject is English.\n\n나리가 가장 좋아하는 과목을 고르세요.",
+    "answer": 0,
     "explain": "Nari's favorite subject is English.에서 가장 좋아하는 과목이 영어라는 것을 알 수 있어요.",
     "tag": "독해",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "English",
+      "Music",
+      "Science",
+      "Math"
+    ]
   }
 ]

@@ -76,14 +76,18 @@
   },
   {
     "id": "en3-006",
-    "type": "short",
-    "q": "알파벳 순서에서 'M' 바로 다음에 오는 대문자를 쓰세요.",
-    "answer": [
-      "N"
-    ],
+    "type": "mc",
+    "q": "알파벳 순서에서 'M' 바로 다음에 오는 대문자를 고르세요.",
+    "answer": 2,
     "explain": "알파벳은 L, M, N 순서로 이어져요.",
     "tag": "알파벳",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "L",
+      "O",
+      "N",
+      "P"
+    ]
   },
   {
     "id": "en3-007",
@@ -177,36 +181,48 @@
   },
   {
     "id": "en3-013",
-    "type": "short",
-    "q": "숫자 낱말을 순서대로 쓸 때 빈칸에 들어갈 낱말을 영어로 쓰세요.\nten - eleven - ___ - thirteen",
-    "answer": [
-      "twelve"
-    ],
+    "type": "mc",
+    "q": "숫자 낱말을 순서대로 쓸 때 빈칸에 들어갈 낱말을 영어로 고르세요.\nten - eleven - ___ - thirteen",
+    "answer": 1,
     "explain": "10, 11, 12, 13은 ten, eleven, twelve, thirteen이에요.",
     "tag": "단어",
-    "level": "hard"
+    "level": "hard",
+    "choices": [
+      "twenty",
+      "twelve",
+      "two",
+      "ten"
+    ]
   },
   {
     "id": "en3-014",
-    "type": "short",
-    "q": "'고양이'를 뜻하는 영어 낱말을 쓰세요.",
-    "answer": [
-      "cat"
-    ],
+    "type": "mc",
+    "q": "'고양이'를 뜻하는 영어 낱말을 고르세요.",
+    "answer": 2,
     "explain": "고양이는 cat이에요.",
     "tag": "단어",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "dog",
+      "cow",
+      "cat",
+      "hen"
+    ]
   },
   {
     "id": "en3-015",
-    "type": "short",
-    "q": "숫자 10을 뜻하는 영어 낱말을 쓰세요.",
-    "answer": [
-      "ten"
-    ],
+    "type": "mc",
+    "q": "숫자 10을 뜻하는 영어 낱말을 고르세요.",
+    "answer": 3,
     "explain": "10은 ten이에요.",
     "tag": "단어",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "two",
+      "twelve",
+      "twenty",
+      "ten"
+    ]
   },
   {
     "id": "en3-016",
@@ -315,14 +331,18 @@
   },
   {
     "id": "en3-023",
-    "type": "short",
-    "q": "빈칸에 들어갈 알맞은 말을 영어로 쓰세요.\n'He ___ my friend.' (그는 내 친구예요.)",
-    "answer": [
-      "is"
-    ],
+    "type": "mc",
+    "q": "빈칸에 들어갈 알맞은 말을 영어로 고르세요.\n'He ___ my friend.' (그는 내 친구예요.)",
+    "answer": 3,
     "explain": "He 뒤에는 is를 써요. He is my friend!",
     "tag": "문법",
-    "level": "hard"
+    "level": "hard",
+    "choices": [
+      "am",
+      "are",
+      "be",
+      "is"
+    ]
   },
   {
     "id": "en3-024",
@@ -401,32 +421,33 @@
   },
   {
     "id": "en3-029",
-    "type": "short",
-    "q": "친구와 헤어질 때 하는 영어 인사말을 쓰세요. (안녕, 잘 가!)",
-    "answer": [
-      "Goodbye",
-      "Bye",
-      "Goodbye!",
-      "Bye!",
-      "Bye bye"
-    ],
+    "type": "mc",
+    "q": "친구와 헤어질 때 하는 영어 인사말을 고르세요. (안녕, 잘 가!)",
+    "answer": 1,
     "explain": "헤어질 때는 Goodbye 또는 Bye라고 인사해요.",
     "tag": "표현",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "Hello",
+      "Goodbye",
+      "Thank you",
+      "I'm sorry"
+    ]
   },
   {
     "id": "en3-030",
-    "type": "short",
-    "q": "고마운 마음을 전할 때 하는 영어 인사말을 쓰세요. (고마워!)",
-    "answer": [
-      "Thank you",
-      "Thanks",
-      "Thank you!",
-      "Thanks!"
-    ],
+    "type": "mc",
+    "q": "고마운 마음을 전할 때 하는 영어 인사말을 고르세요. (고마워!)",
+    "answer": 2,
     "explain": "고마울 때는 Thank you. 또는 Thanks.라고 말해요.",
     "tag": "표현",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "Sorry",
+      "Hello",
+      "Thank you",
+      "Goodbye"
+    ]
   },
   {
     "id": "en3-031",
@@ -475,25 +496,33 @@
   },
   {
     "id": "en3-034",
-    "type": "short",
-    "q": "알파벳에서 맨 처음에 오는 대문자를 쓰세요.",
-    "answer": [
-      "A"
-    ],
+    "type": "mc",
+    "q": "알파벳에서 맨 처음에 오는 대문자를 고르세요.",
+    "answer": 2,
     "explain": "알파벳은 A로 시작해요.",
     "tag": "알파벳",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "B",
+      "Z",
+      "A",
+      "E"
+    ]
   },
   {
     "id": "en3-035",
-    "type": "short",
-    "q": "알파벳 순서에서 'H' 바로 앞에 오는 대문자를 쓰세요.",
-    "answer": [
-      "G"
-    ],
+    "type": "mc",
+    "q": "알파벳 순서에서 'H' 바로 앞에 오는 대문자를 고르세요.",
+    "answer": 3,
     "explain": "알파벳은 F, G, H 순서로 이어져요.",
     "tag": "알파벳",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "F",
+      "I",
+      "J",
+      "G"
+    ]
   },
   {
     "id": "en3-036",
@@ -572,14 +601,18 @@
   },
   {
     "id": "en3-041",
-    "type": "short",
-    "q": "'zoo'의 첫 글자를 소문자로 쓰세요.",
-    "answer": [
-      "z"
-    ],
+    "type": "mc",
+    "q": "'zoo'의 첫 글자를 소문자로 고르세요.",
+    "answer": 1,
     "explain": "zoo는 z로 시작해요.",
     "tag": "알파벳",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "s",
+      "z",
+      "x",
+      "y"
+    ]
   },
   {
     "id": "en3-042",
@@ -613,14 +646,18 @@
   },
   {
     "id": "en3-044",
-    "type": "short",
-    "q": "'cake'과 'car'는 같은 글자로 시작해요. 그 글자를 소문자로 쓰세요.",
-    "answer": [
-      "c"
-    ],
+    "type": "mc",
+    "q": "'cake'과 'car'는 같은 글자로 시작해요. 그 글자를 소문자로 고르세요.",
+    "answer": 0,
     "explain": "cake과 car는 모두 c로 시작해요.",
     "tag": "알파벳",
-    "level": "hard"
+    "level": "hard",
+    "choices": [
+      "c",
+      "a",
+      "k",
+      "r"
+    ]
   },
   {
     "id": "en3-045",
@@ -804,58 +841,78 @@
   },
   {
     "id": "en3-057",
-    "type": "short",
-    "q": "'우유'를 뜻하는 영어 낱말을 쓰세요.",
-    "answer": [
-      "milk"
-    ],
+    "type": "mc",
+    "q": "'우유'를 뜻하는 영어 낱말을 고르세요.",
+    "answer": 1,
     "explain": "우유는 milk예요.",
     "tag": "단어",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "water",
+      "milk",
+      "juice",
+      "bread"
+    ]
   },
   {
     "id": "en3-058",
-    "type": "short",
-    "q": "숫자 5를 뜻하는 영어 낱말을 쓰세요.",
-    "answer": [
-      "five"
-    ],
+    "type": "mc",
+    "q": "숫자 5를 뜻하는 영어 낱말을 고르세요.",
+    "answer": 2,
     "explain": "5는 five예요.",
     "tag": "단어",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "four",
+      "nine",
+      "five",
+      "fifty"
+    ]
   },
   {
     "id": "en3-059",
-    "type": "short",
-    "q": "'초록색'을 뜻하는 영어 낱말을 쓰세요.",
-    "answer": [
-      "green"
-    ],
+    "type": "mc",
+    "q": "'초록색'을 뜻하는 영어 낱말을 고르세요.",
+    "answer": 3,
     "explain": "초록색은 green이에요.",
     "tag": "단어",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "blue",
+      "gray",
+      "brown",
+      "green"
+    ]
   },
   {
     "id": "en3-060",
-    "type": "short",
-    "q": "숫자 낱말을 순서대로 쓸 때 빈칸에 들어갈 낱말을 영어로 쓰세요.\nseven - eight - ___ - ten",
-    "answer": [
-      "nine"
-    ],
+    "type": "mc",
+    "q": "숫자 낱말을 순서대로 쓸 때 빈칸에 들어갈 낱말을 영어로 고르세요.\nseven - eight - ___ - ten",
+    "answer": 0,
     "explain": "7, 8, 9, 10은 seven, eight, nine, ten이에요.",
     "tag": "단어",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "nine",
+      "six",
+      "eleven",
+      "nineteen"
+    ]
   },
   {
     "id": "en3-061",
-    "type": "short",
-    "q": "숫자 20을 뜻하는 영어 낱말을 쓰세요.",
-    "answer": [
-      "twenty"
-    ],
+    "type": "mc",
+    "q": "숫자 20을 뜻하는 영어 낱말을 고르세요.",
+    "answer": 1,
     "explain": "20은 twenty예요.",
     "tag": "단어",
-    "level": "hard"
+    "level": "hard",
+    "choices": [
+      "twelve",
+      "twenty",
+      "two",
+      "ten"
+    ]
   },
   {
     "id": "en3-062",
@@ -934,14 +991,18 @@
   },
   {
     "id": "en3-067",
-    "type": "short",
-    "q": "'연필'을 뜻하는 영어 낱말을 쓰세요.",
-    "answer": [
-      "pencil"
-    ],
+    "type": "mc",
+    "q": "'연필'을 뜻하는 영어 낱말을 고르세요.",
+    "answer": 3,
     "explain": "연필은 pencil이에요.",
     "tag": "단어",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "pen",
+      "paper",
+      "eraser",
+      "pencil"
+    ]
   },
   {
     "id": "en3-068",
@@ -975,14 +1036,18 @@
   },
   {
     "id": "en3-070",
-    "type": "short",
-    "q": "'사과'를 뜻하는 영어 낱말을 쓰세요.",
-    "answer": [
-      "apple"
-    ],
+    "type": "mc",
+    "q": "'사과'를 뜻하는 영어 낱말을 고르세요.",
+    "answer": 2,
     "explain": "사과는 apple이에요.",
     "tag": "단어",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "orange",
+      "grape",
+      "apple",
+      "peach"
+    ]
   },
   {
     "id": "en3-071",
@@ -1016,14 +1081,18 @@
   },
   {
     "id": "en3-073",
-    "type": "short",
-    "q": "빈칸에 들어갈 말을 쓰세요. (a 또는 an)\n'I see ___ egg.' (나는 달걀 한 개가 보여요.)",
-    "answer": [
-      "an"
-    ],
+    "type": "mc",
+    "q": "빈칸에 들어갈 말을 고르세요.\n'I see ___ egg.' (나는 달걀 한 개가 보여요.)",
+    "answer": 1,
     "explain": "egg는 e 소리로 시작하니까 an egg라고 써요.",
     "tag": "문법",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "a",
+      "an",
+      "the",
+      "one"
+    ]
   },
   {
     "id": "en3-074",
@@ -1057,14 +1126,18 @@
   },
   {
     "id": "en3-076",
-    "type": "short",
-    "q": "빈칸에 들어갈 알맞은 말을 영어로 쓰세요.\n'This ___ my book.' (이것은 내 책이에요.)",
-    "answer": [
-      "is"
-    ],
+    "type": "mc",
+    "q": "빈칸에 들어갈 알맞은 말을 영어로 고르세요.\n'This ___ my book.' (이것은 내 책이에요.)",
+    "answer": 0,
     "explain": "This 뒤에는 is를 써요.",
     "tag": "문법",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "is",
+      "am",
+      "are",
+      "do"
+    ]
   },
   {
     "id": "en3-077",
@@ -1113,14 +1186,18 @@
   },
   {
     "id": "en3-080",
-    "type": "short",
-    "q": "빈칸에 들어갈 낱말을 영어로 쓰세요.\n'Open the ___.' (문을 여세요.)",
-    "answer": [
-      "door"
-    ],
+    "type": "mc",
+    "q": "빈칸에 들어갈 낱말을 영어로 고르세요.\n'Open the ___.' (문을 여세요.)",
+    "answer": 0,
     "explain": "문은 door예요. Open the door!",
     "tag": "문법",
-    "level": "easy"
+    "level": "easy",
+    "choices": [
+      "door",
+      "window",
+      "book",
+      "box"
+    ]
   },
   {
     "id": "en3-081",
@@ -1184,16 +1261,18 @@
   },
   {
     "id": "en3-085",
-    "type": "short",
-    "q": "빈칸에 들어갈 말을 영어로 쓰세요.\n'I ___ like fish.' (나는 생선을 좋아하지 않아요.)",
-    "answer": [
-      "don't",
-      "do not",
-      "dont"
-    ],
+    "type": "mc",
+    "q": "빈칸에 들어갈 말을 영어로 고르세요.\n'I ___ like fish.' (나는 생선을 좋아하지 않아요.)",
+    "answer": 1,
     "explain": "좋아하지 않는다고 말할 때는 I don't like ~라고 해요.",
     "tag": "문법",
-    "level": "hard"
+    "level": "hard",
+    "choices": [
+      "do",
+      "don't",
+      "not",
+      "am not"
+    ]
   },
   {
     "id": "en3-086",
@@ -1332,25 +1411,33 @@
   },
   {
     "id": "en3-095",
-    "type": "short",
-    "q": "빈칸에 들어갈 낱말을 영어로 쓰세요.\n'My ___ is Suji.' (내 이름은 수지예요.)",
-    "answer": [
-      "name"
-    ],
+    "type": "mc",
+    "q": "빈칸에 들어갈 낱말을 영어로 고르세요.\n'My ___ is Suji.' (내 이름은 수지예요.)",
+    "answer": 3,
     "explain": "이름을 말할 때는 My name is ~라고 해요.",
     "tag": "표현",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "nice",
+      "number",
+      "new",
+      "name"
+    ]
   },
   {
     "id": "en3-096",
-    "type": "short",
-    "q": "빈칸에 들어갈 낱말을 영어로 쓰세요.\n'Nice to ___ you.' (만나서 반가워.)",
-    "answer": [
-      "meet"
-    ],
+    "type": "mc",
+    "q": "빈칸에 들어갈 낱말을 영어로 고르세요.\n'Nice to ___ you.' (만나서 반가워.)",
+    "answer": 0,
     "explain": "meet은 '만나다'라는 뜻이에요.",
     "tag": "표현",
-    "level": "normal"
+    "level": "normal",
+    "choices": [
+      "meet",
+      "meat",
+      "eat",
+      "met"
+    ]
   },
   {
     "id": "en3-097",
@@ -1399,13 +1486,17 @@
   },
   {
     "id": "en3-100",
-    "type": "short",
-    "q": "빈칸에 들어갈 낱말을 영어로 쓰세요.\n'How ___ you?' (잘 지내?)",
-    "answer": [
-      "are"
-    ],
+    "type": "mc",
+    "q": "빈칸에 들어갈 낱말을 영어로 고르세요.\n'How ___ you?' (잘 지내?)",
+    "answer": 0,
     "explain": "안부를 물을 때는 How are you?라고 해요.",
     "tag": "표현",
-    "level": "hard"
+    "level": "hard",
+    "choices": [
+      "are",
+      "is",
+      "am",
+      "do"
+    ]
   }
 ]
