@@ -4,12 +4,12 @@
     "type": "mc",
     "q": "대문자 A의 소문자는 무엇인가요?",
     "choices": [
-      "a",
       "b",
       "d",
-      "e"
+      "e",
+      "a"
     ],
-    "answer": 0,
+    "answer": 3,
     "explain": "대문자 A의 소문자는 a예요.",
     "tag": "알파벳",
     "level": "easy"
@@ -20,11 +20,11 @@
     "q": "소문자 b의 대문자는 무엇인가요?",
     "choices": [
       "D",
-      "B",
       "P",
+      "B",
       "R"
     ],
-    "answer": 1,
+    "answer": 2,
     "explain": "소문자 b의 대문자는 B예요.",
     "tag": "알파벳",
     "level": "easy"
@@ -34,12 +34,12 @@
     "type": "mc",
     "q": "알파벳을 순서대로 말할 때 A, B, C 다음에 오는 글자는 무엇인가요?",
     "choices": [
-      "D",
       "E",
+      "D",
       "F",
       "G"
     ],
-    "answer": 0,
+    "answer": 1,
     "explain": "알파벳은 A, B, C, D 순서예요.",
     "tag": "알파벳",
     "level": "easy"
@@ -49,12 +49,12 @@
     "type": "mc",
     "q": "대문자와 소문자가 바르게 짝지어진 것은 무엇인가요?",
     "choices": [
-      "E - e",
       "G - q",
+      "E - e",
       "D - b",
       "Q - g"
     ],
-    "answer": 0,
+    "answer": 1,
     "explain": "대문자 E의 소문자는 e예요.",
     "tag": "알파벳",
     "level": "normal"
@@ -64,12 +64,12 @@
     "type": "mc",
     "q": "대문자와 소문자의 짝이 틀린 것은 무엇인가요?",
     "choices": [
+      "C - k",
       "A - a",
       "B - b",
-      "C - k",
       "D - d"
     ],
-    "answer": 2,
+    "answer": 0,
     "explain": "대문자 C의 소문자는 c예요. k는 K의 소문자예요.",
     "tag": "알파벳",
     "level": "normal"
@@ -80,11 +80,11 @@
     "q": "소문자 d의 대문자는 무엇인가요?",
     "choices": [
       "B",
-      "D",
       "P",
-      "Q"
+      "Q",
+      "D"
     ],
-    "answer": 1,
+    "answer": 3,
     "explain": "소문자 d의 대문자는 D예요. b와 모양이 비슷하니 조심해요.",
     "tag": "알파벳",
     "level": "hard"
@@ -94,12 +94,12 @@
     "type": "mc",
     "q": "알파벳 순서에서 H와 J 사이에 오는 글자는 무엇인가요?",
     "choices": [
-      "I",
       "G",
       "K",
+      "I",
       "L"
     ],
-    "answer": 0,
+    "answer": 2,
     "explain": "알파벳은 H, I, J 순서라서 사이에 I가 와요.",
     "tag": "알파벳",
     "level": "hard"
@@ -124,12 +124,12 @@
     "type": "mc",
     "q": "'cat'은 어떤 동물인가요?",
     "choices": [
-      "고양이",
       "강아지",
+      "고양이",
       "토끼",
       "곰"
     ],
-    "answer": 0,
+    "answer": 1,
     "explain": "cat은 고양이를 뜻하는 낱말이에요.",
     "tag": "단어",
     "level": "easy"
@@ -139,12 +139,12 @@
     "type": "mc",
     "q": "'dog'은 어떤 동물인가요?",
     "choices": [
-      "오리",
       "강아지",
+      "오리",
       "돼지",
       "소"
     ],
-    "answer": 1,
+    "answer": 0,
     "explain": "dog은 강아지(개)를 뜻하는 낱말이에요.",
     "tag": "단어",
     "level": "easy"
@@ -156,10 +156,10 @@
     "choices": [
       "포도",
       "바나나",
-      "사과",
-      "수박"
+      "수박",
+      "사과"
     ],
-    "answer": 2,
+    "answer": 3,
     "explain": "apple은 사과를 뜻하는 낱말이에요.",
     "tag": "단어",
     "level": "easy"
@@ -169,12 +169,12 @@
     "type": "mc",
     "q": "'빨간색'을 뜻하는 영어 낱말은 무엇인가요?",
     "choices": [
-      "red",
       "blue",
       "green",
-      "yellow"
+      "yellow",
+      "red"
     ],
-    "answer": 0,
+    "answer": 3,
     "explain": "red는 빨간색이에요.",
     "tag": "단어",
     "level": "easy"
@@ -185,11 +185,11 @@
     "q": "'blue'는 어떤 색인가요?",
     "choices": [
       "노란색",
-      "파란색",
       "초록색",
+      "파란색",
       "검은색"
     ],
-    "answer": 1,
+    "answer": 2,
     "explain": "blue는 파란색이에요.",
     "tag": "단어",
     "level": "normal"
@@ -214,12 +214,12 @@
     "type": "mc",
     "q": "숫자 5를 뜻하는 영어 낱말은 무엇인가요?",
     "choices": [
-      "four",
       "five",
+      "four",
       "six",
       "nine"
     ],
-    "answer": 1,
+    "answer": 0,
     "explain": "5는 영어로 five라고 해요.",
     "tag": "단어",
     "level": "normal"
@@ -229,12 +229,12 @@
     "type": "mc",
     "q": "다음 중 가장 큰 수를 뜻하는 낱말은 무엇인가요?",
     "choices": [
+      "nine",
       "two",
       "five",
-      "nine",
       "four"
     ],
-    "answer": 2,
+    "answer": 0,
     "explain": "two는 2, four는 4, five는 5, nine은 9라서 nine이 가장 커요.",
     "tag": "단어",
     "level": "hard"
@@ -244,12 +244,12 @@
     "type": "mc",
     "q": "'우유'를 뜻하는 영어 낱말은 무엇인가요?",
     "choices": [
-      "milk",
       "water",
       "juice",
-      "bread"
+      "bread",
+      "milk"
     ],
-    "answer": 0,
+    "answer": 3,
     "explain": "milk는 우유예요. water는 물, juice는 주스, bread는 빵이에요.",
     "tag": "단어",
     "level": "hard"
@@ -259,12 +259,12 @@
     "type": "mc",
     "q": "친구를 만났을 때 하는 인사는 무엇인가요?",
     "choices": [
-      "Hello",
       "Bye",
       "Sorry",
+      "Hello",
       "Thank you"
     ],
-    "answer": 0,
+    "answer": 2,
     "explain": "만났을 때는 Hello(안녕)라고 인사해요.",
     "tag": "표현",
     "level": "easy"
@@ -289,12 +289,12 @@
     "type": "mc",
     "q": "아침에 만났을 때 하는 인사는 무엇인가요?",
     "choices": [
-      "Good morning",
       "Good night",
+      "Good morning",
       "Bye",
       "Sorry"
     ],
-    "answer": 0,
+    "answer": 1,
     "explain": "아침 인사는 Good morning이에요.",
     "tag": "표현",
     "level": "normal"
@@ -319,12 +319,12 @@
     "type": "mc",
     "q": "친구가 선물을 주었을 때 고마운 마음을 나타내는 말은 무엇인가요?",
     "choices": [
-      "Thank you",
       "Sorry",
       "Bye",
-      "Hello"
+      "Hello",
+      "Thank you"
     ],
-    "answer": 0,
+    "answer": 3,
     "explain": "고마울 때는 Thank you(고마워)라고 말해요.",
     "tag": "표현",
     "level": "normal"
@@ -333,29 +333,29 @@
     "id": "en1-023",
     "type": "mc",
     "q": "대문자 B의 소문자를 고르세요.",
-    "answer": 3,
+    "answer": 2,
     "explain": "대문자 B의 소문자는 b예요.",
     "tag": "알파벳",
     "level": "easy",
     "choices": [
       "d",
       "p",
-      "q",
-      "b"
+      "b",
+      "q"
     ]
   },
   {
     "id": "en1-024",
     "type": "mc",
     "q": "알파벳 순서에서 F 다음에 오는 대문자를 고르세요.",
-    "answer": 0,
+    "answer": 2,
     "explain": "알파벳은 F, G, H 순서예요.",
     "tag": "알파벳",
     "level": "easy",
     "choices": [
-      "G",
       "E",
       "H",
+      "G",
       "D"
     ]
   },
@@ -378,14 +378,14 @@
     "id": "en1-026",
     "type": "mc",
     "q": "숫자 2를 뜻하는 영어 낱말을 고르세요.",
-    "answer": 2,
+    "answer": 0,
     "explain": "2는 영어로 two라고 해요.",
     "tag": "단어",
     "level": "normal",
     "choices": [
+      "two",
       "one",
       "three",
-      "two",
       "ten"
     ]
   },
@@ -408,29 +408,29 @@
     "id": "en1-028",
     "type": "mc",
     "q": "친구와 헤어질 때 하는 영어 인사를 고르세요.",
-    "answer": 0,
+    "answer": 3,
     "explain": "헤어질 때는 Bye 또는 Goodbye라고 인사해요.",
     "tag": "표현",
     "level": "normal",
     "choices": [
-      "Goodbye",
       "Hello",
       "Thank you",
-      "Sorry"
+      "Sorry",
+      "Goodbye"
     ]
   },
   {
     "id": "en1-029",
     "type": "mc",
     "q": "소문자 q의 대문자를 고르세요.",
-    "answer": 1,
+    "answer": 2,
     "explain": "소문자 q의 대문자는 Q예요. p와 헷갈리지 않게 조심해요.",
     "tag": "알파벳",
     "level": "hard",
     "choices": [
       "P",
-      "Q",
       "O",
+      "Q",
       "G"
     ]
   },
@@ -438,14 +438,14 @@
     "id": "en1-030",
     "type": "mc",
     "q": "'ten'이 뜻하는 수를 고르세요.",
-    "answer": 2,
+    "answer": 1,
     "explain": "ten은 10을 뜻해요.",
     "tag": "단어",
     "level": "hard",
     "choices": [
       "2",
-      "7",
       "10",
+      "7",
       "12"
     ]
   },
@@ -469,12 +469,12 @@
     "type": "mc",
     "q": "소문자 m의 대문자는 무엇인가요?",
     "choices": [
-      "N",
       "M",
+      "N",
       "W",
       "H"
     ],
-    "answer": 1,
+    "answer": 0,
     "explain": "소문자 m의 대문자는 M이에요.",
     "tag": "알파벳",
     "level": "easy"
@@ -484,12 +484,12 @@
     "type": "mc",
     "q": "알파벳의 첫 번째 글자는 무엇인가요?",
     "choices": [
-      "A",
       "B",
       "C",
-      "Z"
+      "Z",
+      "A"
     ],
-    "answer": 0,
+    "answer": 3,
     "explain": "알파벳은 A로 시작해요.",
     "tag": "알파벳",
     "level": "easy"
@@ -500,11 +500,11 @@
     "q": "알파벳 순서에서 D 다음에 오는 글자는 무엇인가요?",
     "choices": [
       "C",
-      "E",
       "F",
+      "E",
       "G"
     ],
-    "answer": 1,
+    "answer": 2,
     "explain": "알파벳은 C, D, E 순서예요.",
     "tag": "알파벳",
     "level": "easy"
@@ -514,12 +514,12 @@
     "type": "mc",
     "q": "알파벳 순서에서 K 바로 앞에 오는 글자는 무엇인가요?",
     "choices": [
-      "J",
       "L",
+      "J",
       "I",
       "M"
     ],
-    "answer": 0,
+    "answer": 1,
     "explain": "알파벳은 I, J, K 순서라서 K 앞에는 J가 와요.",
     "tag": "알파벳",
     "level": "normal"
@@ -530,11 +530,11 @@
     "q": "대문자 S의 소문자는 무엇인가요?",
     "choices": [
       "z",
-      "c",
       "s",
+      "c",
       "x"
     ],
-    "answer": 2,
+    "answer": 1,
     "explain": "대문자 S의 소문자는 s예요.",
     "tag": "알파벳",
     "level": "normal"
@@ -544,12 +544,12 @@
     "type": "mc",
     "q": "소문자 r의 대문자는 무엇인가요?",
     "choices": [
+      "R",
       "P",
       "B",
-      "R",
       "K"
     ],
-    "answer": 2,
+    "answer": 0,
     "explain": "소문자 r의 대문자는 R이에요.",
     "tag": "알파벳",
     "level": "normal"
@@ -560,11 +560,11 @@
     "q": "알파벳 순서에서 U와 W 사이에 오는 글자는 무엇인가요?",
     "choices": [
       "T",
-      "V",
       "X",
-      "Y"
+      "Y",
+      "V"
     ],
-    "answer": 1,
+    "answer": 3,
     "explain": "알파벳은 U, V, W 순서라서 사이에 V가 와요.",
     "tag": "알파벳",
     "level": "hard"
@@ -574,12 +574,12 @@
     "type": "mc",
     "q": "다음 중 소문자로만 이루어진 것은 무엇인가요?",
     "choices": [
-      "a b c",
       "A b c",
       "a B c",
+      "a b c",
       "A B C"
     ],
-    "answer": 0,
+    "answer": 2,
     "explain": "a, b, c는 모두 소문자예요.",
     "tag": "알파벳",
     "level": "normal"
@@ -636,10 +636,10 @@
     "choices": [
       "d",
       "p",
-      "b",
-      "q"
+      "q",
+      "b"
     ],
-    "answer": 2,
+    "answer": 3,
     "explain": "book은 b로 시작해요. d와 모양이 비슷하니 조심해요.",
     "tag": "알파벳",
     "level": "normal"
@@ -649,12 +649,12 @@
     "type": "mc",
     "q": "'moon'과 'sun'의 첫 글자 중 알파벳 순서에서 더 먼저 오는 글자는 무엇인가요?",
     "choices": [
-      "m",
       "s",
       "n",
-      "u"
+      "u",
+      "m"
     ],
-    "answer": 0,
+    "answer": 3,
     "explain": "moon은 m, sun은 s로 시작하는데 알파벳 순서에서 m이 s보다 먼저예요.",
     "tag": "알파벳",
     "level": "hard"
@@ -678,14 +678,14 @@
     "id": "en1-046",
     "type": "mc",
     "q": "대문자 E의 소문자를 고르세요.",
-    "answer": 2,
+    "answer": 1,
     "explain": "대문자 E의 소문자는 e예요.",
     "tag": "알파벳",
     "level": "easy",
     "choices": [
       "a",
-      "c",
       "e",
+      "c",
       "o"
     ]
   },
@@ -693,15 +693,15 @@
     "id": "en1-047",
     "type": "mc",
     "q": "소문자 f의 대문자를 고르세요.",
-    "answer": 3,
+    "answer": 0,
     "explain": "소문자 f의 대문자는 F예요.",
     "tag": "알파벳",
     "level": "easy",
     "choices": [
+      "F",
       "E",
       "T",
-      "P",
-      "F"
+      "P"
     ]
   },
   {
@@ -723,15 +723,15 @@
     "id": "en1-049",
     "type": "mc",
     "q": "알파벳 순서에서 P 바로 앞에 오는 대문자를 고르세요.",
-    "answer": 1,
+    "answer": 3,
     "explain": "알파벳은 N, O, P 순서라서 P 앞에는 O가 와요.",
     "tag": "알파벳",
     "level": "hard",
     "choices": [
       "Q",
-      "O",
       "N",
-      "R"
+      "R",
+      "O"
     ]
   },
   {
@@ -754,12 +754,12 @@
     "type": "mc",
     "q": "'pig'은 어떤 동물인가요?",
     "choices": [
-      "돼지",
       "닭",
+      "돼지",
       "양",
       "말"
     ],
-    "answer": 0,
+    "answer": 1,
     "explain": "pig은 돼지를 뜻해요.",
     "tag": "단어",
     "level": "easy"
@@ -799,12 +799,12 @@
     "type": "mc",
     "q": "'토끼'를 뜻하는 영어 낱말은 무엇인가요?",
     "choices": [
-      "rabbit",
       "monkey",
       "tiger",
-      "bear"
+      "bear",
+      "rabbit"
     ],
-    "answer": 0,
+    "answer": 3,
     "explain": "rabbit은 토끼예요. monkey는 원숭이, tiger는 호랑이, bear는 곰이에요.",
     "tag": "단어",
     "level": "normal"
@@ -828,14 +828,14 @@
     "id": "en1-056",
     "type": "mc",
     "q": "'곰'을 뜻하는 영어 낱말을 고르세요.",
-    "answer": 0,
+    "answer": 2,
     "explain": "곰은 영어로 bear예요.",
     "tag": "단어",
     "level": "normal",
     "choices": [
-      "bear",
       "bird",
       "bee",
+      "bear",
       "bus"
     ]
   },
@@ -844,12 +844,12 @@
     "type": "mc",
     "q": "'yellow'는 어떤 색인가요?",
     "choices": [
-      "노란색",
       "보라색",
+      "노란색",
       "갈색",
       "흰색"
     ],
-    "answer": 0,
+    "answer": 1,
     "explain": "yellow는 노란색이에요.",
     "tag": "단어",
     "level": "easy"
@@ -874,12 +874,12 @@
     "type": "mc",
     "q": "'black'은 어떤 색인가요?",
     "choices": [
-      "검은색",
       "하얀색",
       "회색",
-      "주황색"
+      "주황색",
+      "검은색"
     ],
-    "answer": 0,
+    "answer": 3,
     "explain": "black은 검은색이에요.",
     "tag": "단어",
     "level": "normal"
@@ -903,14 +903,14 @@
     "id": "en1-061",
     "type": "mc",
     "q": "'분홍색'을 뜻하는 영어 낱말을 고르세요.",
-    "answer": 1,
+    "answer": 2,
     "explain": "분홍색은 영어로 pink예요.",
     "tag": "단어",
     "level": "normal",
     "choices": [
       "blue",
-      "pink",
       "green",
+      "pink",
       "black"
     ]
   },
@@ -918,14 +918,14 @@
     "id": "en1-062",
     "type": "mc",
     "q": "'white'의 뜻을 우리말로 고르세요.",
-    "answer": 2,
+    "answer": 1,
     "explain": "white는 흰색이에요.",
     "tag": "단어",
     "level": "easy",
     "choices": [
       "검은색",
-      "노란색",
       "흰색",
+      "노란색",
       "빨간색"
     ]
   },
@@ -949,12 +949,12 @@
     "type": "mc",
     "q": "숫자 7을 뜻하는 영어 낱말은 무엇인가요?",
     "choices": [
-      "six",
       "seven",
+      "six",
       "eight",
       "ten"
     ],
-    "answer": 1,
+    "answer": 0,
     "explain": "7은 영어로 seven이라고 해요.",
     "tag": "단어",
     "level": "normal"
@@ -965,11 +965,11 @@
     "q": "'four' 바로 다음 수를 뜻하는 낱말은 무엇인가요?",
     "choices": [
       "three",
-      "five",
       "six",
-      "two"
+      "two",
+      "five"
     ],
-    "answer": 1,
+    "answer": 3,
     "explain": "four는 4이고 그다음 수 5는 five예요.",
     "tag": "단어",
     "level": "normal"
@@ -980,11 +980,11 @@
     "q": "다음 중 가장 작은 수를 뜻하는 낱말은 무엇인가요?",
     "choices": [
       "eight",
-      "three",
       "six",
+      "three",
       "ten"
     ],
-    "answer": 1,
+    "answer": 2,
     "explain": "eight는 8, three는 3, six는 6, ten은 10이라서 three가 가장 작아요.",
     "tag": "단어",
     "level": "hard"
@@ -993,28 +993,28 @@
     "id": "en1-067",
     "type": "mc",
     "q": "'six'가 뜻하는 수를 고르세요.",
-    "answer": 3,
+    "answer": 1,
     "explain": "six는 6을 뜻해요.",
     "tag": "단어",
     "level": "easy",
     "choices": [
       "4",
+      "6",
       "5",
-      "9",
-      "6"
+      "9"
     ]
   },
   {
     "id": "en1-068",
     "type": "mc",
     "q": "숫자 9를 뜻하는 영어 낱말을 고르세요.",
-    "answer": 0,
+    "answer": 1,
     "explain": "9는 영어로 nine이라고 해요.",
     "tag": "단어",
     "level": "hard",
     "choices": [
-      "nine",
       "five",
+      "nine",
       "seven",
       "ten"
     ]
@@ -1039,12 +1039,12 @@
     "type": "mc",
     "q": "'orange'는 어떤 과일인가요?",
     "choices": [
-      "오렌지",
       "딸기",
       "참외",
-      "감"
+      "감",
+      "오렌지"
     ],
-    "answer": 0,
+    "answer": 3,
     "explain": "orange는 오렌지예요.",
     "tag": "단어",
     "level": "normal"
@@ -1054,12 +1054,12 @@
     "type": "mc",
     "q": "'bread'는 무엇을 뜻하나요?",
     "choices": [
-      "빵",
       "밥",
       "국",
+      "빵",
       "떡"
     ],
-    "answer": 0,
+    "answer": 2,
     "explain": "bread는 빵이에요.",
     "tag": "단어",
     "level": "easy"
@@ -1069,12 +1069,12 @@
     "type": "mc",
     "q": "'물'을 뜻하는 영어 낱말은 무엇인가요?",
     "choices": [
-      "water",
       "milk",
       "juice",
+      "water",
       "tea"
     ],
-    "answer": 0,
+    "answer": 2,
     "explain": "water는 물이에요.",
     "tag": "단어",
     "level": "normal"
@@ -1099,12 +1099,12 @@
     "type": "mc",
     "q": "다음 중 먹는 것을 뜻하는 낱말이 아닌 것은 무엇인가요?",
     "choices": [
+      "chair",
       "cake",
       "milk",
-      "chair",
       "egg"
     ],
-    "answer": 2,
+    "answer": 0,
     "explain": "chair는 의자예요. cake는 케이크, milk는 우유, egg는 달걀이에요.",
     "tag": "단어",
     "level": "hard"
@@ -1114,12 +1114,12 @@
     "type": "mc",
     "q": "'book'은 무엇을 뜻하나요?",
     "choices": [
-      "책",
       "가방",
       "연필",
-      "의자"
+      "의자",
+      "책"
     ],
-    "answer": 0,
+    "answer": 3,
     "explain": "book은 책이에요.",
     "tag": "단어",
     "level": "easy"
@@ -1129,12 +1129,12 @@
     "type": "mc",
     "q": "'연필'을 뜻하는 영어 낱말은 무엇인가요?",
     "choices": [
-      "pencil",
       "ruler",
       "eraser",
-      "crayon"
+      "crayon",
+      "pencil"
     ],
-    "answer": 0,
+    "answer": 3,
     "explain": "pencil은 연필이에요.",
     "tag": "단어",
     "level": "easy"
@@ -1144,12 +1144,12 @@
     "type": "mc",
     "q": "'bag'은 무엇을 뜻하나요?",
     "choices": [
-      "가방",
       "모자",
       "신발",
+      "가방",
       "우산"
     ],
-    "answer": 0,
+    "answer": 2,
     "explain": "bag은 가방이에요.",
     "tag": "단어",
     "level": "normal"
@@ -1159,12 +1159,12 @@
     "type": "mc",
     "q": "'지우개'를 뜻하는 영어 낱말은 무엇인가요?",
     "choices": [
-      "eraser",
       "scissors",
+      "eraser",
       "glue",
       "paper"
     ],
-    "answer": 0,
+    "answer": 1,
     "explain": "eraser는 지우개예요. scissors는 가위, glue는 풀, paper는 종이예요.",
     "tag": "단어",
     "level": "normal"
@@ -1173,15 +1173,15 @@
     "id": "en1-079",
     "type": "mc",
     "q": "'책'을 뜻하는 영어 낱말을 고르세요.",
-    "answer": 3,
+    "answer": 0,
     "explain": "책은 영어로 book이에요.",
     "tag": "단어",
     "level": "normal",
     "choices": [
+      "book",
       "desk",
       "bag",
-      "pen",
-      "book"
+      "pen"
     ]
   },
   {
@@ -1204,12 +1204,12 @@
     "type": "mc",
     "q": "'mom'은 누구를 뜻하나요?",
     "choices": [
-      "엄마",
       "아빠",
       "언니",
-      "할머니"
+      "할머니",
+      "엄마"
     ],
-    "answer": 0,
+    "answer": 3,
     "explain": "mom은 엄마예요.",
     "tag": "단어",
     "level": "easy"
@@ -1219,12 +1219,12 @@
     "type": "mc",
     "q": "'아빠'를 뜻하는 영어 낱말은 무엇인가요?",
     "choices": [
-      "dad",
       "mom",
       "baby",
+      "dad",
       "boy"
     ],
-    "answer": 0,
+    "answer": 2,
     "explain": "dad는 아빠예요.",
     "tag": "단어",
     "level": "easy"
@@ -1234,12 +1234,12 @@
     "type": "mc",
     "q": "'baby'는 누구를 뜻하나요?",
     "choices": [
-      "아기",
       "어른",
+      "아기",
       "선생님",
       "친구"
     ],
-    "answer": 0,
+    "answer": 1,
     "explain": "baby는 아기예요.",
     "tag": "단어",
     "level": "normal"
@@ -1248,13 +1248,13 @@
     "id": "en1-084",
     "type": "mc",
     "q": "'엄마'를 뜻하는 영어 낱말을 고르세요.",
-    "answer": 0,
+    "answer": 1,
     "explain": "엄마는 영어로 mom이라고 해요.",
     "tag": "단어",
     "level": "normal",
     "choices": [
-      "mom",
       "dad",
+      "mom",
       "sister",
       "brother"
     ]
@@ -1264,12 +1264,12 @@
     "type": "mc",
     "q": "다음 중 가족을 나타내는 낱말이 아닌 것은 무엇인가요?",
     "choices": [
+      "book",
       "mom",
       "dad",
-      "sister",
-      "book"
+      "sister"
     ],
-    "answer": 3,
+    "answer": 0,
     "explain": "book은 책이에요. mom은 엄마, dad는 아빠, sister는 언니(누나·여동생)예요.",
     "tag": "단어",
     "level": "hard"
@@ -1279,12 +1279,12 @@
     "type": "mc",
     "q": "'sun'은 무엇을 뜻하나요?",
     "choices": [
-      "해",
       "달",
       "별",
-      "구름"
+      "구름",
+      "해"
     ],
-    "answer": 0,
+    "answer": 3,
     "explain": "sun은 해(태양)예요.",
     "tag": "단어",
     "level": "easy"
@@ -1294,12 +1294,12 @@
     "type": "mc",
     "q": "'달'을 뜻하는 영어 낱말은 무엇인가요?",
     "choices": [
-      "moon",
       "star",
       "sky",
+      "moon",
       "rain"
     ],
-    "answer": 0,
+    "answer": 2,
     "explain": "moon은 달이에요. star는 별, sky는 하늘, rain은 비예요.",
     "tag": "단어",
     "level": "normal"
@@ -1308,14 +1308,14 @@
     "id": "en1-088",
     "type": "mc",
     "q": "'star'의 뜻을 우리말로 고르세요.",
-    "answer": 0,
+    "answer": 2,
     "explain": "star는 별이에요.",
     "tag": "단어",
     "level": "easy",
     "choices": [
-      "별",
       "달",
       "해",
+      "별",
       "구름"
     ]
   },
@@ -1324,12 +1324,12 @@
     "type": "mc",
     "q": "'tree'는 무엇을 뜻하나요?",
     "choices": [
-      "나무",
       "꽃",
+      "나무",
       "풀",
       "돌"
     ],
-    "answer": 0,
+    "answer": 1,
     "explain": "tree는 나무예요.",
     "tag": "단어",
     "level": "normal"
@@ -1338,14 +1338,14 @@
     "id": "en1-090",
     "type": "mc",
     "q": "'꽃'을 뜻하는 영어 낱말을 고르세요.",
-    "answer": 2,
+    "answer": 0,
     "explain": "꽃은 영어로 flower예요.",
     "tag": "단어",
     "level": "hard",
     "choices": [
+      "flower",
       "tree",
       "grass",
-      "flower",
       "leaf"
     ]
   },
@@ -1354,12 +1354,12 @@
     "type": "mc",
     "q": "'Hello' 대신 짧게 할 수 있는 인사말은 무엇인가요?",
     "choices": [
-      "Hi",
       "Bye",
       "Sorry",
-      "Yes"
+      "Yes",
+      "Hi"
     ],
-    "answer": 0,
+    "answer": 3,
     "explain": "Hi는 Hello처럼 만났을 때 하는 짧은 인사예요.",
     "tag": "표현",
     "level": "easy"
@@ -1369,12 +1369,12 @@
     "type": "mc",
     "q": "실수로 친구의 발을 밟았을 때 하는 말은 무엇인가요?",
     "choices": [
-      "Sorry",
       "Thank you",
       "Hello",
-      "Good night"
+      "Good night",
+      "Sorry"
     ],
-    "answer": 0,
+    "answer": 3,
     "explain": "미안할 때는 Sorry(미안해)라고 말해요.",
     "tag": "표현",
     "level": "easy"
@@ -1384,12 +1384,12 @@
     "type": "mc",
     "q": "친구가 'Thank you'라고 했을 때 대답으로 알맞은 말은 무엇인가요?",
     "choices": [
-      "You're welcome",
       "Good night",
       "Sorry",
+      "You're welcome",
       "Hello"
     ],
-    "answer": 0,
+    "answer": 2,
     "explain": "고맙다는 말에는 You're welcome(천만에)이라고 대답해요.",
     "tag": "표현",
     "level": "hard"
@@ -1399,12 +1399,12 @@
     "type": "mc",
     "q": "'Yes'는 우리말로 무슨 뜻인가요?",
     "choices": [
-      "네",
       "아니요",
+      "네",
       "안녕",
       "고마워"
     ],
-    "answer": 0,
+    "answer": 1,
     "explain": "Yes는 '네'라는 뜻이에요.",
     "tag": "표현",
     "level": "normal"
@@ -1443,15 +1443,15 @@
     "id": "en1-097",
     "type": "mc",
     "q": "친구를 만났을 때 하는 영어 인사를 고르세요.",
-    "answer": 1,
+    "answer": 3,
     "explain": "만났을 때는 Hello나 Hi라고 인사해요.",
     "tag": "표현",
     "level": "easy",
     "choices": [
       "Goodbye",
-      "Hello",
       "Thank you",
-      "Good night"
+      "Good night",
+      "Hello"
     ]
   },
   {
@@ -1459,12 +1459,12 @@
     "type": "mc",
     "q": "오후에 만난 사람에게 하는 인사로 알맞은 것은 무엇인가요?",
     "choices": [
-      "Good afternoon",
       "Good morning",
       "Good night",
+      "Good afternoon",
       "Bye"
     ],
-    "answer": 0,
+    "answer": 2,
     "explain": "오후 인사는 Good afternoon이에요. Good morning은 아침 인사예요.",
     "tag": "표현",
     "level": "hard"
@@ -1473,15 +1473,15 @@
     "id": "en1-099",
     "type": "mc",
     "q": "미안한 마음을 나타내는 영어 낱말을 고르세요.",
-    "answer": 3,
+    "answer": 1,
     "explain": "미안할 때는 Sorry라고 말해요.",
     "tag": "표현",
     "level": "normal",
     "choices": [
       "Please",
+      "Sorry",
       "Hello",
-      "Welcome",
-      "Sorry"
+      "Welcome"
     ]
   },
   {
@@ -1489,13 +1489,763 @@
     "type": "mc",
     "q": "선생님이 'Good morning!'이라고 인사했어요. 알맞은 대답은 무엇인가요?",
     "choices": [
-      "Good morning!",
       "Good night!",
+      "Good morning!",
       "Sorry!",
       "Bye!"
     ],
-    "answer": 0,
+    "answer": 1,
     "explain": "아침 인사에는 똑같이 Good morning!이라고 대답해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en1-101",
+    "type": "mc",
+    "q": "대문자 A의 소문자를 고르세요.",
+    "choices": [
+      "a",
+      "e",
+      "o",
+      "u"
+    ],
+    "answer": 0,
+    "explain": "A의 소문자는 a예요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en1-102",
+    "type": "mc",
+    "q": "대문자 M의 소문자를 고르세요.",
+    "choices": [
+      "n",
+      "w",
+      "u",
+      "m"
+    ],
+    "answer": 3,
+    "explain": "M의 소문자는 m이에요. n과 헷갈리지 마세요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en1-103",
+    "type": "mc",
+    "q": "소문자 h의 대문자를 고르세요.",
+    "choices": [
+      "N",
+      "K",
+      "H",
+      "A"
+    ],
+    "answer": 2,
+    "explain": "h의 대문자는 H예요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en1-104",
+    "type": "mc",
+    "q": "소문자 y의 대문자를 고르세요.",
+    "choices": [
+      "V",
+      "X",
+      "Y",
+      "W"
+    ],
+    "answer": 2,
+    "explain": "y의 대문자는 Y예요.",
+    "tag": "알파벳",
+    "level": "normal"
+  },
+  {
+    "id": "en1-105",
+    "type": "mc",
+    "q": "알파벳 순서에서 C 다음에 오는 대문자를 고르세요.",
+    "choices": [
+      "B",
+      "D",
+      "E",
+      "A"
+    ],
+    "answer": 1,
+    "explain": "A - B - C - D 차례예요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en1-106",
+    "type": "mc",
+    "q": "알파벳 순서에서 T 바로 앞에 오는 대문자를 고르세요.",
+    "choices": [
+      "S",
+      "U",
+      "R",
+      "V"
+    ],
+    "answer": 0,
+    "explain": "R - S - T 차례이므로 T 앞은 S예요.",
+    "tag": "알파벳",
+    "level": "normal"
+  },
+  {
+    "id": "en1-107",
+    "type": "mc",
+    "q": "알파벳의 맨 마지막 대문자를 고르세요.",
+    "choices": [
+      "X",
+      "Y",
+      "W",
+      "Z"
+    ],
+    "answer": 3,
+    "explain": "알파벳은 A로 시작해서 Z로 끝나요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en1-108",
+    "type": "mc",
+    "q": "A부터 Z까지 세면 알파벳 대문자는 모두 몇 개인가요?",
+    "choices": [
+      "24",
+      "25",
+      "28",
+      "26"
+    ],
+    "answer": 3,
+    "explain": "영어 알파벳은 모두 26글자예요.",
+    "tag": "알파벳",
+    "level": "normal"
+  },
+  {
+    "id": "en1-109",
+    "type": "mc",
+    "q": "'sun'의 첫소리에 오는 알파벳 소문자를 고르세요.",
+    "choices": [
+      "c",
+      "z",
+      "s",
+      "n"
+    ],
+    "answer": 2,
+    "explain": "sun은 s 소리로 시작해요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en1-110",
+    "type": "mc",
+    "q": "'fish'의 첫소리에 오는 알파벳 소문자를 고르세요.",
+    "choices": [
+      "p",
+      "f",
+      "v",
+      "h"
+    ],
+    "answer": 1,
+    "explain": "fish는 f 소리로 시작해요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en1-111",
+    "type": "mc",
+    "q": "'tree'의 마지막 글자를 고르세요.",
+    "choices": [
+      "e",
+      "t",
+      "r",
+      "y"
+    ],
+    "answer": 0,
+    "explain": "t-r-e-e 이므로 마지막 글자는 e예요.",
+    "tag": "알파벳",
+    "level": "normal"
+  },
+  {
+    "id": "en1-112",
+    "type": "mc",
+    "q": "다음 중 모음 글자는 무엇인가요?",
+    "choices": [
+      "i",
+      "b",
+      "k",
+      "t"
+    ],
+    "answer": 0,
+    "explain": "모음 글자는 a, e, i, o, u 다섯 개예요.",
+    "tag": "알파벳",
+    "level": "normal"
+  },
+  {
+    "id": "en1-113",
+    "type": "mc",
+    "q": "다음 중 모음 글자가 아닌 것은 무엇인가요?",
+    "choices": [
+      "a",
+      "e",
+      "o",
+      "r"
+    ],
+    "answer": 3,
+    "explain": "r은 자음 글자예요.",
+    "tag": "알파벳",
+    "level": "normal"
+  },
+  {
+    "id": "en1-114",
+    "type": "mc",
+    "q": "'egg'에 들어 있는 모음 글자는 무엇인가요?",
+    "choices": [
+      "g",
+      "a",
+      "e",
+      "o"
+    ],
+    "answer": 2,
+    "explain": "egg에는 모음 e가 들어 있어요.",
+    "tag": "알파벳",
+    "level": "hard"
+  },
+  {
+    "id": "en1-115",
+    "type": "mc",
+    "q": "'B, C, D' 다음에 오는 대문자를 고르세요.",
+    "choices": [
+      "F",
+      "E",
+      "A",
+      "G"
+    ],
+    "answer": 1,
+    "explain": "B - C - D - E 차례예요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en1-116",
+    "type": "mc",
+    "q": "'물고기'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "bird",
+      "fish",
+      "frog",
+      "duck"
+    ],
+    "answer": 1,
+    "explain": "물고기는 fish예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-117",
+    "type": "mc",
+    "q": "'새'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "bird",
+      "bear",
+      "bee",
+      "boat"
+    ],
+    "answer": 0,
+    "explain": "새는 bird예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-118",
+    "type": "mc",
+    "q": "'오리'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "deer",
+      "dove",
+      "dog",
+      "duck"
+    ],
+    "answer": 3,
+    "explain": "오리는 duck이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-119",
+    "type": "mc",
+    "q": "'coat'의 뜻을 우리말로 고르세요.",
+    "choices": [
+      "모자",
+      "신발",
+      "외투",
+      "바지"
+    ],
+    "answer": 2,
+    "explain": "coat은 외투예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-120",
+    "type": "mc",
+    "q": "'hat'의 뜻을 우리말로 고르세요.",
+    "choices": [
+      "손",
+      "집",
+      "모자",
+      "고양이"
+    ],
+    "answer": 2,
+    "explain": "hat은 모자예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-121",
+    "type": "mc",
+    "q": "'손'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "head",
+      "hand",
+      "hair",
+      "heart"
+    ],
+    "answer": 1,
+    "explain": "손은 hand예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-122",
+    "type": "mc",
+    "q": "'눈(신체)'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "eye",
+      "ear",
+      "arm",
+      "leg"
+    ],
+    "answer": 0,
+    "explain": "눈은 eye, 귀는 ear예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-123",
+    "type": "mc",
+    "q": "'nose'는 몸의 어느 부분인가요?",
+    "choices": [
+      "입",
+      "귀",
+      "발",
+      "코"
+    ],
+    "answer": 3,
+    "explain": "nose는 코예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-124",
+    "type": "mc",
+    "q": "숫자 3을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "four",
+      "third",
+      "thirty",
+      "three"
+    ],
+    "answer": 3,
+    "explain": "3은 three예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-125",
+    "type": "mc",
+    "q": "숫자 7을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "six",
+      "seventeen",
+      "seven",
+      "eight"
+    ],
+    "answer": 2,
+    "explain": "7은 seven이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-126",
+    "type": "mc",
+    "q": "'eight'가 뜻하는 수를 고르세요.",
+    "choices": [
+      "6",
+      "8",
+      "7",
+      "18"
+    ],
+    "answer": 1,
+    "explain": "eight는 8이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-127",
+    "type": "mc",
+    "q": "'four'가 뜻하는 수를 고르세요.",
+    "choices": [
+      "4",
+      "2",
+      "14",
+      "40"
+    ],
+    "answer": 0,
+    "explain": "four는 4예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-128",
+    "type": "mc",
+    "q": "'노란색'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "yellow",
+      "red",
+      "green",
+      "brown"
+    ],
+    "answer": 0,
+    "explain": "노란색은 yellow예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-129",
+    "type": "mc",
+    "q": "'red'는 무슨 색인가요?",
+    "choices": [
+      "파란색",
+      "검은색",
+      "초록색",
+      "빨간색"
+    ],
+    "answer": 3,
+    "explain": "red는 빨간색이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-130",
+    "type": "mc",
+    "q": "'검은색'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "white",
+      "blue",
+      "black",
+      "pink"
+    ],
+    "answer": 2,
+    "explain": "검은색은 black이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-131",
+    "type": "mc",
+    "q": "'형이나 남동생'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "sister",
+      "brother",
+      "father",
+      "cousin"
+    ],
+    "answer": 1,
+    "explain": "brother는 형제를 뜻해요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-132",
+    "type": "mc",
+    "q": "'sister'는 가족 중 누구인가요?",
+    "choices": [
+      "형이나 남동생",
+      "언니나 여동생",
+      "할머니",
+      "삼촌"
+    ],
+    "answer": 1,
+    "explain": "sister는 자매를 뜻해요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-133",
+    "type": "mc",
+    "q": "'물'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "water",
+      "milk",
+      "juice",
+      "bread"
+    ],
+    "answer": 0,
+    "explain": "물은 water예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-134",
+    "type": "mc",
+    "q": "'달걀'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "eye",
+      "ear",
+      "arm",
+      "egg"
+    ],
+    "answer": 3,
+    "explain": "달걀은 egg예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-135",
+    "type": "mc",
+    "q": "'해'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "moon",
+      "star",
+      "sun",
+      "sky"
+    ],
+    "answer": 2,
+    "explain": "해는 sun, 달은 moon이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-136",
+    "type": "mc",
+    "q": "'moon'의 뜻을 우리말로 고르세요.",
+    "choices": [
+      "해",
+      "별",
+      "달",
+      "구름"
+    ],
+    "answer": 2,
+    "explain": "moon은 달이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-137",
+    "type": "mc",
+    "q": "'나무'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "three",
+      "tree",
+      "true",
+      "train"
+    ],
+    "answer": 1,
+    "explain": "나무는 tree예요. 숫자 3인 three와 헷갈리지 마세요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en1-138",
+    "type": "mc",
+    "q": "'의자'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "chair",
+      "desk",
+      "door",
+      "table"
+    ],
+    "answer": 0,
+    "explain": "의자는 chair예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-139",
+    "type": "mc",
+    "q": "'door'의 뜻을 우리말로 고르세요.",
+    "choices": [
+      "창문",
+      "벽",
+      "지붕",
+      "문"
+    ],
+    "answer": 3,
+    "explain": "door는 문이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-140",
+    "type": "mc",
+    "q": "'공'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "bell",
+      "bull",
+      "bowl",
+      "ball"
+    ],
+    "answer": 3,
+    "explain": "공은 ball이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-141",
+    "type": "mc",
+    "q": "잠자리에 들기 전에 하는 영어 인사를 고르세요.",
+    "choices": [
+      "Good morning",
+      "Hello",
+      "Good night",
+      "Thank you"
+    ],
+    "answer": 2,
+    "explain": "자기 전에는 Good night이라고 해요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en1-142",
+    "type": "mc",
+    "q": "이름을 물어볼 때 하는 말을 고르세요.",
+    "choices": [
+      "How old are you?",
+      "What's your name?",
+      "Where are you?",
+      "What time is it?"
+    ],
+    "answer": 1,
+    "explain": "이름을 물을 때는 What's your name?이라고 해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en1-143",
+    "type": "mc",
+    "q": "\"What's your name?\"에 대한 대답으로 알맞은 것을 고르세요.",
+    "choices": [
+      "I'm Mina.",
+      "I'm seven.",
+      "It's a cat.",
+      "Yes, I am."
+    ],
+    "answer": 0,
+    "explain": "이름을 물었으므로 이름으로 답해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en1-144",
+    "type": "mc",
+    "q": "몇 살인지 물어볼 때 하는 말을 고르세요.",
+    "choices": [
+      "How old are you?",
+      "What's your name?",
+      "How are you?",
+      "Who is he?"
+    ],
+    "answer": 0,
+    "explain": "나이를 물을 때는 How old are you?라고 해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en1-145",
+    "type": "mc",
+    "q": "\"How old are you?\"에 대한 대답으로 알맞은 것을 고르세요.",
+    "choices": [
+      "I'm Tom.",
+      "It's red.",
+      "Yes, please.",
+      "I'm eight."
+    ],
+    "answer": 3,
+    "explain": "나이를 물었으므로 숫자로 답해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en1-146",
+    "type": "mc",
+    "q": "친구를 처음 만났을 때 하는 인사를 고르세요.",
+    "choices": [
+      "See you later.",
+      "Good night.",
+      "Nice to meet you.",
+      "I'm sorry."
+    ],
+    "answer": 2,
+    "explain": "처음 만나면 Nice to meet you.라고 해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en1-147",
+    "type": "mc",
+    "q": "선생님이 \"Sit down, please.\"라고 하면 어떻게 해야 하나요?",
+    "choices": [
+      "일어선다",
+      "자리에 앉는다",
+      "손을 든다",
+      "밖으로 나간다"
+    ],
+    "answer": 1,
+    "explain": "Sit down은 앉으라는 뜻이에요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en1-148",
+    "type": "mc",
+    "q": "\"Stand up.\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "앉으세요",
+      "일어서세요",
+      "조용히 하세요",
+      "따라 하세요"
+    ],
+    "answer": 1,
+    "explain": "Stand up은 일어서라는 뜻이에요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en1-149",
+    "type": "mc",
+    "q": "저녁에 만난 사람에게 하는 인사를 고르세요.",
+    "choices": [
+      "Good evening",
+      "Good morning",
+      "Good night",
+      "Goodbye"
+    ],
+    "answer": 0,
+    "explain": "저녁에 만나면 Good evening이라고 해요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en1-150",
+    "type": "mc",
+    "q": "\"See you tomorrow!\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "오늘 고마워!",
+      "지금 가자!",
+      "미안해!",
+      "내일 만나!"
+    ],
+    "answer": 3,
+    "explain": "See you tomorrow는 내일 보자는 인사예요.",
     "tag": "표현",
     "level": "normal"
   }
