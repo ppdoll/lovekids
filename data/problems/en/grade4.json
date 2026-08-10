@@ -2248,5 +2248,755 @@
     "explain": "'The library is behind the park'라고 했어요.",
     "tag": "독해",
     "level": "hard"
+  },
+  {
+    "id": "en4-151",
+    "type": "mc",
+    "q": "'복도'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "highway",
+      "holiday",
+      "hallway",
+      "hobby"
+    ],
+    "answer": 2,
+    "explain": "복도는 hallway예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en4-152",
+    "type": "mc",
+    "q": "'운동장'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "playroom",
+      "player",
+      "playground",
+      "playtime"
+    ],
+    "answer": 2,
+    "explain": "운동장은 playground예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en4-153",
+    "type": "mc",
+    "q": "'gym'의 뜻을 우리말로 고르세요.",
+    "choices": [
+      "도서관",
+      "체육관",
+      "교무실",
+      "식당"
+    ],
+    "answer": 1,
+    "explain": "gym은 체육관이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en4-154",
+    "type": "mc",
+    "q": "'숙제'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "homework",
+      "housework",
+      "homeroom",
+      "handwork"
+    ],
+    "answer": 0,
+    "explain": "숙제는 homework예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en4-155",
+    "type": "mc",
+    "q": "'미술'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "arm",
+      "ant",
+      "act",
+      "art"
+    ],
+    "answer": 3,
+    "explain": "미술은 art예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en4-156",
+    "type": "mc",
+    "q": "'음악'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "match",
+      "movie",
+      "minute",
+      "music"
+    ],
+    "answer": 3,
+    "explain": "음악은 music이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en4-157",
+    "type": "mc",
+    "q": "'체육'을 뜻하는 영어 표현을 고르세요.",
+    "choices": [
+      "P.M.",
+      "T.V.",
+      "P.E.",
+      "O.K."
+    ],
+    "answer": 2,
+    "explain": "체육은 P.E.(physical education)예요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en4-158",
+    "type": "mc",
+    "q": "'화창한 날씨'가 아닌 것을 고르세요.",
+    "choices": [
+      "sunny",
+      "stormy",
+      "clear",
+      "bright"
+    ],
+    "answer": 1,
+    "explain": "stormy는 폭풍이 치는 날씨예요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en4-159",
+    "type": "mc",
+    "q": "'따뜻한'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "warm",
+      "cool",
+      "cold",
+      "worm"
+    ],
+    "answer": 0,
+    "explain": "따뜻한 것은 warm이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en4-160",
+    "type": "mc",
+    "q": "'시원한'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "cool",
+      "warm",
+      "hot",
+      "cold"
+    ],
+    "answer": 0,
+    "explain": "시원한 것은 cool이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en4-161",
+    "type": "mc",
+    "q": "'배고픈'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "thirsty",
+      "angry",
+      "hurry",
+      "hungry"
+    ],
+    "answer": 3,
+    "explain": "배고픈 것은 hungry예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en4-162",
+    "type": "mc",
+    "q": "'thirsty'의 뜻을 우리말로 고르세요.",
+    "choices": [
+      "배고픈",
+      "졸린",
+      "목이 마른",
+      "피곤한"
+    ],
+    "answer": 2,
+    "explain": "thirsty는 목이 마르다는 뜻이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en4-163",
+    "type": "mc",
+    "q": "'졸린'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "sleep",
+      "sleepy",
+      "slowly",
+      "silly"
+    ],
+    "answer": 1,
+    "explain": "졸린 것은 sleepy예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en4-164",
+    "type": "mc",
+    "q": "'일요일'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "Someday",
+      "Sunday",
+      "Sandy",
+      "Sunny"
+    ],
+    "answer": 1,
+    "explain": "일요일은 Sunday예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en4-165",
+    "type": "mc",
+    "q": "빈칸에 알맞은 be동사를 고르세요.\nMy shoes ___ new.",
+    "choices": [
+      "are",
+      "am",
+      "is",
+      "be"
+    ],
+    "answer": 0,
+    "explain": "shoes는 복수이므로 are를 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en4-166",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nHe ___ TV every evening.",
+    "choices": [
+      "watch",
+      "watching",
+      "watched",
+      "watches"
+    ],
+    "answer": 3,
+    "explain": "3인칭 단수 현재형은 -es를 붙여요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en4-167",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nShe ___ her homework now.",
+    "choices": [
+      "do",
+      "does",
+      "is doing",
+      "did"
+    ],
+    "answer": 2,
+    "explain": "지금 하고 있는 일은 be동사 + -ing로 나타내요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en4-168",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nThe cat is ___ the chair. (의자 뒤에)",
+    "choices": [
+      "in",
+      "on",
+      "behind",
+      "under"
+    ],
+    "answer": 2,
+    "explain": "뒤는 behind예요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en4-169",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nWe live ___ Seoul.",
+    "choices": [
+      "on",
+      "in",
+      "at",
+      "to"
+    ],
+    "answer": 1,
+    "explain": "도시 앞에는 in을 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en4-170",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nMy birthday is ___ May.",
+    "choices": [
+      "in",
+      "on",
+      "at",
+      "to"
+    ],
+    "answer": 0,
+    "explain": "달 앞에는 in을 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en4-171",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nI go to school ___ Monday.",
+    "choices": [
+      "in",
+      "at",
+      "to",
+      "on"
+    ],
+    "answer": 3,
+    "explain": "요일 앞에는 on을 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en4-172",
+    "type": "mc",
+    "q": "괄호 안의 낱말을 복수형으로 바꾼 것을 고르세요.\nI see two (child).",
+    "choices": [
+      "childs",
+      "childes",
+      "child",
+      "children"
+    ],
+    "answer": 3,
+    "explain": "child의 복수형은 children이에요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en4-173",
+    "type": "mc",
+    "q": "괄호 안의 낱말을 복수형으로 바꾼 것을 고르세요.\nThere are three (dish).",
+    "choices": [
+      "dishs",
+      "dishies",
+      "dishes",
+      "dish"
+    ],
+    "answer": 2,
+    "explain": "-sh로 끝나면 -es를 붙여요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en4-174",
+    "type": "mc",
+    "q": "낱말들을 바른 순서로 늘어놓은 문장을 고르세요.\n( a / she / teacher / is )",
+    "choices": [
+      "She a teacher is.",
+      "She is a teacher.",
+      "Is she a teacher.",
+      "A teacher she is."
+    ],
+    "answer": 1,
+    "explain": "주어 - be동사 - 보어 차례예요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en4-175",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\n___ they your friends?",
+    "choices": [
+      "Are",
+      "Is",
+      "Am",
+      "Does"
+    ],
+    "answer": 0,
+    "explain": "주어가 they이면 Are로 물어요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en4-176",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nThere ___ a book on the desk.",
+    "choices": [
+      "is",
+      "are",
+      "am",
+      "be"
+    ],
+    "answer": 0,
+    "explain": "뒤에 오는 명사가 단수이면 is를 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en4-177",
+    "type": "mc",
+    "q": "다음 중 문법이 바른 문장을 고르세요.",
+    "choices": [
+      "I doesn't have a pen.",
+      "I not have a pen.",
+      "I am not have a pen.",
+      "I don't have a pen."
+    ],
+    "answer": 3,
+    "explain": "주어가 I이면 don't를 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en4-178",
+    "type": "mc",
+    "q": "\"How was your weekend?\"에 대한 대답으로 알맞은 것을 고르세요.",
+    "choices": [
+      "It is Monday.",
+      "I'm ten.",
+      "It was great.",
+      "Yes, I can."
+    ],
+    "answer": 2,
+    "explain": "지난 일을 물었으므로 was로 답해요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en4-179",
+    "type": "mc",
+    "q": "\"What are you doing?\"에 대한 대답으로 알맞은 것을 고르세요.",
+    "choices": [
+      "I'm ten years old.",
+      "I'm reading a book.",
+      "It's Friday.",
+      "Yes, I am."
+    ],
+    "answer": 1,
+    "explain": "지금 하는 일을 물었으므로 -ing로 답해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en4-180",
+    "type": "mc",
+    "q": "빈칸에 들어갈 낱말을 고르세요.\n___ is your favorite subject? (무엇)",
+    "choices": [
+      "Who",
+      "What",
+      "Where",
+      "How"
+    ],
+    "answer": 1,
+    "explain": "무엇인지 물을 때는 What을 써요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en4-181",
+    "type": "mc",
+    "q": "\"Whose bag is this?\"에 대한 대답으로 알맞은 것을 고르세요.",
+    "choices": [
+      "It's Mina's.",
+      "It's here.",
+      "It's big.",
+      "It's Monday."
+    ],
+    "answer": 0,
+    "explain": "누구 것인지 물었으므로 소유로 답해요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en4-182",
+    "type": "mc",
+    "q": "가게에서 물건을 살 때 하는 말로 알맞은 것을 고르세요.",
+    "choices": [
+      "I made this one.",
+      "I saw this one.",
+      "I found this one.",
+      "I'll take this one."
+    ],
+    "answer": 3,
+    "explain": "I'll take ~는 이걸로 하겠다는 뜻이에요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en4-183",
+    "type": "mc",
+    "q": "\"Can you help me?\"에 대한 대답으로 알맞은 것을 고르세요.",
+    "choices": [
+      "Yes, I am.",
+      "Yes, I do.",
+      "Sure, no problem.",
+      "Yes, it is."
+    ],
+    "answer": 2,
+    "explain": "can으로 물었으므로 흔쾌히 답해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en4-184",
+    "type": "mc",
+    "q": "\"See you next week.\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "지난주에 봤어",
+      "오늘 만나자",
+      "다음 주에 보자",
+      "내일 보자"
+    ],
+    "answer": 2,
+    "explain": "next week은 다음 주예요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en4-185",
+    "type": "mc",
+    "q": "친구를 초대할 때 하는 말로 알맞은 것을 고르세요.",
+    "choices": [
+      "I went to a party.",
+      "Come to my birthday party!",
+      "The party was fun.",
+      "Where is the party?"
+    ],
+    "answer": 1,
+    "explain": "오라고 청하는 표현이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en4-186",
+    "type": "mc",
+    "q": "\"I don't feel well.\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "몸이 안 좋아요",
+      "기분이 좋아요",
+      "잘 모르겠어요",
+      "괜찮아요"
+    ],
+    "answer": 0,
+    "explain": "feel well은 몸 상태가 좋다는 뜻이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en4-187",
+    "type": "mc",
+    "q": "\"Watch out!\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "봐 봐!",
+      "나가!",
+      "기다려!",
+      "조심해!"
+    ],
+    "answer": 3,
+    "explain": "위험할 때 조심하라고 외치는 말이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en4-188",
+    "type": "mc",
+    "q": "\"Let's meet at three.\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "3명이 만나자",
+      "3일에 만나자",
+      "3층에서 만나자",
+      "3시에 만나자"
+    ],
+    "answer": 3,
+    "explain": "at three는 3시에라는 뜻이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en4-189",
+    "type": "mc",
+    "q": "\"Take care!\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "돌봐 줘!",
+      "받아!",
+      "잘 지내!",
+      "조심해서 가!"
+    ],
+    "answer": 2,
+    "explain": "헤어질 때 건네는 인사예요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en4-190",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nMy name is Mina. I have a cat and two fish. I love animals.\n\n미나가 기르는 동물은 모두 몇 마리인가요?",
+    "choices": [
+      "2마리",
+      "3마리",
+      "1마리",
+      "4마리"
+    ],
+    "answer": 1,
+    "explain": "고양이 1마리 + 물고기 2마리 = 3마리",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en4-191",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nToday is Saturday. I clean my room in the morning. In the afternoon, I play soccer.\n\n글쓴이가 오후에 하는 일은 무엇인가요?",
+    "choices": [
+      "축구하기",
+      "방 청소하기",
+      "책 읽기",
+      "TV 보기"
+    ],
+    "answer": 0,
+    "explain": "'In the afternoon, I play soccer'라고 했어요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en4-192",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nMy school starts at eight thirty. It finishes at three. I take the bus home.\n\n학교가 끝나는 시각은 언제인가요?",
+    "choices": [
+      "3시",
+      "8시 30분",
+      "8시",
+      "3시 30분"
+    ],
+    "answer": 0,
+    "explain": "'It finishes at three'라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en4-193",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nI have four classes today. Math, English, art, and science.\n\n글쓴이가 오늘 듣지 않는 과목은 무엇인가요?",
+    "choices": [
+      "수학",
+      "영어",
+      "미술",
+      "음악"
+    ],
+    "answer": 3,
+    "explain": "음악(music)은 나오지 않아요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en4-194",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nIt is snowy today. Jinu wears a coat, gloves, and a hat.\n\n오늘 날씨는 어떤가요?",
+    "choices": [
+      "비가 온다",
+      "맑다",
+      "눈이 온다",
+      "바람이 분다"
+    ],
+    "answer": 2,
+    "explain": "snowy는 눈이 온다는 뜻이에요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en4-195",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nSora has a piano lesson on Tuesday and a swimming lesson on Friday.\n\n소라가 수영을 배우는 요일은 언제인가요?",
+    "choices": [
+      "화요일",
+      "금요일",
+      "수요일",
+      "목요일"
+    ],
+    "answer": 1,
+    "explain": "'a swimming lesson on Friday'라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en4-196",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nMy dad is a cook. He works at a restaurant. He makes delicious pasta.\n\n아빠가 일하는 곳은 어디인가요?",
+    "choices": [
+      "학교",
+      "식당",
+      "병원",
+      "가게"
+    ],
+    "answer": 1,
+    "explain": "restaurant은 식당이에요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en4-197",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nI read three books last month. This month I read five books.\n\n이번 달에 읽은 책은 지난달보다 몇 권 더 많은가요?",
+    "choices": [
+      "2권",
+      "3권",
+      "5권",
+      "8권"
+    ],
+    "answer": 0,
+    "explain": "5 - 3 = 2권",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en4-198",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nOur class will go to the museum on Thursday. Please bring a notebook and a pencil.\n\n가져가야 하는 것을 고르세요.",
+    "choices": [
+      "도시락",
+      "우산",
+      "카메라",
+      "공책과 연필"
+    ],
+    "answer": 3,
+    "explain": "'bring a notebook and a pencil'이라고 했어요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en4-199",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\nJinho is taller than Mina. Mina is taller than Suho.\n\n키가 가장 작은 사람은 누구인가요?",
+    "choices": [
+      "Jinho",
+      "Mina",
+      "Suho",
+      "알 수 없어요"
+    ],
+    "answer": 2,
+    "explain": "진호 > 미나 > 수호 순서예요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en4-200",
+    "type": "mc",
+    "q": "'과목'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "object",
+      "project",
+      "subject",
+      "sublet"
+    ],
+    "answer": 2,
+    "explain": "과목은 subject예요.",
+    "tag": "단어",
+    "level": "normal"
   }
 ]

@@ -2248,5 +2248,770 @@
     "explain": "See you tomorrow는 내일 보자는 인사예요.",
     "tag": "표현",
     "level": "normal"
+  },
+  {
+    "id": "en1-151",
+    "type": "mc",
+    "q": "대문자 G의 소문자를 고르세요.",
+    "choices": [
+      "q",
+      "p",
+      "g",
+      "j"
+    ],
+    "answer": 2,
+    "explain": "G의 소문자는 g예요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en1-152",
+    "type": "mc",
+    "q": "대문자 L의 소문자를 고르세요.",
+    "choices": [
+      "i",
+      "t",
+      "l",
+      "j"
+    ],
+    "answer": 2,
+    "explain": "L의 소문자는 l이에요.",
+    "tag": "알파벳",
+    "level": "normal"
+  },
+  {
+    "id": "en1-153",
+    "type": "mc",
+    "q": "소문자 k의 대문자를 고르세요.",
+    "choices": [
+      "X",
+      "K",
+      "R",
+      "N"
+    ],
+    "answer": 1,
+    "explain": "k의 대문자는 K예요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en1-154",
+    "type": "mc",
+    "q": "소문자 r의 대문자를 고르세요.",
+    "choices": [
+      "R",
+      "P",
+      "B",
+      "D"
+    ],
+    "answer": 0,
+    "explain": "r의 대문자는 R이에요.",
+    "tag": "알파벳",
+    "level": "normal"
+  },
+  {
+    "id": "en1-155",
+    "type": "mc",
+    "q": "알파벳 순서에서 H 다음에 오는 대문자를 고르세요.",
+    "choices": [
+      "G",
+      "J",
+      "K",
+      "I"
+    ],
+    "answer": 3,
+    "explain": "G - H - I 차례예요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en1-156",
+    "type": "mc",
+    "q": "알파벳 순서에서 R 바로 앞에 오는 대문자를 고르세요.",
+    "choices": [
+      "S",
+      "P",
+      "T",
+      "Q"
+    ],
+    "answer": 3,
+    "explain": "P - Q - R 차례예요.",
+    "tag": "알파벳",
+    "level": "normal"
+  },
+  {
+    "id": "en1-157",
+    "type": "mc",
+    "q": "'milk'의 첫 글자를 고르세요.",
+    "choices": [
+      "n",
+      "w",
+      "m",
+      "k"
+    ],
+    "answer": 2,
+    "explain": "milk는 m으로 시작해요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en1-158",
+    "type": "mc",
+    "q": "'cow'의 첫 글자를 고르세요.",
+    "choices": [
+      "k",
+      "c",
+      "o",
+      "w"
+    ],
+    "answer": 1,
+    "explain": "cow는 c로 시작해요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en1-159",
+    "type": "mc",
+    "q": "'bus'의 마지막 글자를 고르세요.",
+    "choices": [
+      "s",
+      "b",
+      "u",
+      "z"
+    ],
+    "answer": 0,
+    "explain": "b-u-s 이므로 마지막은 s예요.",
+    "tag": "알파벳",
+    "level": "normal"
+  },
+  {
+    "id": "en1-160",
+    "type": "mc",
+    "q": "'cup'에 들어 있는 모음 글자를 고르세요.",
+    "choices": [
+      "u",
+      "c",
+      "p",
+      "a"
+    ],
+    "answer": 0,
+    "explain": "c-u-p에서 모음은 u예요.",
+    "tag": "알파벳",
+    "level": "normal"
+  },
+  {
+    "id": "en1-161",
+    "type": "mc",
+    "q": "모음 글자는 모두 몇 개인가요?",
+    "choices": [
+      "4개",
+      "6개",
+      "21개",
+      "5개"
+    ],
+    "answer": 3,
+    "explain": "a, e, i, o, u 다섯 개예요.",
+    "tag": "알파벳",
+    "level": "normal"
+  },
+  {
+    "id": "en1-162",
+    "type": "mc",
+    "q": "알파벳 순서에서 두 번째 대문자를 고르세요.",
+    "choices": [
+      "A",
+      "C",
+      "B",
+      "Z"
+    ],
+    "answer": 2,
+    "explain": "A 다음이 B예요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en1-163",
+    "type": "mc",
+    "q": "'치즈'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "cherry",
+      "cheese",
+      "chicken",
+      "chair"
+    ],
+    "answer": 1,
+    "explain": "치즈는 cheese예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-164",
+    "type": "mc",
+    "q": "'소'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "cat",
+      "cow",
+      "cap",
+      "car"
+    ],
+    "answer": 1,
+    "explain": "소는 cow예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-165",
+    "type": "mc",
+    "q": "'개구리'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "frog",
+      "fish",
+      "fox",
+      "fly"
+    ],
+    "answer": 0,
+    "explain": "개구리는 frog예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-166",
+    "type": "mc",
+    "q": "'벌'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "bird",
+      "bear",
+      "bat",
+      "bee"
+    ],
+    "answer": 3,
+    "explain": "벌은 bee예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-167",
+    "type": "mc",
+    "q": "'lion'의 뜻을 우리말로 고르세요.",
+    "choices": [
+      "호랑이",
+      "곰",
+      "사자",
+      "여우"
+    ],
+    "answer": 2,
+    "explain": "lion은 사자예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-168",
+    "type": "mc",
+    "q": "'원숭이'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "mouse",
+      "money",
+      "monkey",
+      "moon"
+    ],
+    "answer": 2,
+    "explain": "원숭이는 monkey예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-169",
+    "type": "mc",
+    "q": "'양말'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "shoe",
+      "sock",
+      "shirt",
+      "skirt"
+    ],
+    "answer": 1,
+    "explain": "양말은 sock이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-170",
+    "type": "mc",
+    "q": "'shoe'의 뜻을 우리말로 고르세요.",
+    "choices": [
+      "신발",
+      "모자",
+      "양말",
+      "바지"
+    ],
+    "answer": 0,
+    "explain": "shoe는 신발이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-171",
+    "type": "mc",
+    "q": "'모자'를 뜻하는 영어 낱말 중 야구모자를 가리키는 것을 고르세요.",
+    "choices": [
+      "cup",
+      "cop",
+      "camp",
+      "cap"
+    ],
+    "answer": 3,
+    "explain": "테가 앞에만 있는 모자는 cap이에요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en1-172",
+    "type": "mc",
+    "q": "'컵'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "cap",
+      "cop",
+      "carp",
+      "cup"
+    ],
+    "answer": 3,
+    "explain": "컵은 cup이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-173",
+    "type": "mc",
+    "q": "'숟가락'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "fork",
+      "knife",
+      "spoon",
+      "plate"
+    ],
+    "answer": 2,
+    "explain": "숟가락은 spoon이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-174",
+    "type": "mc",
+    "q": "'버스'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "bug",
+      "bus",
+      "bag",
+      "big"
+    ],
+    "answer": 1,
+    "explain": "버스는 bus예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-175",
+    "type": "mc",
+    "q": "'자동차'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "car",
+      "cat",
+      "cow",
+      "cap"
+    ],
+    "answer": 0,
+    "explain": "자동차는 car예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-176",
+    "type": "mc",
+    "q": "'자전거'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "bike",
+      "bake",
+      "book",
+      "back"
+    ],
+    "answer": 0,
+    "explain": "자전거는 bike예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-177",
+    "type": "mc",
+    "q": "'box'의 뜻을 우리말로 고르세요.",
+    "choices": [
+      "책",
+      "공",
+      "가방",
+      "상자"
+    ],
+    "answer": 3,
+    "explain": "box는 상자예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-178",
+    "type": "mc",
+    "q": "'책상'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "dish",
+      "duck",
+      "desk",
+      "dog"
+    ],
+    "answer": 2,
+    "explain": "책상은 desk예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-179",
+    "type": "mc",
+    "q": "'침대'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "bad",
+      "bed",
+      "bag",
+      "big"
+    ],
+    "answer": 1,
+    "explain": "침대는 bed예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-180",
+    "type": "mc",
+    "q": "'집'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "horse",
+      "house",
+      "hose",
+      "hour"
+    ],
+    "answer": 1,
+    "explain": "집은 house예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-181",
+    "type": "mc",
+    "q": "'풀'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "grass",
+      "glass",
+      "grape",
+      "green"
+    ],
+    "answer": 0,
+    "explain": "풀은 grass예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-182",
+    "type": "mc",
+    "q": "'cloud'의 뜻을 우리말로 고르세요.",
+    "choices": [
+      "비",
+      "눈",
+      "바람",
+      "구름"
+    ],
+    "answer": 3,
+    "explain": "cloud는 구름이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-183",
+    "type": "mc",
+    "q": "'하늘'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "sea",
+      "ski",
+      "sky",
+      "sun"
+    ],
+    "answer": 2,
+    "explain": "하늘은 sky예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-184",
+    "type": "mc",
+    "q": "'귀'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "eye",
+      "arm",
+      "ear",
+      "leg"
+    ],
+    "answer": 2,
+    "explain": "귀는 ear예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-185",
+    "type": "mc",
+    "q": "'mouth'는 몸의 어느 부분인가요?",
+    "choices": [
+      "코",
+      "입",
+      "귀",
+      "눈"
+    ],
+    "answer": 1,
+    "explain": "mouth는 입이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-186",
+    "type": "mc",
+    "q": "'머리'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "head",
+      "hand",
+      "hair",
+      "hat"
+    ],
+    "answer": 0,
+    "explain": "머리는 head예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-187",
+    "type": "mc",
+    "q": "'leg'는 몸의 어느 부분인가요?",
+    "choices": [
+      "팔",
+      "손",
+      "발",
+      "다리"
+    ],
+    "answer": 3,
+    "explain": "leg는 다리예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-188",
+    "type": "mc",
+    "q": "'팔'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "ear",
+      "eye",
+      "leg",
+      "arm"
+    ],
+    "answer": 3,
+    "explain": "팔은 arm이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en1-189",
+    "type": "mc",
+    "q": "숫자 5를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "fine",
+      "four",
+      "five",
+      "fifty"
+    ],
+    "answer": 2,
+    "explain": "5는 five예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-190",
+    "type": "mc",
+    "q": "'nine'이 뜻하는 수를 고르세요.",
+    "choices": [
+      "5",
+      "9",
+      "19",
+      "90"
+    ],
+    "answer": 1,
+    "explain": "nine은 9예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-191",
+    "type": "mc",
+    "q": "'비'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "rain",
+      "train",
+      "rainbow",
+      "ring"
+    ],
+    "answer": 0,
+    "explain": "비는 rain이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en1-192",
+    "type": "mc",
+    "q": "오후에 만난 사람에게 하는 인사를 고르세요.",
+    "choices": [
+      "Good afternoon",
+      "Good morning",
+      "Good night",
+      "Good luck"
+    ],
+    "answer": 0,
+    "explain": "오후 인사는 Good afternoon이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en1-193",
+    "type": "mc",
+    "q": "친구에게 사과할 때 하는 말을 고르세요.",
+    "choices": [
+      "Thank you.",
+      "You're welcome.",
+      "Good job.",
+      "I'm sorry."
+    ],
+    "answer": 3,
+    "explain": "미안할 때는 I'm sorry.라고 해요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en1-194",
+    "type": "mc",
+    "q": "\"Come here.\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "가세요",
+      "앉으세요",
+      "이리 오세요",
+      "일어나세요"
+    ],
+    "answer": 2,
+    "explain": "come here는 이리 오라는 뜻이에요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en1-195",
+    "type": "mc",
+    "q": "\"Wash your hands.\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "손을 드세요",
+      "손을 씻으세요",
+      "손을 잡으세요",
+      "손뼉을 치세요"
+    ],
+    "answer": 1,
+    "explain": "wash는 씻다는 뜻이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en1-196",
+    "type": "mc",
+    "q": "\"Look at me.\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "나를 도와주세요",
+      "나를 보세요",
+      "나에게 오세요",
+      "나를 따라오세요"
+    ],
+    "answer": 1,
+    "explain": "look at ~은 ~을 보라는 뜻이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en1-197",
+    "type": "mc",
+    "q": "선생님이 \"Line up, please.\"라고 하면 어떻게 해야 하나요?",
+    "choices": [
+      "줄을 선다",
+      "자리에 앉는다",
+      "손을 든다",
+      "책을 읽는다"
+    ],
+    "answer": 0,
+    "explain": "line up은 줄을 서라는 뜻이에요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en1-198",
+    "type": "mc",
+    "q": "\"Be careful!\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "빨리 해!",
+      "잘했어!",
+      "고마워!",
+      "조심해!"
+    ],
+    "answer": 3,
+    "explain": "careful은 조심하다는 뜻이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en1-199",
+    "type": "mc",
+    "q": "친구와 함께 무언가를 하자고 말할 때 쓰는 표현을 고르세요.",
+    "choices": [
+      "Stop it!",
+      "Go away!",
+      "Let's go!",
+      "Not now."
+    ],
+    "answer": 2,
+    "explain": "Let's ~는 ~하자는 뜻이에요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en1-200",
+    "type": "mc",
+    "q": "\"Happy New Year!\"는 언제 하는 인사인가요?",
+    "choices": [
+      "생일",
+      "크리스마스",
+      "새해",
+      "추석"
+    ],
+    "answer": 2,
+    "explain": "새해를 축하하는 인사예요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en1-201",
+    "type": "mc",
+    "q": "\"I love you.\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "고마워요",
+      "사랑해요",
+      "미안해요",
+      "반가워요"
+    ],
+    "answer": 1,
+    "explain": "love는 사랑하다는 뜻이에요.",
+    "tag": "표현",
+    "level": "easy"
   }
 ]

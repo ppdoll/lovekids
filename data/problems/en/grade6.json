@@ -2248,5 +2248,755 @@
     "explain": "enjoy 뒤에는 동명사(-ing)가 와요.",
     "tag": "문법",
     "level": "hard"
+  },
+  {
+    "id": "en6-151",
+    "type": "mc",
+    "q": "'문화'를 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "capture",
+      "creature",
+      "culture",
+      "curtain"
+    ],
+    "answer": 2,
+    "explain": "문화는 culture예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en6-152",
+    "type": "mc",
+    "q": "'역사적인'을 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "history",
+      "historian",
+      "historical",
+      "historic"
+    ],
+    "answer": 2,
+    "explain": "역사와 관련된 것은 historical이에요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en6-153",
+    "type": "mc",
+    "q": "'과학자'를 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "science",
+      "scientist",
+      "scientific",
+      "scientology"
+    ],
+    "answer": 1,
+    "explain": "과학자는 scientist예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en6-154",
+    "type": "mc",
+    "q": "'기계'를 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "machine",
+      "magazine",
+      "medicine",
+      "magic"
+    ],
+    "answer": 0,
+    "explain": "기계는 machine이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en6-155",
+    "type": "mc",
+    "q": "'에너지'를 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "enemy",
+      "engine",
+      "enough",
+      "energy"
+    ],
+    "answer": 3,
+    "explain": "에너지는 energy예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en6-156",
+    "type": "mc",
+    "q": "'plastic'의 뜻을 우리말로 고르세요.",
+    "choices": [
+      "유리",
+      "종이",
+      "금속",
+      "플라스틱"
+    ],
+    "answer": 3,
+    "explain": "plastic은 플라스틱이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en6-157",
+    "type": "mc",
+    "q": "'쓰레기'를 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "garden",
+      "garage",
+      "garbage",
+      "gather"
+    ],
+    "answer": 2,
+    "explain": "쓰레기는 garbage(또는 trash)예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en6-158",
+    "type": "mc",
+    "q": "'문제'를 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "program",
+      "problem",
+      "promise",
+      "produce"
+    ],
+    "answer": 1,
+    "explain": "문제는 problem이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en6-159",
+    "type": "mc",
+    "q": "'해결하다'를 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "solve",
+      "save",
+      "serve",
+      "sell"
+    ],
+    "answer": 0,
+    "explain": "해결하다는 solve예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en6-160",
+    "type": "mc",
+    "q": "'선택하다'를 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "choose",
+      "chose",
+      "cheese",
+      "chase"
+    ],
+    "answer": 0,
+    "explain": "선택하다는 choose예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en6-161",
+    "type": "mc",
+    "q": "'설명하다'를 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "explore",
+      "express",
+      "expect",
+      "explain"
+    ],
+    "answer": 3,
+    "explain": "설명하다는 explain이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en6-162",
+    "type": "mc",
+    "q": "'기억하다'를 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "remind",
+      "remove",
+      "remember",
+      "repeat"
+    ],
+    "answer": 2,
+    "explain": "기억하다는 remember예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en6-163",
+    "type": "mc",
+    "q": "괄호 안의 단어를 알맞은 형태로 바꾼 것을 고르세요.\nI (write) a letter to my friend last week.",
+    "choices": [
+      "write",
+      "wrote",
+      "writes",
+      "writed"
+    ],
+    "answer": 1,
+    "explain": "last week이므로 과거형 wrote를 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en6-164",
+    "type": "mc",
+    "q": "괄호 안의 단어를 알맞은 형태로 바꾼 것을 고르세요.\nShe (take) many pictures yesterday.",
+    "choices": [
+      "take",
+      "took",
+      "takes",
+      "taked"
+    ],
+    "answer": 1,
+    "explain": "take의 과거형은 took예요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en6-165",
+    "type": "mc",
+    "q": "괄호 안의 단어를 알맞은 형태로 바꾼 것을 고르세요.\nThis is the (long) river in Korea.",
+    "choices": [
+      "longest",
+      "longer",
+      "long",
+      "most long"
+    ],
+    "answer": 0,
+    "explain": "최상급은 -est를 붙여요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en6-166",
+    "type": "mc",
+    "q": "괄호 안의 단어를 알맞은 형태로 바꾼 것을 고르세요.\nMath is (difficult) than English for me.",
+    "choices": [
+      "difficulter",
+      "most difficult",
+      "difficult",
+      "more difficult"
+    ],
+    "answer": 3,
+    "explain": "긴 형용사는 more를 붙여요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en6-167",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nI (   ) going to visit my uncle tomorrow.",
+    "choices": [
+      "is",
+      "are",
+      "am",
+      "be"
+    ],
+    "answer": 2,
+    "explain": "주어가 I이면 am을 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en6-168",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nHe has (   ) to Japan twice.",
+    "choices": [
+      "be",
+      "went",
+      "been",
+      "going"
+    ],
+    "answer": 2,
+    "explain": "have been to ~는 가 본 적이 있다는 뜻이에요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en6-169",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nThe book (   ) written by a Korean writer.",
+    "choices": [
+      "did",
+      "was",
+      "has",
+      "were"
+    ],
+    "answer": 1,
+    "explain": "수동태 과거는 was + 과거분사예요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en6-170",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nIf you study hard, you (   ) pass the exam.",
+    "choices": [
+      "will",
+      "would",
+      "were",
+      "are"
+    ],
+    "answer": 0,
+    "explain": "조건문의 결과는 will로 나타내요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en6-171",
+    "type": "mc",
+    "q": "빈칸에 알맞은 의문사를 고르세요.\nA: (   ) do you want to be? B: A pilot.",
+    "choices": [
+      "Who",
+      "Where",
+      "When",
+      "What"
+    ],
+    "answer": 3,
+    "explain": "장래 희망은 What do you want to be?로 물어요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en6-172",
+    "type": "mc",
+    "q": "다음 중 불규칙 과거형을 잘못 쓴 것을 고르세요.",
+    "choices": [
+      "went",
+      "ate",
+      "saw",
+      "goed"
+    ],
+    "answer": 3,
+    "explain": "go의 과거형은 went예요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en6-173",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nHow (   ) sugar do you need?",
+    "choices": [
+      "many",
+      "long",
+      "much",
+      "old"
+    ],
+    "answer": 2,
+    "explain": "sugar는 셀 수 없으므로 much를 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en6-174",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nThere aren't (   ) apples in the basket.",
+    "choices": [
+      "some",
+      "any",
+      "much",
+      "a"
+    ],
+    "answer": 1,
+    "explain": "부정문에서는 any를 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en6-175",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nShe finished (   ) her homework.",
+    "choices": [
+      "doing",
+      "to do",
+      "do",
+      "did"
+    ],
+    "answer": 0,
+    "explain": "finish 뒤에는 동명사가 와요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en6-176",
+    "type": "mc",
+    "q": "과거 부정문을 바르게 쓴 것을 고르세요.",
+    "choices": [
+      "I didn't watch TV last night.",
+      "I didn't watched TV last night.",
+      "I don't watched TV last night.",
+      "I not watch TV last night."
+    ],
+    "answer": 0,
+    "explain": "didn't 뒤에는 동사원형이 와요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en6-177",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nIt is important (   ) save water.",
+    "choices": [
+      "for",
+      "of",
+      "at",
+      "to"
+    ],
+    "answer": 3,
+    "explain": "It is 형용사 to부정사 구문이에요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en6-178",
+    "type": "mc",
+    "q": "빈칸에 알맞은 낱말을 고르세요.\nA: (   ) about going to the beach? B: Sounds great!",
+    "choices": [
+      "What",
+      "Why",
+      "How",
+      "When"
+    ],
+    "answer": 2,
+    "explain": "How about ~?은 제안하는 표현이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en6-179",
+    "type": "mc",
+    "q": "상대의 말에 놀라움을 나타내는 표현으로 알맞은 것을 고르세요.",
+    "choices": [
+      "I don't think so.",
+      "Really? That's amazing!",
+      "Never mind.",
+      "Let me see."
+    ],
+    "answer": 1,
+    "explain": "놀라움과 감탄을 나타내요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en6-180",
+    "type": "mc",
+    "q": "빈칸에 알맞은 낱말을 고르세요.\nA: I have a bad cold. B: That's too (   ).",
+    "choices": [
+      "good",
+      "bad",
+      "much",
+      "many"
+    ],
+    "answer": 1,
+    "explain": "That's too bad.는 '안타깝네'라는 뜻이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en6-181",
+    "type": "mc",
+    "q": "병원에서 의사가 할 수 있는 말로 알맞은 것을 고르세요.",
+    "choices": [
+      "Take this medicine twice a day.",
+      "Where is the library?",
+      "How much is it?",
+      "I'd like to order."
+    ],
+    "answer": 0,
+    "explain": "약 복용법을 알려 주는 말이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en6-182",
+    "type": "mc",
+    "q": "빈칸에 알맞은 낱말을 고르세요.\nA: Could you (   ) that again? B: Sure.",
+    "choices": [
+      "said",
+      "saying",
+      "says",
+      "say"
+    ],
+    "answer": 3,
+    "explain": "Could you 뒤에는 동사원형이 와요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en6-183",
+    "type": "mc",
+    "q": "발표를 마치며 하는 말로 알맞은 것을 고르세요.",
+    "choices": [
+      "Let me begin.",
+      "Today I'll talk about ~",
+      "Thank you for listening.",
+      "Nice to meet you."
+    ],
+    "answer": 2,
+    "explain": "발표를 마칠 때 하는 인사예요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en6-184",
+    "type": "mc",
+    "q": "빈칸에 알맞은 낱말을 고르세요.\nA: I'm sorry I broke your cup. B: That's (   ). Accidents happen.",
+    "choices": [
+      "wrong",
+      "bad",
+      "okay",
+      "sorry"
+    ],
+    "answer": 2,
+    "explain": "사과를 받아 줄 때 That's okay.라고 해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en6-185",
+    "type": "mc",
+    "q": "입국 심사에서 들을 수 있는 말로 알맞은 것을 고르세요.",
+    "choices": [
+      "Please show me your ticket stub.",
+      "Please show me your passport.",
+      "Please return the book.",
+      "Please wash your hands."
+    ],
+    "answer": 1,
+    "explain": "passport는 여권이에요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en6-186",
+    "type": "mc",
+    "q": "빈칸에 알맞은 낱말을 고르세요.\nA: What does she look (   )? B: She is tall and has long hair.",
+    "choices": [
+      "like",
+      "for",
+      "at",
+      "after"
+    ],
+    "answer": 0,
+    "explain": "look like ~는 어떻게 생겼는지 묻는 표현이에요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en6-187",
+    "type": "mc",
+    "q": "친구의 의견을 물을 때 쓰는 표현으로 알맞은 것을 고르세요.",
+    "choices": [
+      "What do you have?",
+      "What do you do?",
+      "What do you want?",
+      "What do you think?"
+    ],
+    "answer": 3,
+    "explain": "생각을 물을 때 쓰는 표현이에요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en6-188",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nSome animals sleep through the winter. This is called hibernation. Bears and frogs do this.\n\n동물이 겨울잠을 자는 것을 영어로 무엇이라고 하나요?",
+    "choices": [
+      "migration",
+      "vacation",
+      "invitation",
+      "hibernation"
+    ],
+    "answer": 3,
+    "explain": "'This is called hibernation'이라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en6-189",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nThe Internet connects people all over the world. But we should be careful about what we share online.\n\n글쓴이가 조심하라고 한 것은 무엇인가요?",
+    "choices": [
+      "인터넷 속도",
+      "컴퓨터 가격",
+      "온라인에 무엇을 올리는지",
+      "친구 수"
+    ],
+    "answer": 2,
+    "explain": "'what we share online'을 조심하라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en6-190",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nHangeul was created by King Sejong. Before Hangeul, most people could not read or write.\n\n한글을 만든 사람은 누구인가요?",
+    "choices": [
+      "이순신",
+      "세종 대왕",
+      "신사임당",
+      "정약용"
+    ],
+    "answer": 1,
+    "explain": "'created by King Sejong'이라고 했어요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en6-191",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nExercise is good for your body and mind. Just thirty minutes a day can make a big difference.\n\n글쓴이가 권하는 하루 운동 시간은 얼마인가요?",
+    "choices": [
+      "30분",
+      "10분",
+      "1시간",
+      "2시간"
+    ],
+    "answer": 0,
+    "explain": "'thirty minutes a day'라고 했어요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en6-192",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nMount Everest is the highest mountain in the world. It is about 8,849 meters high.\n\n에베레스트산에 대한 설명으로 알맞은 것을 고르세요.",
+    "choices": [
+      "세계에서 가장 높다",
+      "세계에서 가장 넓다",
+      "가장 오래되었다",
+      "가장 위험하다"
+    ],
+    "answer": 0,
+    "explain": "highest mountain은 가장 높은 산이에요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en6-193",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nMany students throw away food at lunch. If we take only what we can eat, we can reduce waste.\n\n글쓴이가 제안하는 것은 무엇인가요?",
+    "choices": [
+      "점심을 더 많이 받자",
+      "급식을 없애자",
+      "도시락을 싸 오자",
+      "먹을 만큼만 받자"
+    ],
+    "answer": 3,
+    "explain": "'take only what we can eat'이라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en6-194",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nSora joined the school band two years ago. At first she played the drums. Now she plays the flute.\n\n소라가 지금 연주하는 악기는 무엇인가요?",
+    "choices": [
+      "드럼",
+      "피아노",
+      "플루트",
+      "기타"
+    ],
+    "answer": 2,
+    "explain": "'Now she plays the flute'라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en6-195",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nOur field trip is next Wednesday. The bus leaves at eight. Don't be late!\n\n버스가 출발하는 시각은 언제인가요?",
+    "choices": [
+      "9시",
+      "8시",
+      "7시",
+      "10시"
+    ],
+    "answer": 1,
+    "explain": "'The bus leaves at eight'이라고 했어요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en6-196",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nBees are disappearing around the world. Without bees, many plants cannot make fruit.\n\n벌이 사라지면 생기는 문제는 무엇인가요?",
+    "choices": [
+      "꽃이 더 많이 핀다",
+      "많은 식물이 열매를 맺지 못한다",
+      "꿀 값이 내려간다",
+      "곤충이 늘어난다"
+    ],
+    "answer": 1,
+    "explain": "'many plants cannot make fruit'라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en6-197",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nReading before bed helps you sleep better than using a phone. Screens keep your brain awake.\n\n잠들기 전에 하기 좋은 일로 글이 든 것은 무엇인가요?",
+    "choices": [
+      "책 읽기",
+      "휴대전화 보기",
+      "운동하기",
+      "음악 듣기"
+    ],
+    "answer": 0,
+    "explain": "책 읽기가 휴대전화보다 낫다고 했어요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en6-198",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nThe first Olympic marathon was about 40 kilometers. Today it is 42.195 kilometers.\n\n오늘날 마라톤 거리는 얼마인가요?",
+    "choices": [
+      "40km",
+      "45km",
+      "26km",
+      "42.195km"
+    ],
+    "answer": 3,
+    "explain": "'Today it is 42.195 kilometers'라고 했어요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en6-199",
+    "type": "mc",
+    "q": "'미래'와 '과거'를 바르게 짝지은 것을 고르세요.",
+    "choices": [
+      "past - future",
+      "future - present",
+      "future - past",
+      "present - past"
+    ],
+    "answer": 2,
+    "explain": "미래는 future, 과거는 past예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en6-200",
+    "type": "mc",
+    "q": "빈칸에 알맞은 낱말을 고르세요.\nA: Do you have any questions? B: No, (   ) clear.",
+    "choices": [
+      "there's",
+      "he's",
+      "it's",
+      "that's a"
+    ],
+    "answer": 2,
+    "explain": "It's clear.는 '이해했어요'라는 뜻이에요.",
+    "tag": "표현",
+    "level": "hard"
   }
 ]

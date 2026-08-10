@@ -2106,5 +2106,691 @@
     "explain": "That's all right.은 '괜찮아'라는 뜻이에요.",
     "tag": "표현",
     "level": "normal"
+  },
+  {
+    "id": "en7-151",
+    "type": "mc",
+    "q": "'격려하다'를 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "endanger",
+      "enlarge",
+      "encourage",
+      "engage"
+    ],
+    "answer": 2,
+    "explain": "encourage는 용기를 주다는 뜻이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en7-152",
+    "type": "mc",
+    "q": "'imagine'의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "설명하다",
+      "명령하다",
+      "상상하다",
+      "상의하다"
+    ],
+    "answer": 2,
+    "explain": "imagine은 상상하다예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en7-153",
+    "type": "mc",
+    "q": "'관심 있는'을 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "interesting",
+      "interested",
+      "interest",
+      "internal"
+    ],
+    "answer": 1,
+    "explain": "사람이 관심이 있으면 interested를 써요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en7-154",
+    "type": "mc",
+    "q": "'weakness'와 뜻이 반대인 단어를 고르세요.",
+    "choices": [
+      "strength",
+      "sickness",
+      "softness",
+      "sadness"
+    ],
+    "answer": 0,
+    "explain": "weakness는 약점, strength는 강점이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en7-155",
+    "type": "mc",
+    "q": "'polite'와 뜻이 반대인 단어를 고르세요.",
+    "choices": [
+      "quiet",
+      "kind",
+      "shy",
+      "rude"
+    ],
+    "answer": 3,
+    "explain": "polite는 예의 바른, rude는 무례한이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en7-156",
+    "type": "mc",
+    "q": "'조심스러운'을 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "careless",
+      "caring",
+      "cared",
+      "careful"
+    ],
+    "answer": 3,
+    "explain": "-ful은 '~이 가득한'이라는 뜻이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en7-157",
+    "type": "mc",
+    "q": "'부주의한'을 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "careful",
+      "carrier",
+      "careless",
+      "carry"
+    ],
+    "answer": 2,
+    "explain": "-less는 '~이 없는'이라는 뜻이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en7-158",
+    "type": "short",
+    "q": "'happy'의 명사형을 쓰세요.",
+    "answer": [
+      "happiness"
+    ],
+    "explain": "-ness를 붙여 happiness가 돼요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en7-159",
+    "type": "short",
+    "q": "'~을 찾다'를 뜻하는 표현을 쓰세요. (look으로 시작하는 두 단어)",
+    "answer": [
+      "look for"
+    ],
+    "explain": "look for ~는 ~을 찾다예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en7-160",
+    "type": "short",
+    "q": "'~에 참여하다'를 뜻하는 표현을 쓰세요. (take로 시작하는 세 단어)",
+    "answer": [
+      "take part in"
+    ],
+    "explain": "take part in ~은 ~에 참여하다예요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en7-161",
+    "type": "short",
+    "q": "'kind'의 명사형을 쓰세요.",
+    "answer": [
+      "kindness"
+    ],
+    "explain": "-ness를 붙여 kindness가 돼요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en7-162",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nShe (   ) her homework before dinner.",
+    "choices": [
+      "finish",
+      "finishing",
+      "finishes",
+      "is finish"
+    ],
+    "answer": 2,
+    "explain": "3인칭 단수 현재형은 -es를 붙여요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en7-163",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nI decided (   ) English every day.",
+    "choices": [
+      "studying",
+      "to study",
+      "study",
+      "studied"
+    ],
+    "answer": 1,
+    "explain": "decide 뒤에는 to부정사가 와요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en7-164",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nHe stopped (   ) and looked at me.",
+    "choices": [
+      "to talk",
+      "talking",
+      "talk",
+      "talked"
+    ],
+    "answer": 1,
+    "explain": "stop 뒤의 동명사는 '~하던 것을 멈추다'예요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en7-165",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nThe movie (   ) I watched was very sad.",
+    "choices": [
+      "which",
+      "who",
+      "whose",
+      "where"
+    ],
+    "answer": 0,
+    "explain": "사물을 가리키는 관계대명사는 which예요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en7-166",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nYou (   ) not touch that. It's dangerous.",
+    "choices": [
+      "would",
+      "could",
+      "might",
+      "must"
+    ],
+    "answer": 3,
+    "explain": "강한 금지는 must not이에요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en7-167",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nThere (   ) some milk in the glass.",
+    "choices": [
+      "are",
+      "were",
+      "is",
+      "have"
+    ],
+    "answer": 2,
+    "explain": "milk는 셀 수 없으므로 is를 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en7-168",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nThis book is (   ) interesting than that one.",
+    "choices": [
+      "much",
+      "most",
+      "more",
+      "very"
+    ],
+    "answer": 2,
+    "explain": "긴 형용사의 비교급은 more를 붙여요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en7-169",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nWhile I (   ) TV, the phone rang.",
+    "choices": [
+      "watch",
+      "was watching",
+      "watches",
+      "am watching"
+    ],
+    "answer": 1,
+    "explain": "과거에 하던 일은 과거진행형으로 나타내요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en7-170",
+    "type": "mc",
+    "q": "since의 쓰임이 바른 문장을 고르세요.",
+    "choices": [
+      "He has lived here since 2020.",
+      "He has lived here since 3 years.",
+      "He is lived here since 2020.",
+      "He have lived here since 2020."
+    ],
+    "answer": 0,
+    "explain": "특정 시점 앞에는 since를 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en7-171",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nIt's not easy (   ) get up early.",
+    "choices": [
+      "for",
+      "of",
+      "at",
+      "to"
+    ],
+    "answer": 3,
+    "explain": "It's 형용사 to부정사 구문이에요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en7-172",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nMy sister is as tall (   ) me.",
+    "choices": [
+      "than",
+      "then",
+      "so",
+      "as"
+    ],
+    "answer": 3,
+    "explain": "as ~ as 구문이에요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en7-173",
+    "type": "short",
+    "q": "괄호 안의 단어를 알맞은 형태로 바꿔 쓰세요.\nHe (bring) his lunch yesterday.",
+    "answer": [
+      "brought"
+    ],
+    "explain": "bring의 과거형은 brought예요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en7-174",
+    "type": "short",
+    "q": "괄호 안의 단어를 알맞은 형태로 바꿔 쓰세요.\nThey enjoy (play) soccer.",
+    "answer": [
+      "playing"
+    ],
+    "explain": "enjoy 뒤에는 동명사가 와요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en7-175",
+    "type": "short",
+    "q": "빈칸에 알맞은 be동사를 쓰세요.\nThere (   ) two cats under the table.",
+    "answer": [
+      "are"
+    ],
+    "explain": "two cats는 복수이므로 are를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en7-176",
+    "type": "short",
+    "q": "괄호 안의 단어를 최상급으로 바꿔 쓰세요.\nThis is the (big) building in town.",
+    "answer": [
+      "biggest"
+    ],
+    "explain": "짧은 형용사는 g를 하나 더 쓰고 -est를 붙여요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en7-177",
+    "type": "mc",
+    "q": "의견을 부드럽게 말할 때 쓰는 표현으로 알맞은 것을 고르세요.",
+    "choices": [
+      "You must think ~",
+      "Everyone knows ~",
+      "It's obvious that ~",
+      "In my opinion, ~"
+    ],
+    "answer": 3,
+    "explain": "'제 생각에는'이라는 뜻이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en7-178",
+    "type": "mc",
+    "q": "빈칸에 알맞은 낱말을 고르세요.\nA: Shall we take a walk? B: (   ) not?",
+    "choices": [
+      "What",
+      "How",
+      "Why",
+      "Who"
+    ],
+    "answer": 2,
+    "explain": "Why not?은 '그러자'라는 뜻이에요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en7-179",
+    "type": "mc",
+    "q": "빈칸에 알맞은 낱말을 고르세요.\nA: I'm afraid I can't come. B: That's a (   ).",
+    "choices": [
+      "pretty",
+      "pity",
+      "party",
+      "point"
+    ],
+    "answer": 1,
+    "explain": "That's a pity.는 '아쉽네요'예요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en7-180",
+    "type": "mc",
+    "q": "대화를 이어 갈 때 상대에게 되묻는 표현으로 알맞은 것을 고르세요.",
+    "choices": [
+      "How many you?",
+      "How about you?",
+      "How much you?",
+      "How you?"
+    ],
+    "answer": 1,
+    "explain": "'너는 어때?'라고 되묻는 표현이에요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en7-181",
+    "type": "short",
+    "q": "빈칸에 알맞은 낱말을 쓰세요.\nA: Thanks a lot. B: My (   ).",
+    "answer": [
+      "pleasure"
+    ],
+    "explain": "My pleasure.는 '천만에요'예요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en7-182",
+    "type": "short",
+    "q": "우리말과 뜻이 같도록 빈칸에 알맞은 낱말을 쓰세요.\n나는 자전거 타기를 잘해.\nI'm good (   ) riding a bike.",
+    "answer": [
+      "at"
+    ],
+    "explain": "be good at ~은 ~을 잘한다예요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en7-183",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nHandwriting may seem old-fashioned, but studies show it helps memory. Writing by hand makes the brain work harder than typing.\n\n손글씨가 기억에 도움이 되는 까닭은 무엇인가요?",
+    "choices": [
+      "글씨가 예뻐지기 때문에",
+      "종이가 오래가기 때문에",
+      "뇌가 더 많이 일하기 때문에",
+      "속도가 빠르기 때문에"
+    ],
+    "answer": 2,
+    "explain": "'makes the brain work harder'라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en7-184",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nMany cities now have bike-sharing programs. People can rent a bike for a short time and return it anywhere.\n\n자전거 공유 제도의 특징으로 알맞은 것을 고르세요.",
+    "choices": [
+      "자전거를 사야 한다",
+      "하루만 쓸 수 있다",
+      "짧게 빌려 아무 곳에 반납한다",
+      "회원만 쓸 수 있다"
+    ],
+    "answer": 2,
+    "explain": "'rent for a short time and return it anywhere'라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en7-185",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nJinsu was shy about speaking English. His teacher told him mistakes are part of learning. Now he speaks up in class.\n\n진수가 달라진 계기는 무엇인가요?",
+    "choices": [
+      "친구의 도움",
+      "선생님의 말",
+      "시험 성적",
+      "새 교과서"
+    ],
+    "answer": 1,
+    "explain": "선생님의 말을 듣고 달라졌어요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en7-186",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nTrees in cities lower the temperature and clean the air. They also give shade on hot days.\n\n도시의 나무가 하는 일로 글에 나오지 않은 것을 고르세요.",
+    "choices": [
+      "소음을 없앤다",
+      "기온을 낮춘다",
+      "공기를 맑게 한다",
+      "그늘을 준다"
+    ],
+    "answer": 0,
+    "explain": "소음에 대한 이야기는 없어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en7-187",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nSome people say uniforms make students equal. Others say they take away freedom of choice.\n\n이 글의 성격으로 알맞은 것을 고르세요.",
+    "choices": [
+      "찬성만 주장한다",
+      "반대만 주장한다",
+      "사실을 나열한다",
+      "찬반 의견을 함께 소개한다"
+    ],
+    "answer": 3,
+    "explain": "양쪽 의견을 나란히 보여 줘요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en7-188",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nDrinking enough water helps you focus. Even mild dehydration can make it hard to concentrate.\n\n물을 충분히 마시면 좋은 점은 무엇인가요?",
+    "choices": [
+      "키가 자란다",
+      "잠이 잘 온다",
+      "힘이 세진다",
+      "집중이 잘된다"
+    ],
+    "answer": 3,
+    "explain": "'helps you focus'라고 했어요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en7-189",
+    "type": "short",
+    "q": "글을 읽고 물음에 답하세요.\nThe Sahara Desert is growing larger each year. Scientists call this process desertification.\n\n사막이 넓어지는 현상을 영어 한 단어로 쓰세요.",
+    "answer": [
+      "desertification"
+    ],
+    "explain": "'Scientists call this process desertification'이라고 했어요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en7-190",
+    "type": "short",
+    "q": "글을 읽고 물음에 답하세요.\nA blue whale's heart is about the size of a small car. It beats only about eight times per minute.\n\nQ: How many times does a blue whale's heart beat per minute? (숫자만)",
+    "answer": [
+      "8"
+    ],
+    "explain": "'about eight times per minute'라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en7-191",
+    "type": "short",
+    "q": "글을 읽고 물음에 답하세요.\nSleep helps the body repair itself. Teenagers need about nine hours of sleep each night.\n\n십 대에게 필요한 하루 수면 시간을 숫자로 쓰세요. (시간)",
+    "answer": [
+      "9"
+    ],
+    "explain": "'about nine hours'라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en7-192",
+    "type": "mc",
+    "q": "'발명하다'를 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "invent",
+      "invite",
+      "involve",
+      "invest"
+    ],
+    "answer": 0,
+    "explain": "invent는 발명하다예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en7-193",
+    "type": "mc",
+    "q": "'전통적인'을 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "translate",
+      "transport",
+      "transfer",
+      "traditional"
+    ],
+    "answer": 3,
+    "explain": "traditional은 전통적인이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en7-194",
+    "type": "short",
+    "q": "'friend'의 형용사형을 쓰세요. (친절한)",
+    "answer": [
+      "friendly"
+    ],
+    "explain": "-ly를 붙여 friendly가 돼요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en7-195",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nWe should turn (   ) the lights when we leave.",
+    "choices": [
+      "on",
+      "off",
+      "up",
+      "in"
+    ],
+    "answer": 1,
+    "explain": "turn off는 (전기를) 끄다예요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en7-196",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nHe was (   ) tired that he fell asleep.",
+    "choices": [
+      "very",
+      "so",
+      "too",
+      "much"
+    ],
+    "answer": 1,
+    "explain": "so ~ that ...은 '너무 ~해서 …하다'예요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en7-197",
+    "type": "short",
+    "q": "괄호 안의 단어를 알맞은 형태로 바꿔 쓰세요.\nShe (teach) English last year.",
+    "answer": [
+      "taught"
+    ],
+    "explain": "teach의 과거형은 taught예요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en7-198",
+    "type": "mc",
+    "q": "빈칸에 알맞은 낱말을 고르세요.\nA: Would you mind opening the window? B: Of course (   ).",
+    "choices": [
+      "yes",
+      "so",
+      "too",
+      "not"
+    ],
+    "answer": 3,
+    "explain": "Would you mind ~?에 허락하면 Of course not.이라고 해요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en7-199",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nRegular exercise improves not only the body but also the mood. Many people feel calmer after a walk.\n\n운동의 효과로 글에 나온 것을 고르세요.",
+    "choices": [
+      "키가 자란다",
+      "잠이 줄어든다",
+      "기분이 나아진다",
+      "식욕이 없어진다"
+    ],
+    "answer": 2,
+    "explain": "'improves not only the body but also the mood'라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en7-200",
+    "type": "short",
+    "q": "글을 읽고 물음에 답하세요.\nA giraffe's neck has the same number of bones as a human neck: seven.\n\n기린과 사람의 목뼈 개수를 숫자로 쓰세요.",
+    "answer": [
+      "7"
+    ],
+    "explain": "'seven'이라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
   }
 ]

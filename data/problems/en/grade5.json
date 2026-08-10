@@ -2248,5 +2248,755 @@
     "explain": "'It changes into steam when it is very hot'이라고 했어요.",
     "tag": "독해",
     "level": "hard"
+  },
+  {
+    "id": "en5-151",
+    "type": "mc",
+    "q": "'시장'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "mall",
+      "movie",
+      "market",
+      "museum"
+    ],
+    "answer": 2,
+    "explain": "시장은 market이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en5-152",
+    "type": "mc",
+    "q": "'식당'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "restroom",
+      "resort",
+      "restaurant",
+      "result"
+    ],
+    "answer": 2,
+    "explain": "식당은 restaurant이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en5-153",
+    "type": "mc",
+    "q": "'소방관'을 뜻하는 영어 표현을 고르세요.",
+    "choices": [
+      "fireplace",
+      "firefighter",
+      "firework",
+      "fireman's"
+    ],
+    "answer": 1,
+    "explain": "소방관은 firefighter예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en5-154",
+    "type": "mc",
+    "q": "'engineer'는 무슨 직업인지 우리말로 고르세요.",
+    "choices": [
+      "기술자",
+      "회계사",
+      "변호사",
+      "건축가"
+    ],
+    "answer": 0,
+    "explain": "engineer는 기술자·공학자예요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en5-155",
+    "type": "mc",
+    "q": "'요리사'를 뜻하는 영어 낱말 중 전문 요리사를 가리키는 것을 고르세요.",
+    "choices": [
+      "chief",
+      "chess",
+      "cheer",
+      "chef"
+    ],
+    "answer": 3,
+    "explain": "전문 요리사는 chef예요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en5-156",
+    "type": "mc",
+    "q": "'화난'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "hungry",
+      "hurry",
+      "empty",
+      "angry"
+    ],
+    "answer": 3,
+    "explain": "화난 것은 angry예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en5-157",
+    "type": "mc",
+    "q": "'외로운'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "lovely",
+      "likely",
+      "lonely",
+      "lively"
+    ],
+    "answer": 2,
+    "explain": "외로운 것은 lonely예요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en5-158",
+    "type": "mc",
+    "q": "'nervous'의 뜻을 우리말로 고르세요.",
+    "choices": [
+      "지루한",
+      "긴장한",
+      "신난",
+      "졸린"
+    ],
+    "answer": 1,
+    "explain": "nervous는 긴장했다는 뜻이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en5-159",
+    "type": "mc",
+    "q": "'사회'를 뜻하는 영어 표현을 고르세요.",
+    "choices": [
+      "social studies",
+      "social media",
+      "society",
+      "sociable"
+    ],
+    "answer": 0,
+    "explain": "학교 과목 사회는 social studies예요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en5-160",
+    "type": "mc",
+    "q": "'역사'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "history",
+      "story",
+      "hobby",
+      "holiday"
+    ],
+    "answer": 0,
+    "explain": "역사는 history예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en5-161",
+    "type": "mc",
+    "q": "'취미'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "habit",
+      "happy",
+      "holiday",
+      "hobby"
+    ],
+    "answer": 3,
+    "explain": "취미는 hobby예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en5-162",
+    "type": "mc",
+    "q": "'배낭'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "package",
+      "packet",
+      "backpack",
+      "backyard"
+    ],
+    "answer": 2,
+    "explain": "배낭은 backpack이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en5-163",
+    "type": "mc",
+    "q": "'지도'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "mop",
+      "map",
+      "cap",
+      "lap"
+    ],
+    "answer": 1,
+    "explain": "지도는 map이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en5-164",
+    "type": "mc",
+    "q": "'표(입장권)'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "pocket",
+      "ticket",
+      "packet",
+      "rocket"
+    ],
+    "answer": 1,
+    "explain": "표는 ticket이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en5-165",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nThey (   ) playing badminton now.",
+    "choices": [
+      "are",
+      "am",
+      "is",
+      "be"
+    ],
+    "answer": 0,
+    "explain": "주어가 They이면 are를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en5-166",
+    "type": "mc",
+    "q": "괄호 안의 단어를 알맞은 모양으로 바꾼 것을 고르세요.\nShe is (write) a letter.",
+    "choices": [
+      "writeing",
+      "writes",
+      "wrote",
+      "writing"
+    ],
+    "answer": 3,
+    "explain": "-e로 끝나면 e를 빼고 -ing를 붙여요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en5-167",
+    "type": "mc",
+    "q": "괄호 안의 단어를 알맞은 모양으로 바꾼 것을 고르세요.\nThe baby is (cry).",
+    "choices": [
+      "criing",
+      "cries",
+      "crying",
+      "cryed"
+    ],
+    "answer": 2,
+    "explain": "y로 끝나도 그대로 -ing를 붙여요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en5-168",
+    "type": "mc",
+    "q": "빈칸에 알맞은 소유격을 고르세요.\nThose are my parents. (   ) car is blue.",
+    "choices": [
+      "They",
+      "They're",
+      "Their",
+      "Them"
+    ],
+    "answer": 2,
+    "explain": "그들의는 Their예요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en5-169",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nI (   ) ride a bike, but I can't swim.",
+    "choices": [
+      "am",
+      "can",
+      "do",
+      "will"
+    ],
+    "answer": 1,
+    "explain": "할 수 있다는 can이에요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en5-170",
+    "type": "mc",
+    "q": "빈칸에 알맞은 의문사를 고르세요.\nA: (   ) book is this? B: It's Tom's.",
+    "choices": [
+      "Whose",
+      "Who",
+      "What",
+      "Which"
+    ],
+    "answer": 0,
+    "explain": "누구의 것인지 물을 때는 Whose를 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en5-171",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nThere (   ) many students in the gym.",
+    "choices": [
+      "is",
+      "am",
+      "be",
+      "are"
+    ],
+    "answer": 3,
+    "explain": "students는 복수이므로 are를 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en5-172",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nMy father (   ) not drink coffee.",
+    "choices": [
+      "do",
+      "is",
+      "are",
+      "does"
+    ],
+    "answer": 3,
+    "explain": "3인칭 단수이므로 does not을 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en5-173",
+    "type": "mc",
+    "q": "비교하는 문장으로 알맞은 것을 고르세요.\n'이 상자는 저것보다 무겁다'",
+    "choices": [
+      "This box is heavy than that one.",
+      "This box is more heavy than that one.",
+      "This box is heavier than that one.",
+      "This box is heaviest than that one."
+    ],
+    "answer": 2,
+    "explain": "자음 + y는 y를 i로 바꾸고 -er을 붙여요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en5-174",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nWhere (   ) you go yesterday?",
+    "choices": [
+      "do",
+      "did",
+      "does",
+      "are"
+    ],
+    "answer": 1,
+    "explain": "yesterday이므로 과거를 나타내는 did를 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en5-175",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nLet's (   ) lunch together.",
+    "choices": [
+      "have",
+      "having",
+      "has",
+      "had"
+    ],
+    "answer": 0,
+    "explain": "Let's 뒤에는 동사원형이 와요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en5-176",
+    "type": "mc",
+    "q": "3인칭 단수 현재형을 바르게 쓴 문장을 고르세요.",
+    "choices": [
+      "She likes music.",
+      "She like music.",
+      "She liking music.",
+      "She is like music."
+    ],
+    "answer": 0,
+    "explain": "3인칭 단수 현재형은 -s를 붙여요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en5-177",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nI came here (   ) subway.",
+    "choices": [
+      "on",
+      "in",
+      "with",
+      "by"
+    ],
+    "answer": 3,
+    "explain": "교통수단은 by를 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en5-178",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nHe is good (   ) drawing.",
+    "choices": [
+      "in",
+      "on",
+      "at",
+      "to"
+    ],
+    "answer": 2,
+    "explain": "be good at ~은 ~을 잘한다는 뜻이에요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en5-179",
+    "type": "mc",
+    "q": "빈칸에 알맞은 의문사를 고르세요.\nA: (   ) do you like winter? B: Because I like snow.",
+    "choices": [
+      "What",
+      "Why",
+      "When",
+      "Where"
+    ],
+    "answer": 1,
+    "explain": "까닭을 물으면 Why, 답은 Because로 해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en5-180",
+    "type": "mc",
+    "q": "\"What's wrong?\"에 대한 대답으로 알맞은 것을 고르세요.",
+    "choices": [
+      "It's Monday.",
+      "I lost my wallet.",
+      "I'm eleven.",
+      "Yes, please."
+    ],
+    "answer": 1,
+    "explain": "무슨 일인지 물었으므로 문제를 말해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en5-181",
+    "type": "mc",
+    "q": "전화를 받을 때 상대를 확인하는 표현으로 알맞은 것을 고르세요.",
+    "choices": [
+      "Who's calling, please?",
+      "Where are you calling?",
+      "What are you calling?",
+      "How are you calling?"
+    ],
+    "answer": 0,
+    "explain": "누구시냐고 묻는 표현이에요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en5-182",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nA: How much is this cap? B: (   ) five dollars.",
+    "choices": [
+      "There's",
+      "He's",
+      "That's a",
+      "It's"
+    ],
+    "answer": 3,
+    "explain": "값을 말할 때는 It's ~로 답해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en5-183",
+    "type": "mc",
+    "q": "음식을 권할 때 쓰는 표현으로 알맞은 것을 고르세요.",
+    "choices": [
+      "Do you make some cake?",
+      "Are you some cake?",
+      "Would you like some cake?",
+      "Can you cake?"
+    ],
+    "answer": 2,
+    "explain": "Would you like ~?는 정중히 권하는 표현이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en5-184",
+    "type": "mc",
+    "q": "\"I'd like to order, please.\"를 쓰는 곳으로 알맞은 것을 고르세요.",
+    "choices": [
+      "도서관",
+      "병원",
+      "식당",
+      "학교"
+    ],
+    "answer": 2,
+    "explain": "order는 음식을 주문한다는 뜻이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en5-185",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nA: What do you do after school? B: I (   ) my dog.",
+    "choices": [
+      "walking",
+      "walk",
+      "walks",
+      "walked"
+    ],
+    "answer": 1,
+    "explain": "습관적으로 하는 일은 현재형으로 말해요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en5-186",
+    "type": "mc",
+    "q": "길을 잃었을 때 하는 말로 알맞은 것을 고르세요.",
+    "choices": [
+      "I'm lost. Can you help me?",
+      "I found it. Thank you.",
+      "I'm going home now.",
+      "This is my house."
+    ],
+    "answer": 0,
+    "explain": "lost는 길을 잃었다는 뜻이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en5-187",
+    "type": "mc",
+    "q": "\"Congratulations!\"을 쓰는 상황으로 알맞은 것을 고르세요.",
+    "choices": [
+      "친구가 아플 때",
+      "친구가 늦었을 때",
+      "친구와 헤어질 때",
+      "친구가 상을 받았을 때"
+    ],
+    "answer": 3,
+    "explain": "축하할 때 쓰는 말이에요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en5-188",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nA: Do you want to join us? B: (   ), I'd love to.",
+    "choices": [
+      "Sorry",
+      "Never",
+      "Nothing",
+      "Sure"
+    ],
+    "answer": 3,
+    "explain": "기꺼이 받아들일 때 Sure라고 답해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en5-189",
+    "type": "mc",
+    "q": "\"Never mind.\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "절대 안 돼",
+      "기억해 둬",
+      "괜찮아, 신경 쓰지 마",
+      "조심해"
+    ],
+    "answer": 2,
+    "explain": "상대를 안심시키는 표현이에요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en5-190",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nDolphins are very smart animals. They talk to each other with sounds. They live in groups.\n\n돌고래에 대한 설명으로 글에 나오지 않은 것을 고르세요.",
+    "choices": [
+      "매우 똑똑하다",
+      "아주 오래 산다",
+      "소리로 대화한다",
+      "무리를 지어 산다"
+    ],
+    "answer": 1,
+    "explain": "수명에 대한 이야기는 없어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en5-191",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nI usually get up at seven. But on Sunday I get up at nine.\n\n일요일에 일어나는 시각은 언제인가요?",
+    "choices": [
+      "9시",
+      "7시",
+      "8시",
+      "10시"
+    ],
+    "answer": 0,
+    "explain": "'on Sunday I get up at nine'이라고 했어요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en5-192",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nMinho went to the library after school. He borrowed two books about space.\n\n민호가 빌린 책의 주제는 무엇인가요?",
+    "choices": [
+      "우주",
+      "동물",
+      "역사",
+      "요리"
+    ],
+    "answer": 0,
+    "explain": "space는 우주예요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en5-193",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nOur school festival is on October 15th. There will be a play and a food market.\n\n축제에서 볼 수 없는 것을 고르세요.",
+    "choices": [
+      "연극",
+      "먹거리 장터",
+      "10월 행사",
+      "운동 경기"
+    ],
+    "answer": 3,
+    "explain": "운동 경기에 대한 이야기는 없어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en5-194",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nRecycling is important. Paper, cans, and bottles can be used again.\n\n다시 쓸 수 있는 것으로 글에 나오지 않은 것을 고르세요.",
+    "choices": [
+      "종이",
+      "캔",
+      "음식물",
+      "병"
+    ],
+    "answer": 2,
+    "explain": "음식물은 나오지 않아요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en5-195",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nJiwoo practices the violin for one hour every day. She wants to be a musician.\n\n지우의 장래 희망은 무엇인가요?",
+    "choices": [
+      "화가",
+      "음악가",
+      "선생님",
+      "의사"
+    ],
+    "answer": 1,
+    "explain": "musician은 음악가예요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en5-196",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nThe post office opens at nine and closes at six. It is closed on weekends.\n\n우체국이 문을 여는 시각은 언제인가요?",
+    "choices": [
+      "6시",
+      "9시",
+      "8시",
+      "10시"
+    ],
+    "answer": 1,
+    "explain": "'opens at nine'이라고 했어요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en5-197",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nMy grandmother lives in Jeju. We visit her every summer. We swim in the sea.\n\n할머니를 찾아가는 계절은 언제인가요?",
+    "choices": [
+      "여름",
+      "봄",
+      "가을",
+      "겨울"
+    ],
+    "answer": 0,
+    "explain": "'every summer'라고 했어요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en5-198",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nAnts are small but strong. One ant can carry something fifty times its own weight.\n\n개미가 들 수 있는 무게는 자기 몸무게의 몇 배인가요?",
+    "choices": [
+      "5배",
+      "15배",
+      "100배",
+      "50배"
+    ],
+    "answer": 3,
+    "explain": "'fifty times its own weight'라고 했어요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en5-199",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nSujin was nervous before the speech contest. But she practiced a lot, so she did well.\n\n수진이가 잘할 수 있었던 까닭은 무엇인가요?",
+    "choices": [
+      "긴장하지 않아서",
+      "친구가 도와줘서",
+      "연습을 많이 해서",
+      "대회가 쉬워서"
+    ],
+    "answer": 2,
+    "explain": "'she practiced a lot, so she did well'이라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en5-200",
+    "type": "mc",
+    "q": "다음 글을 읽고 물음에 답하세요.\n\nWater covers about seventy percent of the Earth. But most of it is salt water.\n\n지구를 덮고 있는 물의 비율은 대략 얼마인가요?",
+    "choices": [
+      "30%",
+      "50%",
+      "70%",
+      "90%"
+    ],
+    "answer": 2,
+    "explain": "'about seventy percent'라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
   }
 ]

@@ -2248,5 +2248,755 @@
     "explain": "thirsty는 목이 마르다는 뜻이에요.",
     "tag": "표현",
     "level": "hard"
+  },
+  {
+    "id": "en3-151",
+    "type": "mc",
+    "q": "알파벳 순서에서 'K' 바로 다음에 오는 대문자를 고르세요.",
+    "choices": [
+      "J",
+      "M",
+      "L",
+      "I"
+    ],
+    "answer": 2,
+    "explain": "J - K - L 차례예요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en3-152",
+    "type": "mc",
+    "q": "알파벳 순서에서 'P' 바로 앞에 오는 대문자를 고르세요.",
+    "choices": [
+      "Q",
+      "N",
+      "O",
+      "R"
+    ],
+    "answer": 2,
+    "explain": "N - O - P 차례예요.",
+    "tag": "알파벳",
+    "level": "normal"
+  },
+  {
+    "id": "en3-153",
+    "type": "mc",
+    "q": "'nurse'의 첫 글자를 소문자로 고르세요.",
+    "choices": [
+      "m",
+      "n",
+      "u",
+      "r"
+    ],
+    "answer": 1,
+    "explain": "nurse는 n으로 시작해요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en3-154",
+    "type": "mc",
+    "q": "'yellow'의 첫 글자를 소문자로 고르세요.",
+    "choices": [
+      "y",
+      "v",
+      "g",
+      "j"
+    ],
+    "answer": 0,
+    "explain": "yellow는 y로 시작해요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en3-155",
+    "type": "mc",
+    "q": "알파벳 순서로 볼 때 가장 앞에 오는 것을 고르세요.",
+    "choices": [
+      "milk",
+      "rice",
+      "soup",
+      "bread"
+    ],
+    "answer": 3,
+    "explain": "b가 가장 앞이므로 bread예요.",
+    "tag": "알파벳",
+    "level": "normal"
+  },
+  {
+    "id": "en3-156",
+    "type": "mc",
+    "q": "알파벳 순서로 볼 때 가장 뒤에 오는 것을 고르세요.",
+    "choices": [
+      "green",
+      "blue",
+      "red",
+      "yellow"
+    ],
+    "answer": 3,
+    "explain": "y가 가장 뒤이므로 yellow예요.",
+    "tag": "알파벳",
+    "level": "normal"
+  },
+  {
+    "id": "en3-157",
+    "type": "mc",
+    "q": "'summer'에 들어 있는 모음 글자를 모두 고른 것을 고르세요.",
+    "choices": [
+      "s, m",
+      "m, r",
+      "u, e",
+      "u, r"
+    ],
+    "answer": 2,
+    "explain": "s-u-m-m-e-r에서 모음은 u와 e예요.",
+    "tag": "알파벳",
+    "level": "hard"
+  },
+  {
+    "id": "en3-158",
+    "type": "mc",
+    "q": "'happy'의 마지막 글자를 소문자로 고르세요.",
+    "choices": [
+      "p",
+      "y",
+      "h",
+      "a"
+    ],
+    "answer": 1,
+    "explain": "h-a-p-p-y 이므로 마지막은 y예요.",
+    "tag": "알파벳",
+    "level": "easy"
+  },
+  {
+    "id": "en3-159",
+    "type": "mc",
+    "q": "다음 중 대문자와 소문자가 바르게 짝지어진 것을 고르세요.",
+    "choices": [
+      "D - d",
+      "B - p",
+      "N - u",
+      "G - q"
+    ],
+    "answer": 0,
+    "explain": "D의 소문자는 d예요.",
+    "tag": "알파벳",
+    "level": "normal"
+  },
+  {
+    "id": "en3-160",
+    "type": "mc",
+    "q": "알파벳 순서에서 다섯 번째 대문자를 고르세요.",
+    "choices": [
+      "E",
+      "D",
+      "F",
+      "C"
+    ],
+    "answer": 0,
+    "explain": "A, B, C, D, E 순서로 다섯 번째는 E예요.",
+    "tag": "알파벳",
+    "level": "hard"
+  },
+  {
+    "id": "en3-161",
+    "type": "mc",
+    "q": "'토끼'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "rat",
+      "ram",
+      "raccoon",
+      "rabbit"
+    ],
+    "answer": 3,
+    "explain": "토끼는 rabbit이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en3-162",
+    "type": "mc",
+    "q": "'거북이'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "tiger",
+      "tail",
+      "turtle",
+      "tent"
+    ],
+    "answer": 2,
+    "explain": "거북이는 turtle이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en3-163",
+    "type": "mc",
+    "q": "'tiger'의 뜻을 우리말로 고르세요.",
+    "choices": [
+      "사자",
+      "호랑이",
+      "표범",
+      "곰"
+    ],
+    "answer": 1,
+    "explain": "tiger는 호랑이예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en3-164",
+    "type": "mc",
+    "q": "14와 40을 뜻하는 영어 낱말을 바르게 짝지은 것을 고르세요.",
+    "choices": [
+      "forty - fourteen",
+      "fourteen - forty",
+      "fourteen - fourty",
+      "forteen - forty"
+    ],
+    "answer": 1,
+    "explain": "14는 fourteen, 40은 forty예요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en3-165",
+    "type": "mc",
+    "q": "다음 중 십의 자리를 나타내는 낱말이 아닌 것을 고르세요.",
+    "choices": [
+      "fifteen",
+      "fifty",
+      "sixty",
+      "eighty"
+    ],
+    "answer": 0,
+    "explain": "fifteen은 15로 십의 자리 낱말이 아니에요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en3-166",
+    "type": "mc",
+    "q": "'수요일'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "Thursday",
+      "Tuesday",
+      "Saturday",
+      "Wednesday"
+    ],
+    "answer": 3,
+    "explain": "수요일은 Wednesday예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en3-167",
+    "type": "mc",
+    "q": "'Thursday'는 무슨 요일인지 우리말로 고르세요.",
+    "choices": [
+      "화요일",
+      "수요일",
+      "목요일",
+      "토요일"
+    ],
+    "answer": 2,
+    "explain": "Thursday는 목요일이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en3-168",
+    "type": "mc",
+    "q": "'여름'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "spring",
+      "fall",
+      "summer",
+      "winter"
+    ],
+    "answer": 2,
+    "explain": "여름은 summer예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en3-169",
+    "type": "mc",
+    "q": "'fall'은 어느 계절인지 우리말로 고르세요.",
+    "choices": [
+      "봄",
+      "가을",
+      "여름",
+      "겨울"
+    ],
+    "answer": 1,
+    "explain": "fall은 가을이에요. autumn이라고도 해요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en3-170",
+    "type": "mc",
+    "q": "'공원'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "park",
+      "pack",
+      "pork",
+      "part"
+    ],
+    "answer": 0,
+    "explain": "공원은 park예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en3-171",
+    "type": "mc",
+    "q": "'가게'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "storm",
+      "story",
+      "stone",
+      "store"
+    ],
+    "answer": 3,
+    "explain": "가게는 store예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en3-172",
+    "type": "mc",
+    "q": "'집에서 기르는 동물'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "pen",
+      "pot",
+      "pat",
+      "pet"
+    ],
+    "answer": 3,
+    "explain": "반려동물은 pet이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en3-173",
+    "type": "mc",
+    "q": "다음 중 채소가 아닌 것을 고르세요.",
+    "choices": [
+      "carrot",
+      "onion",
+      "banana",
+      "cabbage"
+    ],
+    "answer": 2,
+    "explain": "banana는 과일이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en3-174",
+    "type": "mc",
+    "q": "'풀(붙이는 것)'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "grape",
+      "glue",
+      "grass",
+      "glass"
+    ],
+    "answer": 1,
+    "explain": "붙이는 풀은 glue예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en3-175",
+    "type": "mc",
+    "q": "'가위'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "scissors",
+      "sister",
+      "season",
+      "second"
+    ],
+    "answer": 0,
+    "explain": "가위는 scissors예요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en3-176",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\n'They ___ my friends.'",
+    "choices": [
+      "are",
+      "am",
+      "is",
+      "be"
+    ],
+    "answer": 0,
+    "explain": "주어가 복수이면 are를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en3-177",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\n'It ___ a big dog.'",
+    "choices": [
+      "am",
+      "are",
+      "be",
+      "is"
+    ],
+    "answer": 3,
+    "explain": "주어가 It이면 is를 써요.",
+    "tag": "문법",
+    "level": "easy"
+  },
+  {
+    "id": "en3-178",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\n'He has ___ umbrella.'",
+    "choices": [
+      "a",
+      "the",
+      "an",
+      "two"
+    ],
+    "answer": 2,
+    "explain": "umbrella는 모음 소리로 시작하므로 an을 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en3-179",
+    "type": "mc",
+    "q": "'baby'가 여러 명일 때 알맞은 것을 고르세요.",
+    "choices": [
+      "babys",
+      "babies",
+      "babyes",
+      "baby"
+    ],
+    "answer": 1,
+    "explain": "자음 + y로 끝나면 y를 i로 바꾸고 -es를 붙여요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en3-180",
+    "type": "mc",
+    "q": "'bus'가 여러 대일 때 알맞은 것을 고르세요.",
+    "choices": [
+      "buss",
+      "buses",
+      "busies",
+      "bus"
+    ],
+    "answer": 1,
+    "explain": "-s로 끝나면 -es를 붙여요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en3-181",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\n'The bird is ___ the tree.' (나무 위에)",
+    "choices": [
+      "in",
+      "on",
+      "under",
+      "at"
+    ],
+    "answer": 0,
+    "explain": "나무 안(가지 사이)에 있으면 in을 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en3-182",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\n'My shoes are ___ the bed.' (침대 아래)",
+    "choices": [
+      "on",
+      "in",
+      "over",
+      "under"
+    ],
+    "answer": 3,
+    "explain": "아래는 under예요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en3-183",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\n'___ is she?' (그녀는 누구인가요?)",
+    "choices": [
+      "What",
+      "Where",
+      "Who",
+      "When"
+    ],
+    "answer": 2,
+    "explain": "사람을 물을 때는 Who를 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en3-184",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\n'___ do you go to school?' (언제)",
+    "choices": [
+      "What",
+      "Who",
+      "When",
+      "Which"
+    ],
+    "answer": 2,
+    "explain": "때를 물을 때는 When을 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en3-185",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\n'We ___ like carrots.' (우리는 당근을 좋아하지 않아요)",
+    "choices": [
+      "doesn't",
+      "don't",
+      "isn't",
+      "not"
+    ],
+    "answer": 1,
+    "explain": "주어가 We이면 don't를 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en3-186",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\n'___ you my teacher?'",
+    "choices": [
+      "Are",
+      "Is",
+      "Am",
+      "Do"
+    ],
+    "answer": 0,
+    "explain": "주어가 you이면 Are로 물어요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en3-187",
+    "type": "mc",
+    "q": "다음 중 문장이 바른 것을 고르세요.",
+    "choices": [
+      "I has a cat.",
+      "I having a cat.",
+      "I am have a cat.",
+      "I have a cat."
+    ],
+    "answer": 3,
+    "explain": "주어가 I이면 have를 써요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en3-188",
+    "type": "mc",
+    "q": "\"How's the weather today?\"에 대한 대답으로 알맞은 것을 고르세요.",
+    "choices": [
+      "It's Friday.",
+      "I'm nine.",
+      "It's mine.",
+      "It's cloudy."
+    ],
+    "answer": 3,
+    "explain": "날씨를 물었으므로 날씨로 답해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en3-189",
+    "type": "mc",
+    "q": "\"What's your favorite food?\"에 대한 대답으로 알맞은 것을 고르세요.",
+    "choices": [
+      "I'm ten.",
+      "It's Monday.",
+      "I like pizza.",
+      "Yes, I can."
+    ],
+    "answer": 2,
+    "explain": "좋아하는 음식을 물었으므로 음식으로 답해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en3-190",
+    "type": "mc",
+    "q": "빈칸에 들어갈 낱말을 고르세요.\n'___ many books do you have?'",
+    "choices": [
+      "What",
+      "How",
+      "Who",
+      "When"
+    ],
+    "answer": 1,
+    "explain": "개수는 How many로 물어요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en3-191",
+    "type": "mc",
+    "q": "\"Can I have some water?\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "물 좀 주세요",
+      "물이 없어요",
+      "물을 마셨어요",
+      "물을 좋아해요"
+    ],
+    "answer": 0,
+    "explain": "Can I have ~?는 무언가를 달라고 하는 표현이에요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en3-192",
+    "type": "mc",
+    "q": "\"That's a good idea.\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "좋은 생각이야",
+      "미안해",
+      "그건 내 거야",
+      "잘 모르겠어"
+    ],
+    "answer": 0,
+    "explain": "idea는 생각이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en3-193",
+    "type": "mc",
+    "q": "헤어질 때 하는 인사가 아닌 것을 고르세요.",
+    "choices": [
+      "See you later.",
+      "Goodbye.",
+      "Bye-bye.",
+      "Nice to meet you."
+    ],
+    "answer": 3,
+    "explain": "Nice to meet you.는 처음 만났을 때 하는 인사예요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en3-194",
+    "type": "mc",
+    "q": "\"What time do you get up?\"에 대한 대답으로 알맞은 것을 고르세요.",
+    "choices": [
+      "On Monday.",
+      "In the park.",
+      "At seven.",
+      "With my mom."
+    ],
+    "answer": 2,
+    "explain": "시각을 물었으므로 시각으로 답해요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en3-195",
+    "type": "mc",
+    "q": "\"I don't know.\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "알겠어요",
+      "모르겠어요",
+      "싫어요",
+      "좋아요"
+    ],
+    "answer": 1,
+    "explain": "know는 알다는 뜻이에요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en3-196",
+    "type": "mc",
+    "q": "빈칸에 들어갈 낱말을 고르세요.\n'Happy ___ to you!' (생일 축하 노래)",
+    "choices": [
+      "morning",
+      "birthday",
+      "year",
+      "day"
+    ],
+    "answer": 1,
+    "explain": "생일 축하 노래는 Happy birthday to you예요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en3-197",
+    "type": "mc",
+    "q": "\"You're welcome.\"은 어떤 말에 대한 대답인가요?",
+    "choices": [
+      "Thank you.",
+      "I'm sorry.",
+      "How are you?",
+      "Good night."
+    ],
+    "answer": 0,
+    "explain": "고맙다는 말에 '천만에요'라고 답하는 거예요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en3-198",
+    "type": "mc",
+    "q": "\"Let me help you.\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "도와주세요",
+      "도움이 필요해요",
+      "혼자 할 수 있어요",
+      "제가 도와드릴게요"
+    ],
+    "answer": 3,
+    "explain": "Let me ~는 '내가 ~할게'라는 뜻이에요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en3-199",
+    "type": "mc",
+    "q": "\"Good luck!\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "잘했어!",
+      "고마워!",
+      "행운을 빌어!",
+      "미안해!"
+    ],
+    "answer": 2,
+    "explain": "luck은 운이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en3-200",
+    "type": "mc",
+    "q": "\"Excuse me, where is the library?\"라고 물었을 때 알맞은 대답을 고르세요.",
+    "choices": [
+      "It's a library.",
+      "I like books.",
+      "It's over there.",
+      "Yes, it is."
+    ],
+    "answer": 2,
+    "explain": "위치를 물었으므로 장소로 답해요.",
+    "tag": "표현",
+    "level": "hard"
   }
 ]

@@ -2248,5 +2248,755 @@
     "explain": "잘했다고 칭찬할 때 Good job!이라고 해요.",
     "tag": "표현",
     "level": "normal"
+  },
+  {
+    "id": "en2-151",
+    "type": "mc",
+    "q": "'lamp'의 첫 글자를 고르세요.",
+    "choices": [
+      "i",
+      "r",
+      "l",
+      "n"
+    ],
+    "answer": 2,
+    "explain": "lamp는 l로 시작해요.",
+    "tag": "파닉스",
+    "level": "easy"
+  },
+  {
+    "id": "en2-152",
+    "type": "mc",
+    "q": "'goat'의 첫 글자를 고르세요.",
+    "choices": [
+      "q",
+      "c",
+      "g",
+      "j"
+    ],
+    "answer": 2,
+    "explain": "goat은 g로 시작해요.",
+    "tag": "파닉스",
+    "level": "easy"
+  },
+  {
+    "id": "en2-153",
+    "type": "mc",
+    "q": "'desk'의 마지막 글자를 고르세요.",
+    "choices": [
+      "d",
+      "k",
+      "s",
+      "c"
+    ],
+    "answer": 1,
+    "explain": "d-e-s-k 이므로 마지막은 k예요.",
+    "tag": "파닉스",
+    "level": "normal"
+  },
+  {
+    "id": "en2-154",
+    "type": "mc",
+    "q": "'hand'의 마지막 글자를 고르세요.",
+    "choices": [
+      "d",
+      "h",
+      "n",
+      "b"
+    ],
+    "answer": 0,
+    "explain": "h-a-n-d 이므로 마지막은 d예요.",
+    "tag": "파닉스",
+    "level": "easy"
+  },
+  {
+    "id": "en2-155",
+    "type": "mc",
+    "q": "대문자 W의 소문자를 고르세요.",
+    "choices": [
+      "v",
+      "m",
+      "u",
+      "w"
+    ],
+    "answer": 3,
+    "explain": "W의 소문자는 w예요.",
+    "tag": "파닉스",
+    "level": "normal"
+  },
+  {
+    "id": "en2-156",
+    "type": "mc",
+    "q": "대문자 Y의 소문자를 고르세요.",
+    "choices": [
+      "v",
+      "g",
+      "j",
+      "y"
+    ],
+    "answer": 3,
+    "explain": "Y의 소문자는 y예요.",
+    "tag": "파닉스",
+    "level": "normal"
+  },
+  {
+    "id": "en2-157",
+    "type": "mc",
+    "q": "'thank'의 첫 두 글자를 고르세요.",
+    "choices": [
+      "sh",
+      "ch",
+      "th",
+      "wh"
+    ],
+    "answer": 2,
+    "explain": "thank는 th 소리로 시작해요.",
+    "tag": "파닉스",
+    "level": "hard"
+  },
+  {
+    "id": "en2-158",
+    "type": "mc",
+    "q": "'white'의 첫 두 글자를 고르세요.",
+    "choices": [
+      "th",
+      "wh",
+      "sh",
+      "ph"
+    ],
+    "answer": 1,
+    "explain": "white는 wh로 시작해요.",
+    "tag": "파닉스",
+    "level": "hard"
+  },
+  {
+    "id": "en2-159",
+    "type": "mc",
+    "q": "다음 중 'o' 소리가 들어 있는 낱말을 고르세요.",
+    "choices": [
+      "box",
+      "cat",
+      "pen",
+      "bus"
+    ],
+    "answer": 0,
+    "explain": "box에는 o가 들어 있어요.",
+    "tag": "파닉스",
+    "level": "normal"
+  },
+  {
+    "id": "en2-160",
+    "type": "mc",
+    "q": "다음 중 'e' 소리가 들어 있는 낱말을 고르세요.",
+    "choices": [
+      "pen",
+      "cat",
+      "dog",
+      "sun"
+    ],
+    "answer": 0,
+    "explain": "pen에는 e가 들어 있어요.",
+    "tag": "파닉스",
+    "level": "easy"
+  },
+  {
+    "id": "en2-161",
+    "type": "mc",
+    "q": "'star'와 'stop'은 같은 두 글자로 시작해요. 그 두 글자를 고르세요.",
+    "choices": [
+      "sh",
+      "sp",
+      "sn",
+      "st"
+    ],
+    "answer": 3,
+    "explain": "둘 다 st로 시작해요.",
+    "tag": "파닉스",
+    "level": "hard"
+  },
+  {
+    "id": "en2-162",
+    "type": "mc",
+    "q": "'frog'와 'from'은 같은 두 글자로 시작해요. 그 두 글자를 고르세요.",
+    "choices": [
+      "fl",
+      "tr",
+      "fr",
+      "gr"
+    ],
+    "answer": 2,
+    "explain": "둘 다 fr로 시작해요.",
+    "tag": "파닉스",
+    "level": "normal"
+  },
+  {
+    "id": "en2-163",
+    "type": "mc",
+    "q": "'zebra'의 첫 글자를 고르세요.",
+    "choices": [
+      "s",
+      "z",
+      "x",
+      "j"
+    ],
+    "answer": 1,
+    "explain": "zebra는 z로 시작해요.",
+    "tag": "파닉스",
+    "level": "normal"
+  },
+  {
+    "id": "en2-164",
+    "type": "mc",
+    "q": "'토마토'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "potato",
+      "tomato",
+      "carrot",
+      "onion"
+    ],
+    "answer": 1,
+    "explain": "토마토는 tomato예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-165",
+    "type": "mc",
+    "q": "'potato'의 뜻을 우리말로 고르세요.",
+    "choices": [
+      "감자",
+      "고구마",
+      "당근",
+      "양파"
+    ],
+    "answer": 0,
+    "explain": "potato는 감자예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-166",
+    "type": "mc",
+    "q": "'당근'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "cabbage",
+      "corn",
+      "cucumber",
+      "carrot"
+    ],
+    "answer": 3,
+    "explain": "당근은 carrot이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-167",
+    "type": "mc",
+    "q": "'오이'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "cabbage",
+      "carrot",
+      "cucumber",
+      "corn"
+    ],
+    "answer": 2,
+    "explain": "오이는 cucumber예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-168",
+    "type": "mc",
+    "q": "'lemon'의 뜻을 우리말로 고르세요.",
+    "choices": [
+      "라임",
+      "귤",
+      "레몬",
+      "자두"
+    ],
+    "answer": 2,
+    "explain": "lemon은 레몬이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-169",
+    "type": "mc",
+    "q": "숫자 13을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "thirty",
+      "thirteen",
+      "three",
+      "thirsty"
+    ],
+    "answer": 1,
+    "explain": "13은 thirteen이에요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en2-170",
+    "type": "mc",
+    "q": "'sixteen'은 얼마인가요?",
+    "choices": [
+      "16",
+      "6",
+      "60",
+      "26"
+    ],
+    "answer": 0,
+    "explain": "sixteen은 16이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-171",
+    "type": "mc",
+    "q": "숫자 100을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "thousand",
+      "hunter",
+      "hundreds",
+      "hundred"
+    ],
+    "answer": 3,
+    "explain": "100은 hundred예요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en2-172",
+    "type": "mc",
+    "q": "'주황색'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "yellow",
+      "brown",
+      "gold",
+      "orange"
+    ],
+    "answer": 3,
+    "explain": "주황색은 orange예요. 과일 이름과 같아요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-173",
+    "type": "mc",
+    "q": "'gold'는 무슨 색인지 우리말로 고르세요.",
+    "choices": [
+      "은색",
+      "동색",
+      "금색",
+      "회색"
+    ],
+    "answer": 2,
+    "explain": "gold는 금색이에요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en2-174",
+    "type": "mc",
+    "q": "'이모나 고모'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "uncle",
+      "aunt",
+      "cousin",
+      "niece"
+    ],
+    "answer": 1,
+    "explain": "이모나 고모는 aunt예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-175",
+    "type": "mc",
+    "q": "'형이나 남동생'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "brother",
+      "sister",
+      "father",
+      "son"
+    ],
+    "answer": 0,
+    "explain": "brother는 형제를 뜻해요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-176",
+    "type": "mc",
+    "q": "'등'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "back",
+      "black",
+      "bake",
+      "bank"
+    ],
+    "answer": 0,
+    "explain": "등은 back이에요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en2-177",
+    "type": "mc",
+    "q": "'finger'는 몸의 어느 부분인지 우리말로 고르세요.",
+    "choices": [
+      "발가락",
+      "손목",
+      "팔꿈치",
+      "손가락"
+    ],
+    "answer": 3,
+    "explain": "finger는 손가락이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-178",
+    "type": "mc",
+    "q": "'무릎'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "neck",
+      "nose",
+      "knee",
+      "nail"
+    ],
+    "answer": 2,
+    "explain": "무릎은 knee예요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en2-179",
+    "type": "mc",
+    "q": "'거실'을 뜻하는 영어 표현을 고르세요.",
+    "choices": [
+      "bathroom",
+      "living room",
+      "bedroom",
+      "kitchen"
+    ],
+    "answer": 1,
+    "explain": "거실은 living room이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-180",
+    "type": "mc",
+    "q": "'kitchen'의 뜻을 우리말로 고르세요.",
+    "choices": [
+      "거실",
+      "부엌",
+      "욕실",
+      "침실"
+    ],
+    "answer": 1,
+    "explain": "kitchen은 부엌이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-181",
+    "type": "mc",
+    "q": "'침실'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "bedroom",
+      "bathroom",
+      "classroom",
+      "playroom"
+    ],
+    "answer": 0,
+    "explain": "침실은 bedroom이에요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-182",
+    "type": "mc",
+    "q": "'long'과 뜻이 반대인 영어 낱말을 고르세요.",
+    "choices": [
+      "tall",
+      "big",
+      "wide",
+      "short"
+    ],
+    "answer": 3,
+    "explain": "long의 반대말은 short예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-183",
+    "type": "mc",
+    "q": "'fast'와 뜻이 반대인 영어 낱말을 고르세요.",
+    "choices": [
+      "quick",
+      "late",
+      "slow",
+      "early"
+    ],
+    "answer": 2,
+    "explain": "fast의 반대말은 slow예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-184",
+    "type": "mc",
+    "q": "'open'과 뜻이 반대인 영어 낱말을 고르세요.",
+    "choices": [
+      "clean",
+      "clear",
+      "close",
+      "climb"
+    ],
+    "answer": 2,
+    "explain": "open의 반대말은 close예요.",
+    "tag": "단어",
+    "level": "easy"
+  },
+  {
+    "id": "en2-185",
+    "type": "mc",
+    "q": "'clean'과 뜻이 반대인 영어 낱말을 고르세요.",
+    "choices": [
+      "dry",
+      "dirty",
+      "dark",
+      "deep"
+    ],
+    "answer": 1,
+    "explain": "clean의 반대말은 dirty예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-186",
+    "type": "mc",
+    "q": "'바람'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "wind",
+      "window",
+      "wing",
+      "wine"
+    ],
+    "answer": 0,
+    "explain": "바람은 wind예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-187",
+    "type": "mc",
+    "q": "'구름 낀'을 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "sunny",
+      "rainy",
+      "windy",
+      "cloudy"
+    ],
+    "answer": 3,
+    "explain": "구름이 많으면 cloudy예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-188",
+    "type": "mc",
+    "q": "'nurse'는 무슨 직업인지 우리말로 고르세요.",
+    "choices": [
+      "의사",
+      "약사",
+      "선생님",
+      "간호사"
+    ],
+    "answer": 3,
+    "explain": "nurse는 간호사예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-189",
+    "type": "mc",
+    "q": "\"Where are you going?\"에 대한 대답으로 알맞은 것을 고르세요.",
+    "choices": [
+      "It's red.",
+      "I'm nine.",
+      "To the park.",
+      "Yes, I do."
+    ],
+    "answer": 2,
+    "explain": "어디 가는지 물었으므로 장소로 답해요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en2-190",
+    "type": "mc",
+    "q": "\"Whose book is this?\"에 대한 대답으로 알맞은 것을 고르세요.",
+    "choices": [
+      "It's blue.",
+      "It's mine.",
+      "It's here.",
+      "It's Monday."
+    ],
+    "answer": 1,
+    "explain": "누구 것인지 물었으므로 소유로 답해요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en2-191",
+    "type": "mc",
+    "q": "\"How many pencils do you have?\"에 대한 대답으로 알맞은 것을 고르세요.",
+    "choices": [
+      "Five.",
+      "Blue.",
+      "Yes.",
+      "At school."
+    ],
+    "answer": 0,
+    "explain": "개수를 물었으므로 수로 답해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en2-192",
+    "type": "mc",
+    "q": "교실에서 화장실에 가고 싶을 때 하는 말을 고르세요.",
+    "choices": [
+      "May I go to the bathroom?",
+      "I like the bathroom.",
+      "Where is my book?",
+      "This is my seat."
+    ],
+    "answer": 0,
+    "explain": "May I ~?는 허락을 구하는 표현이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en2-193",
+    "type": "mc",
+    "q": "\"Don't run.\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "뛰세요",
+      "걸으세요",
+      "멈추세요",
+      "뛰지 마세요"
+    ],
+    "answer": 3,
+    "explain": "Don't ~는 ~하지 말라는 뜻이에요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en2-194",
+    "type": "mc",
+    "q": "\"Take off your shoes.\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "신발을 신으세요",
+      "신발을 사세요",
+      "신발을 벗으세요",
+      "신발을 씻으세요"
+    ],
+    "answer": 2,
+    "explain": "take off는 벗는다는 뜻이에요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en2-195",
+    "type": "mc",
+    "q": "\"Merry Christmas!\"는 언제 하는 인사인가요?",
+    "choices": [
+      "새해",
+      "크리스마스",
+      "생일",
+      "설날"
+    ],
+    "answer": 1,
+    "explain": "크리스마스를 축하하는 인사예요.",
+    "tag": "표현",
+    "level": "easy"
+  },
+  {
+    "id": "en2-196",
+    "type": "mc",
+    "q": "\"I'm full.\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "배가 고파요",
+      "배가 불러요",
+      "목이 말라요",
+      "졸려요"
+    ],
+    "answer": 1,
+    "explain": "full은 배가 부르다는 뜻이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en2-197",
+    "type": "mc",
+    "q": "\"Be quiet\"와 뜻이 비슷한 표현을 고르세요.",
+    "choices": [
+      "Silence, please.",
+      "Speak louder.",
+      "Come here.",
+      "Look at this."
+    ],
+    "answer": 0,
+    "explain": "둘 다 조용히 하라는 뜻이에요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en2-198",
+    "type": "mc",
+    "q": "친구가 아플 때 하는 말로 알맞은 것을 고르세요.",
+    "choices": [
+      "Good job.",
+      "See you.",
+      "Here you are.",
+      "Get well soon."
+    ],
+    "answer": 3,
+    "explain": "빨리 나으라는 인사예요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en2-199",
+    "type": "mc",
+    "q": "'양파'를 뜻하는 영어 낱말을 고르세요.",
+    "choices": [
+      "orange",
+      "olive",
+      "onion",
+      "oven"
+    ],
+    "answer": 2,
+    "explain": "양파는 onion이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en2-200",
+    "type": "mc",
+    "q": "\"Good luck on your test!\"의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "시험이 어려워!",
+      "시험이 끝났어!",
+      "시험 잘 봐!",
+      "시험을 봤어!"
+    ],
+    "answer": 2,
+    "explain": "good luck은 행운을 빈다는 뜻이에요.",
+    "tag": "표현",
+    "level": "normal"
   }
 ]

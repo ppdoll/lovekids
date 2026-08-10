@@ -2093,5 +2093,692 @@
     "explain": "'about seventy percent'라고 했어요.",
     "tag": "독해",
     "level": "normal"
+  },
+  {
+    "id": "en9-151",
+    "type": "mc",
+    "q": "'접근하다'를 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "approve",
+      "appoint",
+      "approach",
+      "appear"
+    ],
+    "answer": 2,
+    "explain": "approach는 다가가다·접근하다예요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en9-152",
+    "type": "mc",
+    "q": "'assume'의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "확인하다",
+      "증명하다",
+      "가정하다",
+      "부인하다"
+    ],
+    "answer": 2,
+    "explain": "assume은 근거 없이 그렇다고 여기는 것이에요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en9-153",
+    "type": "mc",
+    "q": "'다양성'을 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "difficulty",
+      "diversity",
+      "density",
+      "destiny"
+    ],
+    "answer": 1,
+    "explain": "다양성은 diversity예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en9-154",
+    "type": "mc",
+    "q": "'권리'를 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "right",
+      "rite",
+      "write",
+      "riot"
+    ],
+    "answer": 0,
+    "explain": "권리는 right예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en9-155",
+    "type": "mc",
+    "q": "'obvious'와 뜻이 반대인 단어를 고르세요.",
+    "choices": [
+      "clear",
+      "certain",
+      "plain",
+      "unclear"
+    ],
+    "answer": 3,
+    "explain": "obvious는 분명한, unclear는 불분명한이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en9-156",
+    "type": "mc",
+    "q": "'temporary'와 뜻이 반대인 단어를 고르세요.",
+    "choices": [
+      "possible",
+      "personal",
+      "practical",
+      "permanent"
+    ],
+    "answer": 3,
+    "explain": "temporary는 일시적인, permanent는 영구적인이에요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en9-157",
+    "type": "short",
+    "q": "'analyze'의 명사형을 쓰세요.",
+    "answer": [
+      "analysis"
+    ],
+    "explain": "analyze의 명사형은 analysis예요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en9-158",
+    "type": "short",
+    "q": "'~을 처리하다'를 뜻하는 표현을 쓰세요. (deal로 시작하는 두 단어)",
+    "answer": [
+      "deal with"
+    ],
+    "explain": "deal with ~는 ~을 다루다·처리하다예요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en9-159",
+    "type": "short",
+    "q": "'agree'의 명사형을 쓰세요.",
+    "answer": [
+      "agreement"
+    ],
+    "explain": "-ment를 붙여 agreement가 돼요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en9-160",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nIf I had studied harder, I (   ) passed.",
+    "choices": [
+      "would have",
+      "will have",
+      "would",
+      "had"
+    ],
+    "answer": 0,
+    "explain": "가정법 과거완료는 would have + 과거분사예요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en9-161",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nHardly (   ) I arrived when the rain started.",
+    "choices": [
+      "have",
+      "did",
+      "was",
+      "had"
+    ],
+    "answer": 3,
+    "explain": "Hardly가 문두에 오면 도치되어 had가 앞에 와요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en9-162",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nThe project needs (   ) by Monday.",
+    "choices": [
+      "do",
+      "doing to",
+      "to be done",
+      "be done"
+    ],
+    "answer": 2,
+    "explain": "need 뒤 수동은 to be + 과거분사예요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en9-163",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nShe is the writer (   ) I admire most.",
+    "choices": [
+      "which",
+      "whom",
+      "whose",
+      "what"
+    ],
+    "answer": 1,
+    "explain": "사람이 목적어 자리이므로 whom(또는 who/that)이에요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en9-164",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\n(   ) the rain, we went hiking.",
+    "choices": [
+      "Although",
+      "Despite",
+      "Because",
+      "Since"
+    ],
+    "answer": 1,
+    "explain": "Despite 뒤에는 명사가 와요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en9-165",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nBy next year, she (   ) worked here for ten years.",
+    "choices": [
+      "will have",
+      "will",
+      "has",
+      "had"
+    ],
+    "answer": 0,
+    "explain": "미래완료는 will have + 과거분사예요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en9-166",
+    "type": "mc",
+    "q": "neither A nor B의 수 일치가 바른 문장을 고르세요.",
+    "choices": [
+      "Neither he nor I are ready.",
+      "Neither he or I am ready.",
+      "Neither he nor me am ready.",
+      "Neither he nor I am ready."
+    ],
+    "answer": 3,
+    "explain": "neither A nor B는 B에 동사를 맞춰요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en9-167",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nIt was he (   ) broke the window.",
+    "choices": [
+      "which",
+      "whom",
+      "who",
+      "what"
+    ],
+    "answer": 2,
+    "explain": "It ~ that/who 강조 구문이에요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en9-168",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nShe avoided (   ) the question.",
+    "choices": [
+      "to answer",
+      "answer",
+      "answering",
+      "answered"
+    ],
+    "answer": 2,
+    "explain": "avoid 뒤에는 동명사가 와요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en9-169",
+    "type": "mc",
+    "q": "다음 문장에서 to의 쓰임이 나머지와 다른 것을 고르세요.",
+    "choices": [
+      "I want to sleep.",
+      "I'm used to waking up early.",
+      "He hopes to win.",
+      "She agreed to help."
+    ],
+    "answer": 1,
+    "explain": "이때 to는 전치사라 뒤에 -ing가 와요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en9-170",
+    "type": "short",
+    "q": "괄호 안의 단어를 알맞은 형태로 바꿔 쓰세요.\nIf I (have) more time, I would travel.",
+    "answer": [
+      "had"
+    ],
+    "explain": "가정법 과거이므로 had를 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en9-171",
+    "type": "short",
+    "q": "괄호 안의 단어를 알맞은 형태로 바꿔 쓰세요.\nThe road (repair) right now.",
+    "answer": [
+      "is being repaired"
+    ],
+    "explain": "진행형 수동태는 be being + 과거분사예요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en9-172",
+    "type": "short",
+    "q": "빈칸에 알맞은 접속사를 쓰세요.\n(   ) he was tired, he kept working. (~였지만)",
+    "answer": [
+      "Although",
+      "Though"
+    ],
+    "explain": "Although는 '~에도 불구하고'예요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en9-173",
+    "type": "short",
+    "q": "빈칸에 알맞은 말을 쓰세요.\nI look forward (   ) meeting you. (~을 기대하다)",
+    "answer": [
+      "to"
+    ],
+    "explain": "look forward to -ing 구문이에요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en9-174",
+    "type": "mc",
+    "q": "논의를 마무리할 때 쓰는 표현으로 알맞은 것을 고르세요.",
+    "choices": [
+      "First of all, ~",
+      "In conclusion, ~",
+      "By the way, ~",
+      "For instance, ~"
+    ],
+    "answer": 1,
+    "explain": "'결론적으로'라는 뜻이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en9-175",
+    "type": "mc",
+    "q": "상대 의견의 한계를 지적할 때 쓰는 표현으로 알맞은 것을 고르세요.",
+    "choices": [
+      "That may be true, but ~",
+      "You are always wrong.",
+      "I don't care.",
+      "Stop talking."
+    ],
+    "answer": 0,
+    "explain": "상대 의견을 인정한 뒤 반론을 펴요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en9-176",
+    "type": "mc",
+    "q": "빈칸에 알맞은 낱말을 고르세요.\nA: Let's postpone the meeting. B: That (   ) sense.",
+    "choices": [
+      "makes",
+      "takes",
+      "gives",
+      "does"
+    ],
+    "answer": 0,
+    "explain": "That makes sense.는 '일리 있다'예요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en9-177",
+    "type": "short",
+    "q": "우리말과 뜻이 같도록 빈칸에 알맞은 낱말을 쓰세요.\n나는 그 문제를 잘 알고 있어.\nI'm aware (   ) the problem.",
+    "answer": [
+      "of"
+    ],
+    "explain": "be aware of ~는 ~을 알고 있다예요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en9-178",
+    "type": "short",
+    "q": "빈칸에 알맞은 낱말을 쓰세요.\nA: Can you cover for me? B: No (   ).",
+    "answer": [
+      "problem"
+    ],
+    "explain": "No problem.은 '문제없어'예요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en9-179",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nAlgorithms decide what we see online. They are efficient, but they can also narrow our view without us noticing.\n\n글쓴이가 지적하는 위험은 무엇인가요?",
+    "choices": [
+      "속도가 느려진다",
+      "시야가 좁아지는 것을 알아채기 어렵다",
+      "비용이 늘어난다",
+      "정보가 사라진다"
+    ],
+    "answer": 1,
+    "explain": "'narrow our view without us noticing'이라고 했어요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en9-180",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nMinimum wage laws aim to protect workers. Critics argue they may reduce the number of jobs available.\n\n비판하는 쪽의 주장은 무엇인가요?",
+    "choices": [
+      "임금이 너무 낮다",
+      "일자리가 줄어들 수 있다",
+      "노동 시간이 길다",
+      "법이 필요 없다"
+    ],
+    "answer": 1,
+    "explain": "'reduce the number of jobs'라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en9-181",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nElectric cars produce no exhaust, but the electricity they use may come from coal. The whole system matters, not just the car.\n\n글쓴이가 강조하는 것은 무엇인가요?",
+    "choices": [
+      "전체 체계를 함께 보아야 한다",
+      "전기차는 완벽하다",
+      "석탄이 가장 낫다",
+      "자동차를 없애야 한다"
+    ],
+    "answer": 0,
+    "explain": "'The whole system matters'라고 했어요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en9-182",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nStudies suggest that spending time in nature lowers stress. Even a short walk in a park can help.\n\n글에 따르면 스트레스를 낮추는 방법은 무엇인가요?",
+    "choices": [
+      "잠을 더 자기",
+      "음악을 듣기",
+      "친구를 만나기",
+      "자연에서 시간을 보내기"
+    ],
+    "answer": 3,
+    "explain": "'spending time in nature lowers stress'라고 했어요.",
+    "tag": "독해",
+    "level": "easy"
+  },
+  {
+    "id": "en9-183",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nWhen we translate a poem, something is always lost. Rhythm and wordplay rarely survive the move to another language.\n\n번역에서 잃기 쉬운 것으로 글에 나온 것은 무엇인가요?",
+    "choices": [
+      "줄거리",
+      "인물",
+      "운율과 말놀이",
+      "배경"
+    ],
+    "answer": 2,
+    "explain": "'Rhythm and wordplay rarely survive'라고 했어요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en9-184",
+    "type": "short",
+    "q": "글을 읽고 물음에 답하세요.\nThe human brain uses about twenty percent of the body's energy, though it makes up only two percent of body weight.\n\n뇌가 쓰는 몸 에너지의 비율을 숫자로 쓰세요. (퍼센트)",
+    "answer": [
+      "20"
+    ],
+    "explain": "'about twenty percent'라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en9-185",
+    "type": "short",
+    "q": "글을 읽고 물음에 답하세요.\nThe word 'quarantine' comes from an Italian word meaning forty, because ships once waited forty days before landing.\n\n'quarantine'의 어원이 된 숫자를 쓰세요.",
+    "answer": [
+      "40"
+    ],
+    "explain": "이탈리아어로 40을 뜻하는 말에서 왔어요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en9-186",
+    "type": "mc",
+    "q": "'~을 언급하다'를 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "mention",
+      "maintain",
+      "measure",
+      "manage"
+    ],
+    "answer": 0,
+    "explain": "mention은 언급하다예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en9-187",
+    "type": "mc",
+    "q": "'중요성'을 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "important",
+      "impression",
+      "improvement",
+      "importance"
+    ],
+    "answer": 3,
+    "explain": "important의 명사형이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en9-188",
+    "type": "mc",
+    "q": "'복잡한'을 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "complete",
+      "complain",
+      "compare",
+      "complex"
+    ],
+    "answer": 3,
+    "explain": "complex는 복잡한이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en9-189",
+    "type": "mc",
+    "q": "'accurate'와 뜻이 반대인 단어를 고르세요.",
+    "choices": [
+      "accurately",
+      "accuracy",
+      "inaccurate",
+      "accused"
+    ],
+    "answer": 2,
+    "explain": "in-을 붙여 반대말을 만들어요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en9-190",
+    "type": "short",
+    "q": "'develop'의 명사형을 쓰세요.",
+    "answer": [
+      "development"
+    ],
+    "explain": "-ment를 붙여 development가 돼요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en9-191",
+    "type": "short",
+    "q": "'~에 기여하다'를 뜻하는 표현을 쓰세요. (contribute로 시작하는 두 단어)",
+    "answer": [
+      "contribute to"
+    ],
+    "explain": "contribute to ~는 ~에 기여하다예요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en9-192",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nSo tired (   ) he that he fell asleep at once.",
+    "choices": [
+      "was",
+      "is",
+      "did",
+      "had"
+    ],
+    "answer": 0,
+    "explain": "So + 형용사가 앞에 오면 도치돼요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en9-193",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nThe reason (   ) he left is unclear.",
+    "choices": [
+      "which",
+      "what",
+      "whose",
+      "why"
+    ],
+    "answer": 3,
+    "explain": "이유를 나타내는 관계부사는 why예요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en9-194",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nThis is the house (   ) I was born.",
+    "choices": [
+      "which",
+      "who",
+      "where",
+      "what"
+    ],
+    "answer": 2,
+    "explain": "장소를 나타내는 관계부사는 where예요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en9-195",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nHe insisted (   ) paying for dinner.",
+    "choices": [
+      "to",
+      "on",
+      "in",
+      "at"
+    ],
+    "answer": 1,
+    "explain": "insist on -ing 구문이에요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en9-196",
+    "type": "short",
+    "q": "괄호 안의 단어를 알맞은 형태로 바꿔 쓰세요.\nHad I (know) earlier, I would have helped.",
+    "answer": [
+      "known"
+    ],
+    "explain": "가정법 과거완료이므로 과거분사 known을 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en9-197",
+    "type": "short",
+    "q": "빈칸에 알맞은 말을 쓰세요.\nIt is no use (   ) over spilt milk. (울어도 소용없다)",
+    "answer": [
+      "crying"
+    ],
+    "explain": "It is no use -ing 구문이에요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en9-198",
+    "type": "mc",
+    "q": "빈칸에 알맞은 낱말을 고르세요.\nA: We need to cut costs. B: I see your (   ).",
+    "choices": [
+      "part",
+      "place",
+      "piece",
+      "point"
+    ],
+    "answer": 3,
+    "explain": "I see your point.는 '무슨 말인지 알겠다'예요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en9-199",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nHistorians rely on many sources. A single record can be biased, so comparing several is essential.\n\n역사가가 여러 자료를 비교하는 까닭은 무엇인가요?",
+    "choices": [
+      "자료가 부족해서",
+      "기록이 오래되어서",
+      "하나의 기록은 치우칠 수 있어서",
+      "언어가 달라서"
+    ],
+    "answer": 2,
+    "explain": "'A single record can be biased'라고 했어요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en9-200",
+    "type": "short",
+    "q": "글을 읽고 물음에 답하세요.\nThe Great Barrier Reef stretches over two thousand kilometers along the coast of Australia.\n\n대보초의 길이를 숫자로 쓰세요. (킬로미터)",
+    "answer": [
+      "2000"
+    ],
+    "explain": "'over two thousand kilometers'라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
   }
 ]

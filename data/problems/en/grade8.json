@@ -2097,5 +2097,696 @@
     "explain": "'every four years'라고 했어요.",
     "tag": "독해",
     "level": "normal"
+  },
+  {
+    "id": "en8-151",
+    "type": "mc",
+    "q": "'인식하다'를 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "recommend",
+      "recover",
+      "recognize",
+      "record"
+    ],
+    "answer": 2,
+    "explain": "recognize는 알아보다·인식하다예요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en8-152",
+    "type": "mc",
+    "q": "'유지하다'를 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "mention",
+      "manage",
+      "maintain",
+      "measure"
+    ],
+    "answer": 2,
+    "explain": "maintain은 유지하다예요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en8-153",
+    "type": "mc",
+    "q": "'benefit'의 뜻으로 알맞은 것을 고르세요.",
+    "choices": [
+      "손해",
+      "이익",
+      "위험",
+      "의무"
+    ],
+    "answer": 1,
+    "explain": "benefit은 이익·혜택이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en8-154",
+    "type": "mc",
+    "q": "'의무'를 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "duty",
+      "beauty",
+      "dusty",
+      "daily"
+    ],
+    "answer": 0,
+    "explain": "의무는 duty예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en8-155",
+    "type": "mc",
+    "q": "'success'와 뜻이 반대인 단어를 고르세요.",
+    "choices": [
+      "fortune",
+      "feature",
+      "feeling",
+      "failure"
+    ],
+    "answer": 3,
+    "explain": "success는 성공, failure는 실패예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en8-156",
+    "type": "mc",
+    "q": "'accept'와 뜻이 반대인 단어를 고르세요.",
+    "choices": [
+      "receive",
+      "recall",
+      "reply",
+      "refuse"
+    ],
+    "answer": 3,
+    "explain": "accept는 받아들이다, refuse는 거절하다예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en8-157",
+    "type": "short",
+    "q": "'decide'의 명사형을 쓰세요.",
+    "answer": [
+      "decision"
+    ],
+    "explain": "decide의 명사형은 decision이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en8-158",
+    "type": "short",
+    "q": "'~을 포기하다'를 뜻하는 표현을 쓰세요. (give로 시작하는 두 단어)",
+    "answer": [
+      "give up"
+    ],
+    "explain": "give up은 포기하다예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en8-159",
+    "type": "short",
+    "q": "'able'의 반대말을 쓰세요.",
+    "answer": [
+      "unable"
+    ],
+    "explain": "un-을 붙여 unable이 돼요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en8-160",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nThe house (   ) roof is red is mine.",
+    "choices": [
+      "whose",
+      "who",
+      "which",
+      "that"
+    ],
+    "answer": 0,
+    "explain": "소유를 나타내는 관계대명사는 whose예요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-161",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nI wish I (   ) taller.",
+    "choices": [
+      "am",
+      "will be",
+      "have been",
+      "were"
+    ],
+    "answer": 3,
+    "explain": "I wish 뒤에는 가정법이 와요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-162",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nShe let me (   ) her bike.",
+    "choices": [
+      "to use",
+      "using",
+      "use",
+      "used"
+    ],
+    "answer": 2,
+    "explain": "사역동사 let 뒤에는 동사원형이 와요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-163",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nI heard someone (   ) in the next room.",
+    "choices": [
+      "sang",
+      "singing",
+      "to sing",
+      "sings"
+    ],
+    "answer": 1,
+    "explain": "지각동사 뒤에는 원형이나 -ing가 와요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-164",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nThis bridge (   ) built ten years ago.",
+    "choices": [
+      "is",
+      "was",
+      "has",
+      "were"
+    ],
+    "answer": 1,
+    "explain": "수동태 과거는 was + 과거분사예요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-165",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nHe asked me (   ) I had finished.",
+    "choices": [
+      "whether",
+      "that",
+      "what",
+      "who"
+    ],
+    "answer": 0,
+    "explain": "간접의문문에서 '~인지'는 whether(또는 if)예요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-166",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nI don't know (   ) to go first.",
+    "choices": [
+      "what",
+      "who",
+      "that",
+      "where"
+    ],
+    "answer": 3,
+    "explain": "where to ~는 어디로 ~할지예요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-167",
+    "type": "mc",
+    "q": "다음 문장을 간접화법으로 바르게 바꾼 것을 고르세요.\nShe said, \"I will come.\"",
+    "choices": [
+      "She said that she will come.",
+      "She said that I will come.",
+      "She said that she would come.",
+      "She said she come."
+    ],
+    "answer": 2,
+    "explain": "주절이 과거이면 will은 would로 바뀌어요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-168",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nThe harder you work, the (   ) you learn.",
+    "choices": [
+      "much",
+      "most",
+      "more",
+      "many"
+    ],
+    "answer": 2,
+    "explain": "The 비교급 ~, the 비교급 ... 구문이에요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-169",
+    "type": "mc",
+    "q": "each의 수 일치가 바른 문장을 고르세요.",
+    "choices": [
+      "Each students have a locker.",
+      "Each student has a locker.",
+      "Each student have a locker.",
+      "Each of student has a locker."
+    ],
+    "answer": 1,
+    "explain": "each 뒤에는 단수 명사와 단수 동사가 와요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-170",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nIt is kind (   ) you to help me.",
+    "choices": [
+      "of",
+      "for",
+      "to",
+      "with"
+    ],
+    "answer": 0,
+    "explain": "사람의 성격을 나타내는 형용사 뒤에는 of를 써요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-171",
+    "type": "short",
+    "q": "괄호 안의 단어를 알맞은 형태로 바꿔 쓰세요.\nThe letter (send) last Friday.",
+    "answer": [
+      "was sent"
+    ],
+    "explain": "수동태 과거는 was/were + 과거분사예요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-172",
+    "type": "short",
+    "q": "괄호 안의 단어를 알맞은 형태로 바꿔 쓰세요.\nI have never (see) such a big dog.",
+    "answer": [
+      "seen"
+    ],
+    "explain": "현재완료는 have + 과거분사예요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-173",
+    "type": "short",
+    "q": "빈칸에 알맞은 관계대명사를 쓰세요.\nThis is the movie (   ) I like most.",
+    "answer": [
+      "which",
+      "that"
+    ],
+    "explain": "사물이 목적어 자리이므로 which(또는 that)예요.",
+    "tag": "문법",
+    "level": "normal"
+  },
+  {
+    "id": "en8-174",
+    "type": "mc",
+    "q": "상대의 말을 확인할 때 쓰는 표현으로 알맞은 것을 고르세요.",
+    "choices": [
+      "Do you make ~?",
+      "Do you mean ~?",
+      "Do you take ~?",
+      "Do you give ~?"
+    ],
+    "answer": 1,
+    "explain": "'~라는 뜻인가요?'라고 확인하는 표현이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en8-175",
+    "type": "mc",
+    "q": "빈칸에 알맞은 낱말을 고르세요.\nA: I got first prize! B: (   ) to hear that!",
+    "choices": [
+      "Glad",
+      "Sad",
+      "Sorry",
+      "Afraid"
+    ],
+    "answer": 0,
+    "explain": "좋은 소식에는 Glad to hear that!이라고 해요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en8-176",
+    "type": "mc",
+    "q": "토론에서 근거를 덧붙일 때 쓰는 표현으로 알맞은 것을 고르세요.",
+    "choices": [
+      "For example, ~",
+      "By the way, ~",
+      "In the end, ~",
+      "After all, ~"
+    ],
+    "answer": 0,
+    "explain": "예를 들 때 쓰는 표현이에요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en8-177",
+    "type": "mc",
+    "q": "빈칸에 알맞은 낱말을 고르세요.\nA: Can I ask you something? B: Go (   ).",
+    "choices": [
+      "away",
+      "out",
+      "over",
+      "ahead"
+    ],
+    "answer": 3,
+    "explain": "Go ahead.는 '그렇게 하세요'예요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en8-178",
+    "type": "short",
+    "q": "우리말과 뜻이 같도록 빈칸에 알맞은 낱말을 쓰세요.\n나는 그 결정에 책임이 있어.\nI'm responsible (   ) the decision.",
+    "answer": [
+      "for"
+    ],
+    "explain": "be responsible for ~는 ~에 책임이 있다예요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en8-179",
+    "type": "short",
+    "q": "빈칸에 알맞은 낱말을 쓰세요.\nA: How about Saturday? B: That (   ) fine with me.",
+    "answer": [
+      "sounds"
+    ],
+    "explain": "That sounds fine.은 '좋아요'예요.",
+    "tag": "표현",
+    "level": "normal"
+  },
+  {
+    "id": "en8-180",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nOnline learning gives students freedom to study anywhere. However, it requires strong self-discipline.\n\n온라인 학습의 어려움으로 글에 나온 것은 무엇인가요?",
+    "choices": [
+      "비용이 많이 든다",
+      "스스로를 다잡는 힘이 필요하다",
+      "장비가 필요하다",
+      "친구를 만날 수 없다"
+    ],
+    "answer": 1,
+    "explain": "'requires strong self-discipline'이라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en8-181",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nFast fashion produces cheap clothes quickly. But it creates huge amounts of textile waste every year.\n\n패스트 패션의 문제로 글에 나온 것은 무엇인가요?",
+    "choices": [
+      "엄청난 옷 쓰레기",
+      "옷값 상승",
+      "품질 향상",
+      "일자리 감소"
+    ],
+    "answer": 0,
+    "explain": "'huge amounts of textile waste'라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en8-182",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nThe placebo effect happens when people feel better after taking medicine with no active ingredient. Belief itself can change how we feel.\n\n플라시보 효과가 보여 주는 것은 무엇인가요?",
+    "choices": [
+      "약은 언제나 효과가 있다",
+      "의사가 중요하다",
+      "약값이 비싸다",
+      "믿음이 몸에 영향을 준다"
+    ],
+    "answer": 3,
+    "explain": "'Belief itself can change how we feel'이라고 했어요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en8-183",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nBamboo is technically a grass, not a tree. Yet it is strong enough to be used in construction.\n\n대나무에 대한 설명으로 알맞은 것을 고르세요.",
+    "choices": [
+      "나무 중 가장 단단하다",
+      "건축에 쓸 수 없다",
+      "나무가 아니라 풀에 가깝다",
+      "물에서만 자란다"
+    ],
+    "answer": 2,
+    "explain": "'technically a grass, not a tree'라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en8-184",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nVolunteering abroad can help communities, but only if volunteers respect local needs instead of imposing their own ideas.\n\n글쓴이가 강조하는 것은 무엇인가요?",
+    "choices": [
+      "더 많은 돈을 보내기",
+      "오래 머무르기",
+      "현지의 필요를 존중하기",
+      "언어를 배우기"
+    ],
+    "answer": 2,
+    "explain": "'respect local needs'를 강조했어요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en8-185",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nHoneybees communicate by dancing. The direction and length of the dance tell other bees where food is.\n\n벌의 춤이 알려 주는 것은 무엇인가요?",
+    "choices": [
+      "적이 오는 방향",
+      "먹이가 있는 곳",
+      "날씨",
+      "여왕벌의 위치"
+    ],
+    "answer": 1,
+    "explain": "'tell other bees where food is'라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en8-186",
+    "type": "short",
+    "q": "글을 읽고 물음에 답하세요.\nThe Amazon River is the largest river by water volume. It carries about twenty percent of the world's river water.\n\n아마존강이 흐르는 세계 강물의 비율을 숫자로 쓰세요. (퍼센트)",
+    "answer": [
+      "20"
+    ],
+    "explain": "'about twenty percent'라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en8-187",
+    "type": "short",
+    "q": "글을 읽고 물음에 답하세요.\nCoral reefs cover less than one percent of the ocean floor, yet they support about a quarter of all marine species.\n\n산호초가 품고 있는 해양 생물 종의 비율을 분수로 쓰세요. (예: 1/4)",
+    "answer": [
+      "1/4"
+    ],
+    "explain": "'about a quarter'는 4분의 1이에요.",
+    "tag": "독해",
+    "level": "hard"
+  },
+  {
+    "id": "en8-188",
+    "type": "mc",
+    "q": "'영향을 주다'를 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "effect",
+      "expect",
+      "elect",
+      "affect"
+    ],
+    "answer": 3,
+    "explain": "affect는 동사로 영향을 주다예요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en8-189",
+    "type": "mc",
+    "q": "'구체적인'을 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "special",
+      "specify",
+      "specific",
+      "species"
+    ],
+    "answer": 2,
+    "explain": "specific은 구체적인이에요.",
+    "tag": "단어",
+    "level": "hard"
+  },
+  {
+    "id": "en8-190",
+    "type": "mc",
+    "q": "'가능성'을 뜻하는 영어 단어를 고르세요.",
+    "choices": [
+      "possible",
+      "possibility",
+      "position",
+      "portion"
+    ],
+    "answer": 1,
+    "explain": "possible의 명사형이에요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en8-191",
+    "type": "short",
+    "q": "'improve'의 명사형을 쓰세요.",
+    "answer": [
+      "improvement"
+    ],
+    "explain": "-ment를 붙여 improvement가 돼요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en8-192",
+    "type": "short",
+    "q": "'~에 집중하다'를 뜻하는 표현을 쓰세요. (focus로 시작하는 두 단어)",
+    "answer": [
+      "focus on"
+    ],
+    "explain": "focus on ~은 ~에 집중하다예요.",
+    "tag": "단어",
+    "level": "normal"
+  },
+  {
+    "id": "en8-193",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nHe is the tallest (   ) all the players.",
+    "choices": [
+      "in",
+      "than",
+      "as",
+      "of"
+    ],
+    "answer": 3,
+    "explain": "of + 복수 명사로 범위를 나타내요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-194",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nI'd rather stay home (   ) go out.",
+    "choices": [
+      "then",
+      "that",
+      "than",
+      "as"
+    ],
+    "answer": 2,
+    "explain": "would rather A than B 구문이에요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-195",
+    "type": "mc",
+    "q": "빈칸에 알맞은 말을 고르세요.\nNot only she but also her friends (   ) coming.",
+    "choices": [
+      "is",
+      "are",
+      "am",
+      "be"
+    ],
+    "answer": 1,
+    "explain": "not only A but also B는 B에 동사를 맞춰요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-196",
+    "type": "short",
+    "q": "괄호 안의 단어를 알맞은 형태로 바꿔 쓰세요.\nThe song (sing) by many people.",
+    "answer": [
+      "is sung"
+    ],
+    "explain": "수동태 현재는 be + 과거분사예요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-197",
+    "type": "short",
+    "q": "빈칸에 알맞은 말을 쓰세요.\nHe is used (   ) working late. (~에 익숙하다)",
+    "answer": [
+      "to"
+    ],
+    "explain": "be used to -ing는 ~에 익숙하다예요.",
+    "tag": "문법",
+    "level": "hard"
+  },
+  {
+    "id": "en8-198",
+    "type": "mc",
+    "q": "빈칸에 알맞은 낱말을 고르세요.\nA: I'm not sure about that. B: Let's look it (   ).",
+    "choices": [
+      "on",
+      "in",
+      "off",
+      "up"
+    ],
+    "answer": 3,
+    "explain": "look up은 찾아본다는 뜻이에요.",
+    "tag": "표현",
+    "level": "hard"
+  },
+  {
+    "id": "en8-199",
+    "type": "mc",
+    "q": "글을 읽고 알맞은 답을 고르세요.\nMost of the plastic in the ocean comes from land, carried there by rivers and wind.\n\n바다 플라스틱의 주된 출처는 어디인가요?",
+    "choices": [
+      "선박",
+      "해저",
+      "육지",
+      "빙하"
+    ],
+    "answer": 2,
+    "explain": "'comes from land'라고 했어요.",
+    "tag": "독해",
+    "level": "normal"
+  },
+  {
+    "id": "en8-200",
+    "type": "short",
+    "q": "글을 읽고 물음에 답하세요.\nLight travels about three hundred thousand kilometers per second.\n\n빛이 1초에 가는 거리를 숫자로 쓰세요. (킬로미터)",
+    "answer": [
+      "300000"
+    ],
+    "explain": "'three hundred thousand kilometers'는 30만 km예요.",
+    "tag": "독해",
+    "level": "hard"
   }
 ]
