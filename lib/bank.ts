@@ -26,7 +26,9 @@ import math3 from "@/data/problems/math/grade3.json";
 import math4 from "@/data/problems/math/grade4.json";
 import math5 from "@/data/problems/math/grade5.json";
 import math6 from "@/data/problems/math/grade6.json";
+import math7 from "@/data/problems/math/grade7.json";
 import math8 from "@/data/problems/math/grade8.json";
+import math9 from "@/data/problems/math/grade9.json";
 
 const BANK: Record<Subject, Record<number, Problem[]>> = {
   ko: {
@@ -58,7 +60,9 @@ const BANK: Record<Subject, Record<number, Problem[]>> = {
     4: math4 as Problem[],
     5: math5 as Problem[],
     6: math6 as Problem[],
+    7: math7 as Problem[],
     8: math8 as Problem[],
+    9: math9 as Problem[],
   },
 };
 
