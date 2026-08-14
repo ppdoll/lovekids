@@ -70,6 +70,25 @@ const solve = (q) => {
 };
 const answer = (i, given) => jpost("/api/answer", { kidId: KID, subject: "math", index: i, given: String(given) });
 const retry = (i, given) => jpost("/api/retry", { kidId: KID, subject: "math", index: i, given: String(given) });
+/**
+ * 계산한 값을 그 문제에 맞는 제출값으로 바꾼다.
+ *
+ * 초등 문제는 모두 객관식이라(lib/daily.ts의 toMultipleChoice) 답을 숫자로 보내면 안 되고
+ * 보기 번호를 보내야 한다. 이 도우미가 없으면 초등 객관식 전환에 이 검사가 함께 깨진다.
+ */
+const submitFor = (p, value) => {
+  if (p.type !== "mc") return String(value);
+  const i = p.choices.findIndex((c) => Number(String(c).replace(/[^\d.-]/g, "")) === value);
+  if (i < 0) throw new Error(`보기에서 ${value}를 찾을 수 없음: ${JSON.stringify(p.choices)}`);
+  return String(i);
+};
+/** 일부러 틀리게 답할 때 쓰는 값 (객관식이면 정답이 아닌 보기 번호) */
+const wrongFor = (p, value) => {
+  if (p.type !== "mc") return String(value + 1);
+  const right = Number(submitFor(p, value));
+  return String((right + 1) % 4);
+};
+
 const today = () => jget(`/api/today?kid=${KID}&subject=math`);
 const state = async () => (await jget("/api/state")).kids.find((k) => k.id === KID);
 
@@ -85,7 +104,8 @@ check(
 console.log("\n=== 다 풀기 (0번·2번 일부러 오답) ===");
 const WRONG = [0, 2];
 for (let i = 0; i < 5; i++) {
-  await answer(i, WRONG.includes(i) ? answers[i] + 1 : answers[i]);
+  const p = set.problems[i];
+  await answer(i, WRONG.includes(i) ? wrongFor(p, answers[i]) : submitFor(p, answers[i]));
 }
 set = await today();
 const firstTry = set.answers.map((a) => a.correct);
@@ -103,14 +123,14 @@ const histBefore = (await parentData()).kids.find((k) => k.id === KID)?.history;
 
 /* ── 2) 맞힌 문제·안 푼 문제는 다시 풀기 대상이 아니다 ── */
 console.log("\n=== 대상이 아닌 문제는 거부 ===");
-const okRes = await retry(1, answers[1]);
+const okRes = await retry(1, submitFor(set.problems[1], answers[1]));
 check("맞힌 문제 다시 풀기 거부", okRes.status === 400 && okRes.body.error === "not-wrong", JSON.stringify(okRes.body));
 const oobRes = await retry(99, "1");
 check("없는 번호 거부", oobRes.status === 400 && oobRes.body.error === "bad-index");
 
 /* ── 3) 틀린 문제를 다시 풀어 맞힌다 ── */
 console.log("\n=== 다시 풀어 맞히기 ===");
-const r0 = await retry(0, answers[0]);
+const r0 = await retry(0, submitFor(set.problems[0], answers[0]));
 check("정답으로 채점됨", r0.body.record?.correct === true, JSON.stringify(r0.body.record));
 check("남은 수 1개로 줄어듦", r0.body.left === 1 && r0.body.fixed === 1, JSON.stringify(r0.body));
 
@@ -133,19 +153,19 @@ check("달력 기록 변화 없음", JSON.stringify(histBefore) === JSON.stringi
 
 /* ── 4) 다시 풀다 또 틀리면 남아 있어야 한다 ── */
 console.log("\n=== 다시 풀다 또 틀리면 남는다 ===");
-const r2bad = await retry(2, answers[2] + 5);
+const r2bad = await retry(2, wrongFor(set.problems[2], answers[2]));
 check("오답으로 채점됨", r2bad.body.record?.correct === false);
 check("남은 수 그대로 1개", r2bad.body.left === 1, JSON.stringify(r2bad.body));
 st = await state();
 check("현황에도 1개 남음", st.today.math.retryLeft === 1);
 
-const r2ok = await retry(2, answers[2]);
+const r2ok = await retry(2, submitFor(set.problems[2], answers[2]));
 check("다시 시도해서 맞히면 0개", r2ok.body.left === 0 && r2ok.body.fixed === 2, JSON.stringify(r2ok.body));
 st = await state();
 check("현황도 0개 (전부 고침)", st.today.math.wrongTotal === 2 && st.today.math.retryLeft === 0);
 
 /* ── 한 번 고친 문제는 다시 열리지 않는다 (고친 개수가 줄어들면 아이가 헷갈린다) ── */
-const again = await retry(0, answers[0] + 7);
+const again = await retry(0, wrongFor(set.problems[0], answers[0]));
 check("고친 문제 재제출 거부", again.status === 400 && again.body.error === "already-fixed", JSON.stringify(again.body));
 st = await state();
 check("거부 후에도 0개 유지", st.today.math.retryLeft === 0);

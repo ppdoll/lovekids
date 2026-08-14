@@ -81,12 +81,70 @@ async function buildWordProblems(
   return [...fromBank, ...generated];
 }
 
+/**
+ * 단답형 수학 문제를 객관식으로 바꾼다.
+ *
+ * 초등은 모든 문제를 객관식으로 낸다는 방침이다. 문제은행의 초등 문제는 이미 전부
+ * 객관식이지만, 연산·문장제는 그때그때 만들어져 단답형으로 나오므로 여기서 맞춰 준다.
+ *
+ * 보기는 **정답과 자릿수가 비슷한 수**로 만든다. 크기가 동떨어진 수를 섞으면 아이가
+ * 계산하지 않고 눈대중으로 골라낼 수 있어 문제가 뜻을 잃는다.
+ * 답이 수가 아니면(시각·낱말 등) 그대로 단답형으로 둔다.
+ */
+function toMultipleChoice(p: Problem): Problem {
+  if (p.type !== "short") return p;
+  const accepted = p.answer as string[];
+  const shown = accepted.find((a) => /^-?\d+(\.\d+)?\s*\D+$/.test(a.trim())) ?? accepted[0];
+
+  const wrong: string[] = [];
+  const num = shown.trim().match(/^(-?\d+(?:\.\d+)?)\s*(\D*)$/);
+  const frac = shown.trim().match(/^(\d+)\s*\/\s*(\d+)$/);
+
+  if (num) {
+    const n = Number(num[1]);
+    const unit = num[2].trim();
+    const dec = (num[1].split(".")[1] ?? "").length;
+    const abs = Math.abs(n);
+    // 소수 답은 정답에 비례한 간격을 쓴다. 1.25에 0.25를 섞으면 어림만으로도 지워진다.
+    const step = dec
+      ? abs < 2 ? 0.1 : abs < 20 ? 1 : 10
+      : abs < 20 ? 1 : abs < 100 ? 10 : abs < 1000 ? 10 : 100;
+    const digits = (x: number) => String(Math.floor(Math.abs(x))).length;
+    // 한 자리 수는 자릿수를 맞추면 고를 수 있는 후보가 적어 ±5까지 넓게 본다
+    for (const c of [n + step, n - step, n + 2 * step, n - 2 * step, n + 3 * step, n - 3 * step, n + 4 * step, n - 4 * step, n + 5 * step]) {
+      const v = dec ? Number(c.toFixed(dec)) : c;
+      // 초등 답은 양수이므로 0 이하는 넣지 않는다 (음수가 섞이면 그것만 빼도 답이 좁혀진다)
+      if (v <= 0 || v === n || (!dec && !Number.isInteger(v))) continue;
+      // 자릿수가 다른 수는 넣지 않는다. 정답이 21인데 보기에 1이 있으면 계산하지 않고도 지울 수 있다.
+      if (digits(v) !== digits(n)) continue;
+      const s = `${v}${unit}`;
+      if (!wrong.includes(s)) wrong.push(s);
+      if (wrong.length === 3) break;
+    }
+  } else if (frac) {
+    const [a, b] = [Number(frac[1]), Number(frac[2])];
+    for (const c of [`${b}/${a}`, `${a + 1}/${b}`, `${a}/${b + a}`, `${a * 2}/${b}`]) {
+      if (c !== shown && !wrong.includes(c)) wrong.push(c);
+      if (wrong.length === 3) break;
+    }
+  }
+  if (wrong.length !== 3) return p; // 보기를 만들 수 없으면 단답형으로 둔다
+
+  const slot = Math.floor(Math.random() * 4);
+  const choices = [...wrong];
+  choices.splice(slot, 0, shown);
+  return { ...p, type: "mc", choices, answer: slot };
+}
+
 async function buildProblems(store: Store, kid: Kid, subject: Subject, count: number): Promise<Problem[]> {
   if (count <= 0) return [];
 
   if (subject !== "math") {
     return pickFromBank(store, kid.id, subject, kid.grade, count);
   }
+
+  // 초등은 자동 생성 문제까지 객관식으로 맞춘다 (중학교는 직접 쓰게 둔다)
+  const fit = (ps: Problem[]) => (kid.grade <= 6 ? ps.map(toMultipleChoice) : ps);
 
   const calc = kid.calc ?? DEFAULT_CALC;
   const custom = calc.mode === "custom" ? genCustomProblems(calc, count) : [];
@@ -95,14 +153,14 @@ async function buildProblems(store: Store, kid: Kid, subject: Subject, count: nu
     // 부모가 직접 고른 연산으로 출제. 문장제를 섞기로 했다면 일부를 문장제로 채운다.
     const word = await buildWordProblems(store, kid, calc.includeWord ? Math.round(count * 0.3) : 0);
     const calcPart = custom.slice(0, count - word.length);
-    return shuffle([...calcPart, ...word]);
+    return shuffle([...fit(calcPart), ...fit(word)]);
   }
 
   // 학년 자동 = 연산(자동 생성) 60% + 문장제 40%
   // custom인데 켜진 연산이 하나도 없을 때도 여기로 와서 빈 숙제가 나오지 않게 한다.
   const word = await buildWordProblems(store, kid, Math.round(count * 0.4));
   const gen = genMathProblems(kid.grade, count - word.length);
-  return shuffle([...gen, ...word]);
+  return shuffle([...fit(gen), ...fit(word)]);
 }
 
 /** 오늘의 문제 세트를 가져오거나, 없으면 새로 출제해서 저장 */

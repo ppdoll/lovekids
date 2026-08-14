@@ -59,6 +59,25 @@ const solve = (q) => {
   return m ? Number(m[1]) + Number(m[2]) : null;
 };
 const answer = (i, given) => jpost("/api/answer", { kidId: KID, subject: "math", index: i, given: String(given) });
+/**
+ * 계산한 값을 그 문제에 맞는 제출값으로 바꾼다.
+ *
+ * 초등 문제는 모두 객관식이라(lib/daily.ts의 toMultipleChoice) 답을 숫자로 보내면 안 되고
+ * 보기 번호를 보내야 한다. 이 도우미가 없으면 초등 객관식 전환에 이 검사가 함께 깨진다.
+ */
+const submitFor = (p, value) => {
+  if (p.type !== "mc") return String(value);
+  const i = p.choices.findIndex((c) => Number(String(c).replace(/[^\d.-]/g, "")) === value);
+  if (i < 0) throw new Error(`보기에서 ${value}를 찾을 수 없음: ${JSON.stringify(p.choices)}`);
+  return String(i);
+};
+/** 일부러 틀리게 답할 때 쓰는 값 (객관식이면 정답이 아닌 보기 번호) */
+const wrongFor = (p, value) => {
+  if (p.type !== "mc") return String(value + 1);
+  const right = Number(submitFor(p, value));
+  return String((right + 1) % 4);
+};
+
 
 /* ── 콤보 ── */
 console.log("=== 콤보 ===");
@@ -70,11 +89,11 @@ const wrongAtStart = (await parentData()).kids.find((k) => k.id === KID)?.wrong.
 let set = await jget(`/api/today?kid=${KID}&subject=math`);
 check("리셋 직후 콤보는 0", set.combo === 0 && set.bestCombo === 0, `combo=${set.combo}, best=${set.bestCombo}`);
 
-let r = await answer(0, solve(set.problems[0].q));
+let r = await answer(0, submitFor(set.problems[0], solve(set.problems[0].q)));
 check("1문제 정답 → 콤보 1", r.body.combo === 1, `combo=${r.body.combo}`);
-r = await answer(1, solve(set.problems[1].q));
+r = await answer(1, submitFor(set.problems[1], solve(set.problems[1].q)));
 check("2문제 연속 정답 → 콤보 2", r.body.combo === 2, `combo=${r.body.combo}`);
-r = await answer(2, solve(set.problems[2].q));
+r = await answer(2, submitFor(set.problems[2], solve(set.problems[2].q)));
 check("3문제 연속 정답 → 콤보 3", r.body.combo === 3, `combo=${r.body.combo}`);
 
 // 새로고침해도 콤보 유지
@@ -82,18 +101,18 @@ set = await jget(`/api/today?kid=${KID}&subject=math`);
 check("새로고침해도 콤보 이어짐", set.combo === 3, `combo=${set.combo}`);
 
 // 일부러 오답 → 콤보 끊김, 최고 기록은 남음
-r = await answer(3, 999999);
+r = await answer(3, wrongFor(set.problems[3], solve(set.problems[3].q)));
 check("틀리면 콤보 0으로", r.body.combo === 0, `combo=${r.body.combo}`);
 check("최고 콤보는 3으로 유지", r.body.bestCombo === 3, `best=${r.body.bestCombo}`);
 
 // 다시 쌓기
-r = await answer(4, solve(set.problems[4].q));
+r = await answer(4, submitFor(set.problems[4], solve(set.problems[4].q)));
 check("다시 맞히면 콤보 1부터", r.body.combo === 1, `combo=${r.body.combo}`);
 
 /* ── 문제 더 내기 ── */
 console.log("\n=== 문제 더 내기 ===");
 // 마지막 문제까지 풀어 완료 상태 만들기
-r = await answer(5, solve(set.problems[5].q));
+r = await answer(5, submitFor(set.problems[5], solve(set.problems[5].q)));
 check("6문제 모두 풀어 완료됨", r.body.done === true, `done=${r.body.done}`);
 
 let pd = await parentData();
@@ -122,7 +141,7 @@ kid = pd.kids.find((k) => k.id === KID);
 check("완료 기록이 내려감 (다 풀 때까지)", !kid.history[pd.date]?.math?.done, JSON.stringify(kid.history[pd.date] ?? {}));
 
 // 추가된 3문제 풀어서 다시 완료
-for (let i = 6; i < 9; i++) await answer(i, solve(set.problems[i].q));
+for (let i = 6; i < 9; i++) await answer(i, submitFor(set.problems[i], solve(set.problems[i].q)));
 pd = await parentData();
 kid = pd.kids.find((k) => k.id === KID);
 check("다시 완료 처리됨", !!kid.history[pd.date]?.math?.done, JSON.stringify(kid.history[pd.date] ?? {}));

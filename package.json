@@ -19,7 +19,8 @@
     "make:images": "node scripts/make-images.mjs",
     "check:owner": "node scripts/test-owner.mjs",
     "check:grading": "node scripts/test-grading.mjs",
-    "check:retry": "node scripts/test-retry.mjs"
+    "check:retry": "node scripts/test-retry.mjs",
+    "check:mcify": "node scripts/test-mcify.mjs"
   },
   "dependencies": {
     "jose": "^6.2.8",
